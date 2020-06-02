@@ -1,0 +1,2968 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cdf="http://checklists.nist.gov/xccdf/1.1" xmlns:html="http://www.w3.org/1999/xhtml">
+  <head>
+    <style>
+			body {
+				font-family: veranda,sans-serif;
+				font-size: 13px;
+				margin-left: 0px;
+			}
+
+			div.content {
+				position: relative;
+				padding-bottom: 20px;
+			}
+
+			@page {
+				size: 8.5in 11in;
+				margin: 1in;
+			}
+
+			@media print
+			{
+				div.headerfooter {
+					position: relative;
+				}
+			}
+
+			@media screen {
+				div.content {
+					margin-top: 40px;
+					margin-left: 10%;
+					margin-right: 10%;
+				}
+			
+				div.headerfooter {
+					position: fixed;
+					z-index: 1000;
+				}
+			}
+
+			div.headerfooter {
+				background-color: green;
+				color: white;
+				font-size: 8pt;
+				font-weight: bold;
+				text-align: center;
+				width: 100%;
+			}
+
+			div.header {
+				top: 0;
+			}
+
+			div.footer {
+				bottom: 0;
+				
+			}
+
+			table {
+				font-size: 13px;
+			}
+
+			table, td, th {
+				border: 1px solid black;
+				border-collapse: collapse;
+				vertical-align: top;
+				padding: 5px;
+				word-wrap: break-word;
+			}
+
+			th {
+				font-weight: bold;
+			}
+
+			table.ruleblock {
+				width: 100%;
+				table-layout: fixed;
+				border-top: 1px solid black;
+				border-left: 1px solid black;
+				border-right: 1px solid black;
+				border-bottom: 0px;
+			}
+
+			td.ruleblock {
+				width: 25%;
+				font-weight: bold;
+				font-size: 15px;
+				padding: 5px;
+				border-bottom: 0px;
+			}
+			
+			tr.ruleblock {
+				border-bottom: 0px;
+			}
+
+			span.ruleheader {
+				font-size: 10px;
+			}
+
+			table.ruledata {
+				width: 100%;
+				table-layout: fixed;
+			}
+
+			th.ruledata {
+				width: 15%;
+				text-align: left;
+				border: none;
+			}
+
+			td.ruledata {
+				border: none;
+			}
+
+			span.rulerequirement {
+				font-size: 15px;
+				font-weight: bold;
+			}
+
+			div.rotate {
+				-ms-transform:rotate(270deg); /* IE 9 */
+				-moz-transform:rotate(270deg); /* Firefox */
+				-webkit-transform:rotate(270deg); /* Safari and Chrome */
+				-o-transform:rotate(270deg); /* Opera */
+			}
+			
+			ul.ruledata {
+			  list-style-position: inside;
+			  padding-left: 0;
+			}
+
+		</style>
+    <title>(U) VMware vSphere 6.5 Virtual Machine Security Technical Implementation Guide</title>
+  </head>
+  <body>
+    <div class="header headerfooter">UNCLASSIFIED</div>
+    <div class="content">
+      <div>
+        <h1>VMware vSphere 6.5 Virtual Machine Security Technical Implementation Guide</h1>
+        <h2>Version 1 Release 2</h2>
+        <h3>25 Oct 2019</h3>
+      </div>
+      <div class="toc">
+        <h2>Table of Contents</h2>
+        <ul>
+          <li>
+            <a href="#intro">Introduction</a>
+            <br/>
+            <ul>
+              <li>
+                <a href="#summary">Executive Summary</a>
+              </li>
+              <li>
+                <a href="#authority">Authority</a>
+              </li>
+              <li>
+                <a href="#severity">Vulnerability Severity Category Code Definitions</a>
+              </li>
+              <li>
+                <a href="#distribution">STIG Distribution</a>
+              </li>
+              <li>
+                <a href="#compliance">SRG Compliance Reporting</a>
+              </li>
+              <li>
+                <a href="#revisions">Document Revisions</a>
+              </li>
+              <li>
+                <a href="#considerations">Other Considerations</a>
+              </li>
+              <li>
+                <a href="#disclaimer">Product Approval Disclaimer</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#catalog">Requirement Catalog</a>
+            <br/>
+            <ul>
+              <li>
+                <a href="#requirementtable">Table of Requirements</a>
+              </li>
+              <li>
+                <a href="#requirementdetails">Requirement Details</a>
+              </li>
+            </ul>
+          </li>
+          <li>Revision History</li>
+        </ul>
+      </div>
+      <div class="intro">
+        <a name="intro">
+          <h2>Introduction</h2>
+        </a>
+        <a name="summary">
+          <h3>Executive Summary</h3>
+        </a>
+        <p>
+The VMware vSphere 6.5 Virtual Machine Security Technical Implementation Guide is published as a tool to improve the security of the Department of Defense (DoD) information systems.
+			</p>
+        <a name="authority">
+          <h3>Authority</h3>
+        </a>
+        <p>
+DoD Instruction (DoDI) 8500.01 requires that “all IT that receives, processes, stores, displays, 
+or transmits DoD information will be […] configured […] consistent with applicable DoD cybersecurity policies, 
+standards, and architectures” and tasks that Defense Information Systems Agency (DISA) “develops and maintains 
+control correlation identifiers (CCIs), security requirements guides (SRGs), security technical implementation 
+guides (STIGs), and mobile code risk categories and usage guides that implement and are consistent with DoD 
+cybersecurity policies, standards, architectures, security controls, and validation procedures, with the 
+support of the NSA/CSS, using input from stakeholders, and using automation whenever possible.” This document 
+is provided under the authority of DoDI 8500.01.
+			</p>
+        <p>
+Although the use of the principles and guidelines in these SRGs/STIGs provides an environment that contributes 
+to the security requirements of DoD systems, applicable NIST SP 800-53 cybersecurity controls need to be 
+applied to all systems and architectures based on the Committee on National Security Systems (CNSS) Instruction 
+(CNSSI) 1253.
+			</p>
+        <a name="severity">
+          <h3>Vulnerability Severity Category Code Definitions</h3>
+        </a>
+        <p>
+				Severity Category Codes (referred to as CAT) are a measure of vulnerabilities used to assess a
+facility or system security posture. Each security policy specified in this document is assigned a
+Severity Code of CAT I, II, or III.
+			</p>
+        <table>
+          <tr>
+            <th/>
+            <th>Category Code Guidelines</th>
+          </tr>
+          <tr>
+            <th>CAT I</th>
+            <td>
+Any vulnerability, the exploitation of which will, directly and immediately result in loss of
+Confidentiality, Availability, or Integrity.
+					</td>
+          </tr>
+          <tr>
+            <th>CAT II</th>
+            <td>Any vulnerability, the exploitation of which has a potential to result in loss of Confidentiality, Availability,
+or Integrity.</td>
+          </tr>
+          <tr>
+            <th>CAT III</th>
+            <td>Any vulnerability, the existence of which degrades measures to protect against loss of Confidentiality, Availability, or Integrity.</td>
+          </tr>
+        </table>
+        <a name="distribution">
+          <h3>STIG Distribution</h3>
+        </a>
+        <p>
+Parties within the DoD and Federal Government’s computing environments can obtain the applicable STIG from the Cyber Exchange website at 
+<a href="https://cyber.mil/">https://cyber.mil/</a>. This site contains the latest copies of STIGs, SRGs, and other related security information. 
+Those without a Common Access Card (CAC) that has DoD Certificates can obtain the STIG from <a href="https://public.cyber.mil/">https://public.cyber.mil/</a>.
+			</p>
+        <a name="compliance">
+          <h3>SRG Compliance Reporting</h3>
+        </a>
+        <p>
+All technical NIST SP 800-53 requirements were considered while developing this STIG. Requirements that are applicable and configurable 
+will be included in the final STIG. A report marked For Official Use Only (FOUO) will be available for those items that did not meet requirements. 
+This report will be available to component Authorizing Official (AO) personnel for risk assessment purposes by request via email to: <a href="mailto:disa.stig_spt@mail.mil">disa.stig_spt@mail.mil</a>.
+			</p>
+        <a name="revisions">
+          <h3>Document Revision Process</h3>
+        </a>
+        <p>
+Comments or proposed revisions to this document should be sent via email to the following address: <a href="mailto:disa.stig_spt@mail.mil">disa.stig_spt@mail.mil</a>. 
+DISA will coordinate all change requests with the relevant DoD organizations before inclusion in this document. Approved changes will be made in accordance with the DISA maintenance release schedule.
+			</p>
+        <a name="considerations">
+          <h3>Other Considerations</h3>
+        </a>
+        <p>
+DISA accepts no liability for the consequences of applying specific configuration settings made on the basis of the SRGs/STIGs. 
+It must be noted that the configuration settings specified should be evaluated in a local, representative test environment before 
+implementation in a production environment, especially within large user populations. The extensive variety of environments makes 
+it impossible to test these configuration settings for all potential software configurations.
+			</p>
+        <p>
+For some production environments, failure to test before implementation may lead to a loss of required functionality. Evaluating 
+the risks and benefits to a system’s particular circumstances and requirements is the system owner’s responsibility. The evaluated 
+risks resulting from not applying specified configuration settings must be approved by the responsible Authorizing Official. 
+Furthermore, DISA implies no warranty that the application of all specified configurations will make a system 100 percent secure.
+			</p>
+        <p>
+Security guidance is provided for the Department of Defense. While other agencies and organizations are free to use it, care must 
+be given to ensure that all applicable security guidance is applied both at the device hardening level as well as the architectural 
+level due to the fact that some of the settings may not be able to be configured in environments outside the DoD architecture.
+			</p>
+        <a name="disclaimer">
+          <h3>Product Approval Disclaimer</h3>
+        </a>
+        <p>
+The existence of a STIG does not equate to DoD approval for the procurement or use of a product.
+			</p>
+        <p>
+STIGs provide configurable operational security guidance for products being used by the DoD. STIGs, along with vendor confidential 
+documentation, also provide a basis for assessing compliance with Cybersecurity controls/control enhancements, which supports system 
+Assessment and Authorization (A&amp;A) under the DoD Risk Management Framework (RMF). DoD Authorizing Officials (AOs) may request available 
+vendor confidential documentation for a product that has a STIG for product evaluation and RMF purposes from <a href="mailto:disa.stig_spt@mail.mil">disa.stig_spt@mail.mil</a>. 
+This documentation is not published for general access to protect the vendor’s proprietary information.
+			</p>
+        <p>
+AOs have the purview to determine product use/approval IAW DoD policy and through RMF risk acceptance. Inputs into acquisition or pre-acquisition product selection include such processes as:
+<ul><li>National Information Assurance Partnership (NIAP) evaluation for National Security Systems (NSS) (http://www.niap-ccevs.org/) IAW CNSSP #11</li><li>National Institute of Standards and Technology (NIST) Cryptographic Module Validation Program (CMVP) (http://csrc.nist.gov/groups/STM/cmvp/) IAW Federal/DoD mandated standards</li><li>DoD Unified Capabilities (UC) Approved Products List (APL) (http://www.disa.mil/network-services/ucco) IAW DoDI 8100.04</li></ul></p>
+      </div>
+      <div class="catalog">
+        <a name="catalog">
+          <h2>Requirements Catalog</h2>
+        </a>
+        <a name="requirementtable">
+          <h3>Table of Requirements</h3>
+        </a>
+        <table>
+          <tr>
+            <th>STIG ID</th>
+            <th>Group ID</th>
+            <th>Rule ID</th>
+            <th>Requirement</th>
+            <th>Severity</th>
+          </tr>
+          <tr>
+            <td>VMCH-65-000001</td>
+            <td>V-94563</td>
+            <td>
+              <a href="#RULE_SV-104393r1_rule">SV-104393r1_rule</a>
+            </td>
+            <td>Copy operations must be disabled on the virtual machine.</td>
+            <td>CAT III</td>
+          </tr>
+          <tr>
+            <td>VMCH-65-000002</td>
+            <td>V-94565</td>
+            <td>
+              <a href="#RULE_SV-104395r1_rule">SV-104395r1_rule</a>
+            </td>
+            <td>Drag and drop operations must be disabled on the virtual machine.</td>
+            <td>CAT III</td>
+          </tr>
+          <tr>
+            <td>VMCH-65-000003</td>
+            <td>V-94567</td>
+            <td>
+              <a href="#RULE_SV-104397r1_rule">SV-104397r1_rule</a>
+            </td>
+            <td>GUI functionality for copy/paste operations must be disabled on the virtual machine.</td>
+            <td>CAT III</td>
+          </tr>
+          <tr>
+            <td>VMCH-65-000004</td>
+            <td>V-94569</td>
+            <td>
+              <a href="#RULE_SV-104399r1_rule">SV-104399r1_rule</a>
+            </td>
+            <td>Paste operations must be disabled on the virtual machine.</td>
+            <td>CAT III</td>
+          </tr>
+          <tr>
+            <td>VMCH-65-000005</td>
+            <td>V-94571</td>
+            <td>
+              <a href="#RULE_SV-104401r1_rule">SV-104401r1_rule</a>
+            </td>
+            <td>Virtual disk shrinking must be disabled on the virtual machine.</td>
+            <td>CAT II</td>
+          </tr>
+          <tr>
+            <td>VMCH-65-000006</td>
+            <td>V-94573</td>
+            <td>
+              <a href="#RULE_SV-104403r2_rule">SV-104403r2_rule</a>
+            </td>
+            <td>Virtual disk erasure must be disabled on the virtual machine.</td>
+            <td>CAT II</td>
+          </tr>
+          <tr>
+            <td>VMCH-65-000007</td>
+            <td>V-94575</td>
+            <td>
+              <a href="#RULE_SV-104405r1_rule">SV-104405r1_rule</a>
+            </td>
+            <td>Independent, non-persistent disks must be not be used on the virtual machine.</td>
+            <td>CAT II</td>
+          </tr>
+          <tr>
+            <td>VMCH-65-000008</td>
+            <td>V-94577</td>
+            <td>
+              <a href="#RULE_SV-104407r1_rule">SV-104407r1_rule</a>
+            </td>
+            <td>HGFS file transfers must be disabled on the virtual machine.</td>
+            <td>CAT II</td>
+          </tr>
+          <tr>
+            <td>VMCH-65-000009</td>
+            <td>V-94579</td>
+            <td>
+              <a href="#RULE_SV-104409r1_rule">SV-104409r1_rule</a>
+            </td>
+            <td>The unexposed feature keyword isolation.tools.ghi.autologon.disable must be set on the virtual machine.</td>
+            <td>CAT III</td>
+          </tr>
+          <tr>
+            <td>VMCH-65-000012</td>
+            <td>V-94581</td>
+            <td>
+              <a href="#RULE_SV-104411r1_rule">SV-104411r1_rule</a>
+            </td>
+            <td>The unexposed feature keyword isolation.tools.ghi.launchmenu.change must be set on the virtual machine.</td>
+            <td>CAT III</td>
+          </tr>
+          <tr>
+            <td>VMCH-65-000013</td>
+            <td>V-94583</td>
+            <td>
+              <a href="#RULE_SV-104413r1_rule">SV-104413r1_rule</a>
+            </td>
+            <td>The unexposed feature keyword isolation.tools.memSchedFakeSampleStats.disable must be set on the virtual machine.</td>
+            <td>CAT III</td>
+          </tr>
+          <tr>
+            <td>VMCH-65-000014</td>
+            <td>V-94585</td>
+            <td>
+              <a href="#RULE_SV-104415r1_rule">SV-104415r1_rule</a>
+            </td>
+            <td>The unexposed feature keyword isolation.tools.ghi.protocolhandler.info.disable must be set on the virtual machine.</td>
+            <td>CAT III</td>
+          </tr>
+          <tr>
+            <td>VMCH-65-000015</td>
+            <td>V-94593</td>
+            <td>
+              <a href="#RULE_SV-104423r1_rule">SV-104423r1_rule</a>
+            </td>
+            <td>The unexposed feature keyword isolation.ghi.host.shellAction.disable must be set on the virtual machine.</td>
+            <td>CAT III</td>
+          </tr>
+          <tr>
+            <td>VMCH-65-000018</td>
+            <td>V-94595</td>
+            <td>
+              <a href="#RULE_SV-104425r1_rule">SV-104425r1_rule</a>
+            </td>
+            <td>The unexposed feature keyword isolation.tools.ghi.trayicon.disable must be set on the virtual machine.</td>
+            <td>CAT III</td>
+          </tr>
+          <tr>
+            <td>VMCH-65-000019</td>
+            <td>V-94597</td>
+            <td>
+              <a href="#RULE_SV-104427r1_rule">SV-104427r1_rule</a>
+            </td>
+            <td>The unexposed feature keyword isolation.tools.unity.disable must be set on the virtual machine.</td>
+            <td>CAT III</td>
+          </tr>
+          <tr>
+            <td>VMCH-65-000020</td>
+            <td>V-94599</td>
+            <td>
+              <a href="#RULE_SV-104429r1_rule">SV-104429r1_rule</a>
+            </td>
+            <td>The unexposed feature keyword isolation.tools.unityInterlockOperation.disable must be set on the virtual machine.</td>
+            <td>CAT III</td>
+          </tr>
+          <tr>
+            <td>VMCH-65-000021</td>
+            <td>V-94601</td>
+            <td>
+              <a href="#RULE_SV-104431r1_rule">SV-104431r1_rule</a>
+            </td>
+            <td>The unexposed feature keyword isolation.tools.unity.push.update.disable must be set on the virtual machine.</td>
+            <td>CAT III</td>
+          </tr>
+          <tr>
+            <td>VMCH-65-000022</td>
+            <td>V-94603</td>
+            <td>
+              <a href="#RULE_SV-104433r1_rule">SV-104433r1_rule</a>
+            </td>
+            <td>The unexposed feature keyword isolation.tools.unity.taskbar.disable must be set on the virtual machine.</td>
+            <td>CAT III</td>
+          </tr>
+          <tr>
+            <td>VMCH-65-000023</td>
+            <td>V-94605</td>
+            <td>
+              <a href="#RULE_SV-104435r1_rule">SV-104435r1_rule</a>
+            </td>
+            <td>The unexposed feature keyword isolation.tools.unityActive.disable must be set on the virtual machine.</td>
+            <td>CAT III</td>
+          </tr>
+          <tr>
+            <td>VMCH-65-000024</td>
+            <td>V-94607</td>
+            <td>
+              <a href="#RULE_SV-104437r1_rule">SV-104437r1_rule</a>
+            </td>
+            <td>The unexposed feature keyword isolation.tools.unity.windowContents.disable must be set on the virtual machine.</td>
+            <td>CAT III</td>
+          </tr>
+          <tr>
+            <td>VMCH-65-000025</td>
+            <td>V-94609</td>
+            <td>
+              <a href="#RULE_SV-104439r1_rule">SV-104439r1_rule</a>
+            </td>
+            <td>The unexposed feature keyword isolation.tools.vmxDnDVersionGet.disable must be set on the virtual machine.</td>
+            <td>CAT III</td>
+          </tr>
+          <tr>
+            <td>VMCH-65-000026</td>
+            <td>V-94611</td>
+            <td>
+              <a href="#RULE_SV-104441r1_rule">SV-104441r1_rule</a>
+            </td>
+            <td>The unexposed feature keyword isolation.tools.guestDnDVersionSet.disable must be set on the virtual machine.</td>
+            <td>CAT III</td>
+          </tr>
+          <tr>
+            <td>VMCH-65-000028</td>
+            <td>V-94613</td>
+            <td>
+              <a href="#RULE_SV-104443r1_rule">SV-104443r1_rule</a>
+            </td>
+            <td>Unauthorized floppy devices must be disconnected on the virtual machine.</td>
+            <td>CAT II</td>
+          </tr>
+          <tr>
+            <td>VMCH-65-000029</td>
+            <td>V-94615</td>
+            <td>
+              <a href="#RULE_SV-104445r1_rule">SV-104445r1_rule</a>
+            </td>
+            <td>Unauthorized CD/DVD devices must be disconnected on the virtual machine.</td>
+            <td>CAT III</td>
+          </tr>
+          <tr>
+            <td>VMCH-65-000030</td>
+            <td>V-94617</td>
+            <td>
+              <a href="#RULE_SV-104447r1_rule">SV-104447r1_rule</a>
+            </td>
+            <td>Unauthorized parallel devices must be disconnected on the virtual machine.</td>
+            <td>CAT II</td>
+          </tr>
+          <tr>
+            <td>VMCH-65-000031</td>
+            <td>V-94619</td>
+            <td>
+              <a href="#RULE_SV-104449r1_rule">SV-104449r1_rule</a>
+            </td>
+            <td>Unauthorized serial devices must be disconnected on the virtual machine.</td>
+            <td>CAT II</td>
+          </tr>
+          <tr>
+            <td>VMCH-65-000032</td>
+            <td>V-94621</td>
+            <td>
+              <a href="#RULE_SV-104451r1_rule">SV-104451r1_rule</a>
+            </td>
+            <td>Unauthorized USB devices must be disconnected on the virtual machine.</td>
+            <td>CAT II</td>
+          </tr>
+          <tr>
+            <td>VMCH-65-000033</td>
+            <td>V-94623</td>
+            <td>
+              <a href="#RULE_SV-104453r1_rule">SV-104453r1_rule</a>
+            </td>
+            <td>Console connection sharing must be limited on the virtual machine.</td>
+            <td>CAT II</td>
+          </tr>
+          <tr>
+            <td>VMCH-65-000034</td>
+            <td>V-94625</td>
+            <td>
+              <a href="#RULE_SV-104455r1_rule">SV-104455r1_rule</a>
+            </td>
+            <td>Console access through the VNC protocol must be disabled on the virtual machine.</td>
+            <td>CAT II</td>
+          </tr>
+          <tr>
+            <td>VMCH-65-000036</td>
+            <td>V-94627</td>
+            <td>
+              <a href="#RULE_SV-104457r1_rule">SV-104457r1_rule</a>
+            </td>
+            <td>Informational messages from the virtual machine to the VMX file must be limited on the virtual machine.</td>
+            <td>CAT III</td>
+          </tr>
+          <tr>
+            <td>VMCH-65-000037</td>
+            <td>V-94629</td>
+            <td>
+              <a href="#RULE_SV-104459r1_rule">SV-104459r1_rule</a>
+            </td>
+            <td>Unauthorized removal, connection and modification of devices must be prevented on the virtual machine.</td>
+            <td>CAT II</td>
+          </tr>
+          <tr>
+            <td>VMCH-65-000039</td>
+            <td>V-94631</td>
+            <td>
+              <a href="#RULE_SV-104461r1_rule">SV-104461r1_rule</a>
+            </td>
+            <td>The virtual machine must not be able to obtain host information from the hypervisor.</td>
+            <td>CAT II</td>
+          </tr>
+          <tr>
+            <td>VMCH-65-000040</td>
+            <td>V-94633</td>
+            <td>
+              <a href="#RULE_SV-104463r1_rule">SV-104463r1_rule</a>
+            </td>
+            <td>Shared salt values must be disabled on the virtual machine.</td>
+            <td>CAT III</td>
+          </tr>
+          <tr>
+            <td>VMCH-65-000041</td>
+            <td>V-94635</td>
+            <td>
+              <a href="#RULE_SV-104465r1_rule">SV-104465r1_rule</a>
+            </td>
+            <td>Access to virtual machines through the dvfilter network APIs must be controlled.</td>
+            <td>CAT III</td>
+          </tr>
+          <tr>
+            <td>VMCH-65-000042</td>
+            <td>V-94637</td>
+            <td>
+              <a href="#RULE_SV-104467r1_rule">SV-104467r1_rule</a>
+            </td>
+            <td>System administrators must use templates to deploy virtual machines whenever possible.</td>
+            <td>CAT III</td>
+          </tr>
+          <tr>
+            <td>VMCH-65-000043</td>
+            <td>V-94639</td>
+            <td>
+              <a href="#RULE_SV-104469r1_rule">SV-104469r1_rule</a>
+            </td>
+            <td>Use of the virtual machine console must be minimized.</td>
+            <td>CAT II</td>
+          </tr>
+          <tr>
+            <td>VMCH-65-000047</td>
+            <td>V-94647</td>
+            <td>
+              <a href="#RULE_SV-104477r1_rule">SV-104477r1_rule</a>
+            </td>
+            <td>The virtual machine guest operating system must be locked when the last console connection is closed.</td>
+            <td>CAT II</td>
+          </tr>
+          <tr>
+            <td>VMCH-65-000048</td>
+            <td>V-94649</td>
+            <td>
+              <a href="#RULE_SV-104479r1_rule">SV-104479r1_rule</a>
+            </td>
+            <td>3D features on the virtual machine must be disabled when not required.</td>
+            <td>CAT III</td>
+          </tr>
+          <tr>
+            <td>VMCH-65-000049</td>
+            <td>V-94651</td>
+            <td>
+              <a href="#RULE_SV-104481r1_rule">SV-104481r1_rule</a>
+            </td>
+            <td>Encryption must be enabled for vMotion on the virtual machine.</td>
+            <td>CAT II</td>
+          </tr>
+        </table>
+        <a name="requirementdetails">
+          <h3>Requirement Details</h3>
+        </a>
+        <a name="RULE_SV-104393r1_rule">
+          <table class="ruleblock">
+            <tr class="ruleblock">
+              <td class="ruleblock"><span class="ruleheader">STIG ID:</span><br/>VMCH-65-000001</td>
+              <td class="ruleblock"><span class="ruleheader">Group ID:</span><br/>V-94563</td>
+              <td class="ruleblock"><span class="ruleheader">Rule ID:</span><br/>SV-104393r1_rule</td>
+              <td class="ruleblock"><span class="ruleheader">Severity:</span><br/>CAT III</td>
+            </tr>
+          </table>
+        </a>
+        <table class="ruledata">
+          <tr>
+            <th class="ruledata">Requirement:</th>
+            <td class="ruledata">
+              <span class="rulerequirement">Copy operations must be disabled on the virtual machine.</span>
+            </td>
+          </tr>
+          <tr>
+            <th class="ruledata">Discussion:</th>
+            <td class="ruledata">Copy and paste operations are disabled by default; however, by explicitly disabling this feature it will enable audit controls to check that this setting is correct. Copy, paste, drag and drop, or GUI copy/paste operations between the guest OS and the remote console could provide the means for an attacker to compromise the VM.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Check:</th>
+            <td class="ruledata">From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Verify the isolation.tools.copy.disable value is set to true.<br/>
+<br/>
+or<br/>
+<br/>
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:<br/>
+<br/>
+Get-VM "VM Name" | Get-AdvancedSetting -Name isolation.tools.copy.disable<br/>
+<br/>
+If the virtual machine advanced setting isolation.tools.copy.disable does not exist or is not set to true, this is a finding.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Fix:</th>
+            <td class="ruledata">From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Find the isolation.tools.copy.disable value and set it to true. If the setting does not exist, add the Name and Value setting at the bottom of screen. <br/>
+<br/>
+Note: The VM must be powered off to configure the advanced settings through the vSphere Web Client so it is recommended to configure these settings with PowerCLI as it can be done while the VM is powered on. Settings do not take effect via either method until the virtual machine is cold started, not rebooted.<br/>
+<br/>
+or<br/>
+<br/>
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:<br/>
+<br/>
+If the setting does not exist, run:<br/>
+<br/>
+Get-VM "VM Name" | New-AdvancedSetting -Name isolation.tools.copy.disable -Value true<br/>
+<br/>
+If the setting exists, run:<br/>
+<br/>
+Get-VM "VM Name" | Get-AdvancedSetting -Name isolation.tools.copy.disable | Set-AdvancedSetting -Value true</td>
+          </tr>
+          <tr>
+            <th class="ruledata">References:</th>
+            <td class="ruledata">
+              <ul class="ruledata">
+                <li>CCI-000366</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+        <br/>
+        <a name="RULE_SV-104395r1_rule">
+          <table class="ruleblock">
+            <tr class="ruleblock">
+              <td class="ruleblock"><span class="ruleheader">STIG ID:</span><br/>VMCH-65-000002</td>
+              <td class="ruleblock"><span class="ruleheader">Group ID:</span><br/>V-94565</td>
+              <td class="ruleblock"><span class="ruleheader">Rule ID:</span><br/>SV-104395r1_rule</td>
+              <td class="ruleblock"><span class="ruleheader">Severity:</span><br/>CAT III</td>
+            </tr>
+          </table>
+        </a>
+        <table class="ruledata">
+          <tr>
+            <th class="ruledata">Requirement:</th>
+            <td class="ruledata">
+              <span class="rulerequirement">Drag and drop operations must be disabled on the virtual machine.</span>
+            </td>
+          </tr>
+          <tr>
+            <th class="ruledata">Discussion:</th>
+            <td class="ruledata">Copy and paste operations are disabled by default; however, by explicitly disabling this feature it will enable audit controls to check that this setting is correct. Copy, paste, drag and drop, or GUI copy/paste operations between the guest OS and the remote console could provide the means for an attacker to compromise the VM.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Check:</th>
+            <td class="ruledata">From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Verify the isolation.tools.dnd.disable value is set to true.<br/>
+<br/>
+or<br/>
+<br/>
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:<br/>
+<br/>
+Get-VM "VM Name" | Get-AdvancedSetting -Name isolation.tools.dnd.disable<br/>
+<br/>
+If the virtual machine advanced setting isolation.tools.dnd.disable does not exist or is not set to true, this is a finding.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Fix:</th>
+            <td class="ruledata">From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Verify the isolation.tools.dnd.disable value is set to true. If the setting does not exist, add the Name and Value setting at the bottom of screen.<br/>
+<br/>
+Note: The VM must be powered off to configure the advanced settings through the vSphere Web Client so it is recommended to configure these settings with PowerCLI as it can be done while the VM is powered on. Settings do not take effect via either method until the virtual machine is cold started, not rebooted.<br/>
+<br/>
+or<br/>
+<br/>
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:<br/>
+<br/>
+If the setting does not exist, run:<br/>
+<br/>
+Get-VM "VM Name" | New-AdvancedSetting -Name isolation.tools.dnd.disable -Value true<br/>
+<br/>
+If the setting exists, run:<br/>
+<br/>
+Get-VM "VM Name" | Get-AdvancedSetting -Name isolation.tools.dnd.disable | Set-AdvancedSetting -Value true</td>
+          </tr>
+          <tr>
+            <th class="ruledata">References:</th>
+            <td class="ruledata">
+              <ul class="ruledata">
+                <li>CCI-000366</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+        <br/>
+        <a name="RULE_SV-104397r1_rule">
+          <table class="ruleblock">
+            <tr class="ruleblock">
+              <td class="ruleblock"><span class="ruleheader">STIG ID:</span><br/>VMCH-65-000003</td>
+              <td class="ruleblock"><span class="ruleheader">Group ID:</span><br/>V-94567</td>
+              <td class="ruleblock"><span class="ruleheader">Rule ID:</span><br/>SV-104397r1_rule</td>
+              <td class="ruleblock"><span class="ruleheader">Severity:</span><br/>CAT III</td>
+            </tr>
+          </table>
+        </a>
+        <table class="ruledata">
+          <tr>
+            <th class="ruledata">Requirement:</th>
+            <td class="ruledata">
+              <span class="rulerequirement">GUI functionality for copy/paste operations must be disabled on the virtual machine.</span>
+            </td>
+          </tr>
+          <tr>
+            <th class="ruledata">Discussion:</th>
+            <td class="ruledata">Copy and paste operations are disabled by default; however, by explicitly disabling this feature it will enable audit controls to check that this setting is correct. Copy, paste, drag and drop, or GUI copy/paste operations between the guest OS and the remote console could provide the means for an attacker to compromise the VM.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Check:</th>
+            <td class="ruledata">From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Verify the isolation.tools.setGUIOptions.enable value is set to false.<br/>
+<br/>
+or<br/>
+<br/>
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:<br/>
+<br/>
+Get-VM "VM Name" | Get-AdvancedSetting -Name isolation.tools.setGUIOptions.enable<br/>
+<br/>
+If the virtual machine advanced setting isolation.tools.setGUIOptions.enable does not exist or is not set to false, this is a finding.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Fix:</th>
+            <td class="ruledata">From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Find the isolation.tools.setGUIOptions.enable value and set it to false. If the setting does not exist, add the Name and Value setting at the bottom of screen.<br/>
+<br/>
+Note: The VM must be powered off to configure the advanced settings through the vSphere Web Client so it is recommended to configure these settings with PowerCLI as it can be done while the VM is powered on. Settings do not take effect via either method until the virtual machine is cold started, not rebooted.<br/>
+<br/>
+or<br/>
+<br/>
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:<br/>
+<br/>
+If the setting does not exist, run:<br/>
+<br/>
+Get-VM "VM Name" | New-AdvancedSetting -Name isolation.tools.setGUIOptions.enable -Value false<br/>
+<br/>
+If the setting exists, run:<br/>
+<br/>
+Get-VM "VM Name" | Get-AdvancedSetting -Name isolation.tools.setGUIOptions.enable | Set-AdvancedSetting -Value false</td>
+          </tr>
+          <tr>
+            <th class="ruledata">References:</th>
+            <td class="ruledata">
+              <ul class="ruledata">
+                <li>CCI-000366</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+        <br/>
+        <a name="RULE_SV-104399r1_rule">
+          <table class="ruleblock">
+            <tr class="ruleblock">
+              <td class="ruleblock"><span class="ruleheader">STIG ID:</span><br/>VMCH-65-000004</td>
+              <td class="ruleblock"><span class="ruleheader">Group ID:</span><br/>V-94569</td>
+              <td class="ruleblock"><span class="ruleheader">Rule ID:</span><br/>SV-104399r1_rule</td>
+              <td class="ruleblock"><span class="ruleheader">Severity:</span><br/>CAT III</td>
+            </tr>
+          </table>
+        </a>
+        <table class="ruledata">
+          <tr>
+            <th class="ruledata">Requirement:</th>
+            <td class="ruledata">
+              <span class="rulerequirement">Paste operations must be disabled on the virtual machine.</span>
+            </td>
+          </tr>
+          <tr>
+            <th class="ruledata">Discussion:</th>
+            <td class="ruledata">Copy and paste operations are disabled by default; however, by explicitly disabling this feature it will enable audit controls to check that this setting is correct. Copy, paste, drag and drop, or GUI copy/paste operations between the guest OS and the remote console could provide the means for an attacker to compromise the VM.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Check:</th>
+            <td class="ruledata">From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Verify the isolation.tools.paste.disable value is set to true.<br/>
+<br/>
+or<br/>
+<br/>
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:<br/>
+<br/>
+Get-VM "VM Name" | Get-AdvancedSetting -Name isolation.tools.paste.disable<br/>
+<br/>
+If the virtual machine advanced setting isolation.tools.paste.disable does not exist or is not set to true, this is a finding.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Fix:</th>
+            <td class="ruledata">From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Find the isolation.tools.paste.disable value and set it to true. If the setting does not exist, add the Name and Value setting at the bottom of screen.<br/>
+<br/>
+Note: The VM must be powered off to configure the advanced settings through the vSphere Web Client so it is recommended to configure these settings with PowerCLI as it can be done while the VM is powered on. Settings do not take effect via either method until the virtual machine is cold started, not rebooted.<br/>
+<br/>
+or<br/>
+<br/>
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:<br/>
+<br/>
+If the setting does not exist, run:<br/>
+<br/>
+Get-VM "VM Name" | New-AdvancedSetting -Name isolation.tools.paste.disable -Value true<br/>
+<br/>
+If the setting exists, run:<br/>
+<br/>
+Get-VM "VM Name" | Get-AdvancedSetting -Name isolation.tools.paste.disable | Set-AdvancedSetting -Value true</td>
+          </tr>
+          <tr>
+            <th class="ruledata">References:</th>
+            <td class="ruledata">
+              <ul class="ruledata">
+                <li>CCI-000366</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+        <br/>
+        <a name="RULE_SV-104401r1_rule">
+          <table class="ruleblock">
+            <tr class="ruleblock">
+              <td class="ruleblock"><span class="ruleheader">STIG ID:</span><br/>VMCH-65-000005</td>
+              <td class="ruleblock"><span class="ruleheader">Group ID:</span><br/>V-94571</td>
+              <td class="ruleblock"><span class="ruleheader">Rule ID:</span><br/>SV-104401r1_rule</td>
+              <td class="ruleblock"><span class="ruleheader">Severity:</span><br/>CAT II</td>
+            </tr>
+          </table>
+        </a>
+        <table class="ruledata">
+          <tr>
+            <th class="ruledata">Requirement:</th>
+            <td class="ruledata">
+              <span class="rulerequirement">Virtual disk shrinking must be disabled on the virtual machine.</span>
+            </td>
+          </tr>
+          <tr>
+            <th class="ruledata">Discussion:</th>
+            <td class="ruledata">Shrinking a virtual disk reclaims unused space in it. If there is empty space in the disk, this process reduces the amount of space the virtual disk occupies on the host drive. Normal users and processes-that is, users and processes without root or administrator privileges-within virtual machines have the capability to invoke this procedure. However, if this is done repeatedly, the virtual disk can become unavailable while this shrinking is being performed, effectively causing a denial-of-service. In most datacenter environments, disk shrinking is not done, so this feature must be disabled. Repeated disk shrinking can make a virtual disk unavailable. The capability to shrink is available to non-administrative users operating within the VMs guest OS.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Check:</th>
+            <td class="ruledata">From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Verify the isolation.tools.diskShrink.disable value is set to true.<br/>
+<br/>
+or<br/>
+<br/>
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:<br/>
+<br/>
+Get-VM "VM Name" | Get-AdvancedSetting -Name isolation.tools.diskShrink.disable<br/>
+<br/>
+If the virtual machine advanced setting isolation.tools.diskShrink.disable does not exist or is not set to true, this is a finding.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Fix:</th>
+            <td class="ruledata">From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Find the isolation.tools.diskShrink.disable value and set it to true. If the setting does not exist, add the Name and Value setting at the bottom of screen.<br/>
+<br/>
+Note: The VM must be powered off to configure the advanced settings through the vSphere Web Client so it is recommended to configure these settings with PowerCLI as it can be done while the VM is powered on. Settings do not take effect via either method until the virtual machine is cold started, not rebooted.<br/>
+<br/>
+or<br/>
+<br/>
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:<br/>
+<br/>
+If the setting does not exist, run:<br/>
+<br/>
+Get-VM "VM Name" | New-AdvancedSetting -Name isolation.tools.diskShrink.disable -Value true<br/>
+<br/>
+If the setting exists, run:<br/>
+<br/>
+Get-VM "VM Name" | Get-AdvancedSetting -Name isolation.tools.diskShrink.disable | Set-AdvancedSetting -Value true</td>
+          </tr>
+          <tr>
+            <th class="ruledata">References:</th>
+            <td class="ruledata">
+              <ul class="ruledata">
+                <li>CCI-000366</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+        <br/>
+        <a name="RULE_SV-104403r2_rule">
+          <table class="ruleblock">
+            <tr class="ruleblock">
+              <td class="ruleblock"><span class="ruleheader">STIG ID:</span><br/>VMCH-65-000006</td>
+              <td class="ruleblock"><span class="ruleheader">Group ID:</span><br/>V-94573</td>
+              <td class="ruleblock"><span class="ruleheader">Rule ID:</span><br/>SV-104403r2_rule</td>
+              <td class="ruleblock"><span class="ruleheader">Severity:</span><br/>CAT II</td>
+            </tr>
+          </table>
+        </a>
+        <table class="ruledata">
+          <tr>
+            <th class="ruledata">Requirement:</th>
+            <td class="ruledata">
+              <span class="rulerequirement">Virtual disk erasure must be disabled on the virtual machine.</span>
+            </td>
+          </tr>
+          <tr>
+            <th class="ruledata">Discussion:</th>
+            <td class="ruledata">Shrinking and wiping (erasing) a virtual disk reclaims unused space in it. If there is empty space in the disk, this process reduces the amount of space the virtual disk occupies on the host drive. Normal users and processes - that is, users and processes without root or administrator privileges - within virtual machines have the capability to invoke this procedure. However, if this is done repeatedly, the virtual disk can become unavailable while this shrinking is being performed, effectively causing a denial-of-service. In most datacenter environments, disk shrinking is not done, so this feature must be disabled. Repeated disk shrinking can make a virtual disk unavailable. The capability to wipe (erase) is available to non-administrative users operating within the VMs guest OS.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Check:</th>
+            <td class="ruledata">From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Verify the isolation.tools.diskWiper.disable value is set to true.<br/>
+<br/>
+or<br/>
+<br/>
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:<br/>
+<br/>
+Get-VM "VM Name" | Get-AdvancedSetting -Name  isolation.tools.diskWiper.disable<br/>
+<br/>
+If the virtual machine advanced setting isolation.tools.diskWiper.disable does not exist or is not set to true, this is a finding.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Fix:</th>
+            <td class="ruledata">From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Find the isolation.tools.diskWiper.disable value and set it to true. If the setting does not exist, add the Name and Value setting at the bottom of screen.<br/>
+<br/>
+Note: The VM must be powered off to configure the advanced settings through the vSphere Web Client so it is recommended to configure these settings with PowerCLI as it can be done while the VM is powered on. Settings do not take effect via either method until the virtual machine is cold started, not rebooted.<br/>
+<br/>
+or<br/>
+<br/>
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:<br/>
+<br/>
+If the setting does not exist, run:<br/>
+<br/>
+Get-VM "VM Name" | New-AdvancedSetting -Name isolation.tools.diskWiper.disable -Value true<br/>
+<br/>
+If the setting exists, run:<br/>
+<br/>
+Get-VM "VM Name" | Get-AdvancedSetting -Name isolation.tools.diskWiper.disable | Set-AdvancedSetting -Value true</td>
+          </tr>
+          <tr>
+            <th class="ruledata">References:</th>
+            <td class="ruledata">
+              <ul class="ruledata">
+                <li>CCI-000366</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+        <br/>
+        <a name="RULE_SV-104405r1_rule">
+          <table class="ruleblock">
+            <tr class="ruleblock">
+              <td class="ruleblock"><span class="ruleheader">STIG ID:</span><br/>VMCH-65-000007</td>
+              <td class="ruleblock"><span class="ruleheader">Group ID:</span><br/>V-94575</td>
+              <td class="ruleblock"><span class="ruleheader">Rule ID:</span><br/>SV-104405r1_rule</td>
+              <td class="ruleblock"><span class="ruleheader">Severity:</span><br/>CAT II</td>
+            </tr>
+          </table>
+        </a>
+        <table class="ruledata">
+          <tr>
+            <th class="ruledata">Requirement:</th>
+            <td class="ruledata">
+              <span class="rulerequirement">Independent, non-persistent disks must be not be used on the virtual machine.</span>
+            </td>
+          </tr>
+          <tr>
+            <th class="ruledata">Discussion:</th>
+            <td class="ruledata">The security issue with nonpersistent disk mode is that successful attackers, with a simple shutdown or reboot, might undo or remove any traces that they were ever on the machine. To safeguard against this risk, production virtual machines should be set to use persistent disk mode; additionally, make sure that activity within the VM is logged remotely on a separate server, such as a syslog server or equivalent Windows-based event collector. Without a persistent record of activity on a VM, administrators might never know whether they have been attacked or hacked.  <br/>
+<br/>
+There can be valid use cases for these types of disks such as with an application presentation solution where read only disks are desired and such cases should be identified and documented.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Check:</th>
+            <td class="ruledata">From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings. Review the attached hard disks and verify they are not configured as independent nonpersistent disks.<br/>
+<br/>
+or<br/>
+<br/>
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:<br/>
+<br/>
+Get-VM "VM Name" | Get-HardDisk | Select Parent, Name, Filename, DiskType, Persistence | FT -AutoSize<br/>
+<br/>
+If the virtual machine has attached disks that are in independent nonpersistent mode and are not documented, this is a finding.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Fix:</th>
+            <td class="ruledata">From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings. Select the target hard disk and change the mode to persistent or uncheck Independent.<br/>
+<br/>
+or<br/>
+<br/>
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:<br/>
+<br/>
+Get-VM "VM Name" | Get-HardDisk | Set-HardDisk -Persistence IndependentPersistent<br/>
+<br/>
+or<br/>
+<br/>
+Get-VM "VM Name" | Get-HardDisk | Set-HardDisk -Persistence Persistent</td>
+          </tr>
+          <tr>
+            <th class="ruledata">References:</th>
+            <td class="ruledata">
+              <ul class="ruledata">
+                <li>CCI-000366</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+        <br/>
+        <a name="RULE_SV-104407r1_rule">
+          <table class="ruleblock">
+            <tr class="ruleblock">
+              <td class="ruleblock"><span class="ruleheader">STIG ID:</span><br/>VMCH-65-000008</td>
+              <td class="ruleblock"><span class="ruleheader">Group ID:</span><br/>V-94577</td>
+              <td class="ruleblock"><span class="ruleheader">Rule ID:</span><br/>SV-104407r1_rule</td>
+              <td class="ruleblock"><span class="ruleheader">Severity:</span><br/>CAT II</td>
+            </tr>
+          </table>
+        </a>
+        <table class="ruledata">
+          <tr>
+            <th class="ruledata">Requirement:</th>
+            <td class="ruledata">
+              <span class="rulerequirement">HGFS file transfers must be disabled on the virtual machine.</span>
+            </td>
+          </tr>
+          <tr>
+            <th class="ruledata">Discussion:</th>
+            <td class="ruledata">Setting isolation.tools.hgfsServerSet.disable to true disables registration of the guest's HGFS server with the host. APIs that use HGFS to transfer files to and from the guest operating system, such as some VIX commands, will not function. An attacker could potentially use this to transfer files inside the guest OS.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Check:</th>
+            <td class="ruledata">From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Verify the isolation.tools.hgfsServerSet.disable value is set to true.<br/>
+<br/>
+or<br/>
+<br/>
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:<br/>
+<br/>
+Get-VM "VM Name" | Get-AdvancedSetting -Name isolation.tools.hgfsServerSet.disable<br/>
+<br/>
+If the virtual machine advanced setting isolation.tools.hgfsServerSet.disable does not exist or is not set to true, this is a finding.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Fix:</th>
+            <td class="ruledata">From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Find the isolation.tools.hgfsServerSet.disable value and set it to true. If the setting does not exist, add the Name and Value setting at the bottom of screen.<br/>
+<br/>
+Note: The VM must be powered off to configure the advanced settings through the vSphere Web Client so it is recommended to configure these settings with PowerCLI as it can be done while the VM is powered on. Settings do not take effect via either method until the virtual machine is cold started, not rebooted.<br/>
+<br/>
+or<br/>
+<br/>
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:<br/>
+<br/>
+If the setting does not exist, run:<br/>
+<br/>
+Get-VM "VM Name" | New-AdvancedSetting -Name isolation.tools.hgfsServerSet.disable -Value true<br/>
+<br/>
+If the setting exists, run:<br/>
+<br/>
+Get-VM "VM Name" | Get-AdvancedSetting -Name isolation.tools.hgfsServerSet.disable | Set-AdvancedSetting -Value true</td>
+          </tr>
+          <tr>
+            <th class="ruledata">References:</th>
+            <td class="ruledata">
+              <ul class="ruledata">
+                <li>CCI-000366</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+        <br/>
+        <a name="RULE_SV-104409r1_rule">
+          <table class="ruleblock">
+            <tr class="ruleblock">
+              <td class="ruleblock"><span class="ruleheader">STIG ID:</span><br/>VMCH-65-000009</td>
+              <td class="ruleblock"><span class="ruleheader">Group ID:</span><br/>V-94579</td>
+              <td class="ruleblock"><span class="ruleheader">Rule ID:</span><br/>SV-104409r1_rule</td>
+              <td class="ruleblock"><span class="ruleheader">Severity:</span><br/>CAT III</td>
+            </tr>
+          </table>
+        </a>
+        <table class="ruledata">
+          <tr>
+            <th class="ruledata">Requirement:</th>
+            <td class="ruledata">
+              <span class="rulerequirement">The unexposed feature keyword isolation.tools.ghi.autologon.disable must be set on the virtual machine.</span>
+            </td>
+          </tr>
+          <tr>
+            <th class="ruledata">Discussion:</th>
+            <td class="ruledata">Some virtual machine advanced settings parameters do not apply on vSphere because VMware virtual machines work on both vSphere and hosted virtualization platforms such as Workstation and Fusion. Explicitly disabling these features reduces the potential for vulnerabilities because it reduces the number of ways in which a guest can affect the host.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Check:</th>
+            <td class="ruledata">From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Verify the isolation.tools.ghi.autologon.disable value is set to true.<br/>
+<br/>
+or<br/>
+<br/>
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:<br/>
+<br/>
+Get-VM "VM Name" | Get-AdvancedSetting -Name isolation.tools.ghi.autologon.disable<br/>
+<br/>
+If the virtual machine advanced setting isolation.tools.ghi.autologon.disable does not exist or is not set to true, this is a finding.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Fix:</th>
+            <td class="ruledata">From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Find the isolation.tools.ghi.autologon.disable value and set it to true. If the setting does not exist, add the Name and Value setting at the bottom of screen.<br/>
+<br/>
+Note: The VM must be powered off to configure the advanced settings through the vSphere Web Client so it is recommended to configure these settings with PowerCLI as it can be done while the VM is powered on. Settings do not take effect via either method until the virtual machine is cold started, not rebooted.<br/>
+<br/>
+or<br/>
+<br/>
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:<br/>
+<br/>
+If the setting does not exist, run:<br/>
+<br/>
+Get-VM "VM Name" | New-AdvancedSetting -Name isolation.tools.ghi.autologon.disable -Value true<br/>
+<br/>
+If the setting exists, run:<br/>
+<br/>
+Get-VM "VM Name" | Get-AdvancedSetting -Name isolation.tools.ghi.autologon.disable | Set-AdvancedSetting -Value true</td>
+          </tr>
+          <tr>
+            <th class="ruledata">References:</th>
+            <td class="ruledata">
+              <ul class="ruledata">
+                <li>CCI-000366</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+        <br/>
+        <a name="RULE_SV-104411r1_rule">
+          <table class="ruleblock">
+            <tr class="ruleblock">
+              <td class="ruleblock"><span class="ruleheader">STIG ID:</span><br/>VMCH-65-000012</td>
+              <td class="ruleblock"><span class="ruleheader">Group ID:</span><br/>V-94581</td>
+              <td class="ruleblock"><span class="ruleheader">Rule ID:</span><br/>SV-104411r1_rule</td>
+              <td class="ruleblock"><span class="ruleheader">Severity:</span><br/>CAT III</td>
+            </tr>
+          </table>
+        </a>
+        <table class="ruledata">
+          <tr>
+            <th class="ruledata">Requirement:</th>
+            <td class="ruledata">
+              <span class="rulerequirement">The unexposed feature keyword isolation.tools.ghi.launchmenu.change must be set on the virtual machine.</span>
+            </td>
+          </tr>
+          <tr>
+            <th class="ruledata">Discussion:</th>
+            <td class="ruledata">Some virtual machine advanced settings parameters do not apply on vSphere because VMware virtual machines work on both vSphere and hosted virtualization platforms such as Workstation and Fusion. Explicitly disabling these features reduces the potential for vulnerabilities because it reduces the number of ways in which a guest can affect the host.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Check:</th>
+            <td class="ruledata">From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Verify the isolation.tools.ghi.launchmenu.change value is set to true.<br/>
+<br/>
+or<br/>
+<br/>
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:<br/>
+<br/>
+Get-VM "VM Name" | Get-AdvancedSetting -Name isolation.tools.ghi.launchmenu.change<br/>
+<br/>
+If the virtual machine advanced setting isolation.tools.ghi.launchmenu.change does not exist or is not set to true, this is a finding.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Fix:</th>
+            <td class="ruledata">From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Find the isolation.tools.ghi.launchmenu.change value and set it to true. If the setting does not exist, add the Name and Value setting at the bottom of screen.<br/>
+<br/>
+Note: The VM must be powered off to configure the advanced settings through the vSphere Web Client so it is recommended to configure these settings with PowerCLI as it can be done while the VM is powered on. Settings do not take effect via either method until the virtual machine is cold started, not rebooted.<br/>
+<br/>
+or<br/>
+<br/>
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:<br/>
+<br/>
+If the setting does not exist, run:<br/>
+<br/>
+Get-VM "VM Name" | New-AdvancedSetting -Name isolation.tools.ghi.launchmenu.change -Value true<br/>
+<br/>
+If the setting exists, run:<br/>
+<br/>
+Get-VM "VM Name" | Get-AdvancedSetting -Name isolation.tools.ghi.launchmenu.change | Set-AdvancedSetting -Value true</td>
+          </tr>
+          <tr>
+            <th class="ruledata">References:</th>
+            <td class="ruledata">
+              <ul class="ruledata">
+                <li>CCI-000366</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+        <br/>
+        <a name="RULE_SV-104413r1_rule">
+          <table class="ruleblock">
+            <tr class="ruleblock">
+              <td class="ruleblock"><span class="ruleheader">STIG ID:</span><br/>VMCH-65-000013</td>
+              <td class="ruleblock"><span class="ruleheader">Group ID:</span><br/>V-94583</td>
+              <td class="ruleblock"><span class="ruleheader">Rule ID:</span><br/>SV-104413r1_rule</td>
+              <td class="ruleblock"><span class="ruleheader">Severity:</span><br/>CAT III</td>
+            </tr>
+          </table>
+        </a>
+        <table class="ruledata">
+          <tr>
+            <th class="ruledata">Requirement:</th>
+            <td class="ruledata">
+              <span class="rulerequirement">The unexposed feature keyword isolation.tools.memSchedFakeSampleStats.disable must be set on the virtual machine.</span>
+            </td>
+          </tr>
+          <tr>
+            <th class="ruledata">Discussion:</th>
+            <td class="ruledata">Some virtual machine advanced settings parameters do not apply on vSphere because VMware virtual machines work on both vSphere and hosted virtualization platforms such as Workstation and Fusion. Explicitly disabling these features reduces the potential for vulnerabilities because it reduces the number of ways in which a guest can affect the host.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Check:</th>
+            <td class="ruledata">From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Verify the isolation.tools.memSchedFakeSampleStats.disable value is set to true.<br/>
+<br/>
+or<br/>
+<br/>
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:<br/>
+<br/>
+Get-VM "VM Name" | Get-AdvancedSetting -Name isolation.tools.memSchedFakeSampleStats.disable<br/>
+<br/>
+If the virtual machine advanced setting isolation.tools.memSchedFakeSampleStats.disable does not exist or is not set to true, this is a finding.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Fix:</th>
+            <td class="ruledata">From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Find the isolation.tools.memSchedFakeSampleStats.disable value and set it to true. If the setting does not exist, add the Name and Value setting at the bottom of screen.<br/>
+<br/>
+Note: The VM must be powered off to configure the advanced settings through the vSphere Web Client so it is recommended to configure these settings with PowerCLI as it can be done while the VM is powered on. Settings do not take effect via either method until the virtual machine is cold started, not rebooted.<br/>
+<br/>
+or<br/>
+<br/>
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:<br/>
+<br/>
+If the setting does not exist, run:<br/>
+<br/>
+Get-VM "VM Name" | New-AdvancedSetting -Name isolation.tools.memSchedFakeSampleStats.disable -Value true<br/>
+<br/>
+If the setting exists, run:<br/>
+<br/>
+Get-VM "VM Name" | Get-AdvancedSetting -Name isolation.tools.memSchedFakeSampleStats.disable | Set-AdvancedSetting -Value true</td>
+          </tr>
+          <tr>
+            <th class="ruledata">References:</th>
+            <td class="ruledata">
+              <ul class="ruledata">
+                <li>CCI-000366</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+        <br/>
+        <a name="RULE_SV-104415r1_rule">
+          <table class="ruleblock">
+            <tr class="ruleblock">
+              <td class="ruleblock"><span class="ruleheader">STIG ID:</span><br/>VMCH-65-000014</td>
+              <td class="ruleblock"><span class="ruleheader">Group ID:</span><br/>V-94585</td>
+              <td class="ruleblock"><span class="ruleheader">Rule ID:</span><br/>SV-104415r1_rule</td>
+              <td class="ruleblock"><span class="ruleheader">Severity:</span><br/>CAT III</td>
+            </tr>
+          </table>
+        </a>
+        <table class="ruledata">
+          <tr>
+            <th class="ruledata">Requirement:</th>
+            <td class="ruledata">
+              <span class="rulerequirement">The unexposed feature keyword isolation.tools.ghi.protocolhandler.info.disable must be set on the virtual machine.</span>
+            </td>
+          </tr>
+          <tr>
+            <th class="ruledata">Discussion:</th>
+            <td class="ruledata">Some virtual machine advanced settings parameters do not apply on vSphere because VMware virtual machines work on both vSphere and hosted virtualization platforms such as Workstation and Fusion. Explicitly disabling these features reduces the potential for vulnerabilities because it reduces the number of ways in which a guest can affect the host.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Check:</th>
+            <td class="ruledata">From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Verify the isolation.tools.ghi.protocolhandler.info.disable value is set to true.<br/>
+<br/>
+or<br/>
+<br/>
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:<br/>
+<br/>
+Get-VM "VM Name" | Get-AdvancedSetting -Name isolation.tools.ghi.protocolhandler.info.disable<br/>
+<br/>
+If the virtual machine advanced setting isolation.tools.ghi.protocolhandler.info.disable does not exist or is not set to true, this is a finding.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Fix:</th>
+            <td class="ruledata">From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Find the isolation.tools.ghi.protocolhandler.info.disable value and set it to true. If the setting does not exist, add the Name and Value setting at the bottom of screen.<br/>
+<br/>
+Note: The VM must be powered off to configure the advanced settings through the vSphere Web Client so it is recommended to configure these settings with PowerCLI as it can be done while the VM is powered on. Settings do not take effect via either method until the virtual machine is cold started, not rebooted.<br/>
+<br/>
+or<br/>
+<br/>
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:<br/>
+<br/>
+If the setting does not exist, run:<br/>
+<br/>
+Get-VM "VM Name" | New-AdvancedSetting -Name isolation.tools.ghi.protocolhandler.info.disable -Value true<br/>
+<br/>
+If the setting exists, run:<br/>
+<br/>
+Get-VM "VM Name" | Get-AdvancedSetting -Name isolation.tools.ghi.protocolhandler.info.disable | Set-AdvancedSetting -Value true</td>
+          </tr>
+          <tr>
+            <th class="ruledata">References:</th>
+            <td class="ruledata">
+              <ul class="ruledata">
+                <li>CCI-000366</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+        <br/>
+        <a name="RULE_SV-104423r1_rule">
+          <table class="ruleblock">
+            <tr class="ruleblock">
+              <td class="ruleblock"><span class="ruleheader">STIG ID:</span><br/>VMCH-65-000015</td>
+              <td class="ruleblock"><span class="ruleheader">Group ID:</span><br/>V-94593</td>
+              <td class="ruleblock"><span class="ruleheader">Rule ID:</span><br/>SV-104423r1_rule</td>
+              <td class="ruleblock"><span class="ruleheader">Severity:</span><br/>CAT III</td>
+            </tr>
+          </table>
+        </a>
+        <table class="ruledata">
+          <tr>
+            <th class="ruledata">Requirement:</th>
+            <td class="ruledata">
+              <span class="rulerequirement">The unexposed feature keyword isolation.ghi.host.shellAction.disable must be set on the virtual machine.</span>
+            </td>
+          </tr>
+          <tr>
+            <th class="ruledata">Discussion:</th>
+            <td class="ruledata">Some virtual machine advanced settings parameters do not apply on vSphere because VMware virtual machines work on both vSphere and hosted virtualization platforms such as Workstation and Fusion. Explicitly disabling these features reduces the potential for vulnerabilities because it reduces the number of ways in which a guest can affect the host.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Check:</th>
+            <td class="ruledata">From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Verify the isolation.ghi.host.shellAction.disable value is set to true.<br/>
+<br/>
+or<br/>
+<br/>
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:<br/>
+<br/>
+Get-VM "VM Name" | Get-AdvancedSetting -Name isolation.ghi.host.shellAction.disable<br/>
+<br/>
+If the virtual machine advanced setting isolation.ghi.host.shellAction.disable does not exist or is not set to true, this is a finding.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Fix:</th>
+            <td class="ruledata">From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Find the isolation.ghi.host.shellAction.disable value and set it to true. If the setting does not exist, add the Name and Value setting at the bottom of screen.<br/>
+<br/>
+Note: The VM must be powered off to configure the advanced settings through the vSphere Web Client so it is recommended to configure these settings with PowerCLI as it can be done while the VM is powered on. Settings do not take effect via either method until the virtual machine is cold started, not rebooted.<br/>
+<br/>
+or<br/>
+<br/>
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:<br/>
+<br/>
+If the setting does not exist, run:<br/>
+<br/>
+Get-VM "VM Name" | New-AdvancedSetting -Name isolation.ghi.host.shellAction.disable -Value true<br/>
+<br/>
+If the setting exists, run:<br/>
+<br/>
+Get-VM "VM Name" | Get-AdvancedSetting -Name isolation.ghi.host.shellAction.disable | Set-AdvancedSetting -Value true</td>
+          </tr>
+          <tr>
+            <th class="ruledata">References:</th>
+            <td class="ruledata">
+              <ul class="ruledata">
+                <li>CCI-000366</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+        <br/>
+        <a name="RULE_SV-104425r1_rule">
+          <table class="ruleblock">
+            <tr class="ruleblock">
+              <td class="ruleblock"><span class="ruleheader">STIG ID:</span><br/>VMCH-65-000018</td>
+              <td class="ruleblock"><span class="ruleheader">Group ID:</span><br/>V-94595</td>
+              <td class="ruleblock"><span class="ruleheader">Rule ID:</span><br/>SV-104425r1_rule</td>
+              <td class="ruleblock"><span class="ruleheader">Severity:</span><br/>CAT III</td>
+            </tr>
+          </table>
+        </a>
+        <table class="ruledata">
+          <tr>
+            <th class="ruledata">Requirement:</th>
+            <td class="ruledata">
+              <span class="rulerequirement">The unexposed feature keyword isolation.tools.ghi.trayicon.disable must be set on the virtual machine.</span>
+            </td>
+          </tr>
+          <tr>
+            <th class="ruledata">Discussion:</th>
+            <td class="ruledata">Some virtual machine advanced settings parameters do not apply on vSphere because VMware virtual machines work on both vSphere and hosted virtualization platforms such as Workstation and Fusion. Explicitly disabling these features reduces the potential for vulnerabilities because it reduces the number of ways in which a guest can affect the host.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Check:</th>
+            <td class="ruledata">From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Verify the isolation.tools.ghi.trayicon.disable value is set to true.<br/>
+<br/>
+or<br/>
+<br/>
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:<br/>
+<br/>
+Get-VM "VM Name" | Get-AdvancedSetting -Name isolation.tools.ghi.trayicon.disable<br/>
+<br/>
+If the virtual machine advanced setting isolation.tools.ghi.trayicon.disable does not exist or is not set to true, this is a finding.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Fix:</th>
+            <td class="ruledata">From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Find the isolation.tools.ghi.trayicon.disable value and set it to true. If the setting does not exist, add the Name and Value setting at the bottom of screen.<br/>
+<br/>
+Note: The VM must be powered off to configure the advanced settings through the vSphere Web Client so it is recommended to configure these settings with PowerCLI as it can be done while the VM is powered on. Settings do not take effect via either method until the virtual machine is cold started, not rebooted.<br/>
+<br/>
+or<br/>
+<br/>
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:<br/>
+<br/>
+If the setting does not exist, run:<br/>
+<br/>
+Get-VM "VM Name" | New-AdvancedSetting -Name isolation.tools.ghi.trayicon.disable -Value true<br/>
+<br/>
+If the setting exists, run:<br/>
+<br/>
+Get-VM "VM Name" | Get-AdvancedSetting -Name isolation.tools.ghi.trayicon.disable | Set-AdvancedSetting -Value true</td>
+          </tr>
+          <tr>
+            <th class="ruledata">References:</th>
+            <td class="ruledata">
+              <ul class="ruledata">
+                <li>CCI-000366</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+        <br/>
+        <a name="RULE_SV-104427r1_rule">
+          <table class="ruleblock">
+            <tr class="ruleblock">
+              <td class="ruleblock"><span class="ruleheader">STIG ID:</span><br/>VMCH-65-000019</td>
+              <td class="ruleblock"><span class="ruleheader">Group ID:</span><br/>V-94597</td>
+              <td class="ruleblock"><span class="ruleheader">Rule ID:</span><br/>SV-104427r1_rule</td>
+              <td class="ruleblock"><span class="ruleheader">Severity:</span><br/>CAT III</td>
+            </tr>
+          </table>
+        </a>
+        <table class="ruledata">
+          <tr>
+            <th class="ruledata">Requirement:</th>
+            <td class="ruledata">
+              <span class="rulerequirement">The unexposed feature keyword isolation.tools.unity.disable must be set on the virtual machine.</span>
+            </td>
+          </tr>
+          <tr>
+            <th class="ruledata">Discussion:</th>
+            <td class="ruledata">Some virtual machine advanced settings parameters do not apply on vSphere because VMware virtual machines work on both vSphere and hosted virtualization platforms such as Workstation and Fusion. Explicitly disabling these features reduces the potential for vulnerabilities because it reduces the number of ways in which a guest can affect the host.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Check:</th>
+            <td class="ruledata">From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Verify the isolation.tools.unity.disable value is set to true.<br/>
+<br/>
+or<br/>
+<br/>
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:<br/>
+<br/>
+Get-VM "VM Name" | Get-AdvancedSetting -Name isolation.tools.unity.disable<br/>
+<br/>
+If the virtual machine advanced setting isolation.tools.unity.disable does not exist or is not set to true, this is a finding</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Fix:</th>
+            <td class="ruledata">From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Find the isolation.tools.unity.disable value and set it to true. If the setting does not exist, add the Name and Value setting at the bottom of screen.<br/>
+<br/>
+Note: The VM must be powered off to configure the advanced settings through the vSphere Web Client so it is recommended to configure these settings with PowerCLI as it can be done while the VM is powered on. Settings do not take effect via either method until the virtual machine is cold started, not rebooted.<br/>
+<br/>
+or<br/>
+<br/>
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:<br/>
+<br/>
+If the setting does not exist, run:<br/>
+<br/>
+Get-VM "VM Name" | New-AdvancedSetting -Name isolation.tools.unity.disable -Value true<br/>
+<br/>
+If the setting exists, run:<br/>
+<br/>
+Get-VM "VM Name" | Get-AdvancedSetting -Name isolation.tools.unity.disable | Set-AdvancedSetting -Value true</td>
+          </tr>
+          <tr>
+            <th class="ruledata">References:</th>
+            <td class="ruledata">
+              <ul class="ruledata">
+                <li>CCI-000366</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+        <br/>
+        <a name="RULE_SV-104429r1_rule">
+          <table class="ruleblock">
+            <tr class="ruleblock">
+              <td class="ruleblock"><span class="ruleheader">STIG ID:</span><br/>VMCH-65-000020</td>
+              <td class="ruleblock"><span class="ruleheader">Group ID:</span><br/>V-94599</td>
+              <td class="ruleblock"><span class="ruleheader">Rule ID:</span><br/>SV-104429r1_rule</td>
+              <td class="ruleblock"><span class="ruleheader">Severity:</span><br/>CAT III</td>
+            </tr>
+          </table>
+        </a>
+        <table class="ruledata">
+          <tr>
+            <th class="ruledata">Requirement:</th>
+            <td class="ruledata">
+              <span class="rulerequirement">The unexposed feature keyword isolation.tools.unityInterlockOperation.disable must be set on the virtual machine.</span>
+            </td>
+          </tr>
+          <tr>
+            <th class="ruledata">Discussion:</th>
+            <td class="ruledata">Some virtual machine advanced settings parameters do not apply on vSphere because VMware virtual machines work on both vSphere and hosted virtualization platforms such as Workstation and Fusion. Explicitly disabling these features reduces the potential for vulnerabilities because it reduces the number of ways in which a guest can affect the host.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Check:</th>
+            <td class="ruledata">From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Verify the isolation.tools.unityInterlockOperation.disable value is set to true.<br/>
+<br/>
+or<br/>
+<br/>
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:<br/>
+<br/>
+Get-VM "VM Name" | Get-AdvancedSetting -Name isolation.tools.unityInterlockOperation.disable<br/>
+<br/>
+If the virtual machine advanced setting isolation.tools.unityInterlockOperation.disable does not exist or is not set to true, this is a finding.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Fix:</th>
+            <td class="ruledata">From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Find the isolation.tools.unityInterlockOperation.disable value and set it to true. If the setting does not exist, add the Name and Value setting at the bottom of screen.<br/>
+<br/>
+Note: The VM must be powered off to configure the advanced settings through the vSphere Web Client so it is recommended to configure these settings with PowerCLI as it can be done while the VM is powered on. Settings do not take effect via either method until the virtual machine is cold started, not rebooted.<br/>
+<br/>
+or<br/>
+<br/>
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:<br/>
+<br/>
+If the setting does not exist, run:<br/>
+<br/>
+Get-VM "VM Name" | New-AdvancedSetting -Name isolation.tools.unityInterlockOperation.disable -Value true<br/>
+<br/>
+If the setting exists, run:<br/>
+<br/>
+Get-VM "VM Name" | Get-AdvancedSetting -Name isolation.tools.unityInterlockOperation.disable | Set-AdvancedSetting -Value true</td>
+          </tr>
+          <tr>
+            <th class="ruledata">References:</th>
+            <td class="ruledata">
+              <ul class="ruledata">
+                <li>CCI-000366</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+        <br/>
+        <a name="RULE_SV-104431r1_rule">
+          <table class="ruleblock">
+            <tr class="ruleblock">
+              <td class="ruleblock"><span class="ruleheader">STIG ID:</span><br/>VMCH-65-000021</td>
+              <td class="ruleblock"><span class="ruleheader">Group ID:</span><br/>V-94601</td>
+              <td class="ruleblock"><span class="ruleheader">Rule ID:</span><br/>SV-104431r1_rule</td>
+              <td class="ruleblock"><span class="ruleheader">Severity:</span><br/>CAT III</td>
+            </tr>
+          </table>
+        </a>
+        <table class="ruledata">
+          <tr>
+            <th class="ruledata">Requirement:</th>
+            <td class="ruledata">
+              <span class="rulerequirement">The unexposed feature keyword isolation.tools.unity.push.update.disable must be set on the virtual machine.</span>
+            </td>
+          </tr>
+          <tr>
+            <th class="ruledata">Discussion:</th>
+            <td class="ruledata">Some virtual machine advanced settings parameters do not apply on vSphere because VMware virtual machines work on both vSphere and hosted virtualization platforms such as Workstation and Fusion. Explicitly disabling these features reduces the potential for vulnerabilities because it reduces the number of ways in which a guest can affect the host.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Check:</th>
+            <td class="ruledata">From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Verify the isolation.tools.unity.push.update.disable value is set to true.<br/>
+<br/>
+or<br/>
+<br/>
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:<br/>
+<br/>
+Get-VM "VM Name" | Get-AdvancedSetting -Name isolation.tools.unity.push.update.disable<br/>
+<br/>
+If the virtual machine advanced setting isolation.tools.unity.push.update.disable does not exist or is not set to true, this is a finding.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Fix:</th>
+            <td class="ruledata">From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Find the isolation.tools.unity.push.update.disable value and set it to true. If the setting does not exist, add the Name and Value setting at the bottom of screen.<br/>
+<br/>
+Note: The VM must be powered off to configure the advanced settings through the vSphere Web Client so it is recommended to configure these settings with PowerCLI as it can be done while the VM is powered on. Settings do not take effect via either method until the virtual machine is cold started, not rebooted.<br/>
+<br/>
+or<br/>
+<br/>
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:<br/>
+<br/>
+If the setting does not exist, run:<br/>
+<br/>
+Get-VM "VM Name" | New-AdvancedSetting -Name isolation.tools.unity.push.update.disable -Value true<br/>
+<br/>
+If the setting exists, run:<br/>
+<br/>
+Get-VM "VM Name" | Get-AdvancedSetting -Name isolation.tools.unity.push.update.disable | Set-AdvancedSetting -Value true</td>
+          </tr>
+          <tr>
+            <th class="ruledata">References:</th>
+            <td class="ruledata">
+              <ul class="ruledata">
+                <li>CCI-000366</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+        <br/>
+        <a name="RULE_SV-104433r1_rule">
+          <table class="ruleblock">
+            <tr class="ruleblock">
+              <td class="ruleblock"><span class="ruleheader">STIG ID:</span><br/>VMCH-65-000022</td>
+              <td class="ruleblock"><span class="ruleheader">Group ID:</span><br/>V-94603</td>
+              <td class="ruleblock"><span class="ruleheader">Rule ID:</span><br/>SV-104433r1_rule</td>
+              <td class="ruleblock"><span class="ruleheader">Severity:</span><br/>CAT III</td>
+            </tr>
+          </table>
+        </a>
+        <table class="ruledata">
+          <tr>
+            <th class="ruledata">Requirement:</th>
+            <td class="ruledata">
+              <span class="rulerequirement">The unexposed feature keyword isolation.tools.unity.taskbar.disable must be set on the virtual machine.</span>
+            </td>
+          </tr>
+          <tr>
+            <th class="ruledata">Discussion:</th>
+            <td class="ruledata">Some virtual machine advanced settings parameters do not apply on vSphere because VMware virtual machines work on both vSphere and hosted virtualization platforms such as Workstation and Fusion. Explicitly disabling these features reduces the potential for vulnerabilities because it reduces the number of ways in which a guest can affect the host.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Check:</th>
+            <td class="ruledata">From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Verify the isolation.tools.unity.taskbar.disable value is set to true.<br/>
+<br/>
+or<br/>
+<br/>
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:<br/>
+<br/>
+Get-VM "VM Name" | Get-AdvancedSetting -Name isolation.tools.unity.taskbar.disable<br/>
+<br/>
+If the virtual machine advanced setting isolation.tools.unity.taskbar.disable does not exist or is not set to true, this is a finding.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Fix:</th>
+            <td class="ruledata">From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Find the isolation.tools.unity.taskbar.disable value and set it to true. If the setting does not exist, add the Name and Value setting at the bottom of screen.<br/>
+<br/>
+Note: The VM must be powered off to configure the advanced settings through the vSphere Web Client so it is recommended to configure these settings with PowerCLI as it can be done while the VM is powered on. Settings do not take effect via either method until the virtual machine is cold started, not rebooted.<br/>
+<br/>
+or<br/>
+<br/>
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:<br/>
+<br/>
+If the setting does not exist, run:<br/>
+<br/>
+Get-VM "VM Name" | New-AdvancedSetting -Name isolation.tools.unity.taskbar.disable -Value true<br/>
+<br/>
+If the setting exists, run:<br/>
+<br/>
+Get-VM "VM Name" | Get-AdvancedSetting -Name isolation.tools.unity.taskbar.disable | Set-AdvancedSetting -Value true</td>
+          </tr>
+          <tr>
+            <th class="ruledata">References:</th>
+            <td class="ruledata">
+              <ul class="ruledata">
+                <li>CCI-000366</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+        <br/>
+        <a name="RULE_SV-104435r1_rule">
+          <table class="ruleblock">
+            <tr class="ruleblock">
+              <td class="ruleblock"><span class="ruleheader">STIG ID:</span><br/>VMCH-65-000023</td>
+              <td class="ruleblock"><span class="ruleheader">Group ID:</span><br/>V-94605</td>
+              <td class="ruleblock"><span class="ruleheader">Rule ID:</span><br/>SV-104435r1_rule</td>
+              <td class="ruleblock"><span class="ruleheader">Severity:</span><br/>CAT III</td>
+            </tr>
+          </table>
+        </a>
+        <table class="ruledata">
+          <tr>
+            <th class="ruledata">Requirement:</th>
+            <td class="ruledata">
+              <span class="rulerequirement">The unexposed feature keyword isolation.tools.unityActive.disable must be set on the virtual machine.</span>
+            </td>
+          </tr>
+          <tr>
+            <th class="ruledata">Discussion:</th>
+            <td class="ruledata">Some virtual machine advanced settings parameters do not apply on vSphere because VMware virtual machines work on both vSphere and hosted virtualization platforms such as Workstation and Fusion. Explicitly disabling these features reduces the potential for vulnerabilities because it reduces the number of ways in which a guest can affect the host.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Check:</th>
+            <td class="ruledata">From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Verify the isolation.tools.unityActive.disable value is set to true.<br/>
+<br/>
+or<br/>
+<br/>
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:<br/>
+<br/>
+Get-VM "VM Name" | Get-AdvancedSetting -Name isolation.tools.unityActive.disable<br/>
+<br/>
+If the virtual machine advanced setting isolation.tools.unityActive.disable does not exist or is not set to true, this is a finding.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Fix:</th>
+            <td class="ruledata">From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Find the isolation.tools.unityActive.disable value and set it to true. If the setting does not exist, add the Name and Value setting at the bottom of screen.<br/>
+<br/>
+Note: The VM must be powered off to configure the advanced settings through the vSphere Web Client so it is recommended to configure these settings with PowerCLI as it can be done while the VM is powered on. Settings do not take effect via either method until the virtual machine is cold started, not rebooted.<br/>
+<br/>
+or<br/>
+<br/>
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:<br/>
+<br/>
+If the setting does not exist, run:<br/>
+<br/>
+Get-VM "VM Name" | New-AdvancedSetting -Name isolation.tools.unityActive.disable -Value true<br/>
+<br/>
+If the setting exists, run:<br/>
+<br/>
+Get-VM "VM Name" | Get-AdvancedSetting -Name isolation.tools.unityActive.disable | Set-AdvancedSetting -Value true</td>
+          </tr>
+          <tr>
+            <th class="ruledata">References:</th>
+            <td class="ruledata">
+              <ul class="ruledata">
+                <li>CCI-000366</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+        <br/>
+        <a name="RULE_SV-104437r1_rule">
+          <table class="ruleblock">
+            <tr class="ruleblock">
+              <td class="ruleblock"><span class="ruleheader">STIG ID:</span><br/>VMCH-65-000024</td>
+              <td class="ruleblock"><span class="ruleheader">Group ID:</span><br/>V-94607</td>
+              <td class="ruleblock"><span class="ruleheader">Rule ID:</span><br/>SV-104437r1_rule</td>
+              <td class="ruleblock"><span class="ruleheader">Severity:</span><br/>CAT III</td>
+            </tr>
+          </table>
+        </a>
+        <table class="ruledata">
+          <tr>
+            <th class="ruledata">Requirement:</th>
+            <td class="ruledata">
+              <span class="rulerequirement">The unexposed feature keyword isolation.tools.unity.windowContents.disable must be set on the virtual machine.</span>
+            </td>
+          </tr>
+          <tr>
+            <th class="ruledata">Discussion:</th>
+            <td class="ruledata">Some virtual machine advanced settings parameters do not apply on vSphere because VMware virtual machines work on both vSphere and hosted virtualization platforms such as Workstation and Fusion. Explicitly disabling these features reduces the potential for vulnerabilities because it reduces the number of ways in which a guest can affect the host.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Check:</th>
+            <td class="ruledata">From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Verify the isolation.tools.unity.windowContents.disable value is set to true.<br/>
+<br/>
+or<br/>
+<br/>
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:<br/>
+<br/>
+Get-VM "VM Name" | Get-AdvancedSetting -Name isolation.tools.unity.windowContents.disable<br/>
+<br/>
+If the virtual machine advanced setting isolation.tools.unity.windowContents.disable does not exist or is not set to true, this is a finding.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Fix:</th>
+            <td class="ruledata">From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Find the isolation.tools.unity.windowContents.disable value and set it to true. If the setting does not exist, add the Name and Value setting at the bottom of screen.<br/>
+<br/>
+Note: The VM must be powered off to configure the advanced settings through the vSphere Web Client so it is recommended to configure these settings with PowerCLI as it can be done while the VM is powered on. Settings do not take effect via either method until the virtual machine is cold started, not rebooted.<br/>
+<br/>
+or<br/>
+<br/>
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:<br/>
+<br/>
+If the setting does not exist, run:<br/>
+<br/>
+Get-VM "VM Name" | New-AdvancedSetting -Name isolation.tools.unity.windowContents.disable -Value true<br/>
+<br/>
+If the setting exists, run:<br/>
+<br/>
+Get-VM "VM Name" | Get-AdvancedSetting -Name isolation.tools.unity.windowContents.disable | Set-AdvancedSetting -Value true</td>
+          </tr>
+          <tr>
+            <th class="ruledata">References:</th>
+            <td class="ruledata">
+              <ul class="ruledata">
+                <li>CCI-000366</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+        <br/>
+        <a name="RULE_SV-104439r1_rule">
+          <table class="ruleblock">
+            <tr class="ruleblock">
+              <td class="ruleblock"><span class="ruleheader">STIG ID:</span><br/>VMCH-65-000025</td>
+              <td class="ruleblock"><span class="ruleheader">Group ID:</span><br/>V-94609</td>
+              <td class="ruleblock"><span class="ruleheader">Rule ID:</span><br/>SV-104439r1_rule</td>
+              <td class="ruleblock"><span class="ruleheader">Severity:</span><br/>CAT III</td>
+            </tr>
+          </table>
+        </a>
+        <table class="ruledata">
+          <tr>
+            <th class="ruledata">Requirement:</th>
+            <td class="ruledata">
+              <span class="rulerequirement">The unexposed feature keyword isolation.tools.vmxDnDVersionGet.disable must be set on the virtual machine.</span>
+            </td>
+          </tr>
+          <tr>
+            <th class="ruledata">Discussion:</th>
+            <td class="ruledata">Some virtual machine advanced settings parameters do not apply on vSphere because VMware virtual machines work on both vSphere and hosted virtualization platforms such as Workstation and Fusion. Explicitly disabling these features reduces the potential for vulnerabilities because it reduces the number of ways in which a guest can affect the host.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Check:</th>
+            <td class="ruledata">From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Verify the isolation.tools.vmxDnDVersionGet.disable value is set to true.<br/>
+<br/>
+or<br/>
+<br/>
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:<br/>
+<br/>
+Get-VM "VM Name" | Get-AdvancedSetting -Name isolation.tools.vmxDnDVersionGet.disable<br/>
+<br/>
+If the virtual machine advanced setting isolation.tools.vmxDnDVersionGet.disable does not exist or is not set to true, this is a finding.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Fix:</th>
+            <td class="ruledata">From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Find the isolation.tools.vmxDnDVersionGet.disable value and set it to true. If the setting does not exist, add the Name and Value setting at the bottom of screen.<br/>
+<br/>
+Note: The VM must be powered off to configure the advanced settings through the vSphere Web Client so it is recommended to configure these settings with PowerCLI as it can be done while the VM is powered on. Settings do not take effect via either method until the virtual machine is cold started, not rebooted.<br/>
+<br/>
+or<br/>
+<br/>
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:<br/>
+<br/>
+If the setting does not exist, run:<br/>
+<br/>
+Get-VM "VM Name" | New-AdvancedSetting -Name isolation.tools.vmxDnDVersionGet.disable -Value true<br/>
+<br/>
+If the setting exists, run:<br/>
+<br/>
+Get-VM "VM Name" | Get-AdvancedSetting -Name isolation.tools.vmxDnDVersionGet.disable | Set-AdvancedSetting -Value true</td>
+          </tr>
+          <tr>
+            <th class="ruledata">References:</th>
+            <td class="ruledata">
+              <ul class="ruledata">
+                <li>CCI-000366</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+        <br/>
+        <a name="RULE_SV-104441r1_rule">
+          <table class="ruleblock">
+            <tr class="ruleblock">
+              <td class="ruleblock"><span class="ruleheader">STIG ID:</span><br/>VMCH-65-000026</td>
+              <td class="ruleblock"><span class="ruleheader">Group ID:</span><br/>V-94611</td>
+              <td class="ruleblock"><span class="ruleheader">Rule ID:</span><br/>SV-104441r1_rule</td>
+              <td class="ruleblock"><span class="ruleheader">Severity:</span><br/>CAT III</td>
+            </tr>
+          </table>
+        </a>
+        <table class="ruledata">
+          <tr>
+            <th class="ruledata">Requirement:</th>
+            <td class="ruledata">
+              <span class="rulerequirement">The unexposed feature keyword isolation.tools.guestDnDVersionSet.disable must be set on the virtual machine.</span>
+            </td>
+          </tr>
+          <tr>
+            <th class="ruledata">Discussion:</th>
+            <td class="ruledata">Some virtual machine advanced settings parameters do not apply on vSphere because VMware virtual machines work on both vSphere and hosted virtualization platforms such as Workstation and Fusion. Explicitly disabling these features reduces the potential for vulnerabilities because it reduces the number of ways in which a guest can affect the host.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Check:</th>
+            <td class="ruledata">From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Verify the isolation.tools.guestDnDVersionSet.disable value is set to true.<br/>
+<br/>
+or<br/>
+<br/>
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:<br/>
+<br/>
+Get-VM "VM Name" | Get-AdvancedSetting -Name isolation.tools.guestDnDVersionSet.disable<br/>
+<br/>
+If the virtual machine advanced setting isolation.tools.guestDnDVersionSet.disable does not exist or is not set to true, this is a finding.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Fix:</th>
+            <td class="ruledata">From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Find the isolation.tools.guestDnDVersionSet.disable value and set it to true. If the setting does not exist, add the Name and Value setting at the bottom of screen.<br/>
+<br/>
+Note: The VM must be powered off to configure the advanced settings through the vSphere Web Client so it is recommended to configure these settings with PowerCLI as it can be done while the VM is powered on. Settings do not take effect via either method until the virtual machine is cold started, not rebooted.<br/>
+<br/>
+or<br/>
+<br/>
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:<br/>
+<br/>
+If the setting does not exist, run:<br/>
+<br/>
+Get-VM "VM Name" | New-AdvancedSetting -Name isolation.tools.guestDnDVersionSet.disable -Value true<br/>
+<br/>
+If the setting exists, run:<br/>
+<br/>
+Get-VM "VM Name" | Get-AdvancedSetting -Name isolation.tools.guestDnDVersionSet.disable | Set-AdvancedSetting -Value true</td>
+          </tr>
+          <tr>
+            <th class="ruledata">References:</th>
+            <td class="ruledata">
+              <ul class="ruledata">
+                <li>CCI-000366</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+        <br/>
+        <a name="RULE_SV-104443r1_rule">
+          <table class="ruleblock">
+            <tr class="ruleblock">
+              <td class="ruleblock"><span class="ruleheader">STIG ID:</span><br/>VMCH-65-000028</td>
+              <td class="ruleblock"><span class="ruleheader">Group ID:</span><br/>V-94613</td>
+              <td class="ruleblock"><span class="ruleheader">Rule ID:</span><br/>SV-104443r1_rule</td>
+              <td class="ruleblock"><span class="ruleheader">Severity:</span><br/>CAT II</td>
+            </tr>
+          </table>
+        </a>
+        <table class="ruledata">
+          <tr>
+            <th class="ruledata">Requirement:</th>
+            <td class="ruledata">
+              <span class="rulerequirement">Unauthorized floppy devices must be disconnected on the virtual machine.</span>
+            </td>
+          </tr>
+          <tr>
+            <th class="ruledata">Discussion:</th>
+            <td class="ruledata">Ensure that no device is connected to a virtual machine if it is not required. For example, floppy, serial and parallel ports are rarely used for virtual machines in a datacenter environment, and CD/DVD drives are usually connected only temporarily during software installation.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Check:</th>
+            <td class="ruledata">From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings. Review the VMs hardware and verify no floppy device is connected.<br/>
+<br/>
+or<br/>
+<br/>
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:<br/>
+<br/>
+Get-VM | Get-FloppyDrive | Select Parent, Name, ConnectionState<br/>
+<br/>
+If a virtual machine has a floppy drive connected, this is a finding.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Fix:</th>
+            <td class="ruledata">If the floppy drive is required to be present, then from the vSphere Client right-click the Virtual Machine and go to Edit Settings, make sure the drive is not connected and will not "Connect at power on".<br/>
+<br/>
+If the floppy drive is not required, then from the vSphere Client power off the virtual machine, right-click the Virtual Machine and go to Edit Settings, select the floppy drive and click the circle-x to remove then OK.<br/>
+<br/>
+or<br/>
+<br/>
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:<br/>
+<br/>
+Get-VM "VM Name" | Get-FloppyDrive | Remove-FloppyDrive</td>
+          </tr>
+          <tr>
+            <th class="ruledata">References:</th>
+            <td class="ruledata">
+              <ul class="ruledata">
+                <li>CCI-000366</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+        <br/>
+        <a name="RULE_SV-104445r1_rule">
+          <table class="ruleblock">
+            <tr class="ruleblock">
+              <td class="ruleblock"><span class="ruleheader">STIG ID:</span><br/>VMCH-65-000029</td>
+              <td class="ruleblock"><span class="ruleheader">Group ID:</span><br/>V-94615</td>
+              <td class="ruleblock"><span class="ruleheader">Rule ID:</span><br/>SV-104445r1_rule</td>
+              <td class="ruleblock"><span class="ruleheader">Severity:</span><br/>CAT III</td>
+            </tr>
+          </table>
+        </a>
+        <table class="ruledata">
+          <tr>
+            <th class="ruledata">Requirement:</th>
+            <td class="ruledata">
+              <span class="rulerequirement">Unauthorized CD/DVD devices must be disconnected on the virtual machine.</span>
+            </td>
+          </tr>
+          <tr>
+            <th class="ruledata">Discussion:</th>
+            <td class="ruledata">Ensure that no device is connected to a virtual machine if it is not required. For example, floppy, serial and parallel ports are rarely used for virtual machines in a datacenter environment, and CD/DVD drives are usually connected only temporarily during software installation.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Check:</th>
+            <td class="ruledata">From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings. Review the VMs hardware and verify no CD/DVD drives are connected.<br/>
+<br/>
+or<br/>
+<br/>
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:<br/>
+<br/>
+Get-VM | Get-CDDrive | Where {$_.extensiondata.connectable.connected -eq $true} | Select Parent,Name<br/>
+<br/>
+If a virtual machine has a CD/DVD drive connected other than temporarily, this is a finding.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Fix:</th>
+            <td class="ruledata">From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings. Select the CD/DVD drive and uncheck "Connected" and "Connect at power on" and remove any attached ISOs.<br/>
+<br/>
+or<br/>
+<br/>
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:<br/>
+<br/>
+Get-VM "VM Name" | Get-CDDrive | Set-CDDrive -NoMedia</td>
+          </tr>
+          <tr>
+            <th class="ruledata">References:</th>
+            <td class="ruledata">
+              <ul class="ruledata">
+                <li>CCI-000366</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+        <br/>
+        <a name="RULE_SV-104447r1_rule">
+          <table class="ruleblock">
+            <tr class="ruleblock">
+              <td class="ruleblock"><span class="ruleheader">STIG ID:</span><br/>VMCH-65-000030</td>
+              <td class="ruleblock"><span class="ruleheader">Group ID:</span><br/>V-94617</td>
+              <td class="ruleblock"><span class="ruleheader">Rule ID:</span><br/>SV-104447r1_rule</td>
+              <td class="ruleblock"><span class="ruleheader">Severity:</span><br/>CAT II</td>
+            </tr>
+          </table>
+        </a>
+        <table class="ruledata">
+          <tr>
+            <th class="ruledata">Requirement:</th>
+            <td class="ruledata">
+              <span class="rulerequirement">Unauthorized parallel devices must be disconnected on the virtual machine.</span>
+            </td>
+          </tr>
+          <tr>
+            <th class="ruledata">Discussion:</th>
+            <td class="ruledata">Ensure that no device is connected to a virtual machine if it is not required. For example, floppy, serial and parallel ports are rarely used for virtual machines in a datacenter environment, and CD/DVD drives are usually connected only temporarily during software installation.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Check:</th>
+            <td class="ruledata">From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings. Review the VMs hardware and verify no parallel devices exist.<br/>
+<br/>
+or<br/>
+<br/>
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:<br/>
+<br/>
+Get-VM | Where {$_.ExtensionData.Config.Hardware.Device.DeviceInfo.Label -match "parallel"}<br/>
+<br/>
+If a virtual machine has a parallel device present, this is a finding.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Fix:</th>
+            <td class="ruledata">The VM must be powered off in order to remove a parallel device.<br/>
+<br/>
+From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings. Select the parallel device and click the circle-x to remove then OK.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">References:</th>
+            <td class="ruledata">
+              <ul class="ruledata">
+                <li>CCI-000366</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+        <br/>
+        <a name="RULE_SV-104449r1_rule">
+          <table class="ruleblock">
+            <tr class="ruleblock">
+              <td class="ruleblock"><span class="ruleheader">STIG ID:</span><br/>VMCH-65-000031</td>
+              <td class="ruleblock"><span class="ruleheader">Group ID:</span><br/>V-94619</td>
+              <td class="ruleblock"><span class="ruleheader">Rule ID:</span><br/>SV-104449r1_rule</td>
+              <td class="ruleblock"><span class="ruleheader">Severity:</span><br/>CAT II</td>
+            </tr>
+          </table>
+        </a>
+        <table class="ruledata">
+          <tr>
+            <th class="ruledata">Requirement:</th>
+            <td class="ruledata">
+              <span class="rulerequirement">Unauthorized serial devices must be disconnected on the virtual machine.</span>
+            </td>
+          </tr>
+          <tr>
+            <th class="ruledata">Discussion:</th>
+            <td class="ruledata">Ensure that no device is connected to a virtual machine if it is not required. For example, floppy, serial and parallel ports are rarely used for virtual machines in a datacenter environment, and CD/DVD drives are usually connected only temporarily during software installation.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Check:</th>
+            <td class="ruledata">From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings. Review the VMs hardware and verify no serial devices exist.<br/>
+<br/>
+or<br/>
+<br/>
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:<br/>
+<br/>
+Get-VM | Where {$_.ExtensionData.Config.Hardware.Device.DeviceInfo.Label -match "serial"}<br/>
+<br/>
+If a virtual machine has a serial device present, this is a finding.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Fix:</th>
+            <td class="ruledata">The VM must be powered off in order to remove a serial device.<br/>
+<br/>
+From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings. Select the serial device and click the circle-x to remove then OK.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">References:</th>
+            <td class="ruledata">
+              <ul class="ruledata">
+                <li>CCI-000366</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+        <br/>
+        <a name="RULE_SV-104451r1_rule">
+          <table class="ruleblock">
+            <tr class="ruleblock">
+              <td class="ruleblock"><span class="ruleheader">STIG ID:</span><br/>VMCH-65-000032</td>
+              <td class="ruleblock"><span class="ruleheader">Group ID:</span><br/>V-94621</td>
+              <td class="ruleblock"><span class="ruleheader">Rule ID:</span><br/>SV-104451r1_rule</td>
+              <td class="ruleblock"><span class="ruleheader">Severity:</span><br/>CAT II</td>
+            </tr>
+          </table>
+        </a>
+        <table class="ruledata">
+          <tr>
+            <th class="ruledata">Requirement:</th>
+            <td class="ruledata">
+              <span class="rulerequirement">Unauthorized USB devices must be disconnected on the virtual machine.</span>
+            </td>
+          </tr>
+          <tr>
+            <th class="ruledata">Discussion:</th>
+            <td class="ruledata">Ensure that no device is connected to a virtual machine if it is not required. For example, floppy, serial and parallel ports are rarely used for virtual machines in a datacenter environment, and CD/DVD drives are usually connected only temporarily during software installation.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Check:</th>
+            <td class="ruledata">From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings. Review the VMs hardware and verify no USB devices exist.<br/>
+<br/>
+or<br/>
+<br/>
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following commands:<br/>
+<br/>
+Get-VM | Where {$_.ExtensionData.Config.Hardware.Device.DeviceInfo.Label -match "usb"}<br/>
+Get-VM | Get-UsbDevice<br/>
+<br/>
+If a virtual machine has any USB devices or USB controllers present, this is a finding.<br/>
+<br/>
+If USB smart card readers are used to pass smart cards through the VM console to a VM then the use of a USB controller and USB devices for that purpose is not a finding.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Fix:</th>
+            <td class="ruledata">From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings. Select the USB controller and click the circle-x to remove then OK.<br/>
+<br/>
+or<br/>
+<br/>
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:<br/>
+<br/>
+Get-VM "VM Name" | Get-USBDevice | Remove-USBDevice<br/>
+<br/>
+Note:  This will not remove the USB controller just any connected devices.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">References:</th>
+            <td class="ruledata">
+              <ul class="ruledata">
+                <li>CCI-000366</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+        <br/>
+        <a name="RULE_SV-104453r1_rule">
+          <table class="ruleblock">
+            <tr class="ruleblock">
+              <td class="ruleblock"><span class="ruleheader">STIG ID:</span><br/>VMCH-65-000033</td>
+              <td class="ruleblock"><span class="ruleheader">Group ID:</span><br/>V-94623</td>
+              <td class="ruleblock"><span class="ruleheader">Rule ID:</span><br/>SV-104453r1_rule</td>
+              <td class="ruleblock"><span class="ruleheader">Severity:</span><br/>CAT II</td>
+            </tr>
+          </table>
+        </a>
+        <table class="ruledata">
+          <tr>
+            <th class="ruledata">Requirement:</th>
+            <td class="ruledata">
+              <span class="rulerequirement">Console connection sharing must be limited on the virtual machine.</span>
+            </td>
+          </tr>
+          <tr>
+            <th class="ruledata">Discussion:</th>
+            <td class="ruledata">By default, remote console sessions can be connected to by more than one user at a time.  When multiple sessions are activated, each terminal window gets a notification about the new session. If an administrator in the VM logs in using a VMware remote console during their session, a non-administrator in the VM might connect to the console and observe the administrator's actions.  Also, this could result in an administrator losing console access to a virtual machine. For example, if a jump box is being used for an open console session and the admin loses connection to that box, then the console session remains open. Allowing two console sessions permits debugging via a shared session.  For highest security, only one remote console session at a time should be allowed.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Check:</th>
+            <td class="ruledata">From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Verify the RemoteDisplay.maxConnections value is set to 1.<br/>
+<br/>
+or<br/>
+<br/>
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:<br/>
+<br/>
+Get-VM "VM Name" | Get-AdvancedSetting -Name RemoteDisplay.maxConnections<br/>
+<br/>
+If the virtual machine advanced setting RemoteDisplay.maxConnections does not exist or is not set to 1, this is a finding.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Fix:</th>
+            <td class="ruledata">From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Find the RemoteDisplay.maxConnections value and set it to 1. If the setting does not exist, add the Name and Value setting at the bottom of screen.<br/>
+<br/>
+Note: The VM must be powered off to configure the advanced settings through the vSphere Web Client so it is recommended to configure these settings with PowerCLI as it can be done while the VM is powered on. Settings do not take effect via either method until the virtual machine is cold started, not rebooted.<br/>
+<br/>
+or<br/>
+<br/>
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:<br/>
+<br/>
+If the setting does not exist, run:<br/>
+<br/>
+Get-VM "VM Name" | New-AdvancedSetting -Name RemoteDisplay.maxConnections -Value 1<br/>
+<br/>
+If the setting exists, run:<br/>
+<br/>
+Get-VM "VM Name" | Get-AdvancedSetting -Name RemoteDisplay.maxConnections | Set-AdvancedSetting -Value 1</td>
+          </tr>
+          <tr>
+            <th class="ruledata">References:</th>
+            <td class="ruledata">
+              <ul class="ruledata">
+                <li>CCI-000366</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+        <br/>
+        <a name="RULE_SV-104455r1_rule">
+          <table class="ruleblock">
+            <tr class="ruleblock">
+              <td class="ruleblock"><span class="ruleheader">STIG ID:</span><br/>VMCH-65-000034</td>
+              <td class="ruleblock"><span class="ruleheader">Group ID:</span><br/>V-94625</td>
+              <td class="ruleblock"><span class="ruleheader">Rule ID:</span><br/>SV-104455r1_rule</td>
+              <td class="ruleblock"><span class="ruleheader">Severity:</span><br/>CAT II</td>
+            </tr>
+          </table>
+        </a>
+        <table class="ruledata">
+          <tr>
+            <th class="ruledata">Requirement:</th>
+            <td class="ruledata">
+              <span class="rulerequirement">Console access through the VNC protocol must be disabled on the virtual machine.</span>
+            </td>
+          </tr>
+          <tr>
+            <th class="ruledata">Discussion:</th>
+            <td class="ruledata">The VM console enables you to connect to the console of a virtual machine, in effect seeing what a monitor on a physical server would show. This console is also available via the VNC protocol and should be disabled.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Check:</th>
+            <td class="ruledata">From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Verify the RemoteDisplay.vnc.enabled value is set to false.<br/>
+<br/>
+or<br/>
+<br/>
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:<br/>
+<br/>
+Get-VM "VM Name" | Get-AdvancedSetting -Name RemoteDisplay.vnc.enabled<br/>
+<br/>
+If the virtual machine advanced setting RemoteDisplay.vnc.enabled does not exist or is not set to false, this is a finding.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Fix:</th>
+            <td class="ruledata">From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Find the RemoteDisplay.vnc.enabled value and set it to false. If the setting does not exist, add the Name and Value setting at the bottom of screen.<br/>
+<br/>
+Note: The VM must be powered off to configure the advanced settings through the vSphere Web Client so it is recommended to configure these settings with PowerCLI as it can be done while the VM is powered on. Settings do not take effect via either method until the virtual machine is cold started, not rebooted.<br/>
+<br/>
+or<br/>
+<br/>
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:<br/>
+<br/>
+If the setting does not exist, run:<br/>
+<br/>
+Get-VM "VM Name" | New-AdvancedSetting -Name RemoteDisplay.vnc.enabled -Value false<br/>
+<br/>
+If the setting exists, run:<br/>
+<br/>
+Get-VM "VM Name" | Get-AdvancedSetting -Name RemoteDisplay.vnc.enabled | Set-AdvancedSetting -Value false</td>
+          </tr>
+          <tr>
+            <th class="ruledata">References:</th>
+            <td class="ruledata">
+              <ul class="ruledata">
+                <li>CCI-000366</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+        <br/>
+        <a name="RULE_SV-104457r1_rule">
+          <table class="ruleblock">
+            <tr class="ruleblock">
+              <td class="ruleblock"><span class="ruleheader">STIG ID:</span><br/>VMCH-65-000036</td>
+              <td class="ruleblock"><span class="ruleheader">Group ID:</span><br/>V-94627</td>
+              <td class="ruleblock"><span class="ruleheader">Rule ID:</span><br/>SV-104457r1_rule</td>
+              <td class="ruleblock"><span class="ruleheader">Severity:</span><br/>CAT III</td>
+            </tr>
+          </table>
+        </a>
+        <table class="ruledata">
+          <tr>
+            <th class="ruledata">Requirement:</th>
+            <td class="ruledata">
+              <span class="rulerequirement">Informational messages from the virtual machine to the VMX file must be limited on the virtual machine.</span>
+            </td>
+          </tr>
+          <tr>
+            <th class="ruledata">Discussion:</th>
+            <td class="ruledata">The configuration file containing these name-value pairs is limited to a size of 1MB. If not limited, VMware tools in the guest OS are capable of sending a large and continuous data stream to the host. This 1MB capacity should be sufficient for most cases, but this value can change if necessary. The value can be increased if large amounts of custom information are being stored in the configuration file. The default limit is 1MB.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Check:</th>
+            <td class="ruledata">From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Verify the tools.setinfo.sizeLimit value is set to 1048576.<br/>
+<br/>
+or<br/>
+<br/>
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:<br/>
+<br/>
+Get-VM "VM Name" | Get-AdvancedSetting -Name tools.setinfo.sizeLimit<br/>
+<br/>
+If the virtual machine advanced setting tools.setinfo.sizeLimit does not exist or is not set to 1048576, this is a finding.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Fix:</th>
+            <td class="ruledata">From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Find the tools.setinfo.sizeLimit value and set it to 1048576. If the setting does not exist, add the Name and Value setting at the bottom of screen.<br/>
+<br/>
+Note: The VM must be powered off to configure the advanced settings through the vSphere Web Client so it is recommended to configure these settings with PowerCLI as it can be done while the VM is powered on. Settings do not take effect via either method until the virtual machine is cold started, not rebooted.<br/>
+<br/>
+or<br/>
+<br/>
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:<br/>
+<br/>
+If the setting does not exist, run:<br/>
+<br/>
+Get-VM "VM Name" | New-AdvancedSetting -Name tools.setinfo.sizeLimit -Value 1048576<br/>
+<br/>
+If the setting exists, run:<br/>
+<br/>
+Get-VM "VM Name" | Get-AdvancedSetting -Name tools.setinfo.sizeLimit | Set-AdvancedSetting -Value 1048576</td>
+          </tr>
+          <tr>
+            <th class="ruledata">References:</th>
+            <td class="ruledata">
+              <ul class="ruledata">
+                <li>CCI-000366</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+        <br/>
+        <a name="RULE_SV-104459r1_rule">
+          <table class="ruleblock">
+            <tr class="ruleblock">
+              <td class="ruleblock"><span class="ruleheader">STIG ID:</span><br/>VMCH-65-000037</td>
+              <td class="ruleblock"><span class="ruleheader">Group ID:</span><br/>V-94629</td>
+              <td class="ruleblock"><span class="ruleheader">Rule ID:</span><br/>SV-104459r1_rule</td>
+              <td class="ruleblock"><span class="ruleheader">Severity:</span><br/>CAT II</td>
+            </tr>
+          </table>
+        </a>
+        <table class="ruledata">
+          <tr>
+            <th class="ruledata">Requirement:</th>
+            <td class="ruledata">
+              <span class="rulerequirement">Unauthorized removal, connection and modification of devices must be prevented on the virtual machine.</span>
+            </td>
+          </tr>
+          <tr>
+            <th class="ruledata">Discussion:</th>
+            <td class="ruledata">In a virtual machine, users and processes without root or administrator privileges can connect or disconnect devices, such as network adaptors and CD-ROM drives, and can modify device settings. Use the virtual machine settings editor or configuration editor to remove unneeded or unused hardware devices. If you want to use the device again, you can prevent a user or running process in the virtual machine from connecting, disconnecting, or modifying a device from within the guest operating system. By default, a rogue user with nonadministrator privileges in a virtual machine can: <br/>
+1. Connect a disconnected CD-ROM drive and access sensitive information on the media left in the drive<br/>
+2. Disconnect a network adaptor to isolate the virtual machine from its network, which is a denial of service<br/>
+3. Modify settings on a device</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Check:</th>
+            <td class="ruledata">From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Verify the isolation.device.connectable.disable value is set to true.<br/>
+<br/>
+or<br/>
+<br/>
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:<br/>
+<br/>
+Get-VM "VM Name" | Get-AdvancedSetting -Name isolation.device.connectable.disable<br/>
+<br/>
+If the virtual machine advanced setting isolation.device.connectable.disable does not exist or is not set to true, this is a finding.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Fix:</th>
+            <td class="ruledata">From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Find the isolation.device.connectable.disable value and set it to true. If the setting does not exist, add the Name and Value setting at the bottom of screen.<br/>
+<br/>
+Note: The VM must be powered off to configure the advanced settings through the vSphere Web Client so it is recommended to configure these settings with PowerCLI as it can be done while the VM is powered on. Settings do not take effect via either method until the virtual machine is cold started, not rebooted.<br/>
+<br/>
+or<br/>
+<br/>
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:<br/>
+<br/>
+If the setting does not exist, run:<br/>
+<br/>
+Get-VM "VM Name" | New-AdvancedSetting -Name isolation.device.connectable.disable -Value true<br/>
+<br/>
+If the setting exists, run:<br/>
+<br/>
+Get-VM "VM Name" | Get-AdvancedSetting -Name isolation.device.connectable.disable | Set-AdvancedSetting -Value true</td>
+          </tr>
+          <tr>
+            <th class="ruledata">References:</th>
+            <td class="ruledata">
+              <ul class="ruledata">
+                <li>CCI-000366</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+        <br/>
+        <a name="RULE_SV-104461r1_rule">
+          <table class="ruleblock">
+            <tr class="ruleblock">
+              <td class="ruleblock"><span class="ruleheader">STIG ID:</span><br/>VMCH-65-000039</td>
+              <td class="ruleblock"><span class="ruleheader">Group ID:</span><br/>V-94631</td>
+              <td class="ruleblock"><span class="ruleheader">Rule ID:</span><br/>SV-104461r1_rule</td>
+              <td class="ruleblock"><span class="ruleheader">Severity:</span><br/>CAT II</td>
+            </tr>
+          </table>
+        </a>
+        <table class="ruledata">
+          <tr>
+            <th class="ruledata">Requirement:</th>
+            <td class="ruledata">
+              <span class="rulerequirement">The virtual machine must not be able to obtain host information from the hypervisor.</span>
+            </td>
+          </tr>
+          <tr>
+            <th class="ruledata">Discussion:</th>
+            <td class="ruledata">If enabled, a VM can obtain detailed information about the physical host. The default value for the parameter is FALSE. This setting should not be TRUE unless a particular VM requires this information for performance monitoring. An adversary potentially can use this information to inform further attacks on the host.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Check:</th>
+            <td class="ruledata">From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Verify the tools.guestlib.enableHostInfo value is set to false.<br/>
+<br/>
+or<br/>
+<br/>
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:<br/>
+<br/>
+Get-VM "VM Name" | Get-AdvancedSetting -Name tools.guestlib.enableHostInfo<br/>
+<br/>
+If the virtual machine advanced setting tools.guestlib.enableHostInfo does not exist or is not set to false, this is a finding.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Fix:</th>
+            <td class="ruledata">From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Find the tools.guestlib.enableHostInfo value and set it to false. If the setting does not exist, add the Name and Value setting at the bottom of screen.<br/>
+<br/>
+Note: The VM must be powered off to configure the advanced settings through the vSphere Web Client so it is recommended to configure these settings with PowerCLI as it can be done while the VM is powered on. Settings do not take effect via either method until the virtual machine is cold started, not rebooted.<br/>
+<br/>
+or<br/>
+<br/>
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:<br/>
+<br/>
+If the setting does not exist, run:<br/>
+<br/>
+Get-VM "VM Name" | New-AdvancedSetting -Name tools.guestlib.enableHostInfo -Value false<br/>
+<br/>
+If the setting exists, run:<br/>
+<br/>
+Get-VM "VM Name" | Get-AdvancedSetting -Name tools.guestlib.enableHostInfo | Set-AdvancedSetting -Value false</td>
+          </tr>
+          <tr>
+            <th class="ruledata">References:</th>
+            <td class="ruledata">
+              <ul class="ruledata">
+                <li>CCI-000366</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+        <br/>
+        <a name="RULE_SV-104463r1_rule">
+          <table class="ruleblock">
+            <tr class="ruleblock">
+              <td class="ruleblock"><span class="ruleheader">STIG ID:</span><br/>VMCH-65-000040</td>
+              <td class="ruleblock"><span class="ruleheader">Group ID:</span><br/>V-94633</td>
+              <td class="ruleblock"><span class="ruleheader">Rule ID:</span><br/>SV-104463r1_rule</td>
+              <td class="ruleblock"><span class="ruleheader">Severity:</span><br/>CAT III</td>
+            </tr>
+          </table>
+        </a>
+        <table class="ruledata">
+          <tr>
+            <th class="ruledata">Requirement:</th>
+            <td class="ruledata">
+              <span class="rulerequirement">Shared salt values must be disabled on the virtual machine.</span>
+            </td>
+          </tr>
+          <tr>
+            <th class="ruledata">Discussion:</th>
+            <td class="ruledata">When salting is enabled (Mem.ShareForceSalting=1 or 2) in order to share a page between two virtual machines both salt and the content of the page must be same. A salt value is a configurable advanced option for each virtual machine. You can manually specify the salt values in the virtual machine's advanced settings with the new option sched.mem.pshare.salt. If this option is not present in the virtual machine's advanced settings, then the value of the vc.uuid option is taken as the default value. Since the vc.uuid is unique to each virtual machine, by default TPS happens only among the pages belonging to a particular virtual machine (Intra-VM).</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Check:</th>
+            <td class="ruledata">From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Verify the sched.mem.pshare.salt setting does not exist.<br/>
+<br/>
+or<br/>
+<br/>
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:<br/>
+<br/>
+Get-VM "VM Name" | Get-AdvancedSetting -Name sched.mem.pshare.salt<br/>
+<br/>
+If the virtual machine advanced setting sched.mem.pshare.salt exists, this is a finding.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Fix:</th>
+            <td class="ruledata">From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Delete the sched.mem.pshare.salt setting.<br/>
+<br/>
+Note: The VM must be powered off to configure the advanced settings through the vSphere Web Client so it is recommended to configure these settings with PowerCLI as it can be done while the VM is powered on. Settings do not take effect via either method until the virtual machine is cold started, not rebooted.<br/>
+<br/>
+or<br/>
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:<br/>
+<br/>
+Get-VM "VM Name" | Get-AdvancedSetting -Name sched.mem.pshare.salt | Remove-AdvancedSetting</td>
+          </tr>
+          <tr>
+            <th class="ruledata">References:</th>
+            <td class="ruledata">
+              <ul class="ruledata">
+                <li>CCI-000366</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+        <br/>
+        <a name="RULE_SV-104465r1_rule">
+          <table class="ruleblock">
+            <tr class="ruleblock">
+              <td class="ruleblock"><span class="ruleheader">STIG ID:</span><br/>VMCH-65-000041</td>
+              <td class="ruleblock"><span class="ruleheader">Group ID:</span><br/>V-94635</td>
+              <td class="ruleblock"><span class="ruleheader">Rule ID:</span><br/>SV-104465r1_rule</td>
+              <td class="ruleblock"><span class="ruleheader">Severity:</span><br/>CAT III</td>
+            </tr>
+          </table>
+        </a>
+        <table class="ruledata">
+          <tr>
+            <th class="ruledata">Requirement:</th>
+            <td class="ruledata">
+              <span class="rulerequirement">Access to virtual machines through the dvfilter network APIs must be controlled.</span>
+            </td>
+          </tr>
+          <tr>
+            <th class="ruledata">Discussion:</th>
+            <td class="ruledata">An attacker might compromise a VM by making use the dvFilter API. Configure only those VMs to use the API that need this access.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Check:</th>
+            <td class="ruledata">From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Look for settings with the format ethernet*.filter*.name.<br/>
+<br/>
+or<br/>
+<br/>
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:<br/>
+<br/>
+Get-VM "VM Name" | Get-AdvancedSetting -Name "ethernet*.filter*.name*"<br/>
+<br/>
+If the virtual machine advanced setting ethernet*.filter*.name exists and dvfilters are not in use, this is a finding.<br/>
+<br/>
+If the virtual machine advanced setting ethernet*.filter*.name exists and the value is not valid, this is a finding.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Fix:</th>
+            <td class="ruledata">From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Look for settings with the format ethernet*.filter*.name. Ensure only required VMs use this setting.<br/>
+<br/>
+Note: The VM must be powered off to configure the advanced settings through the vSphere Web Client so it is recommended to configure these settings with PowerCLI as it can be done while the VM is powered on. Settings do not take effect via either method until the virtual machine is cold started, not rebooted.<br/>
+<br/>
+or<br/>
+<br/>
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:<br/>
+<br/>
+Get-VM "VM Name" | Get-AdvancedSetting -Name ethernetX.filterY.name | Remove-AdvancedSetting<br/>
+<br/>
+Note:  Change the X and Y values to match the specific setting in your environment.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">References:</th>
+            <td class="ruledata">
+              <ul class="ruledata">
+                <li>CCI-000366</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+        <br/>
+        <a name="RULE_SV-104467r1_rule">
+          <table class="ruleblock">
+            <tr class="ruleblock">
+              <td class="ruleblock"><span class="ruleheader">STIG ID:</span><br/>VMCH-65-000042</td>
+              <td class="ruleblock"><span class="ruleheader">Group ID:</span><br/>V-94637</td>
+              <td class="ruleblock"><span class="ruleheader">Rule ID:</span><br/>SV-104467r1_rule</td>
+              <td class="ruleblock"><span class="ruleheader">Severity:</span><br/>CAT III</td>
+            </tr>
+          </table>
+        </a>
+        <table class="ruledata">
+          <tr>
+            <th class="ruledata">Requirement:</th>
+            <td class="ruledata">
+              <span class="rulerequirement">System administrators must use templates to deploy virtual machines whenever possible.</span>
+            </td>
+          </tr>
+          <tr>
+            <th class="ruledata">Discussion:</th>
+            <td class="ruledata">By capturing a hardened base operating system image (with no applications installed) in a template, ensure all virtual machines are created with a known baseline level of security. Then use this template to create other, application-specific templates, or use the application template to deploy virtual machines. Manual installation of the OS and applications into a VM introduces the risk of misconfiguration due to human or process error.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Check:</th>
+            <td class="ruledata">Ask the SA if hardened, patched templates are used for VM creation, properly configured OS deployments, including applications both dependent and non-dependent on VM-specific configurations.<br/>
+<br/>
+If hardened, patched templates are not used for VM creation, this is a finding.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Fix:</th>
+            <td class="ruledata">Create hardened virtual machine templates to use for OS deployments.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">References:</th>
+            <td class="ruledata">
+              <ul class="ruledata">
+                <li>CCI-000366</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+        <br/>
+        <a name="RULE_SV-104469r1_rule">
+          <table class="ruleblock">
+            <tr class="ruleblock">
+              <td class="ruleblock"><span class="ruleheader">STIG ID:</span><br/>VMCH-65-000043</td>
+              <td class="ruleblock"><span class="ruleheader">Group ID:</span><br/>V-94639</td>
+              <td class="ruleblock"><span class="ruleheader">Rule ID:</span><br/>SV-104469r1_rule</td>
+              <td class="ruleblock"><span class="ruleheader">Severity:</span><br/>CAT II</td>
+            </tr>
+          </table>
+        </a>
+        <table class="ruledata">
+          <tr>
+            <th class="ruledata">Requirement:</th>
+            <td class="ruledata">
+              <span class="rulerequirement">Use of the virtual machine console must be minimized.</span>
+            </td>
+          </tr>
+          <tr>
+            <th class="ruledata">Discussion:</th>
+            <td class="ruledata">The VM console enables a connection to the console of a virtual machine, in effect seeing what a monitor on a physical server would show. The VM console also provides power management and removable device connectivity controls, which might potentially allow a malicious user to bring down a virtual machine. In addition, it also has a performance impact on the service console, especially if many VM console sessions are open simultaneously.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Check:</th>
+            <td class="ruledata">Remote management services, such as terminal services and SSH, must be used to interact with virtual machines. VM console access should only be granted when remote management services are unavailable or insufficient to perform necessary management tasks.<br/>
+<br/>
+Ask the SA if a VM console is used to perform VM management tasks, other than for troubleshooting VM issues. <br/>
+<br/>
+If a VM console is used to perform VM management tasks, other than for troubleshooting VM issues, this is a finding. <br/>
+<br/>
+If SSH and/or terminal management services are exclusively used to perform management tasks, this is not a finding.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Fix:</th>
+            <td class="ruledata">Develop a policy prohibiting the use of a VM console for performing management services. This policy should include procedures for the use of SSH and Terminal Management services for VM management. Where SSH and Terminal Management services prove insufficient to troubleshoot a VM, access to the VM console may be temporarily granted.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">References:</th>
+            <td class="ruledata">
+              <ul class="ruledata">
+                <li>CCI-000366</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+        <br/>
+        <a name="RULE_SV-104477r1_rule">
+          <table class="ruleblock">
+            <tr class="ruleblock">
+              <td class="ruleblock"><span class="ruleheader">STIG ID:</span><br/>VMCH-65-000047</td>
+              <td class="ruleblock"><span class="ruleheader">Group ID:</span><br/>V-94647</td>
+              <td class="ruleblock"><span class="ruleheader">Rule ID:</span><br/>SV-104477r1_rule</td>
+              <td class="ruleblock"><span class="ruleheader">Severity:</span><br/>CAT II</td>
+            </tr>
+          </table>
+        </a>
+        <table class="ruledata">
+          <tr>
+            <th class="ruledata">Requirement:</th>
+            <td class="ruledata">
+              <span class="rulerequirement">The virtual machine guest operating system must be locked when the last console connection is closed.</span>
+            </td>
+          </tr>
+          <tr>
+            <th class="ruledata">Discussion:</th>
+            <td class="ruledata">When accessing the VM console the guest OS must be locked when the last console user disconnects, limiting the possibility of session hijacking. This setting only applies to Windows-based VMs with VMware tools installed.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Check:</th>
+            <td class="ruledata">From the vSphere Web Client select the Virtual Machine, right click and go to Edit Settings &gt;&gt; VM Options Tab &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Find the "tools.guest.desktop.autolock" value and verify that it is set to "true".<br/>
+<br/>
+or<br/>
+<br/>
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:<br/>
+<br/>
+Get-VM "VM Name" | Get-AdvancedSetting -Name tools.guest.desktop.autolock<br/>
+<br/>
+If the virtual machine advanced setting "tools.guest.desktop.autolock" does not exist or is not set to "true", this is a finding.<br/>
+<br/>
+If the VM is not Windows-based, this is not a finding.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Fix:</th>
+            <td class="ruledata">From the vSphere Client select the Virtual Machine, right click and go to Edit Settings &gt;&gt; VM Options Tab &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Find or create the "tools.guest.desktop.autolock" value and set it to "true".<br/>
+<br/>
+Note: The VM must be powered off to modify the advanced settings through the vSphere Web Client. It is recommended to configure these settings with PowerCLI as this can be done while the VM is powered on. In this case the modified settings will not take effect until a cold boot of the VM.<br/>
+<br/>
+or<br/>
+<br/>
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:<br/>
+<br/>
+If the setting does not exist, run:<br/>
+<br/>
+Get-VM "VM Name" | New-AdvancedSetting -Name tools.guest.desktop.autolock -Value true<br/>
+<br/>
+If the setting exists, run:<br/>
+<br/>
+Get-VM "VM Name" | Get-AdvancedSetting -Name tools.guest.desktop.autolock | Set-AdvancedSetting -Value true</td>
+          </tr>
+          <tr>
+            <th class="ruledata">References:</th>
+            <td class="ruledata">
+              <ul class="ruledata">
+                <li>CCI-000366</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+        <br/>
+        <a name="RULE_SV-104479r1_rule">
+          <table class="ruleblock">
+            <tr class="ruleblock">
+              <td class="ruleblock"><span class="ruleheader">STIG ID:</span><br/>VMCH-65-000048</td>
+              <td class="ruleblock"><span class="ruleheader">Group ID:</span><br/>V-94649</td>
+              <td class="ruleblock"><span class="ruleheader">Rule ID:</span><br/>SV-104479r1_rule</td>
+              <td class="ruleblock"><span class="ruleheader">Severity:</span><br/>CAT III</td>
+            </tr>
+          </table>
+        </a>
+        <table class="ruledata">
+          <tr>
+            <th class="ruledata">Requirement:</th>
+            <td class="ruledata">
+              <span class="rulerequirement">3D features on the virtual machine must be disabled when not required.</span>
+            </td>
+          </tr>
+          <tr>
+            <th class="ruledata">Discussion:</th>
+            <td class="ruledata">It is recommended that 3D acceleration be disabled on virtual machines that do not require 3D functionality, (e.g. most server workloads or desktops not using 3D applications).</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Check:</th>
+            <td class="ruledata">From the vSphere Web Client select the Virtual Machine, right click and go to Edit Settings &gt;&gt; VM Options Tab &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Find the "mks.enable3d" value and verify it is set to "false".<br/>
+<br/>
+or<br/>
+<br/>
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:<br/>
+<br/>
+Get-VM "VM Name" | Get-AdvancedSetting -Name mks.enable3d<br/>
+<br/>
+If the virtual machine advanced setting "mks.enable3d" does not exist or is not set to "false", this is a finding.<br/>
+<br/>
+If a virtual machine requires 3D features, this is not a finding.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Fix:</th>
+            <td class="ruledata">From the vSphere Client select the Virtual Machine, right click and go to Edit Settings &gt;&gt; VM Options Tab &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Find the "mks.enable3d" value and set it to "false".<br/>
+<br/>
+Note: The VM must be powered off to modify the advanced settings through the vSphere Web Client. It is recommended to configure these settings with PowerCLI as this can be done while the VM is powered on. In this case the modified settings will not take effect until a cold boot of the VM.<br/>
+<br/>
+or<br/>
+<br/>
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:<br/>
+<br/>
+If the setting does not exist, run:<br/>
+<br/>
+Get-VM "VM Name" | New-AdvancedSetting -Name mks.enable3d -Value false<br/>
+<br/>
+If the setting exists, run:<br/>
+<br/>
+Get-VM "VM Name" | Get-AdvancedSetting -Name mks.enable3d | Set-AdvancedSetting -Value false</td>
+          </tr>
+          <tr>
+            <th class="ruledata">References:</th>
+            <td class="ruledata">
+              <ul class="ruledata">
+                <li>CCI-000366</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+        <br/>
+        <a name="RULE_SV-104481r1_rule">
+          <table class="ruleblock">
+            <tr class="ruleblock">
+              <td class="ruleblock"><span class="ruleheader">STIG ID:</span><br/>VMCH-65-000049</td>
+              <td class="ruleblock"><span class="ruleheader">Group ID:</span><br/>V-94651</td>
+              <td class="ruleblock"><span class="ruleheader">Rule ID:</span><br/>SV-104481r1_rule</td>
+              <td class="ruleblock"><span class="ruleheader">Severity:</span><br/>CAT II</td>
+            </tr>
+          </table>
+        </a>
+        <table class="ruledata">
+          <tr>
+            <th class="ruledata">Requirement:</th>
+            <td class="ruledata">
+              <span class="rulerequirement">Encryption must be enabled for vMotion on the virtual machine.</span>
+            </td>
+          </tr>
+          <tr>
+            <th class="ruledata">Discussion:</th>
+            <td class="ruledata">vMotion migrations in vSphere 6.0 and earlier transferred working memory and CPU state information in clear text over the vMotion network. As of vSphere 6.5 this transfer can be transparently encrypted using 256bit AES-GCM with negligible performance impact. vSphere 6.5 enables encrypted vMotion by default as 'Opportunistic', meaning that encrypted channels are used where supported but the operation will continue in plain text where encryption is not supported. For example when vMotioning between two 6.5 hosts encryption will always be utilized but since 6.0 and earlier releases do not support this feature vMotion from a 6.5 host to a 6.0 host would be allowed but would not be encrypted. If this finding is set to 'Required' then vMotions to unsupported hosts will fail. This setting must be set to 'Opportunistic' or 'Required'.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Check:</th>
+            <td class="ruledata">From the vSphere Web Client select the Virtual Machine, right click and go to Edit Settings &gt;&gt; VM Options Tab &gt;&gt; Encryption &gt;&gt; Encrypted vMotion. <br/>
+<br/>
+or<br/>
+<br/>
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:<br/>
+<br/>
+Get-VM | Where {($_.ExtensionData.Config.MigrateEncryption -ne "opportunistic") -and ($_.ExtensionData.Config.MigrateEncryption -ne "required")}<br/>
+<br/>
+If the setting does not have a value of "Opportunistic" or "Required", this is a finding.</td>
+          </tr>
+          <tr>
+            <th class="ruledata">Fix:</th>
+            <td class="ruledata">From the vSphere Client select the Virtual Machine, right click and go to Edit Settings &gt;&gt; VM Options Tab &gt;&gt; Encryption &gt;&gt; Encrypted vMotion. Set the value to "Opportunistic" or "Required".</td>
+          </tr>
+          <tr>
+            <th class="ruledata">References:</th>
+            <td class="ruledata">
+              <ul class="ruledata">
+                <li>CCI-000366</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+        <br/>
+      </div>
+    </div>
+    <div class="footer headerfooter">UNCLASSIFIED</div>
+  </body>
+</html>

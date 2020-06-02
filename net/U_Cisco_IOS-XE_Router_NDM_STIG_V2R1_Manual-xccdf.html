@@ -1,0 +1,4100 @@
+<?xml version="1.0" encoding="UTF-8"?><html xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:cdf="http://checklists.nist.gov/xccdf/1.1" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<style>
+			body {
+				font-family: veranda,sans-serif;
+				font-size: 13px;
+				margin-left: 0px;
+			}
+
+			div.content {
+				position: relative;
+				padding-bottom: 20px;
+			}
+
+			@page {
+				size: 8.5in 11in;
+				margin: 1in;
+			}
+
+			@media print
+			{
+				div.headerfooter {
+					position: relative;
+				}
+			}
+
+			@media screen {
+				div.content {
+					margin-top: 40px;
+					margin-left: 10%;
+					margin-right: 10%;
+				}
+			
+				div.headerfooter {
+					position: fixed;
+					z-index: 1000;
+				}
+			}
+
+			div.headerfooter {
+				background-color: green;
+				color: white;
+				font-size: 8pt;
+				font-weight: bold;
+				text-align: center;
+				width: 100%;
+			}
+
+			div.header {
+				top: 0;
+			}
+
+			div.footer {
+				bottom: 0;
+				
+			}
+
+			table {
+				font-size: 13px;
+			}
+
+			table, td, th {
+				border: 1px solid black;
+				border-collapse: collapse;
+				vertical-align: top;
+				padding: 5px;
+				word-wrap: break-word;
+			}
+
+			th {
+				font-weight: bold;
+			}
+
+			table.ruleblock {
+				width: 100%;
+				table-layout: fixed;
+				border-top: 1px solid black;
+				border-left: 1px solid black;
+				border-right: 1px solid black;
+				border-bottom: 0px;
+			}
+
+			td.ruleblock {
+				width: 25%;
+				font-weight: bold;
+				font-size: 15px;
+				padding: 5px;
+				border-bottom: 0px;
+			}
+			
+			tr.ruleblock {
+				border-bottom: 0px;
+			}
+
+			span.ruleheader {
+				font-size: 10px;
+			}
+
+			table.ruledata {
+				width: 100%;
+				table-layout: fixed;
+			}
+
+			th.ruledata {
+				width: 15%;
+				text-align: left;
+				border: none;
+			}
+
+			td.ruledata {
+				border: none;
+			}
+
+			span.rulerequirement {
+				font-size: 15px;
+				font-weight: bold;
+			}
+
+			div.rotate {
+				-ms-transform:rotate(270deg); /* IE 9 */
+				-moz-transform:rotate(270deg); /* Firefox */
+				-webkit-transform:rotate(270deg); /* Safari and Chrome */
+				-o-transform:rotate(270deg); /* Opera */
+			}
+			
+			ul.ruledata {
+			  list-style-position: inside;
+			  padding-left: 0;
+			}
+
+		</style>
+<title>(U) Cisco IOS XE Router NDM Security Technical Implementation Guide</title>
+</head>
+<body>
+<div class="header headerfooter">UNCLASSIFIED</div>
+<div class="content">
+<div>
+<h1>Cisco IOS XE Router NDM Security Technical Implementation Guide</h1>
+<h2>Version 2 Release 1</h2>
+<h3>23 Oct 2020</h3>
+</div>
+<div class="toc">
+<h2>Table of Contents</h2>
+<ul>
+<li>
+<a href="#intro">Introduction</a>
+<br/>
+<ul>
+<li>
+<a href="#summary">Executive Summary</a>
+</li>
+<li>
+<a href="#authority">Authority</a>
+</li>
+<li>
+<a href="#severity">Vulnerability Severity Category Code Definitions</a>
+</li>
+<li>
+<a href="#distribution">STIG Distribution</a>
+</li>
+<li>
+<a href="#compliance">SRG Compliance Reporting</a>
+</li>
+<li>
+<a href="#revisions">Document Revisions</a>
+</li>
+<li>
+<a href="#considerations">Other Considerations</a>
+</li>
+<li>
+<a href="#disclaimer">Product Approval Disclaimer</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#catalog">Requirement Catalog</a>
+<br/>
+<ul>
+<li>
+<a href="#requirementtable">Table of Requirements</a>
+</li>
+<li>
+<a href="#requirementdetails">Requirement Details</a>
+</li>
+</ul>
+</li>
+<li>Revision History</li>
+</ul>
+</div>
+<div class="intro">
+<a name="intro">
+<h2>Introduction</h2>
+</a>
+<a name="summary">
+<h3>Executive Summary</h3>
+</a>
+<p>
+The Cisco IOS XE Router NDM Security Technical Implementation Guide is published as a tool to improve the security of the Department of Defense (DoD) information systems.
+			</p>
+<a name="authority">
+<h3>Authority</h3>
+</a>
+<p>
+DoD Instruction (DoDI) 8500.01 requires that “all IT that receives, processes, stores, displays, 
+or transmits DoD information will be […] configured […] consistent with applicable DoD cybersecurity policies, 
+standards, and architectures�? and tasks that Defense Information Systems Agency (DISA) “develops and maintains 
+control correlation identifiers (CCIs), security requirements guides (SRGs), security technical implementation 
+guides (STIGs), and mobile code risk categories and usage guides that implement and are consistent with DoD 
+cybersecurity policies, standards, architectures, security controls, and validation procedures, with the 
+support of the NSA/CSS, using input from stakeholders, and using automation whenever possible.�? This document 
+is provided under the authority of DoDI 8500.01.
+			</p>
+<p>
+Although the use of the principles and guidelines in these SRGs/STIGs provides an environment that contributes 
+to the security requirements of DoD systems, applicable NIST SP 800-53 cybersecurity controls need to be 
+applied to all systems and architectures based on the Committee on National Security Systems (CNSS) Instruction 
+(CNSSI) 1253.
+			</p>
+<a name="severity">
+<h3>Vulnerability Severity Category Code Definitions</h3>
+</a>
+<p>
+				Severity Category Codes (referred to as CAT) are a measure of vulnerabilities used to assess a
+facility or system security posture. Each security policy specified in this document is assigned a
+Severity Code of CAT I, II, or III.
+			</p>
+<table>
+<tr>
+<th/>
+<th>Category Code Guidelines</th>
+</tr>
+<tr>
+<th>CAT�I</th>
+<td>
+Any vulnerability, the exploitation of which will, directly and immediately result in loss of
+Confidentiality, Availability, or Integrity.
+					</td>
+</tr>
+<tr>
+<th>CAT�II</th>
+<td>Any vulnerability, the exploitation of which has a potential to result in loss of Confidentiality, Availability,
+or Integrity.</td>
+</tr>
+<tr>
+<th>CAT�III</th>
+<td>Any vulnerability, the existence of which degrades measures to protect against loss of Confidentiality, Availability, or Integrity.</td>
+</tr>
+</table>
+<a name="distribution">
+<h3>STIG Distribution</h3>
+</a>
+<p>
+Parties within the DoD and Federal Government’s computing environments can obtain the applicable STIG from the Cyber Exchange website at 
+<a href="https://cyber.mil/">https://cyber.mil/</a>. This site contains the latest copies of STIGs, SRGs, and other related security information. 
+Those without a Common Access Card (CAC) that has DoD Certificates can obtain the STIG from <a href="https://public.cyber.mil/">https://public.cyber.mil/</a>.
+			</p>
+<a name="compliance">
+<h3>SRG Compliance Reporting</h3>
+</a>
+<p>
+All technical NIST SP 800-53 requirements were considered while developing this STIG. Requirements that are applicable and configurable 
+will be included in the final STIG. A report marked For Official Use Only (FOUO) will be available for those items that did not meet requirements. 
+This report will be available to component Authorizing Official (AO) personnel for risk assessment purposes by request via email to: <a href="mailto:disa.stig_spt@mail.mil">disa.stig_spt@mail.mil</a>.
+			</p>
+<a name="revisions">
+<h3>Document Revision Process</h3>
+</a>
+<p>
+Comments or proposed revisions to this document should be sent via email to the following address: <a href="mailto:disa.stig_spt@mail.mil">disa.stig_spt@mail.mil</a>. 
+DISA will coordinate all change requests with the relevant DoD organizations before inclusion in this document. Approved changes will be made in accordance with the DISA maintenance release schedule.
+			</p>
+<a name="considerations">
+<h3>Other Considerations</h3>
+</a>
+<p>
+DISA accepts no liability for the consequences of applying specific configuration settings made on the basis of the SRGs/STIGs. 
+It must be noted that the configuration settings specified should be evaluated in a local, representative test environment before 
+implementation in a production environment, especially within large user populations. The extensive variety of environments makes 
+it impossible to test these configuration settings for all potential software configurations.
+			</p>
+<p>
+For some production environments, failure to test before implementation may lead to a loss of required functionality. Evaluating 
+the risks and benefits to a system’s particular circumstances and requirements is the system owner’s responsibility. The evaluated 
+risks resulting from not applying specified configuration settings must be approved by the responsible Authorizing Official. 
+Furthermore, DISA implies no warranty that the application of all specified configurations will make a system 100 percent secure.
+			</p>
+<p>
+Security guidance is provided for the Department of Defense. While other agencies and organizations are free to use it, care must 
+be given to ensure that all applicable security guidance is applied both at the device hardening level as well as the architectural 
+level due to the fact that some of the settings may not be able to be configured in environments outside the DoD architecture.
+			</p>
+<a name="disclaimer">
+<h3>Product Approval Disclaimer</h3>
+</a>
+<p>
+The existence of a STIG does not equate to DoD approval for the procurement or use of a product.
+			</p>
+<p>
+STIGs provide configurable operational security guidance for products being used by the DoD. STIGs, along with vendor confidential 
+documentation, also provide a basis for assessing compliance with Cybersecurity controls/control enhancements, which supports system 
+Assessment and Authorization (A&amp;A) under the DoD Risk Management Framework (RMF). DoD Authorizing Officials (AOs) may request available 
+vendor confidential documentation for a product that has a STIG for product evaluation and RMF purposes from <a href="mailto:disa.stig_spt@mail.mil">disa.stig_spt@mail.mil</a>. 
+This documentation is not published for general access to protect the vendor’s proprietary information.
+			</p>
+<p>
+AOs have the purview to determine product use/approval IAW DoD policy and through RMF risk acceptance. Inputs into acquisition or pre-acquisition product selection include such processes as:
+<ul>
+<li>National Information Assurance Partnership (NIAP) evaluation for National Security Systems (NSS) (http://www.niap-ccevs.org/) IAW CNSSP #11</li>
+<li>National Institute of Standards and Technology (NIST) Cryptographic Module Validation Program (CMVP) (http://csrc.nist.gov/groups/STM/cmvp/) IAW Federal/DoD mandated standards</li>
+<li>DoD Unified Capabilities (UC) Approved Products List (APL) (http://www.disa.mil/network-services/ucco) IAW DoDI 8100.04</li>
+</ul>
+</p>
+</div>
+<div class="catalog">
+<a name="catalog">
+<h2>Requirements Catalog</h2>
+</a>
+<a name="requirementtable">
+<h3>Table of Requirements</h3>
+</a>
+<table>
+<tr>
+<th>STIG ID</th>
+<th>Group ID</th>
+<th>Rule ID</th>
+<th>Requirement</th>
+<th>Severity</th>
+</tr>
+<tr>
+<td>CISC-ND-000010</td>
+<td>V-215807</td>
+<td>
+<a href="#RULE_SV-215807r531083_rule">SV-215807r531083_rule</a>
+</td>
+<td>The Cisco router must be configured to limit the number of concurrent management sessions to an organization-defined number.</td>
+<td>CAT II</td>
+</tr>
+<tr>
+<td>CISC-ND-000090</td>
+<td>V-215808</td>
+<td>
+<a href="#RULE_SV-215808r531083_rule">SV-215808r531083_rule</a>
+</td>
+<td>The Cisco router must be configured to automatically audit account creation.</td>
+<td>CAT II</td>
+</tr>
+<tr>
+<td>CISC-ND-000100</td>
+<td>V-215809</td>
+<td>
+<a href="#RULE_SV-215809r531083_rule">SV-215809r531083_rule</a>
+</td>
+<td>The Cisco router must be configured to automatically audit account modification.</td>
+<td>CAT II</td>
+</tr>
+<tr>
+<td>CISC-ND-000110</td>
+<td>V-215810</td>
+<td>
+<a href="#RULE_SV-215810r531083_rule">SV-215810r531083_rule</a>
+</td>
+<td>The Cisco router must be configured to automatically audit account disabling actions.</td>
+<td>CAT II</td>
+</tr>
+<tr>
+<td>CISC-ND-000120</td>
+<td>V-215811</td>
+<td>
+<a href="#RULE_SV-215811r531083_rule">SV-215811r531083_rule</a>
+</td>
+<td>The Cisco router must be configured to automatically audit account removal actions.</td>
+<td>CAT II</td>
+</tr>
+<tr>
+<td>CISC-ND-000140</td>
+<td>V-215812</td>
+<td>
+<a href="#RULE_SV-215812r539421_rule">SV-215812r539421_rule</a>
+</td>
+<td>The Cisco router must be configured to enforce approved authorizations for controlling the flow of management information within the device based on control policies.</td>
+<td>CAT II</td>
+</tr>
+<tr>
+<td>CISC-ND-000150</td>
+<td>V-215813</td>
+<td>
+<a href="#RULE_SV-215813r531083_rule">SV-215813r531083_rule</a>
+</td>
+<td>The Cisco router must be configured to enforce the limit of three consecutive invalid logon attempts, after which time it must lock out the user account from accessing the device for 15 minutes.</td>
+<td>CAT II</td>
+</tr>
+<tr>
+<td>CISC-ND-000160</td>
+<td>V-215814</td>
+<td>
+<a href="#RULE_SV-215814r531083_rule">SV-215814r531083_rule</a>
+</td>
+<td>The Cisco router must be configured to display the Standard Mandatory DoD Notice and Consent Banner before granting access to the device.</td>
+<td>CAT II</td>
+</tr>
+<tr>
+<td>CISC-ND-000210</td>
+<td>V-215815</td>
+<td>
+<a href="#RULE_SV-215815r531083_rule">SV-215815r531083_rule</a>
+</td>
+<td>The Cisco router must be configured to protect against an individual falsely denying having performed organization-defined actions to be covered by non-repudiation.</td>
+<td>CAT II</td>
+</tr>
+<tr>
+<td>CISC-ND-000250</td>
+<td>V-215816</td>
+<td>
+<a href="#RULE_SV-215816r531083_rule">SV-215816r531083_rule</a>
+</td>
+<td>The Cisco router must be configured to generate audit records when successful/unsuccessful attempts to log on with access privileges occur.</td>
+<td>CAT II</td>
+</tr>
+<tr>
+<td>CISC-ND-000280</td>
+<td>V-215817</td>
+<td>
+<a href="#RULE_SV-215817r531083_rule">SV-215817r531083_rule</a>
+</td>
+<td>The Cisco router must produce audit records containing information to establish when (date and time) the events occurred.</td>
+<td>CAT II</td>
+</tr>
+<tr>
+<td>CISC-ND-000290</td>
+<td>V-215818</td>
+<td>
+<a href="#RULE_SV-215818r531083_rule">SV-215818r531083_rule</a>
+</td>
+<td>The Cisco router must produce audit records containing information to establish where the events occurred.</td>
+<td>CAT II</td>
+</tr>
+<tr>
+<td>CISC-ND-000330</td>
+<td>V-215819</td>
+<td>
+<a href="#RULE_SV-215819r531083_rule">SV-215819r531083_rule</a>
+</td>
+<td>The Cisco router must be configured to generate audit records containing the full-text recording of privileged commands.</td>
+<td>CAT II</td>
+</tr>
+<tr>
+<td>CISC-ND-000380</td>
+<td>V-215820</td>
+<td>
+<a href="#RULE_SV-215820r531083_rule">SV-215820r531083_rule</a>
+</td>
+<td>The Cisco router must be configured to protect audit information from unauthorized modification.</td>
+<td>CAT II</td>
+</tr>
+<tr>
+<td>CISC-ND-000390</td>
+<td>V-215821</td>
+<td>
+<a href="#RULE_SV-215821r531083_rule">SV-215821r531083_rule</a>
+</td>
+<td>The Cisco router must be configured to protect audit information from unauthorized deletion.</td>
+<td>CAT II</td>
+</tr>
+<tr>
+<td>CISC-ND-000460</td>
+<td>V-215822</td>
+<td>
+<a href="#RULE_SV-215822r531083_rule">SV-215822r531083_rule</a>
+</td>
+<td>The Cisco router must be configured to limit privileges to change the software resident within software libraries.</td>
+<td>CAT II</td>
+</tr>
+<tr>
+<td>CISC-ND-000470</td>
+<td>V-215823</td>
+<td>
+<a href="#RULE_SV-215823r531083_rule">SV-215823r531083_rule</a>
+</td>
+<td>The Cisco router must be configured to prohibit the use of all unnecessary and nonsecure functions and services.</td>
+<td>CAT I</td>
+</tr>
+<tr>
+<td>CISC-ND-000490</td>
+<td>V-215824</td>
+<td>
+<a href="#RULE_SV-215824r531083_rule">SV-215824r531083_rule</a>
+</td>
+<td>The Cisco router must be configured with only one local account to be used as the account of last resort in the event the authentication server is unavailable.</td>
+<td>CAT II</td>
+</tr>
+<tr>
+<td>CISC-ND-000530</td>
+<td>V-215825</td>
+<td>
+<a href="#RULE_SV-215825r531083_rule">SV-215825r531083_rule</a>
+</td>
+<td>The Cisco router must be configured to implement replay-resistant authentication mechanisms for network access to privileged accounts.</td>
+<td>CAT II</td>
+</tr>
+<tr>
+<td>CISC-ND-000550</td>
+<td>V-215826</td>
+<td>
+<a href="#RULE_SV-215826r531083_rule">SV-215826r531083_rule</a>
+</td>
+<td>The Cisco router must be configured to enforce a minimum 15-character password length.</td>
+<td>CAT II</td>
+</tr>
+<tr>
+<td>CISC-ND-000570</td>
+<td>V-215827</td>
+<td>
+<a href="#RULE_SV-215827r531083_rule">SV-215827r531083_rule</a>
+</td>
+<td>The Cisco router must be configured to enforce password complexity by requiring that at least one upper-case character be used.</td>
+<td>CAT II</td>
+</tr>
+<tr>
+<td>CISC-ND-000580</td>
+<td>V-215828</td>
+<td>
+<a href="#RULE_SV-215828r531083_rule">SV-215828r531083_rule</a>
+</td>
+<td>The Cisco router must be configured to enforce password complexity by requiring that at least one lower-case character be used.</td>
+<td>CAT II</td>
+</tr>
+<tr>
+<td>CISC-ND-000590</td>
+<td>V-215829</td>
+<td>
+<a href="#RULE_SV-215829r531083_rule">SV-215829r531083_rule</a>
+</td>
+<td>The Cisco router must be configured to enforce password complexity by requiring that at least one numeric character be used.</td>
+<td>CAT II</td>
+</tr>
+<tr>
+<td>CISC-ND-000600</td>
+<td>V-215830</td>
+<td>
+<a href="#RULE_SV-215830r531083_rule">SV-215830r531083_rule</a>
+</td>
+<td>The Cisco router must be configured to enforce password complexity by requiring that at least one special character be used.</td>
+<td>CAT II</td>
+</tr>
+<tr>
+<td>CISC-ND-000610</td>
+<td>V-215831</td>
+<td>
+<a href="#RULE_SV-215831r531083_rule">SV-215831r531083_rule</a>
+</td>
+<td>The Cisco router must be configured to require that when a password is changed, the characters are changed in at least eight of the positions within the password.</td>
+<td>CAT II</td>
+</tr>
+<tr>
+<td>CISC-ND-000620</td>
+<td>V-215832</td>
+<td>
+<a href="#RULE_SV-215832r531083_rule">SV-215832r531083_rule</a>
+</td>
+<td>The Cisco router must only store cryptographic representations of passwords.</td>
+<td>CAT I</td>
+</tr>
+<tr>
+<td>CISC-ND-000720</td>
+<td>V-215833</td>
+<td>
+<a href="#RULE_SV-215833r531083_rule">SV-215833r531083_rule</a>
+</td>
+<td>The Cisco router must be configured to terminate all network connections associated with device management after 10 minutes of inactivity.</td>
+<td>CAT I</td>
+</tr>
+<tr>
+<td>CISC-ND-000880</td>
+<td>V-215834</td>
+<td>
+<a href="#RULE_SV-215834r531083_rule">SV-215834r531083_rule</a>
+</td>
+<td>The Cisco router must be configured to automatically audit account enabling actions.</td>
+<td>CAT II</td>
+</tr>
+<tr>
+<td>CISC-ND-000940</td>
+<td>V-215835</td>
+<td>
+<a href="#RULE_SV-215835r531083_rule">SV-215835r531083_rule</a>
+</td>
+<td>The Cisco router must be configured to audit the execution of privileged functions.</td>
+<td>CAT II</td>
+</tr>
+<tr>
+<td>CISC-ND-000980</td>
+<td>V-215836</td>
+<td>
+<a href="#RULE_SV-215836r531083_rule">SV-215836r531083_rule</a>
+</td>
+<td>The Cisco router must be configured to allocate audit record storage capacity in accordance with organization-defined audit record storage requirements.</td>
+<td>CAT II</td>
+</tr>
+<tr>
+<td>CISC-ND-001000</td>
+<td>V-215837</td>
+<td>
+<a href="#RULE_SV-215837r531083_rule">SV-215837r531083_rule</a>
+</td>
+<td>The Cisco router must be configured to generate an alert for all audit failure events.</td>
+<td>CAT II</td>
+</tr>
+<tr>
+<td>CISC-ND-001030</td>
+<td>V-215838</td>
+<td>
+<a href="#RULE_SV-215838r531083_rule">SV-215838r531083_rule</a>
+</td>
+<td>The Cisco router must be configured to synchronize its clock with the primary and secondary time sources using redundant authoritative time sources.</td>
+<td>CAT II</td>
+</tr>
+<tr>
+<td>CISC-ND-001040</td>
+<td>V-215839</td>
+<td>
+<a href="#RULE_SV-215839r531083_rule">SV-215839r531083_rule</a>
+</td>
+<td>The Cisco router must record time stamps for audit records that meet a granularity of one second for a minimum degree of precision.</td>
+<td>CAT II</td>
+</tr>
+<tr>
+<td>CISC-ND-001050</td>
+<td>V-215840</td>
+<td>
+<a href="#RULE_SV-215840r531083_rule">SV-215840r531083_rule</a>
+</td>
+<td>The Cisco router must be configured to record time stamps for log records that can be mapped to Coordinated Universal Time (UTC) or Greenwich Mean Time (GMT).</td>
+<td>CAT II</td>
+</tr>
+<tr>
+<td>CISC-ND-001130</td>
+<td>V-215841</td>
+<td>
+<a href="#RULE_SV-215841r531083_rule">SV-215841r531083_rule</a>
+</td>
+<td>The Cisco router must be configured to authenticate SNMP messages using a FIPS-validated Keyed-Hash Message Authentication Code (HMAC).</td>
+<td>CAT II</td>
+</tr>
+<tr>
+<td>CISC-ND-001140</td>
+<td>V-215842</td>
+<td>
+<a href="#RULE_SV-215842r531083_rule">SV-215842r531083_rule</a>
+</td>
+<td>The Cisco router must be configured to encrypt SNMP messages using a FIPS 140-2 approved algorithm.</td>
+<td>CAT II</td>
+</tr>
+<tr>
+<td>CISC-ND-001150</td>
+<td>V-215843</td>
+<td>
+<a href="#RULE_SV-215843r531083_rule">SV-215843r531083_rule</a>
+</td>
+<td>The Cisco router must be configured to authenticate Network Time Protocol (NTP) sources using authentication that is cryptographically based.</td>
+<td>CAT II</td>
+</tr>
+<tr>
+<td>CISC-ND-001200</td>
+<td>V-215844</td>
+<td>
+<a href="#RULE_SV-215844r531083_rule">SV-215844r531083_rule</a>
+</td>
+<td>The Cisco router must be configured to use FIPS-validated Keyed-Hash Message Authentication Code (HMAC) to protect the integrity of remote maintenance sessions.</td>
+<td>CAT I</td>
+</tr>
+<tr>
+<td>CISC-ND-001210</td>
+<td>V-215845</td>
+<td>
+<a href="#RULE_SV-215845r531083_rule">SV-215845r531083_rule</a>
+</td>
+<td>The Cisco router must be configured to implement cryptographic mechanisms to protect the confidentiality of remote maintenance sessions.</td>
+<td>CAT I</td>
+</tr>
+<tr>
+<td>CISC-ND-001220</td>
+<td>V-215846</td>
+<td>
+<a href="#RULE_SV-215846r531083_rule">SV-215846r531083_rule</a>
+</td>
+<td>The Cisco router must be configured to protect against known types of denial-of-service (DoS) attacks by employing organization-defined security safeguards.</td>
+<td>CAT II</td>
+</tr>
+<tr>
+<td>CISC-ND-001240</td>
+<td>V-215847</td>
+<td>
+<a href="#RULE_SV-215847r531083_rule">SV-215847r531083_rule</a>
+</td>
+<td>The Cisco router must be configured to generate log records when administrator privileges are modified.</td>
+<td>CAT II</td>
+</tr>
+<tr>
+<td>CISC-ND-001250</td>
+<td>V-215848</td>
+<td>
+<a href="#RULE_SV-215848r531083_rule">SV-215848r531083_rule</a>
+</td>
+<td>The Cisco router must be configured to generate log records when administrator privileges are deleted.</td>
+<td>CAT II</td>
+</tr>
+<tr>
+<td>CISC-ND-001260</td>
+<td>V-215849</td>
+<td>
+<a href="#RULE_SV-215849r531083_rule">SV-215849r531083_rule</a>
+</td>
+<td>The Cisco router must be configured to generate audit records when successful/unsuccessful logon attempts occur.</td>
+<td>CAT II</td>
+</tr>
+<tr>
+<td>CISC-ND-001270</td>
+<td>V-215850</td>
+<td>
+<a href="#RULE_SV-215850r531083_rule">SV-215850r531083_rule</a>
+</td>
+<td>The Cisco router must be configured to generate log records for privileged activities.</td>
+<td>CAT II</td>
+</tr>
+<tr>
+<td>CISC-ND-001290</td>
+<td>V-215852</td>
+<td>
+<a href="#RULE_SV-215852r531083_rule">SV-215852r531083_rule</a>
+</td>
+<td>The Cisco router must be configured to generate log records when concurrent logons from different workstations occur.</td>
+<td>CAT II</td>
+</tr>
+<tr>
+<td>CISC-ND-001310</td>
+<td>V-215853</td>
+<td>
+<a href="#RULE_SV-215853r531083_rule">SV-215853r531083_rule</a>
+</td>
+<td>The Cisco router must be configured to off-load log records onto a different system than the system being audited.</td>
+<td>CAT II</td>
+</tr>
+<tr>
+<td>CISC-ND-001370</td>
+<td>V-215854</td>
+<td>
+<a href="#RULE_SV-215854r531083_rule">SV-215854r531083_rule</a>
+</td>
+<td>The Cisco router must be configured to use an authentication server for the purpose of authenticating users prior to granting administrative access.</td>
+<td>CAT I</td>
+</tr>
+<tr>
+<td>CISC-ND-001410</td>
+<td>V-215855</td>
+<td>
+<a href="#RULE_SV-215855r531083_rule">SV-215855r531083_rule</a>
+</td>
+<td>The Cisco router must be configured to back up the configuration when changes occur.</td>
+<td>CAT II</td>
+</tr>
+<tr>
+<td>CISC-ND-001440</td>
+<td>V-215856</td>
+<td>
+<a href="#RULE_SV-215856r531083_rule">SV-215856r531083_rule</a>
+</td>
+<td>The Cisco router must be configured to obtain its public key certificates from an appropriate certificate policy through an approved service provider.</td>
+<td>CAT II</td>
+</tr>
+<tr>
+<td>CISC-ND-001450</td>
+<td>V-220139</td>
+<td>
+<a href="#RULE_SV-220139r531083_rule">SV-220139r531083_rule</a>
+</td>
+<td>The Cisco router must be configured to send log data to a syslog server for the purpose of forwarding alerts to the administrators and the ISSO.</td>
+<td>CAT I</td>
+</tr>
+<tr>
+<td>CISC-ND-001470</td>
+<td>V-220140</td>
+<td>
+<a href="#RULE_SV-220140r531083_rule">SV-220140r531083_rule</a>
+</td>
+<td>The Cisco router must be running an IOS release that is currently supported by Cisco Systems.</td>
+<td>CAT I</td>
+</tr>
+</table>
+<a name="requirementdetails">
+<h3>Requirement Details</h3>
+</a>
+<a name="RULE_SV-215807r531083_rule">
+<table class="ruleblock">
+<tr class="ruleblock">
+<td class="ruleblock">
+<span class="ruleheader">STIG ID:</span>
+<br/>CISC-ND-000010</td>
+<td class="ruleblock">
+<span class="ruleheader">Group ID:</span>
+<br/>V-215807</td>
+<td class="ruleblock">
+<span class="ruleheader">Rule ID:</span>
+<br/>SV-215807r531083_rule</td>
+<td class="ruleblock">
+<span class="ruleheader">Severity:</span>
+<br/>CAT II</td>
+</tr>
+</table>
+</a>
+<table class="ruledata">
+<tr>
+<th class="ruledata">Requirement:</th>
+<td class="ruledata">
+<span class="rulerequirement">The Cisco router must be configured to limit the number of concurrent management sessions to an organization-defined number.</span>
+</td>
+</tr>
+<tr>
+<th class="ruledata">Discussion:</th>
+<td class="ruledata">Device management includes the ability to control the number of administrators and management sessions that manage a device. Limiting the number of allowed administrators and sessions per administrator based on account type, role, or access type is helpful in limiting risks related to denial-of-service (DoS) attacks.<br/>
+<br/>
+This requirement addresses concurrent sessions for administrative accounts and does not address concurrent sessions by a single administrator via multiple administrative accounts. The maximum number of concurrent sessions should be defined based upon mission needs and the operational environment for each system. At a minimum, limits must be set for SSH, HTTPS, account of last resort, and root account sessions.</td>
+</tr>
+<tr>
+<th class="ruledata">Check:</th>
+<td class="ruledata">Note: This requirement is not applicable to file transfer actions such as FTP, SCP and SFTP.<br/>
+<br/>
+Review the router configuration to determine if concurrent management sessions are limited as shown in the example below:<br/>
+<br/>
+ip http secure-server<br/>
+ip http max-connections 2<br/>
+…<br/>
+…<br/>
+…<br/>
+line vty 0 4<br/>
+ session-limit 2<br/>
+ transport input ssh<br/>
+<br/>
+If the router is not configured to limit the number of concurrent management sessions, this is a finding.</td>
+</tr>
+<tr>
+<th class="ruledata">Fix:</th>
+<td class="ruledata">Configure the router to limit the number of concurrent management sessions to an organization-defined number as shown in the example below.<br/>
+<br/>
+ip http max-connections 2<br/>
+line vty 0 4<br/>
+ session-limit 2</td>
+</tr>
+<tr>
+<th class="ruledata">References:</th>
+<td class="ruledata">
+<ul class="ruledata"/>
+</td>
+</tr>
+</table>
+<br/>
+<a name="RULE_SV-215808r531083_rule">
+<table class="ruleblock">
+<tr class="ruleblock">
+<td class="ruleblock">
+<span class="ruleheader">STIG ID:</span>
+<br/>CISC-ND-000090</td>
+<td class="ruleblock">
+<span class="ruleheader">Group ID:</span>
+<br/>V-215808</td>
+<td class="ruleblock">
+<span class="ruleheader">Rule ID:</span>
+<br/>SV-215808r531083_rule</td>
+<td class="ruleblock">
+<span class="ruleheader">Severity:</span>
+<br/>CAT II</td>
+</tr>
+</table>
+</a>
+<table class="ruledata">
+<tr>
+<th class="ruledata">Requirement:</th>
+<td class="ruledata">
+<span class="rulerequirement">The Cisco router must be configured to automatically audit account creation.</span>
+</td>
+</tr>
+<tr>
+<th class="ruledata">Discussion:</th>
+<td class="ruledata">Upon gaining access to a network device, an attacker will often first attempt to create a persistent method of reestablishing access. One way to accomplish this is to create a new account. Notification of account creation helps to mitigate this risk. Auditing account creation provides the necessary reconciliation that account management procedures are being followed. Without this audit trail, personnel without the proper authorization may gain access to critical network nodes.</td>
+</tr>
+<tr>
+<th class="ruledata">Check:</th>
+<td class="ruledata">Review the router configuration to determine if it automatically audits account creation. The configuration should look similar to the example below:<br/>
+<br/>
+archive<br/>
+ log config<br/>
+ logging enable<br/>
+<br/>
+Note: Configuration changes can be viewed using the show archive log config all command.<br/>
+<br/>
+If account creation is not automatically audited, this is a finding.</td>
+</tr>
+<tr>
+<th class="ruledata">Fix:</th>
+<td class="ruledata">Configure the router to log account creation using the following commands:<br/>
+<br/>
+R4(config)#archive<br/>
+R4(config-archive)#log config<br/>
+R4(config-archive-log-cfg)#logging enable<br/>
+R4(config-archive-log-cfg)#end</td>
+</tr>
+<tr>
+<th class="ruledata">References:</th>
+<td class="ruledata">
+<ul class="ruledata"/>
+</td>
+</tr>
+</table>
+<br/>
+<a name="RULE_SV-215809r531083_rule">
+<table class="ruleblock">
+<tr class="ruleblock">
+<td class="ruleblock">
+<span class="ruleheader">STIG ID:</span>
+<br/>CISC-ND-000100</td>
+<td class="ruleblock">
+<span class="ruleheader">Group ID:</span>
+<br/>V-215809</td>
+<td class="ruleblock">
+<span class="ruleheader">Rule ID:</span>
+<br/>SV-215809r531083_rule</td>
+<td class="ruleblock">
+<span class="ruleheader">Severity:</span>
+<br/>CAT II</td>
+</tr>
+</table>
+</a>
+<table class="ruledata">
+<tr>
+<th class="ruledata">Requirement:</th>
+<td class="ruledata">
+<span class="rulerequirement">The Cisco router must be configured to automatically audit account modification.</span>
+</td>
+</tr>
+<tr>
+<th class="ruledata">Discussion:</th>
+<td class="ruledata">Since the accounts in the network device are privileged or system-level accounts, account management is vital to the security of the network device. Account management by a designated authority ensures access to the network device is being controlled in a secure manner by granting access to only authorized personnel with the appropriate and necessary privileges. Auditing account modification along with an automatic notification to appropriate individuals will provide the necessary reconciliation that account management procedures are being followed. If modifications to management accounts are not audited, reconciliation of account management procedures cannot be tracked.</td>
+</tr>
+<tr>
+<th class="ruledata">Check:</th>
+<td class="ruledata">Review the router configuration to determine if it automatically audits account modification. The configuration should look similar to the example below:<br/>
+<br/>
+archive<br/>
+ log config<br/>
+ logging enable<br/>
+<br/>
+Note: Configuration changes can be viewed using the show archive log config all command.<br/>
+<br/>
+If account modification is not automatically audited, this is a finding.</td>
+</tr>
+<tr>
+<th class="ruledata">Fix:</th>
+<td class="ruledata">Configure the router to log account modification using the following commands:<br/>
+<br/>
+R4(config)#archive<br/>
+R4(config-archive)#log config<br/>
+R4(config-archive-log-cfg)#logging enable<br/>
+R4(config-archive-log-cfg)#end</td>
+</tr>
+<tr>
+<th class="ruledata">References:</th>
+<td class="ruledata">
+<ul class="ruledata"/>
+</td>
+</tr>
+</table>
+<br/>
+<a name="RULE_SV-215810r531083_rule">
+<table class="ruleblock">
+<tr class="ruleblock">
+<td class="ruleblock">
+<span class="ruleheader">STIG ID:</span>
+<br/>CISC-ND-000110</td>
+<td class="ruleblock">
+<span class="ruleheader">Group ID:</span>
+<br/>V-215810</td>
+<td class="ruleblock">
+<span class="ruleheader">Rule ID:</span>
+<br/>SV-215810r531083_rule</td>
+<td class="ruleblock">
+<span class="ruleheader">Severity:</span>
+<br/>CAT II</td>
+</tr>
+</table>
+</a>
+<table class="ruledata">
+<tr>
+<th class="ruledata">Requirement:</th>
+<td class="ruledata">
+<span class="rulerequirement">The Cisco router must be configured to automatically audit account disabling actions.</span>
+</td>
+</tr>
+<tr>
+<th class="ruledata">Discussion:</th>
+<td class="ruledata">Account management, as a whole, ensures access to the network device is being controlled in a secure manner by granting access to only authorized personnel. Auditing account disabling actions will support account management procedures. When device management accounts are disabled, user or service accessibility may be affected. Auditing also ensures authorized active accounts remain enabled and available for use when required.</td>
+</tr>
+<tr>
+<th class="ruledata">Check:</th>
+<td class="ruledata">Review the router configuration to determine if it automatically audits account disabling. The configuration should look similar to the example below:<br/>
+<br/>
+archive<br/>
+ log config<br/>
+ logging enable<br/>
+<br/>
+Note: Configuration changes can be viewed using the show archive log config all command.<br/>
+<br/>
+If account disabling is not automatically audited, this is a finding.</td>
+</tr>
+<tr>
+<th class="ruledata">Fix:</th>
+<td class="ruledata">Configure the router to log account disabling using the following commands:<br/>
+<br/>
+R4(config)#archive<br/>
+R4(config-archive)#log config<br/>
+R4(config-archive-log-cfg)#logging enable<br/>
+R4(config-archive-log-cfg)#end</td>
+</tr>
+<tr>
+<th class="ruledata">References:</th>
+<td class="ruledata">
+<ul class="ruledata"/>
+</td>
+</tr>
+</table>
+<br/>
+<a name="RULE_SV-215811r531083_rule">
+<table class="ruleblock">
+<tr class="ruleblock">
+<td class="ruleblock">
+<span class="ruleheader">STIG ID:</span>
+<br/>CISC-ND-000120</td>
+<td class="ruleblock">
+<span class="ruleheader">Group ID:</span>
+<br/>V-215811</td>
+<td class="ruleblock">
+<span class="ruleheader">Rule ID:</span>
+<br/>SV-215811r531083_rule</td>
+<td class="ruleblock">
+<span class="ruleheader">Severity:</span>
+<br/>CAT II</td>
+</tr>
+</table>
+</a>
+<table class="ruledata">
+<tr>
+<th class="ruledata">Requirement:</th>
+<td class="ruledata">
+<span class="rulerequirement">The Cisco router must be configured to automatically audit account removal actions.</span>
+</td>
+</tr>
+<tr>
+<th class="ruledata">Discussion:</th>
+<td class="ruledata">Account management, as a whole, ensures access to the network device is being controlled in a secure manner by granting access to only authorized personnel. Auditing account removal actions will support account management procedures. When device management accounts are terminated, user or service accessibility may be affected. Auditing also ensures authorized active accounts remain enabled and available for use when required.</td>
+</tr>
+<tr>
+<th class="ruledata">Check:</th>
+<td class="ruledata">Review the router configuration to determine if it automatically audits account removal. The configuration should look similar to the example below:<br/>
+<br/>
+archive<br/>
+ log config<br/>
+ logging enable<br/>
+<br/>
+Note: Configuration changes can be viewed using the show archive log config all command.<br/>
+<br/>
+If account removal is not automatically audited, this is a finding.</td>
+</tr>
+<tr>
+<th class="ruledata">Fix:</th>
+<td class="ruledata">Configure the router to log account removal using the following commands:<br/>
+<br/>
+R4(config)#archive<br/>
+R4(config-archive)#log config<br/>
+R4(config-archive-log-cfg)#logging enable<br/>
+R4(config-archive-log-cfg)#end</td>
+</tr>
+<tr>
+<th class="ruledata">References:</th>
+<td class="ruledata">
+<ul class="ruledata"/>
+</td>
+</tr>
+</table>
+<br/>
+<a name="RULE_SV-215812r539421_rule">
+<table class="ruleblock">
+<tr class="ruleblock">
+<td class="ruleblock">
+<span class="ruleheader">STIG ID:</span>
+<br/>CISC-ND-000140</td>
+<td class="ruleblock">
+<span class="ruleheader">Group ID:</span>
+<br/>V-215812</td>
+<td class="ruleblock">
+<span class="ruleheader">Rule ID:</span>
+<br/>SV-215812r539421_rule</td>
+<td class="ruleblock">
+<span class="ruleheader">Severity:</span>
+<br/>CAT II</td>
+</tr>
+</table>
+</a>
+<table class="ruledata">
+<tr>
+<th class="ruledata">Requirement:</th>
+<td class="ruledata">
+<span class="rulerequirement">The Cisco router must be configured to enforce approved authorizations for controlling the flow of management information within the device based on control policies.</span>
+</td>
+</tr>
+<tr>
+<th class="ruledata">Discussion:</th>
+<td class="ruledata">A mechanism to detect and prevent unauthorized communication flow must be configured or provided as part of the system design. If management information flow is not enforced based on approved authorizations, the network device may become compromised. Information flow control regulates where management information is allowed to travel within a network device. The flow of all management information must be monitored and controlled so it does not introduce any unacceptable risk to the network device or data. <br/>
+<br/>
+Application-specific examples of enforcement occur in systems that employ rule sets or establish configuration settings that restrict information system services or message-filtering capability based on message content (e.g., implementing key word searches or using document characteristics).<br/>
+<br/>
+Applications providing information flow control must be able to enforce approved authorizations for controlling the flow of management information within the system in accordance with applicable policy.</td>
+</tr>
+<tr>
+<th class="ruledata">Check:</th>
+<td class="ruledata">Review the Cisco router configuration to verify that it is compliant with this requirement. <br/>
+<br/>
+Step 1: Verify that the line vty has an ACL inbound applied as shown in the example below.<br/>
+<br/>
+line vty 0 4<br/>
+ access-class MANAGEMENT_NET in<br/>
+ transport input ssh<br/>
+<br/>
+Step 2: Verify that the ACL permits only hosts from the management network to access the router.<br/>
+<br/>
+ip access-list extended MANAGEMENT_NET <br/>
+permit ip x.x.x.0 0.0.0.255 any<br/>
+deny   ip any any log-input<br/>
+<br/>
+<br/>
+If the Cisco router is not configured to enforce approved authorizations for controlling the flow of management information within the device based on control policies, this is a finding.</td>
+</tr>
+<tr>
+<th class="ruledata">Fix:</th>
+<td class="ruledata">Configure the Cisco router to restrict management access to specific IP addresses via SSH as shown in the example below.<br/>
+<br/>
+SW2(config)#ip access-list standard MANAGEMENT_NET <br/>
+SW2(config-std-nacl)#permit x.x.x.0 0.0.0.255 <br/>
+SW2(config-std-nacl)#exit <br/>
+SW2(config)#line vty 0 4 <br/>
+SW2(config-line)#transport input ssh <br/>
+SW2(config-line)#access-class MANAGEMENT_NET in <br/>
+SW2(config-line)#end<br/>
+</td>
+</tr>
+<tr>
+<th class="ruledata">References:</th>
+<td class="ruledata">
+<ul class="ruledata"/>
+</td>
+</tr>
+</table>
+<br/>
+<a name="RULE_SV-215813r531083_rule">
+<table class="ruleblock">
+<tr class="ruleblock">
+<td class="ruleblock">
+<span class="ruleheader">STIG ID:</span>
+<br/>CISC-ND-000150</td>
+<td class="ruleblock">
+<span class="ruleheader">Group ID:</span>
+<br/>V-215813</td>
+<td class="ruleblock">
+<span class="ruleheader">Rule ID:</span>
+<br/>SV-215813r531083_rule</td>
+<td class="ruleblock">
+<span class="ruleheader">Severity:</span>
+<br/>CAT II</td>
+</tr>
+</table>
+</a>
+<table class="ruledata">
+<tr>
+<th class="ruledata">Requirement:</th>
+<td class="ruledata">
+<span class="rulerequirement">The Cisco router must be configured to enforce the limit of three consecutive invalid logon attempts, after which time it must lock out the user account from accessing the device for 15 minutes.</span>
+</td>
+</tr>
+<tr>
+<th class="ruledata">Discussion:</th>
+<td class="ruledata">By limiting the number of failed logon attempts, the risk of unauthorized system access via user password guessing, otherwise known as brute-forcing, is reduced.</td>
+</tr>
+<tr>
+<th class="ruledata">Check:</th>
+<td class="ruledata">Review the Cisco router configuration to verify that it enforces the limit of three consecutive invalid logon attempts as shown in the example below.<br/>
+<br/>
+login block-for 900 attempts 3 within 120<br/>
+<br/>
+Note: The configuration example above will block any login attempt for 15 minutes after three consecutive invalid logon attempts within a two-minute period.<br/>
+<br/>
+If the Cisco router is not configured to enforce the limit of three consecutive invalid logon attempts, this is a finding.</td>
+</tr>
+<tr>
+<th class="ruledata">Fix:</th>
+<td class="ruledata">Configure the Cisco router to enforce the limit of three consecutive invalid logon attempts as shown in the example below.<br/>
+<br/>
+R2(config)#login block-for 900 attempts 3 within 120</td>
+</tr>
+<tr>
+<th class="ruledata">References:</th>
+<td class="ruledata">
+<ul class="ruledata"/>
+</td>
+</tr>
+</table>
+<br/>
+<a name="RULE_SV-215814r531083_rule">
+<table class="ruleblock">
+<tr class="ruleblock">
+<td class="ruleblock">
+<span class="ruleheader">STIG ID:</span>
+<br/>CISC-ND-000160</td>
+<td class="ruleblock">
+<span class="ruleheader">Group ID:</span>
+<br/>V-215814</td>
+<td class="ruleblock">
+<span class="ruleheader">Rule ID:</span>
+<br/>SV-215814r531083_rule</td>
+<td class="ruleblock">
+<span class="ruleheader">Severity:</span>
+<br/>CAT II</td>
+</tr>
+</table>
+</a>
+<table class="ruledata">
+<tr>
+<th class="ruledata">Requirement:</th>
+<td class="ruledata">
+<span class="rulerequirement">The Cisco router must be configured to display the Standard Mandatory DoD Notice and Consent Banner before granting access to the device.</span>
+</td>
+</tr>
+<tr>
+<th class="ruledata">Discussion:</th>
+<td class="ruledata">Display of the DoD-approved use notification before granting access to the network device ensures privacy and security notification verbiage used is consistent with applicable federal laws, Executive Orders, directives, policies, regulations, standards, and guidance.<br/>
+<br/>
+System use notifications are required only for access via logon interfaces with human users.</td>
+</tr>
+<tr>
+<th class="ruledata">Check:</th>
+<td class="ruledata">Review the Cisco router configuration to verify that it is compliant with this requirement as shown in the example below.<br/>
+<br/>
+banner login ^C<br/>
+You are accessing a U.S. Government (USG) Information System (IS) that is provided for USG-authorized use only.<br/>
+<br/>
+By using this IS (which includes any device attached to this IS), you consent to the following conditions:<br/>
+<br/>
+-The USG routinely intercepts and monitors communications on this IS for purposes including, but not limited to, penetration testing, COMSEC monitoring, network operations and defense, personnel misconduct (PM), law enforcement (LE), and counterintelligence (CI) investigations.<br/>
+<br/>
+-At any time, the USG may inspect and seize data stored on this IS.<br/>
+<br/>
+-Communications using, or data stored on, this IS are not private, are subject to routine monitoring, interception, and search, and may be disclosed or used for any USG-authorized purpose.<br/>
+<br/>
+-This IS includes security measures (e.g., authentication and access controls) to protect USG interests--not for your personal benefit or privacy.<br/>
+<br/>
+-Notwithstanding the above, using this IS does not constitute consent to PM, LE or CI investigative searching or monitoring of the content of privileged communications, or work product, related to personal representation or services by attorneys, psychotherapists, or clergy, and their assistants. Such communications and work product are private and confidential. See User Agreement for details.<br/>
+^C<br/>
+<br/>
+If the Cisco router is not configured to display the Standard Mandatory DoD Notice and Consent Banner before granting access to the device, this is a finding.</td>
+</tr>
+<tr>
+<th class="ruledata">Fix:</th>
+<td class="ruledata">Configure the Cisco router to display the Standard Mandatory DoD Notice and Consent Banner before granting access as shown in the following example:<br/>
+<br/>
+R1(config)#banner login #<br/>
+Enter TEXT message. End with the character '#'.<br/>
+You are accessing a U.S. Government (USG) Information System (IS) that is provided for USG-authorized use only.<br/>
+<br/>
+By using this IS (which includes any device attached to this IS), you consent to the following conditions:<br/>
+<br/>
+-The USG routinely intercepts and monitors communications on this IS for purposes including, but not limited to, penetration testing, COMSEC monitoring, network operations and defense, personnel misconduct (PM), law enforcement (LE), and counterintelligence (CI) investigations.<br/>
+<br/>
+-At any time, the USG may inspect and seize data stored on this IS.<br/>
+<br/>
+-Communications using, or data stored on, this IS are not private, are subject to routine monitoring, interception, and search, and may be disclosed or used for any USG-authorized purpose.<br/>
+<br/>
+-This IS includes security measures (e.g., authentication and access controls) to protect USG interests--not for your personal benefit or privacy.<br/>
+<br/>
+-Notwithstanding the above, using this IS does not constitute consent to PM, LE or CI investigative searching or monitoring of the content of privileged communications, or work product, related to personal representation or services by attorneys, psychotherapists, or clergy, and their assistants. Such communications and work product are private and confidential. See User Agreement for details. #<br/>
+R1(config)#end</td>
+</tr>
+<tr>
+<th class="ruledata">References:</th>
+<td class="ruledata">
+<ul class="ruledata"/>
+</td>
+</tr>
+</table>
+<br/>
+<a name="RULE_SV-215815r531083_rule">
+<table class="ruleblock">
+<tr class="ruleblock">
+<td class="ruleblock">
+<span class="ruleheader">STIG ID:</span>
+<br/>CISC-ND-000210</td>
+<td class="ruleblock">
+<span class="ruleheader">Group ID:</span>
+<br/>V-215815</td>
+<td class="ruleblock">
+<span class="ruleheader">Rule ID:</span>
+<br/>SV-215815r531083_rule</td>
+<td class="ruleblock">
+<span class="ruleheader">Severity:</span>
+<br/>CAT II</td>
+</tr>
+</table>
+</a>
+<table class="ruledata">
+<tr>
+<th class="ruledata">Requirement:</th>
+<td class="ruledata">
+<span class="rulerequirement">The Cisco router must be configured to protect against an individual falsely denying having performed organization-defined actions to be covered by non-repudiation.</span>
+</td>
+</tr>
+<tr>
+<th class="ruledata">Discussion:</th>
+<td class="ruledata">This requirement supports non-repudiation of actions taken by an administrator and is required in order to maintain the integrity of the configuration management process. All configuration changes to the network device are logged, and administrators authenticate with two-factor authentication before gaining administrative access. Together, these processes will ensure the administrators can be held accountable for the configuration changes they implement.<br/>
+<br/>
+To meet this requirement, the network device must log administrator access and activity.</td>
+</tr>
+<tr>
+<th class="ruledata">Check:</th>
+<td class="ruledata">Review the Cisco router configuration to verify that it is compliant with this requirement as shown in the example below.<br/>
+<br/>
+hostname R1<br/>
+!<br/>
+logging userinfo<br/>
+!<br/>
+…<br/>
+…<br/>
+…<br/>
+archive<br/>
+ log config<br/>
+ logging enable<br/>
+!<br/>
+<br/>
+Note: The logging userinfo global configuration command will generate a log when a user increases his or her privilege level.<br/>
+<br/>
+If logging of administrator activity is not configured, this is a finding.</td>
+</tr>
+<tr>
+<th class="ruledata">Fix:</th>
+<td class="ruledata">Configure the router to log administrator activity as shown in the example below.<br/>
+<br/>
+R1(config)#logging userinfo<br/>
+R1(config)#archive<br/>
+R1(config-archive)#log config<br/>
+R1(config-archive-log-cfg)#logging enable<br/>
+R1(config-archive-log-cfg)#end</td>
+</tr>
+<tr>
+<th class="ruledata">References:</th>
+<td class="ruledata">
+<ul class="ruledata"/>
+</td>
+</tr>
+</table>
+<br/>
+<a name="RULE_SV-215816r531083_rule">
+<table class="ruleblock">
+<tr class="ruleblock">
+<td class="ruleblock">
+<span class="ruleheader">STIG ID:</span>
+<br/>CISC-ND-000250</td>
+<td class="ruleblock">
+<span class="ruleheader">Group ID:</span>
+<br/>V-215816</td>
+<td class="ruleblock">
+<span class="ruleheader">Rule ID:</span>
+<br/>SV-215816r531083_rule</td>
+<td class="ruleblock">
+<span class="ruleheader">Severity:</span>
+<br/>CAT II</td>
+</tr>
+</table>
+</a>
+<table class="ruledata">
+<tr>
+<th class="ruledata">Requirement:</th>
+<td class="ruledata">
+<span class="rulerequirement">The Cisco router must be configured to generate audit records when successful/unsuccessful attempts to log on with access privileges occur.</span>
+</td>
+</tr>
+<tr>
+<th class="ruledata">Discussion:</th>
+<td class="ruledata">Without generating audit records that are specific to the security and mission needs of the organization, it would be difficult to establish, correlate, and investigate the events relating to an incident or identify those responsible for one. <br/>
+<br/>
+Audit records can be generated from various components within the information system (e.g., module or policy filter).</td>
+</tr>
+<tr>
+<th class="ruledata">Check:</th>
+<td class="ruledata">Review the Cisco router configuration to verify that it is compliant with this requirement. The configuration example below will log all logon attempts.<br/>
+<br/>
+login on-failure log<br/>
+login on-success log<br/>
+<br/>
+If the Cisco router is not configured to generate audit records when successful/unsuccessful attempts to logon, this is a finding.</td>
+</tr>
+<tr>
+<th class="ruledata">Fix:</th>
+<td class="ruledata">Configure the Cisco router to log all logon attempts as shown in the example below.<br/>
+<br/>
+R1(config)#login on-failure log<br/>
+R1(config)#login on-success log<br/>
+R1(config)#end</td>
+</tr>
+<tr>
+<th class="ruledata">References:</th>
+<td class="ruledata">
+<ul class="ruledata"/>
+</td>
+</tr>
+</table>
+<br/>
+<a name="RULE_SV-215817r531083_rule">
+<table class="ruleblock">
+<tr class="ruleblock">
+<td class="ruleblock">
+<span class="ruleheader">STIG ID:</span>
+<br/>CISC-ND-000280</td>
+<td class="ruleblock">
+<span class="ruleheader">Group ID:</span>
+<br/>V-215817</td>
+<td class="ruleblock">
+<span class="ruleheader">Rule ID:</span>
+<br/>SV-215817r531083_rule</td>
+<td class="ruleblock">
+<span class="ruleheader">Severity:</span>
+<br/>CAT II</td>
+</tr>
+</table>
+</a>
+<table class="ruledata">
+<tr>
+<th class="ruledata">Requirement:</th>
+<td class="ruledata">
+<span class="rulerequirement">The Cisco router must produce audit records containing information to establish when (date and time) the events occurred.</span>
+</td>
+</tr>
+<tr>
+<th class="ruledata">Discussion:</th>
+<td class="ruledata">It is essential for security personnel to know what is being done, what was attempted, where it was done, when it was done, and by whom it was done in order to compile an accurate risk assessment. Logging the date and time of each detected event provides a means of investigating an attack; recognizing resource utilization or capacity thresholds; or identifying an improperly configured network device. In order to establish and correlate the series of events leading up to an outage or attack, it is imperative the date and time are recorded in all log records.</td>
+</tr>
+<tr>
+<th class="ruledata">Check:</th>
+<td class="ruledata">Verify that the router is configured to include the date and time on all log records as shown in the configuration example below.<br/>
+<br/>
+service timestamps log datetime localtime<br/>
+<br/>
+If time stamps are not configured, this is a finding.</td>
+</tr>
+<tr>
+<th class="ruledata">Fix:</th>
+<td class="ruledata">Configure the router to include the date and time on all log records as shown in the example below.<br/>
+<br/>
+R1(config)#service timestamps log datetime localtime</td>
+</tr>
+<tr>
+<th class="ruledata">References:</th>
+<td class="ruledata">
+<ul class="ruledata"/>
+</td>
+</tr>
+</table>
+<br/>
+<a name="RULE_SV-215818r531083_rule">
+<table class="ruleblock">
+<tr class="ruleblock">
+<td class="ruleblock">
+<span class="ruleheader">STIG ID:</span>
+<br/>CISC-ND-000290</td>
+<td class="ruleblock">
+<span class="ruleheader">Group ID:</span>
+<br/>V-215818</td>
+<td class="ruleblock">
+<span class="ruleheader">Rule ID:</span>
+<br/>SV-215818r531083_rule</td>
+<td class="ruleblock">
+<span class="ruleheader">Severity:</span>
+<br/>CAT II</td>
+</tr>
+</table>
+</a>
+<table class="ruledata">
+<tr>
+<th class="ruledata">Requirement:</th>
+<td class="ruledata">
+<span class="rulerequirement">The Cisco router must produce audit records containing information to establish where the events occurred.</span>
+</td>
+</tr>
+<tr>
+<th class="ruledata">Discussion:</th>
+<td class="ruledata">In order to compile an accurate risk assessment and provide forensic analysis, it is essential for security personnel to know where events occurred, such as device hardware components, device software modules, session identifiers, filenames, host names, and functionality.<br/>
+<br/>
+Associating information about where the event occurred within the network device provides a means of investigating an attack; recognizing resource utilization or capacity thresholds; or identifying an improperly configured device.</td>
+</tr>
+<tr>
+<th class="ruledata">Check:</th>
+<td class="ruledata">Review the deny statements in all ACLs to determine if the log-input parameter has been configured as shown in the example below.<br/>
+<br/>
+ip access-list extended BLOCK_INBOUND<br/>
+ deny  icmp any any log-input<br/>
+<br/>
+If the router is not configured with the log-input parameter after any deny statements to note where packets have been dropped via an ACL, this is a finding.</td>
+</tr>
+<tr>
+<th class="ruledata">Fix:</th>
+<td class="ruledata">Configure the log-input parameter after any deny statements to provide the location as to where packets have been dropped via an ACL.<br/>
+<br/>
+R1(config)#ip access-list extended BLOCK_INBOUND<br/>
+R1(config-ext-nacl)#deny icmp any any log-input</td>
+</tr>
+<tr>
+<th class="ruledata">References:</th>
+<td class="ruledata">
+<ul class="ruledata"/>
+</td>
+</tr>
+</table>
+<br/>
+<a name="RULE_SV-215819r531083_rule">
+<table class="ruleblock">
+<tr class="ruleblock">
+<td class="ruleblock">
+<span class="ruleheader">STIG ID:</span>
+<br/>CISC-ND-000330</td>
+<td class="ruleblock">
+<span class="ruleheader">Group ID:</span>
+<br/>V-215819</td>
+<td class="ruleblock">
+<span class="ruleheader">Rule ID:</span>
+<br/>SV-215819r531083_rule</td>
+<td class="ruleblock">
+<span class="ruleheader">Severity:</span>
+<br/>CAT II</td>
+</tr>
+</table>
+</a>
+<table class="ruledata">
+<tr>
+<th class="ruledata">Requirement:</th>
+<td class="ruledata">
+<span class="rulerequirement">The Cisco router must be configured to generate audit records containing the full-text recording of privileged commands.</span>
+</td>
+</tr>
+<tr>
+<th class="ruledata">Discussion:</th>
+<td class="ruledata">Reconstruction of harmful events or forensic analysis is not possible if audit records do not contain enough information. <br/>
+<br/>
+Organizations consider limiting the additional audit information to only that information explicitly needed for specific audit requirements. The additional information required is dependent on the type of information (i.e., sensitivity of the data and the environment within which it resides). At a minimum, the organization must audit full-text recording of privileged commands. The organization must maintain audit trails in sufficient detail to reconstruct events to determine the cause and impact of compromise.</td>
+</tr>
+<tr>
+<th class="ruledata">Check:</th>
+<td class="ruledata">Review the Cisco router configuration to verify that it is compliant with this requirement. The configuration example below will log all configuration changes.<br/>
+<br/>
+archive<br/>
+ log config<br/>
+ logging enable<br/>
+<br/>
+Note: Configuration changes can be viewed using the show archive log config all command.<br/>
+<br/>
+If the Cisco router is not configured to generate audit records of configuration changes, this is a finding.</td>
+</tr>
+<tr>
+<th class="ruledata">Fix:</th>
+<td class="ruledata">Configure the Cisco router to log all configuration changes as shown in the example below.<br/>
+<br/>
+R4(config)#archive<br/>
+R4(config-archive)#log config<br/>
+R4(config-archive-log-cfg)#logging enable<br/>
+R4(config-archive-log-cfg)#end</td>
+</tr>
+<tr>
+<th class="ruledata">References:</th>
+<td class="ruledata">
+<ul class="ruledata"/>
+</td>
+</tr>
+</table>
+<br/>
+<a name="RULE_SV-215820r531083_rule">
+<table class="ruleblock">
+<tr class="ruleblock">
+<td class="ruleblock">
+<span class="ruleheader">STIG ID:</span>
+<br/>CISC-ND-000380</td>
+<td class="ruleblock">
+<span class="ruleheader">Group ID:</span>
+<br/>V-215820</td>
+<td class="ruleblock">
+<span class="ruleheader">Rule ID:</span>
+<br/>SV-215820r531083_rule</td>
+<td class="ruleblock">
+<span class="ruleheader">Severity:</span>
+<br/>CAT II</td>
+</tr>
+</table>
+</a>
+<table class="ruledata">
+<tr>
+<th class="ruledata">Requirement:</th>
+<td class="ruledata">
+<span class="rulerequirement">The Cisco router must be configured to protect audit information from unauthorized modification.</span>
+</td>
+</tr>
+<tr>
+<th class="ruledata">Discussion:</th>
+<td class="ruledata">Audit information includes all information (e.g., audit records, audit settings, and audit reports) needed to successfully audit network device activity.<br/>
+<br/>
+If audit data were to become compromised, then forensic analysis and discovery of the true source of potentially malicious system activity is impossible to achieve. <br/>
+<br/>
+To ensure the veracity of audit data, the network device must protect audit information from unauthorized modification. <br/>
+<br/>
+This requirement can be achieved through multiple methods, which will depend upon system architecture and design. Some commonly employed methods include ensuring log files receive the proper file system permissions and limiting log data locations. <br/>
+<br/>
+Network devices providing a user interface to audit data will leverage user permissions and roles identifying the user accessing the data and the corresponding rights that the user enjoys in order to make access decisions regarding the modification of audit data.</td>
+</tr>
+<tr>
+<th class="ruledata">Check:</th>
+<td class="ruledata">Review the Cisco router configuration to verify that it is compliant with this requirement.<br/>
+<br/>
+Step 1: If persistent logging is enabled as shown in the example below, go to step 2. Otherwise, this requirement is not applicable.<br/>
+<br/>
+logging persistent url disk0:/logfile size 134217728 filesize 16384<br/>
+<br/>
+Step 2: Verify that the router is not configured with a privilege level other than "15" to allow access to the file system as shown in the example below.<br/>
+<br/>
+file privilege 10 <br/>
+<br/>
+Note: The default privilege level required for access to the file system is "15"; hence, the command file privilege "15" will not be shown in the configuration.<br/>
+<br/>
+If the router is configured with a privilege level other than "15" to allow access to the file system, this is a finding.</td>
+</tr>
+<tr>
+<th class="ruledata">Fix:</th>
+<td class="ruledata">If persistent logging is enabled, configure the router to only allow administrators with privilege level "15" access to the file system as shown in the example below.<br/>
+<br/>
+R4(config)#file privilege 15</td>
+</tr>
+<tr>
+<th class="ruledata">References:</th>
+<td class="ruledata">
+<ul class="ruledata"/>
+</td>
+</tr>
+</table>
+<br/>
+<a name="RULE_SV-215821r531083_rule">
+<table class="ruleblock">
+<tr class="ruleblock">
+<td class="ruleblock">
+<span class="ruleheader">STIG ID:</span>
+<br/>CISC-ND-000390</td>
+<td class="ruleblock">
+<span class="ruleheader">Group ID:</span>
+<br/>V-215821</td>
+<td class="ruleblock">
+<span class="ruleheader">Rule ID:</span>
+<br/>SV-215821r531083_rule</td>
+<td class="ruleblock">
+<span class="ruleheader">Severity:</span>
+<br/>CAT II</td>
+</tr>
+</table>
+</a>
+<table class="ruledata">
+<tr>
+<th class="ruledata">Requirement:</th>
+<td class="ruledata">
+<span class="rulerequirement">The Cisco router must be configured to protect audit information from unauthorized deletion.</span>
+</td>
+</tr>
+<tr>
+<th class="ruledata">Discussion:</th>
+<td class="ruledata">Audit information includes all information (e.g., audit records, audit settings, and audit reports) needed to successfully audit information system activity.<br/>
+<br/>
+If audit data were to become compromised, then forensic analysis and discovery of the true source of potentially malicious system activity is impossible to achieve. <br/>
+<br/>
+To ensure the veracity of audit data, the network device must protect audit information from unauthorized deletion. This requirement can be achieved through multiple methods, which will depend upon system architecture and design. Some commonly employed methods include: ensuring log files receive the proper file system permissions utilizing file system protections, restricting access, and backing up log data to ensure log data is retained. <br/>
+<br/>
+Network devices providing a user interface to audit data will leverage user permissions and roles identifying the user accessing the data and the corresponding rights the user enjoys in order to make access decisions regarding the deletion of audit data.</td>
+</tr>
+<tr>
+<th class="ruledata">Check:</th>
+<td class="ruledata">Review the Cisco router configuration to verify that it is compliant with this requirement.<br/>
+<br/>
+Step 1: If persistent logging is enabled as shown in the example below, go to step 2. Otherwise, this requirement is not applicable.<br/>
+<br/>
+logging persistent url disk0:/logfile size 134217728 filesize 16384<br/>
+<br/>
+Step 2: Verify that the router is not configured with a privilege level other than "15" to allow access to the file system as shown in the example below.<br/>
+<br/>
+file privilege 10 <br/>
+<br/>
+Note: The default privilege level required for access to the file system is "15"; hence, the command file privilege "15" will not be shown in the configuration.<br/>
+<br/>
+If the router is configured with a privilege level other than "15" to allow access to the file system, this is a finding.</td>
+</tr>
+<tr>
+<th class="ruledata">Fix:</th>
+<td class="ruledata">If persistent logging is enabled, configure the router to only allow administrators with privilege level "15" access to the file system as shown in the example below.<br/>
+<br/>
+R4(config)#file privilege 15</td>
+</tr>
+<tr>
+<th class="ruledata">References:</th>
+<td class="ruledata">
+<ul class="ruledata"/>
+</td>
+</tr>
+</table>
+<br/>
+<a name="RULE_SV-215822r531083_rule">
+<table class="ruleblock">
+<tr class="ruleblock">
+<td class="ruleblock">
+<span class="ruleheader">STIG ID:</span>
+<br/>CISC-ND-000460</td>
+<td class="ruleblock">
+<span class="ruleheader">Group ID:</span>
+<br/>V-215822</td>
+<td class="ruleblock">
+<span class="ruleheader">Rule ID:</span>
+<br/>SV-215822r531083_rule</td>
+<td class="ruleblock">
+<span class="ruleheader">Severity:</span>
+<br/>CAT II</td>
+</tr>
+</table>
+</a>
+<table class="ruledata">
+<tr>
+<th class="ruledata">Requirement:</th>
+<td class="ruledata">
+<span class="rulerequirement">The Cisco router must be configured to limit privileges to change the software resident within software libraries.</span>
+</td>
+</tr>
+<tr>
+<th class="ruledata">Discussion:</th>
+<td class="ruledata">Changes to any software components of the network device can have significant effects on the overall security of the network. Therefore, only qualified and authorized individuals should be allowed administrative access to the network device for implementing any changes or upgrades. If the network device were to enable non-authorized users to make changes to software libraries, those changes could be implemented without undergoing testing, validation, and approval.</td>
+</tr>
+<tr>
+<th class="ruledata">Check:</th>
+<td class="ruledata">Verify that the router is not configured with a privilege level other than "15" to allow access to the file system as shown in the example below.<br/>
+<br/>
+file privilege 10 <br/>
+<br/>
+Note: The default privilege level required for access to the file system is "15"; hence, the command file privilege "15" will not be shown in the configuration.<br/>
+<br/>
+If the router is configured with a privilege level other than "15" to allow access to the file system, this is a finding.</td>
+</tr>
+<tr>
+<th class="ruledata">Fix:</th>
+<td class="ruledata">Configure the router to only allow administrators with privilege level "15" access to the file system as shown in the example below.<br/>
+<br/>
+R4(config)#file privilege 15</td>
+</tr>
+<tr>
+<th class="ruledata">References:</th>
+<td class="ruledata">
+<ul class="ruledata"/>
+</td>
+</tr>
+</table>
+<br/>
+<a name="RULE_SV-215823r531083_rule">
+<table class="ruleblock">
+<tr class="ruleblock">
+<td class="ruleblock">
+<span class="ruleheader">STIG ID:</span>
+<br/>CISC-ND-000470</td>
+<td class="ruleblock">
+<span class="ruleheader">Group ID:</span>
+<br/>V-215823</td>
+<td class="ruleblock">
+<span class="ruleheader">Rule ID:</span>
+<br/>SV-215823r531083_rule</td>
+<td class="ruleblock">
+<span class="ruleheader">Severity:</span>
+<br/>CAT I</td>
+</tr>
+</table>
+</a>
+<table class="ruledata">
+<tr>
+<th class="ruledata">Requirement:</th>
+<td class="ruledata">
+<span class="rulerequirement">The Cisco router must be configured to prohibit the use of all unnecessary and nonsecure functions and services.</span>
+</td>
+</tr>
+<tr>
+<th class="ruledata">Discussion:</th>
+<td class="ruledata">Network devices are capable of providing a wide variety of functions and services. Some of the functions and services provided by default may not be necessary to support essential organizational operations. Additionally, it is sometimes convenient to provide multiple services from a single component (e.g., email and web services); however, doing so increases risk over limiting the services provided by any one component. <br/>
+<br/>
+To support the requirements and principles of least functionality, the network device must support the organizational requirements providing only essential capabilities and limiting the use of ports, protocols, and/or services to only those required, authorized, and approved. Some network devices have capabilities enabled by default; if these capabilities are not necessary, they must be disabled. If a particular capability is used, then it must be documented and approved.</td>
+</tr>
+<tr>
+<th class="ruledata">Check:</th>
+<td class="ruledata">Verify that the router does not have any unnecessary or non-secure ports, protocols and services enabled. For example, the following commands should not be in the configuration:<br/>
+<br/>
+boot network<br/>
+ip boot server<br/>
+ip bootp server<br/>
+ip dns server<br/>
+ip identd<br/>
+ip finger<br/>
+ip http server<br/>
+ip rcmd rcp-enable<br/>
+ip rcmd rsh-enable<br/>
+service config<br/>
+service finger<br/>
+service tcp-small-servers<br/>
+service udp-small-servers<br/>
+<br/>
+If any unnecessary or non-secure ports, protocols, or services are enabled, this is a finding.</td>
+</tr>
+<tr>
+<th class="ruledata">Fix:</th>
+<td class="ruledata">Disable the following services if enabled as shown in the example below.<br/>
+<br/>
+R2(config)#no boot network<br/>
+R2(config)#no ip boot server<br/>
+R2(config)#no ip bootp server<br/>
+R2(config)#no ip dns server<br/>
+R2(config)#no ip identd<br/>
+R2(config)#no ip finger<br/>
+R2(config)#no ip http server<br/>
+R2(config)#no ip rcmd rcp-enable<br/>
+R2(config)#no ip rcmd rsh-enable<br/>
+R2(config)#no service config<br/>
+R2(config)#no service finger<br/>
+R2(config)#no service tcp-small-servers<br/>
+R2(config)#no service udp-small-servers<br/>
+R2(config)#no service pad<br/>
+R2(config)#end</td>
+</tr>
+<tr>
+<th class="ruledata">References:</th>
+<td class="ruledata">
+<ul class="ruledata"/>
+</td>
+</tr>
+</table>
+<br/>
+<a name="RULE_SV-215824r531083_rule">
+<table class="ruleblock">
+<tr class="ruleblock">
+<td class="ruleblock">
+<span class="ruleheader">STIG ID:</span>
+<br/>CISC-ND-000490</td>
+<td class="ruleblock">
+<span class="ruleheader">Group ID:</span>
+<br/>V-215824</td>
+<td class="ruleblock">
+<span class="ruleheader">Rule ID:</span>
+<br/>SV-215824r531083_rule</td>
+<td class="ruleblock">
+<span class="ruleheader">Severity:</span>
+<br/>CAT II</td>
+</tr>
+</table>
+</a>
+<table class="ruledata">
+<tr>
+<th class="ruledata">Requirement:</th>
+<td class="ruledata">
+<span class="rulerequirement">The Cisco router must be configured with only one local account to be used as the account of last resort in the event the authentication server is unavailable.</span>
+</td>
+</tr>
+<tr>
+<th class="ruledata">Discussion:</th>
+<td class="ruledata">Authentication for administrative (privileged level) access to the device is required at all times. An account can be created on the device's local database for use when the authentication server is down or connectivity between the device and the authentication server is not operable. This account is referred to as the account of last resort since it is intended to be used as a last resort and when immediate administrative access is absolutely necessary.<br/>
+<br/>
+The account of last resort logon credentials must be stored in a sealed envelope and kept in a safe. The safe must be periodically audited to verify the envelope remains sealed. The signature of the auditor and the date of the audit should be added to the envelope as a record. Administrators should secure the credentials and disable the root account (if possible) when not needed for system administration functions.</td>
+</tr>
+<tr>
+<th class="ruledata">Check:</th>
+<td class="ruledata">Step 1: Review the Cisco router configuration to verify that a local account for last resort has been configured.<br/>
+<br/>
+username xxxxxxxxxxx privilege nn common-criteria-policy PASSWORD_POLICY password xxxxxxxxxx<br/>
+<br/>
+Note: The configured Common Criteria policy must be used when creating or changing the local account password as shown in the example above.<br/>
+<br/>
+Step 2: Verify that local is defined after radius or tacas+ in the authentication order as shown in the example below.<br/>
+<br/>
+aaa authentication login default group tacacs+ local<br/>
+<br/>
+If the Cisco router is not configured with only one local account to be used as the account of last resort in the event the authentication server is unavailable, this is a finding.</td>
+</tr>
+<tr>
+<th class="ruledata">Fix:</th>
+<td class="ruledata">Step 1: Configure a local account as shown in the example below.<br/>
+<br/>
+R2(config)#username xxxxxxxxx privilege nn secret xxxxxxx<br/>
+<br/>
+Step 2: Configure the authentication order to use the local account if the authentication server is not reachable as shown in the following example:<br/>
+<br/>
+R2(config)#aaa authentication login default group tacacs+ local</td>
+</tr>
+<tr>
+<th class="ruledata">References:</th>
+<td class="ruledata">
+<ul class="ruledata"/>
+</td>
+</tr>
+</table>
+<br/>
+<a name="RULE_SV-215825r531083_rule">
+<table class="ruleblock">
+<tr class="ruleblock">
+<td class="ruleblock">
+<span class="ruleheader">STIG ID:</span>
+<br/>CISC-ND-000530</td>
+<td class="ruleblock">
+<span class="ruleheader">Group ID:</span>
+<br/>V-215825</td>
+<td class="ruleblock">
+<span class="ruleheader">Rule ID:</span>
+<br/>SV-215825r531083_rule</td>
+<td class="ruleblock">
+<span class="ruleheader">Severity:</span>
+<br/>CAT II</td>
+</tr>
+</table>
+</a>
+<table class="ruledata">
+<tr>
+<th class="ruledata">Requirement:</th>
+<td class="ruledata">
+<span class="rulerequirement">The Cisco router must be configured to implement replay-resistant authentication mechanisms for network access to privileged accounts.</span>
+</td>
+</tr>
+<tr>
+<th class="ruledata">Discussion:</th>
+<td class="ruledata">A replay attack may enable an unauthorized user to gain access to the application. Authentication sessions between the authenticator and the application validating the user credentials must not be vulnerable to a replay attack.<br/>
+<br/>
+An authentication process resists replay attacks if it is impractical to achieve a successful authentication by recording and replaying a previous authentication message. <br/>
+<br/>
+Techniques used to address this include protocols using nonces (e.g., numbers generated for a specific one-time use) or challenges (e.g., TLS, WS_Security). Additional techniques include time-synchronous or challenge-response one-time authenticators.</td>
+</tr>
+<tr>
+<th class="ruledata">Check:</th>
+<td class="ruledata">Review the Cisco router configuration to verify that SSH is configured to use FIPS-140-2 compliant HMACs as shown in the example below.<br/>
+<br/>
+ip ssh version 2<br/>
+ip ssh server algorithm encryption aes128-cbc aes192-cbc aes192-ctr<br/>
+<br/>
+Note: An SSH configuration enables a server and client to authorize the negotiation of only those algorithms that are configured from the allowed list. If a remote party tries to negotiate using an algorithm that is not part of the allowed list, the request is rejected and the session is not established. <br/>
+<br/>
+If the router is not configured to implement replay-resistant authentication mechanisms for network access to privileged accounts, this is a finding.</td>
+</tr>
+<tr>
+<th class="ruledata">Fix:</th>
+<td class="ruledata">Configure SSH to use FIPS-140-2 compliant HMACs as shown in the example below.<br/>
+<br/>
+R1(config)#ip ssh version 2<br/>
+R1(config)#ip ssh server algorithm encryption aes128-cbc aes192-cbc aes192-ctr<br/>
+<br/>
+Note: An SSH configuration enables a server and client to authorize the negotiation of only those algorithms that are configured from the allowed list. If a user tries to negotiate using an algorithm that is not part of the allowed list, the request is rejected and the session is not established.</td>
+</tr>
+<tr>
+<th class="ruledata">References:</th>
+<td class="ruledata">
+<ul class="ruledata"/>
+</td>
+</tr>
+</table>
+<br/>
+<a name="RULE_SV-215826r531083_rule">
+<table class="ruleblock">
+<tr class="ruleblock">
+<td class="ruleblock">
+<span class="ruleheader">STIG ID:</span>
+<br/>CISC-ND-000550</td>
+<td class="ruleblock">
+<span class="ruleheader">Group ID:</span>
+<br/>V-215826</td>
+<td class="ruleblock">
+<span class="ruleheader">Rule ID:</span>
+<br/>SV-215826r531083_rule</td>
+<td class="ruleblock">
+<span class="ruleheader">Severity:</span>
+<br/>CAT II</td>
+</tr>
+</table>
+</a>
+<table class="ruledata">
+<tr>
+<th class="ruledata">Requirement:</th>
+<td class="ruledata">
+<span class="rulerequirement">The Cisco router must be configured to enforce a minimum 15-character password length.</span>
+</td>
+</tr>
+<tr>
+<th class="ruledata">Discussion:</th>
+<td class="ruledata">Password complexity, or strength, is a measure of the effectiveness of a password in resisting attempts at guessing and brute-force attacks. Password length is one factor of several that helps to determine strength and how long it takes to crack a password.<br/>
+<br/>
+The shorter the password, the lower the number of possible combinations that need to be tested before the password is compromised. Use of more characters in a password helps to exponentially increase the time and/or resources required to compromise the password.</td>
+</tr>
+<tr>
+<th class="ruledata">Check:</th>
+<td class="ruledata">Review the Cisco router configuration to verify that it is compliant with this requirement as shown in the example below.<br/>
+<br/>
+aaa new-model<br/>
+!<br/>
+!<br/>
+aaa common-criteria policy PASSWORD_POLICY<br/>
+ min-length 15<br/>
+<br/>
+If the Cisco router is not configured to enforce a minimum 15-character password length, this is a finding.</td>
+</tr>
+<tr>
+<th class="ruledata">Fix:</th>
+<td class="ruledata">Configure the Cisco router to enforce a minimum 15-character password length as shown in the example below.<br/>
+<br/>
+R1(config)#aaa common-criteria policy PASSWORD_POLICY<br/>
+R1(config-cc-policy)#min-length 15<br/>
+R1(config-cc-policy)#exit</td>
+</tr>
+<tr>
+<th class="ruledata">References:</th>
+<td class="ruledata">
+<ul class="ruledata"/>
+</td>
+</tr>
+</table>
+<br/>
+<a name="RULE_SV-215827r531083_rule">
+<table class="ruleblock">
+<tr class="ruleblock">
+<td class="ruleblock">
+<span class="ruleheader">STIG ID:</span>
+<br/>CISC-ND-000570</td>
+<td class="ruleblock">
+<span class="ruleheader">Group ID:</span>
+<br/>V-215827</td>
+<td class="ruleblock">
+<span class="ruleheader">Rule ID:</span>
+<br/>SV-215827r531083_rule</td>
+<td class="ruleblock">
+<span class="ruleheader">Severity:</span>
+<br/>CAT II</td>
+</tr>
+</table>
+</a>
+<table class="ruledata">
+<tr>
+<th class="ruledata">Requirement:</th>
+<td class="ruledata">
+<span class="rulerequirement">The Cisco router must be configured to enforce password complexity by requiring that at least one upper-case character be used.</span>
+</td>
+</tr>
+<tr>
+<th class="ruledata">Discussion:</th>
+<td class="ruledata">Use of a complex passwords helps to increase the time and resources required to compromise the password. Password complexity, or strength, is a measure of the effectiveness of a password in resisting attempts at guessing and brute-force attacks.<br/>
+<br/>
+Password complexity is one factor of several that determine how long it takes to crack a password. The more complex the password is, the greater the number of possible combinations that need to be tested before the password is compromised.<br/>
+<br/>
+Multifactor authentication (MFA) is required for all administrative and user accounts on network devices, except for an account of last resort and (where applicable) a root account. Passwords should only be used when MFA using PKI is not available, and for the account of last resort and root account.</td>
+</tr>
+<tr>
+<th class="ruledata">Check:</th>
+<td class="ruledata">Review the Cisco router configuration to verify that it is compliant with this requirement as shown in the example below.<br/>
+<br/>
+aaa new-model<br/>
+!<br/>
+!<br/>
+aaa common-criteria policy PASSWORD_POLICY<br/>
+upper-case 1<br/>
+<br/>
+If the Cisco router is not configured to enforce password complexity by requiring that at least one upper-case character be used, this is a finding.</td>
+</tr>
+<tr>
+<th class="ruledata">Fix:</th>
+<td class="ruledata">Configure the Cisco router to enforce password complexity by requiring that at least one upper-case character be used as shown in the example below.<br/>
+<br/>
+R1(config)#aaa common-criteria policy PASSWORD_POLICY<br/>
+R1(config-cc-policy)#upper-case 1<br/>
+R1(config-cc-policy)#exit</td>
+</tr>
+<tr>
+<th class="ruledata">References:</th>
+<td class="ruledata">
+<ul class="ruledata"/>
+</td>
+</tr>
+</table>
+<br/>
+<a name="RULE_SV-215828r531083_rule">
+<table class="ruleblock">
+<tr class="ruleblock">
+<td class="ruleblock">
+<span class="ruleheader">STIG ID:</span>
+<br/>CISC-ND-000580</td>
+<td class="ruleblock">
+<span class="ruleheader">Group ID:</span>
+<br/>V-215828</td>
+<td class="ruleblock">
+<span class="ruleheader">Rule ID:</span>
+<br/>SV-215828r531083_rule</td>
+<td class="ruleblock">
+<span class="ruleheader">Severity:</span>
+<br/>CAT II</td>
+</tr>
+</table>
+</a>
+<table class="ruledata">
+<tr>
+<th class="ruledata">Requirement:</th>
+<td class="ruledata">
+<span class="rulerequirement">The Cisco router must be configured to enforce password complexity by requiring that at least one lower-case character be used.</span>
+</td>
+</tr>
+<tr>
+<th class="ruledata">Discussion:</th>
+<td class="ruledata">Use of a complex password helps to increase the time and resources required to compromise the password. Password complexity, or strength, is a measure of the effectiveness of a password in resisting attempts at guessing and brute-force attacks.<br/>
+<br/>
+Password complexity is one factor of several that determine how long it takes to crack a password. The more complex the password, the greater the number of possible combinations that need to be tested before the password is compromised.<br/>
+<br/>
+Multifactor authentication (MFA) is required for all administrative and user accounts on network devices, except for an account of last resort and (where applicable) a root account. Passwords should only be used when MFA using PKI is not available, and for the account of last resort and root account.</td>
+</tr>
+<tr>
+<th class="ruledata">Check:</th>
+<td class="ruledata">Review the Cisco router configuration to verify that it is compliant with this requirement as shown in the example below.<br/>
+<br/>
+aaa new-model<br/>
+!<br/>
+!<br/>
+aaa common-criteria policy PASSWORD_POLICY<br/>
+lower-case 1<br/>
+<br/>
+If the Cisco router is not configured to enforce password complexity by requiring that at least one lower-case character be used, this is a finding.</td>
+</tr>
+<tr>
+<th class="ruledata">Fix:</th>
+<td class="ruledata">Configure the Cisco router to enforce password complexity by requiring that at least one lower-case character be used as shown in the example below.<br/>
+<br/>
+R1(config)#aaa common-criteria policy PASSWORD_POLICY<br/>
+R1(config-cc-policy)#lower-case 1<br/>
+R1(config-cc-policy)#exit</td>
+</tr>
+<tr>
+<th class="ruledata">References:</th>
+<td class="ruledata">
+<ul class="ruledata"/>
+</td>
+</tr>
+</table>
+<br/>
+<a name="RULE_SV-215829r531083_rule">
+<table class="ruleblock">
+<tr class="ruleblock">
+<td class="ruleblock">
+<span class="ruleheader">STIG ID:</span>
+<br/>CISC-ND-000590</td>
+<td class="ruleblock">
+<span class="ruleheader">Group ID:</span>
+<br/>V-215829</td>
+<td class="ruleblock">
+<span class="ruleheader">Rule ID:</span>
+<br/>SV-215829r531083_rule</td>
+<td class="ruleblock">
+<span class="ruleheader">Severity:</span>
+<br/>CAT II</td>
+</tr>
+</table>
+</a>
+<table class="ruledata">
+<tr>
+<th class="ruledata">Requirement:</th>
+<td class="ruledata">
+<span class="rulerequirement">The Cisco router must be configured to enforce password complexity by requiring that at least one numeric character be used.</span>
+</td>
+</tr>
+<tr>
+<th class="ruledata">Discussion:</th>
+<td class="ruledata">Use of a complex password helps to increase the time and resources required to compromise the password. Password complexity, or strength, is a measure of the effectiveness of a password in resisting attempts at guessing and brute-force attacks.<br/>
+<br/>
+Password complexity is one factor of several that determine how long it takes to crack a password. The more complex the password, the greater the number of possible combinations that need to be tested before the password is compromised.<br/>
+<br/>
+Multifactor authentication (MFA) is required for all administrative and user accounts on network devices, except for an account of last resort and (where applicable) a root account. Passwords should only be used when MFA using PKI is not available, and for the account of last resort and root account.</td>
+</tr>
+<tr>
+<th class="ruledata">Check:</th>
+<td class="ruledata">Review the Cisco router configuration to verify that it is compliant with this requirement as shown in the example below.<br/>
+<br/>
+aaa new-model<br/>
+!<br/>
+!<br/>
+aaa common-criteria policy PASSWORD_POLICY<br/>
+ numeric-count 1<br/>
+<br/>
+If the Cisco router is not configured to enforce password complexity by requiring that at least one numeric character be used, this is a finding.</td>
+</tr>
+<tr>
+<th class="ruledata">Fix:</th>
+<td class="ruledata">Configure the Cisco router to enforce password complexity by requiring that at least one numeric character be used as shown in the example below.<br/>
+<br/>
+R1(config)#aaa common-criteria policy PASSWORD_POLICY<br/>
+R1(config-cc-policy)#numeric-count 1<br/>
+R1(config-cc-policy)#exit</td>
+</tr>
+<tr>
+<th class="ruledata">References:</th>
+<td class="ruledata">
+<ul class="ruledata"/>
+</td>
+</tr>
+</table>
+<br/>
+<a name="RULE_SV-215830r531083_rule">
+<table class="ruleblock">
+<tr class="ruleblock">
+<td class="ruleblock">
+<span class="ruleheader">STIG ID:</span>
+<br/>CISC-ND-000600</td>
+<td class="ruleblock">
+<span class="ruleheader">Group ID:</span>
+<br/>V-215830</td>
+<td class="ruleblock">
+<span class="ruleheader">Rule ID:</span>
+<br/>SV-215830r531083_rule</td>
+<td class="ruleblock">
+<span class="ruleheader">Severity:</span>
+<br/>CAT II</td>
+</tr>
+</table>
+</a>
+<table class="ruledata">
+<tr>
+<th class="ruledata">Requirement:</th>
+<td class="ruledata">
+<span class="rulerequirement">The Cisco router must be configured to enforce password complexity by requiring that at least one special character be used.</span>
+</td>
+</tr>
+<tr>
+<th class="ruledata">Discussion:</th>
+<td class="ruledata">Use of a complex password helps to increase the time and resources required to compromise the password. Password complexity, or strength, is a measure of the effectiveness of a password in resisting attempts at guessing and brute-force attacks.<br/>
+<br/>
+Password complexity is one factor of several that determine how long it takes to crack a password. The more complex the password, the greater the number of possible combinations that need to be tested before the password is compromised.<br/>
+<br/>
+Multifactor authentication (MFA) is required for all administrative and user accounts on network devices, except for an account of last resort and (where applicable) a root account. Passwords should only be used when MFA using PKI is not available, and for the account of last resort and root account.</td>
+</tr>
+<tr>
+<th class="ruledata">Check:</th>
+<td class="ruledata">Review the Cisco router configuration to verify that it is compliant with this requirement as shown in the example below.<br/>
+<br/>
+aaa new-model<br/>
+!<br/>
+!<br/>
+aaa common-criteria policy PASSWORD_POLICY<br/>
+ special-case 1<br/>
+<br/>
+If the Cisco router is not configured to enforce password complexity by requiring that at least one special character be used, this is a finding.</td>
+</tr>
+<tr>
+<th class="ruledata">Fix:</th>
+<td class="ruledata">Configure the Cisco router to enforce password complexity by requiring that at least one special character be used as shown in the example below.<br/>
+<br/>
+R1(config)#aaa common-criteria policy PASSWORD_POLICY<br/>
+R1(config-cc-policy)#special-case 1<br/>
+R1(config-cc-policy)#exit</td>
+</tr>
+<tr>
+<th class="ruledata">References:</th>
+<td class="ruledata">
+<ul class="ruledata"/>
+</td>
+</tr>
+</table>
+<br/>
+<a name="RULE_SV-215831r531083_rule">
+<table class="ruleblock">
+<tr class="ruleblock">
+<td class="ruleblock">
+<span class="ruleheader">STIG ID:</span>
+<br/>CISC-ND-000610</td>
+<td class="ruleblock">
+<span class="ruleheader">Group ID:</span>
+<br/>V-215831</td>
+<td class="ruleblock">
+<span class="ruleheader">Rule ID:</span>
+<br/>SV-215831r531083_rule</td>
+<td class="ruleblock">
+<span class="ruleheader">Severity:</span>
+<br/>CAT II</td>
+</tr>
+</table>
+</a>
+<table class="ruledata">
+<tr>
+<th class="ruledata">Requirement:</th>
+<td class="ruledata">
+<span class="rulerequirement">The Cisco router must be configured to require that when a password is changed, the characters are changed in at least eight of the positions within the password.</span>
+</td>
+</tr>
+<tr>
+<th class="ruledata">Discussion:</th>
+<td class="ruledata">If the application allows the user to consecutively reuse extensive portions of passwords, this increases the chances of password compromise by increasing the window of opportunity for attempts at guessing and brute-force attacks.<br/>
+<br/>
+The number of changed characters refers to the number of changes required with respect to the total number of positions in the current password. In other words, characters may be the same within the two passwords; however, the positions of the like characters must be different.<br/>
+<br/>
+Multifactor authentication (MFA) is required for all administrative and user accounts on network devices, except for an account of last resort and (where applicable) a root account. Passwords should only be used when MFA using PKI is not available, and for the account of last resort and root account.</td>
+</tr>
+<tr>
+<th class="ruledata">Check:</th>
+<td class="ruledata">Review the Cisco router configuration to verify that it is compliant with this requirement as shown in the example below.<br/>
+<br/>
+aaa new-model<br/>
+!<br/>
+!<br/>
+aaa common-criteria policy PASSWORD_POLICY<br/>
+ char-changes 8<br/>
+<br/>
+If the Cisco router is not configured to require that when a password is changed, the characters are changed in at least eight of the positions within the password, this is a finding.</td>
+</tr>
+<tr>
+<th class="ruledata">Fix:</th>
+<td class="ruledata">Configure the Cisco router to enforce password complexity by requiring that when a password is changed, the characters are changed in at least eight of the positions within the password as shown in the example below.<br/>
+<br/>
+R1(config)#aaa common-criteria policy PASSWORD_POLICY<br/>
+R1(config-cc-policy)#char-changes 8<br/>
+R1(config-cc-policy)#exit</td>
+</tr>
+<tr>
+<th class="ruledata">References:</th>
+<td class="ruledata">
+<ul class="ruledata"/>
+</td>
+</tr>
+</table>
+<br/>
+<a name="RULE_SV-215832r531083_rule">
+<table class="ruleblock">
+<tr class="ruleblock">
+<td class="ruleblock">
+<span class="ruleheader">STIG ID:</span>
+<br/>CISC-ND-000620</td>
+<td class="ruleblock">
+<span class="ruleheader">Group ID:</span>
+<br/>V-215832</td>
+<td class="ruleblock">
+<span class="ruleheader">Rule ID:</span>
+<br/>SV-215832r531083_rule</td>
+<td class="ruleblock">
+<span class="ruleheader">Severity:</span>
+<br/>CAT I</td>
+</tr>
+</table>
+</a>
+<table class="ruledata">
+<tr>
+<th class="ruledata">Requirement:</th>
+<td class="ruledata">
+<span class="rulerequirement">The Cisco router must only store cryptographic representations of passwords.</span>
+</td>
+</tr>
+<tr>
+<th class="ruledata">Discussion:</th>
+<td class="ruledata">Passwords need to be protected at all times, and encryption is the standard method for protecting passwords. If passwords are not encrypted, they can be plainly read (i.e., clear text) and easily compromised.<br/>
+<br/>
+Network devices must enforce cryptographic representations of passwords when storing passwords in databases, configuration files, and log files. Passwords must be protected at all times; using a strong one-way hashing encryption algorithm with a salt is the standard method for providing a means to validate a password without having to store the actual password.<br/>
+<br/>
+Performance and time required to access are factors that must be considered, and the one way hash is the most feasible means of securing the password and providing an acceptable measure of password security. If passwords are stored in clear text, they can be plainly read and easily compromised.<br/>
+<br/>
+In many instances, verifying the user knows a password is performed using a password verifier. In its simplest form, a password verifier is a computational function that is capable of creating a hash of a password and determining if the value provided by the user matches the stored hash.</td>
+</tr>
+<tr>
+<th class="ruledata">Check:</th>
+<td class="ruledata">Review the router configuration to determine if passwords are encrypted as shown in the example below.<br/>
+<br/>
+service password-encryption<br/>
+<br/>
+If the router is not configured to encrypt passwords, this is a finding.</td>
+</tr>
+<tr>
+<th class="ruledata">Fix:</th>
+<td class="ruledata">Configure the router to encrypt all passwords.<br/>
+<br/>
+R4(config)#service password-encryption <br/>
+R4(config)#end</td>
+</tr>
+<tr>
+<th class="ruledata">References:</th>
+<td class="ruledata">
+<ul class="ruledata"/>
+</td>
+</tr>
+</table>
+<br/>
+<a name="RULE_SV-215833r531083_rule">
+<table class="ruleblock">
+<tr class="ruleblock">
+<td class="ruleblock">
+<span class="ruleheader">STIG ID:</span>
+<br/>CISC-ND-000720</td>
+<td class="ruleblock">
+<span class="ruleheader">Group ID:</span>
+<br/>V-215833</td>
+<td class="ruleblock">
+<span class="ruleheader">Rule ID:</span>
+<br/>SV-215833r531083_rule</td>
+<td class="ruleblock">
+<span class="ruleheader">Severity:</span>
+<br/>CAT I</td>
+</tr>
+</table>
+</a>
+<table class="ruledata">
+<tr>
+<th class="ruledata">Requirement:</th>
+<td class="ruledata">
+<span class="rulerequirement">The Cisco router must be configured to terminate all network connections associated with device management after 10 minutes of inactivity.</span>
+</td>
+</tr>
+<tr>
+<th class="ruledata">Discussion:</th>
+<td class="ruledata">Terminating an idle session within a short time period reduces the window of opportunity for unauthorized personnel to take control of a management session enabled on the console or console port that has been left unattended. In addition, quickly terminating an idle session will also free up resources committed by the managed network element. <br/>
+<br/>
+Terminating network connections associated with communications sessions includes, for example, de-allocating associated TCP/IP address/port pairs at the operating system level, or de-allocating networking assignments at the application level if multiple application sessions are using a single, operating system-level network connection. This does not mean that the device terminates all sessions or network access; it only ends the inactive session and releases the resources associated with that session.</td>
+</tr>
+<tr>
+<th class="ruledata">Check:</th>
+<td class="ruledata">Review the Cisco router configuration to verify that all network connections associated with a device management have an idle timeout value set to 10 minutes or less as shown in the following example:<br/>
+<br/>
+ip http secure-server<br/>
+ip http timeout-policy idle 600 life nnnn requests nn<br/>
+…<br/>
+…<br/>
+…<br/>
+line con 0<br/>
+ exec-timeout 10 0<br/>
+line vty 0 4<br/>
+ exec-timeout 10 0<br/>
+<br/>
+If the Cisco router is not configured to terminate all network connections associated with a device management after "10" minutes of inactivity, this is a finding.</td>
+</tr>
+<tr>
+<th class="ruledata">Fix:</th>
+<td class="ruledata">Set the idle timeout value to "10" minutes or less on all configured login classes as shown in the example below.<br/>
+<br/>
+R1(config)#line vty 0 4<br/>
+R1(config-line)#exec-timeout 10 0<br/>
+R1(config-line)#exit<br/>
+R1(config)#line con 0<br/>
+R1(config-line)#exec-timeout 10 0<br/>
+R1(config-line)#exit<br/>
+R2(config)#ip http timeout-policy idle 600 life nnnn requests nn</td>
+</tr>
+<tr>
+<th class="ruledata">References:</th>
+<td class="ruledata">
+<ul class="ruledata"/>
+</td>
+</tr>
+</table>
+<br/>
+<a name="RULE_SV-215834r531083_rule">
+<table class="ruleblock">
+<tr class="ruleblock">
+<td class="ruleblock">
+<span class="ruleheader">STIG ID:</span>
+<br/>CISC-ND-000880</td>
+<td class="ruleblock">
+<span class="ruleheader">Group ID:</span>
+<br/>V-215834</td>
+<td class="ruleblock">
+<span class="ruleheader">Rule ID:</span>
+<br/>SV-215834r531083_rule</td>
+<td class="ruleblock">
+<span class="ruleheader">Severity:</span>
+<br/>CAT II</td>
+</tr>
+</table>
+</a>
+<table class="ruledata">
+<tr>
+<th class="ruledata">Requirement:</th>
+<td class="ruledata">
+<span class="rulerequirement">The Cisco router must be configured to automatically audit account enabling actions.</span>
+</td>
+</tr>
+<tr>
+<th class="ruledata">Discussion:</th>
+<td class="ruledata">Once an attacker establishes initial access to a system, the attacker often attempts to create a persistent method of reestablishing access. One way to accomplish this is for the attacker to simply enable a new or disabled account. Notification of account enabling is one method for mitigating this risk. A comprehensive account management process will ensure an audit trail which documents the creation of application user accounts and notifies administrators and Information System Security Officers (ISSO). Such a process greatly reduces the risk that accounts will be surreptitiously created and provides logging that can be used for forensic purposes.</td>
+</tr>
+<tr>
+<th class="ruledata">Check:</th>
+<td class="ruledata">Review the router configuration to determine if it automatically audits account enabling. The configuration should look similar to the example below:<br/>
+<br/>
+archive<br/>
+ log config<br/>
+ logging enable<br/>
+<br/>
+Note: Configuration changes can be viewed using the show archive log config all command.<br/>
+<br/>
+If account enabling is not automatically audited, this is a finding.</td>
+</tr>
+<tr>
+<th class="ruledata">Fix:</th>
+<td class="ruledata">Configure the router to log account enabling using the following commands:<br/>
+<br/>
+R4(config)#archive<br/>
+R4(config-archive)#log config<br/>
+R4(config-archive-log-cfg)#logging enable<br/>
+R4(config-archive-log-cfg)#end</td>
+</tr>
+<tr>
+<th class="ruledata">References:</th>
+<td class="ruledata">
+<ul class="ruledata"/>
+</td>
+</tr>
+</table>
+<br/>
+<a name="RULE_SV-215835r531083_rule">
+<table class="ruleblock">
+<tr class="ruleblock">
+<td class="ruleblock">
+<span class="ruleheader">STIG ID:</span>
+<br/>CISC-ND-000940</td>
+<td class="ruleblock">
+<span class="ruleheader">Group ID:</span>
+<br/>V-215835</td>
+<td class="ruleblock">
+<span class="ruleheader">Rule ID:</span>
+<br/>SV-215835r531083_rule</td>
+<td class="ruleblock">
+<span class="ruleheader">Severity:</span>
+<br/>CAT II</td>
+</tr>
+</table>
+</a>
+<table class="ruledata">
+<tr>
+<th class="ruledata">Requirement:</th>
+<td class="ruledata">
+<span class="rulerequirement">The Cisco router must be configured to audit the execution of privileged functions.</span>
+</td>
+</tr>
+<tr>
+<th class="ruledata">Discussion:</th>
+<td class="ruledata">Misuse of privileged functions, either intentionally or unintentionally by authorized users, or by unauthorized external entities that have compromised information system accounts, is a serious and ongoing concern and can have significant adverse impacts on organizations. Auditing the use of privileged functions is one way to detect such misuse and identify the risk from insider threats and the advanced persistent threat.</td>
+</tr>
+<tr>
+<th class="ruledata">Check:</th>
+<td class="ruledata">Review the Cisco router configuration to verify that it is compliant with this requirement. The configuration example below will log all commands entered from the command line interface as well as log all configuration changes.<br/>
+<br/>
+hostname R1<br/>
+!<br/>
+logging userinfo<br/>
+!<br/>
+…<br/>
+…<br/>
+…<br/>
+archive<br/>
+ log config<br/>
+ logging enable<br/>
+!<br/>
+<br/>
+Note: The logging userinfo global configuration command will generate a log when a user increases his or her privilege level.<br/>
+<br/>
+If the Cisco router is not configured to log all commands entered from the command line interface as well as log all configuration changes, this is a finding.</td>
+</tr>
+<tr>
+<th class="ruledata">Fix:</th>
+<td class="ruledata">Configure the Cisco router to log all commands entered from the command line interface as well as log all configuration changes as shown in the following example:<br/>
+<br/>
+R1(config)#logging userinfo<br/>
+R1(config)#archive<br/>
+R1(config-archive)#log config<br/>
+R1(config-archive-log-cfg)#logging enable<br/>
+R1(config-archive-log-cfg)#end</td>
+</tr>
+<tr>
+<th class="ruledata">References:</th>
+<td class="ruledata">
+<ul class="ruledata"/>
+</td>
+</tr>
+</table>
+<br/>
+<a name="RULE_SV-215836r531083_rule">
+<table class="ruleblock">
+<tr class="ruleblock">
+<td class="ruleblock">
+<span class="ruleheader">STIG ID:</span>
+<br/>CISC-ND-000980</td>
+<td class="ruleblock">
+<span class="ruleheader">Group ID:</span>
+<br/>V-215836</td>
+<td class="ruleblock">
+<span class="ruleheader">Rule ID:</span>
+<br/>SV-215836r531083_rule</td>
+<td class="ruleblock">
+<span class="ruleheader">Severity:</span>
+<br/>CAT II</td>
+</tr>
+</table>
+</a>
+<table class="ruledata">
+<tr>
+<th class="ruledata">Requirement:</th>
+<td class="ruledata">
+<span class="rulerequirement">The Cisco router must be configured to allocate audit record storage capacity in accordance with organization-defined audit record storage requirements.</span>
+</td>
+</tr>
+<tr>
+<th class="ruledata">Discussion:</th>
+<td class="ruledata">In order to ensure network devices have a sufficient storage capacity in which to write the audit logs, they need to be able to allocate audit record storage capacity. The task of allocating audit record storage capacity is usually performed during initial device setup if it is modifiable. <br/>
+<br/>
+The value for the organization-defined audit record storage requirement will depend on the amount of storage available on the network device, the anticipated volume of logs, the frequency of transfer from the network device to centralized log servers, and other factors.</td>
+</tr>
+<tr>
+<th class="ruledata">Check:</th>
+<td class="ruledata">Verify that the Cisco router is configured with a logging buffer size. The configuration should look like the example below:<br/>
+<br/>
+logging buffered xxxxxxxx informational<br/>
+<br/>
+If a logging buffer size is not configured, this is a finding.<br/>
+<br/>
+If the Cisco router is not configured to allocate audit record storage capacity in accordance with organization-defined audit record storage requirements, this is a finding.</td>
+</tr>
+<tr>
+<th class="ruledata">Fix:</th>
+<td class="ruledata">Configure the buffer size for logging as shown in the example below.<br/>
+<br/>
+R2(config)#logging buffered xxxxxxxx informational</td>
+</tr>
+<tr>
+<th class="ruledata">References:</th>
+<td class="ruledata">
+<ul class="ruledata"/>
+</td>
+</tr>
+</table>
+<br/>
+<a name="RULE_SV-215837r531083_rule">
+<table class="ruleblock">
+<tr class="ruleblock">
+<td class="ruleblock">
+<span class="ruleheader">STIG ID:</span>
+<br/>CISC-ND-001000</td>
+<td class="ruleblock">
+<span class="ruleheader">Group ID:</span>
+<br/>V-215837</td>
+<td class="ruleblock">
+<span class="ruleheader">Rule ID:</span>
+<br/>SV-215837r531083_rule</td>
+<td class="ruleblock">
+<span class="ruleheader">Severity:</span>
+<br/>CAT II</td>
+</tr>
+</table>
+</a>
+<table class="ruledata">
+<tr>
+<th class="ruledata">Requirement:</th>
+<td class="ruledata">
+<span class="rulerequirement">The Cisco router must be configured to generate an alert for all audit failure events.</span>
+</td>
+</tr>
+<tr>
+<th class="ruledata">Discussion:</th>
+<td class="ruledata">It is critical for the appropriate personnel to be aware if a system is at risk of failing to process audit logs as required. Without a real-time alert, security personnel may be unaware of an impending failure of the audit capability and system operation may be adversely affected. <br/>
+<br/>
+Alerts provide organizations with urgent messages. Real-time alerts provide these messages immediately (i.e., the time from event detection to alert occurs in seconds or less).</td>
+</tr>
+<tr>
+<th class="ruledata">Check:</th>
+<td class="ruledata">Review the Cisco router configuration to verify that it is compliant with this requirement as shown in the example below.<br/>
+<br/>
+logging trap critical<br/>
+logging x.x.x.x<br/>
+<br/>
+Note: The parameter "critical" can replaced with a lesser severity level (i.e. error, warning, notice, informational). Informational is the default severity level; hence, if the severity level is configured to informational, the logging trap command will not be shown in the configuration.<br/>
+<br/>
+If the Cisco router is not configured to generate an alert for all audit failure events, this is a finding.</td>
+</tr>
+<tr>
+<th class="ruledata">Fix:</th>
+<td class="ruledata">Configure the Cisco router to send critical to emergency log messages to the syslog server as shown in the example below.<br/>
+<br/>
+4(config)#logging host x.x.x.x<br/>
+R4(config)#logging trap critical<br/>
+<br/>
+Note: The parameter "critical" can replaced with a lesser severity level (i.e., error, warning, notice, informational).</td>
+</tr>
+<tr>
+<th class="ruledata">References:</th>
+<td class="ruledata">
+<ul class="ruledata"/>
+</td>
+</tr>
+</table>
+<br/>
+<a name="RULE_SV-215838r531083_rule">
+<table class="ruleblock">
+<tr class="ruleblock">
+<td class="ruleblock">
+<span class="ruleheader">STIG ID:</span>
+<br/>CISC-ND-001030</td>
+<td class="ruleblock">
+<span class="ruleheader">Group ID:</span>
+<br/>V-215838</td>
+<td class="ruleblock">
+<span class="ruleheader">Rule ID:</span>
+<br/>SV-215838r531083_rule</td>
+<td class="ruleblock">
+<span class="ruleheader">Severity:</span>
+<br/>CAT II</td>
+</tr>
+</table>
+</a>
+<table class="ruledata">
+<tr>
+<th class="ruledata">Requirement:</th>
+<td class="ruledata">
+<span class="rulerequirement">The Cisco router must be configured to synchronize its clock with the primary and secondary time sources using redundant authoritative time sources.</span>
+</td>
+</tr>
+<tr>
+<th class="ruledata">Discussion:</th>
+<td class="ruledata">The loss of connectivity to a particular authoritative time source will result in the loss of time synchronization (free-run mode) and increasingly inaccurate time stamps on audit events and other functions. <br/>
+<br/>
+Multiple time sources provide redundancy by including a secondary source. Time synchronization is usually a hierarchy; clients synchronize time to a local source while that source synchronizes its time to a more accurate source. The network device must utilize an authoritative time server and/or be configured to use redundant authoritative time sources. This requirement is related to the comparison done in CCI-001891.<br/>
+<br/>
+DoD-approved solutions consist of a combination of a primary and secondary time source using a combination or multiple instances of the following: a time server designated for the appropriate DoD network (NIPRNet/SIPRNet); United States Naval Observatory (USNO) time servers; and/or the Global Positioning System (GPS). The secondary time source must be located in a different geographic region than the primary time source.</td>
+</tr>
+<tr>
+<th class="ruledata">Check:</th>
+<td class="ruledata">Review the Cisco router configuration to verify that it is compliant with this requirement as shown in the configuration example below.<br/>
+<br/>
+ntp server x.x.x.x<br/>
+ntp server y.y.y.y<br/>
+<br/>
+If the Cisco router is not configured to synchronize its clock with redundant authoritative time sources, this is a finding.</td>
+</tr>
+<tr>
+<th class="ruledata">Fix:</th>
+<td class="ruledata">Configure the Cisco router to synchronize its clock with redundant authoritative time sources as shown in the example below.<br/>
+<br/>
+R2(config)#ntp server x.x.x.x<br/>
+R2(config)#ntp server y.y.y.y</td>
+</tr>
+<tr>
+<th class="ruledata">References:</th>
+<td class="ruledata">
+<ul class="ruledata"/>
+</td>
+</tr>
+</table>
+<br/>
+<a name="RULE_SV-215839r531083_rule">
+<table class="ruleblock">
+<tr class="ruleblock">
+<td class="ruleblock">
+<span class="ruleheader">STIG ID:</span>
+<br/>CISC-ND-001040</td>
+<td class="ruleblock">
+<span class="ruleheader">Group ID:</span>
+<br/>V-215839</td>
+<td class="ruleblock">
+<span class="ruleheader">Rule ID:</span>
+<br/>SV-215839r531083_rule</td>
+<td class="ruleblock">
+<span class="ruleheader">Severity:</span>
+<br/>CAT II</td>
+</tr>
+</table>
+</a>
+<table class="ruledata">
+<tr>
+<th class="ruledata">Requirement:</th>
+<td class="ruledata">
+<span class="rulerequirement">The Cisco router must record time stamps for audit records that meet a granularity of one second for a minimum degree of precision.</span>
+</td>
+</tr>
+<tr>
+<th class="ruledata">Discussion:</th>
+<td class="ruledata">Without sufficient granularity of time stamps, it is not possible to adequately determine the chronological order of records. Time stamps generated by the application include date and time. Granularity of time measurements refers to the degree of synchronization between information system clocks and reference clocks.</td>
+</tr>
+<tr>
+<th class="ruledata">Check:</th>
+<td class="ruledata">Review the Cisco router configuration to verify that it is compliant with this requirement as shown in the example below.<br/>
+<br/>
+service timestamps log datetime <br/>
+<br/>
+If the router is not configured to record time stamps that meet a granularity of one second, this is a finding.</td>
+</tr>
+<tr>
+<th class="ruledata">Fix:</th>
+<td class="ruledata">Configure the Cisco router to record time stamps that meet a granularity of one second as shown in the example below.<br/>
+<br/>
+R2(config)#service timestamps log datetime localtime</td>
+</tr>
+<tr>
+<th class="ruledata">References:</th>
+<td class="ruledata">
+<ul class="ruledata"/>
+</td>
+</tr>
+</table>
+<br/>
+<a name="RULE_SV-215840r531083_rule">
+<table class="ruleblock">
+<tr class="ruleblock">
+<td class="ruleblock">
+<span class="ruleheader">STIG ID:</span>
+<br/>CISC-ND-001050</td>
+<td class="ruleblock">
+<span class="ruleheader">Group ID:</span>
+<br/>V-215840</td>
+<td class="ruleblock">
+<span class="ruleheader">Rule ID:</span>
+<br/>SV-215840r531083_rule</td>
+<td class="ruleblock">
+<span class="ruleheader">Severity:</span>
+<br/>CAT II</td>
+</tr>
+</table>
+</a>
+<table class="ruledata">
+<tr>
+<th class="ruledata">Requirement:</th>
+<td class="ruledata">
+<span class="rulerequirement">The Cisco router must be configured to record time stamps for log records that can be mapped to Coordinated Universal Time (UTC) or Greenwich Mean Time (GMT).</span>
+</td>
+</tr>
+<tr>
+<th class="ruledata">Discussion:</th>
+<td class="ruledata">If time stamps are not consistently applied and there is no common time reference, it is difficult to perform forensic analysis.<br/>
+<br/>
+Time stamps generated by the application include date and time. Time is commonly expressed in UTC, a modern continuation of GMT, or local time with an offset from UTC.</td>
+</tr>
+<tr>
+<th class="ruledata">Check:</th>
+<td class="ruledata">Review the Cisco router configuration to verify that it is compliant with this requirement as shown in the example below.<br/>
+<br/>
+service timestamps log datetime localtime<br/>
+!<br/>
+hostname R2<br/>
+…<br/>
+…<br/>
+…<br/>
+clock timezone EST -5<br/>
+<br/>
+Note: UTC is the default; hence, the command set time-zone may not be seen in the configuration.<br/>
+This can be verified using the show system uptime command.<br/>
+<br/>
+If the router is not configured to record time stamps for audit records that can be mapped to UTC GMT, this is a finding.</td>
+</tr>
+<tr>
+<th class="ruledata">Fix:</th>
+<td class="ruledata">Configure the Cisco router to record time stamps for audit records that can be mapped to UTC or GMT as shown in the example below.<br/>
+<br/>
+R2(config)#clock timezone EST -5<br/>
+R2(config)#service timestamps log datetime localtime</td>
+</tr>
+<tr>
+<th class="ruledata">References:</th>
+<td class="ruledata">
+<ul class="ruledata"/>
+</td>
+</tr>
+</table>
+<br/>
+<a name="RULE_SV-215841r531083_rule">
+<table class="ruleblock">
+<tr class="ruleblock">
+<td class="ruleblock">
+<span class="ruleheader">STIG ID:</span>
+<br/>CISC-ND-001130</td>
+<td class="ruleblock">
+<span class="ruleheader">Group ID:</span>
+<br/>V-215841</td>
+<td class="ruleblock">
+<span class="ruleheader">Rule ID:</span>
+<br/>SV-215841r531083_rule</td>
+<td class="ruleblock">
+<span class="ruleheader">Severity:</span>
+<br/>CAT II</td>
+</tr>
+</table>
+</a>
+<table class="ruledata">
+<tr>
+<th class="ruledata">Requirement:</th>
+<td class="ruledata">
+<span class="rulerequirement">The Cisco router must be configured to authenticate SNMP messages using a FIPS-validated Keyed-Hash Message Authentication Code (HMAC).</span>
+</td>
+</tr>
+<tr>
+<th class="ruledata">Discussion:</th>
+<td class="ruledata">Without authenticating devices, unidentified or unknown devices may be introduced, thereby facilitating malicious activity. Bidirectional authentication provides stronger safeguards to validate the identity of other devices for connections that are of greater risk.<br/>
+<br/>
+A local connection is any connection with a device communicating without the use of a network. A network connection is any connection with a device that communicates through a network (e.g., local area or wide area network, Internet). A remote connection is any connection with a device communicating through an external network (e.g., the Internet).<br/>
+<br/>
+Because of the challenges of applying this requirement on a large scale, organizations are encouraged to only apply the requirement to those limited number (and type) of devices that truly need to support this capability.</td>
+</tr>
+<tr>
+<th class="ruledata">Check:</th>
+<td class="ruledata">Review the Cisco router configuration to verify that it is compliant with this requirement as shown in the example below.<br/>
+<br/>
+snmp-server group V3GROUP v3 auth read V3READ write V3WRITE <br/>
+snmp-server view V3READ iso included<br/>
+snmp-server view V3WRITE iso included<br/>
+snmp-server host x.x.x.x version 3 auth V3USER<br/>
+<br/>
+Authentication used by the SNMP users can be viewed via the show snmp user command as shown in the example below.<br/>
+<br/>
+R4#show snmp user<br/>
+<br/>
+User name: V3USER<br/>
+Engine ID: 800000090300C2042B540000<br/>
+storage-type: nonvolatile active<br/>
+Authentication Protocol: SHA<br/>
+Privacy Protocol: None<br/>
+Group-name: V3GROUP<br/>
+<br/>
+If the Cisco router is not configured to authenticate SNMP messages using a FIPS-validated HMAC, this is a finding.</td>
+</tr>
+<tr>
+<th class="ruledata">Fix:</th>
+<td class="ruledata">Configure the Cisco router to authenticate SNMP messages as shown in the example below.<br/>
+<br/>
+R4(config)#snmp-server group V3GROUP v3 auth read V3READ write V3WRITE<br/>
+R4(config)#snmp-server user V3USER V3GROUP v3 auth sha xxxxxxx<br/>
+R4(config)#snmp-server view V3READ iso included<br/>
+R4(config)#snmp-server view V3WRITE iso included<br/>
+R4(config)#snmp-server host x.x.x.x version 3 auth V3USER</td>
+</tr>
+<tr>
+<th class="ruledata">References:</th>
+<td class="ruledata">
+<ul class="ruledata"/>
+</td>
+</tr>
+</table>
+<br/>
+<a name="RULE_SV-215842r531083_rule">
+<table class="ruleblock">
+<tr class="ruleblock">
+<td class="ruleblock">
+<span class="ruleheader">STIG ID:</span>
+<br/>CISC-ND-001140</td>
+<td class="ruleblock">
+<span class="ruleheader">Group ID:</span>
+<br/>V-215842</td>
+<td class="ruleblock">
+<span class="ruleheader">Rule ID:</span>
+<br/>SV-215842r531083_rule</td>
+<td class="ruleblock">
+<span class="ruleheader">Severity:</span>
+<br/>CAT II</td>
+</tr>
+</table>
+</a>
+<table class="ruledata">
+<tr>
+<th class="ruledata">Requirement:</th>
+<td class="ruledata">
+<span class="rulerequirement">The Cisco router must be configured to encrypt SNMP messages using a FIPS 140-2 approved algorithm.</span>
+</td>
+</tr>
+<tr>
+<th class="ruledata">Discussion:</th>
+<td class="ruledata">Without the strong encryption that is provided by the SNMP Version 3 User-based Security Model (USM), an unauthorized user can gain access to network management information that can be used to create a network outage.</td>
+</tr>
+<tr>
+<th class="ruledata">Check:</th>
+<td class="ruledata">Review the Cisco router configuration to verify that it is compliant with this requirement as shown in the example below.<br/>
+<br/>
+snmp-server group V3GROUP v3 priv read V3READ write V3WRITE<br/>
+snmp-server view V3READ iso included<br/>
+snmp-server view V3WRITE iso included<br/>
+snmp-server host x.x.x.x version 3 auth V3USER<br/>
+<br/>
+Encryption used by the SNMP users can be viewed via the show snmp user command as shown in the example below.<br/>
+<br/>
+R4#show snmp user<br/>
+<br/>
+User name: V3USER<br/>
+Engine ID: 800000090300C2042B540000<br/>
+storage-type: nonvolatile active<br/>
+Authentication Protocol: SHA<br/>
+Privacy Protocol: AES256<br/>
+Group-name: V3GROUP<br/>
+<br/>
+If the Cisco router is not configured to encrypt SNMP messages using a FIPS 140-2 approved algorithm, this is a finding.</td>
+</tr>
+<tr>
+<th class="ruledata">Fix:</th>
+<td class="ruledata">Configure the Cisco router to encrypt SNMP messages using a FIPS 140-2 approved algorithm as shown in the example below.<br/>
+<br/>
+R4(config)#snmp-server group V3GROUP v3 priv read V3READ write V3WRITE<br/>
+R4(config)#snmp-server user V3USER V3GROUP v3 auth sha xxxxxx priv aes 256 xxxxxx</td>
+</tr>
+<tr>
+<th class="ruledata">References:</th>
+<td class="ruledata">
+<ul class="ruledata"/>
+</td>
+</tr>
+</table>
+<br/>
+<a name="RULE_SV-215843r531083_rule">
+<table class="ruleblock">
+<tr class="ruleblock">
+<td class="ruleblock">
+<span class="ruleheader">STIG ID:</span>
+<br/>CISC-ND-001150</td>
+<td class="ruleblock">
+<span class="ruleheader">Group ID:</span>
+<br/>V-215843</td>
+<td class="ruleblock">
+<span class="ruleheader">Rule ID:</span>
+<br/>SV-215843r531083_rule</td>
+<td class="ruleblock">
+<span class="ruleheader">Severity:</span>
+<br/>CAT II</td>
+</tr>
+</table>
+</a>
+<table class="ruledata">
+<tr>
+<th class="ruledata">Requirement:</th>
+<td class="ruledata">
+<span class="rulerequirement">The Cisco router must be configured to authenticate Network Time Protocol (NTP) sources using authentication that is cryptographically based.</span>
+</td>
+</tr>
+<tr>
+<th class="ruledata">Discussion:</th>
+<td class="ruledata">If Network Time Protocol is not authenticated, an attacker can introduce a rogue NTP server. This rogue server can then be used to send incorrect time information to network devices, which will make log timestamps inaccurate and affect scheduled actions. NTP authentication is used to prevent this tampering by authenticating the time source.</td>
+</tr>
+<tr>
+<th class="ruledata">Check:</th>
+<td class="ruledata">Review the Cisco router configuration to verify that it is compliant with this requirement as shown in the configuration example below.<br/>
+<br/>
+ntp authentication-key 1 md5 121B0A151012 7<br/>
+ntp authenticate<br/>
+ntp trusted-key 1<br/>
+ntp server x.x.x.x key 1<br/>
+ntp server y.y.y.y key 1<br/>
+<br/>
+If the Cisco router is not configured to authenticate NTP sources using authentication that is cryptographically based, this is a finding.</td>
+</tr>
+<tr>
+<th class="ruledata">Fix:</th>
+<td class="ruledata">Configure the Cisco router to authenticate NTP sources using authentication that is cryptographically based as shown in the example below.<br/>
+<br/>
+R2(config)#ntp authenticate<br/>
+R2(config)#ntp authentication-key 1 md5 xxxxxx<br/>
+R2(config)#ntp trusted-key 1<br/>
+R2(config)#ntp server x.x.x.x key 1<br/>
+R2(config)#ntp server y.y.y.y key 1</td>
+</tr>
+<tr>
+<th class="ruledata">References:</th>
+<td class="ruledata">
+<ul class="ruledata"/>
+</td>
+</tr>
+</table>
+<br/>
+<a name="RULE_SV-215844r531083_rule">
+<table class="ruleblock">
+<tr class="ruleblock">
+<td class="ruleblock">
+<span class="ruleheader">STIG ID:</span>
+<br/>CISC-ND-001200</td>
+<td class="ruleblock">
+<span class="ruleheader">Group ID:</span>
+<br/>V-215844</td>
+<td class="ruleblock">
+<span class="ruleheader">Rule ID:</span>
+<br/>SV-215844r531083_rule</td>
+<td class="ruleblock">
+<span class="ruleheader">Severity:</span>
+<br/>CAT I</td>
+</tr>
+</table>
+</a>
+<table class="ruledata">
+<tr>
+<th class="ruledata">Requirement:</th>
+<td class="ruledata">
+<span class="rulerequirement">The Cisco router must be configured to use FIPS-validated Keyed-Hash Message Authentication Code (HMAC) to protect the integrity of remote maintenance sessions.</span>
+</td>
+</tr>
+<tr>
+<th class="ruledata">Discussion:</th>
+<td class="ruledata">Unapproved mechanisms that are used for authentication to the cryptographic module are not verified and therefore cannot be relied upon to provide confidentiality or integrity, and DoD data may be compromised.<br/>
+<br/>
+Nonlocal maintenance and diagnostic activities are those activities conducted by individuals communicating through a network, either an external network (e.g., the Internet) or an internal network. <br/>
+<br/>
+Currently, HMAC is the only FIPS-approved algorithm for generating and verifying message/data authentication codes in accordance with FIPS 198-1. Products that are FIPS 140-2 validated will have an HMAC that meets specification; however, the option must be configured for use as the only message authentication code used for authentication to cryptographic modules.</td>
+</tr>
+<tr>
+<th class="ruledata">Check:</th>
+<td class="ruledata">Review the Cisco router configuration to verify that it is compliant with this requirement as shown in the example below.<br/>
+<br/>
+SSH Example<br/>
+<br/>
+ip ssh version 2<br/>
+ip ssh server algorithm mac hmac-sha1-96<br/>
+<br/>
+HTTPS Example<br/>
+<br/>
+ip http secure-server<br/>
+ip http secure-ciphersuite aes-128-cbc-sha <br/>
+ip http secure-client-auth<br/>
+ip http secure-trustpoint CA_XXX<br/>
+<br/>
+If the Cisco router is not configured to use FIPS-validated HMAC to protect the integrity of remote maintenance sessions, this is a finding.</td>
+</tr>
+<tr>
+<th class="ruledata">Fix:</th>
+<td class="ruledata">The Cisco router is not compliant with this requirement. However, the risk associated with this requirement can be fully mitigated if the router is configured.<br/>
+<br/>
+Configure SSH and HTTPs to use FIPS-validated HMAC for remote maintenance sessions as shown in the following examples:<br/>
+<br/>
+SSH Example<br/>
+<br/>
+R1(config)#ip ssh version 2<br/>
+R1(config)#ip ssh server algorithm mac hmac-sha1-96<br/>
+<br/>
+HTTPS Example<br/>
+<br/>
+R2(config)#ip http secure-ciphersuite aes-128-cbc-sha</td>
+</tr>
+<tr>
+<th class="ruledata">References:</th>
+<td class="ruledata">
+<ul class="ruledata"/>
+</td>
+</tr>
+</table>
+<br/>
+<a name="RULE_SV-215845r531083_rule">
+<table class="ruleblock">
+<tr class="ruleblock">
+<td class="ruleblock">
+<span class="ruleheader">STIG ID:</span>
+<br/>CISC-ND-001210</td>
+<td class="ruleblock">
+<span class="ruleheader">Group ID:</span>
+<br/>V-215845</td>
+<td class="ruleblock">
+<span class="ruleheader">Rule ID:</span>
+<br/>SV-215845r531083_rule</td>
+<td class="ruleblock">
+<span class="ruleheader">Severity:</span>
+<br/>CAT I</td>
+</tr>
+</table>
+</a>
+<table class="ruledata">
+<tr>
+<th class="ruledata">Requirement:</th>
+<td class="ruledata">
+<span class="rulerequirement">The Cisco router must be configured to implement cryptographic mechanisms to protect the confidentiality of remote maintenance sessions.</span>
+</td>
+</tr>
+<tr>
+<th class="ruledata">Discussion:</th>
+<td class="ruledata">This requires the use of secure protocols instead of their unsecured counterparts, such as SSH instead of telnet, SCP instead of FTP, and HTTPS instead of HTTP. If unsecured protocols (lacking cryptographic mechanisms) are used for sessions, the contents of those sessions will be susceptible to eavesdropping, potentially putting sensitive data (including administrator passwords) at risk of compromise and potentially allowing hijacking of maintenance sessions.</td>
+</tr>
+<tr>
+<th class="ruledata">Check:</th>
+<td class="ruledata">Review the Cisco router configuration to verify that it is compliant with this requirement.<br/>
+<br/>
+SSH Example<br/>
+<br/>
+ip ssh version 2<br/>
+ip ssh server algorithm encryption aes128-cbc aes128-ctr aes192-cbc aes192-ctr<br/>
+<br/>
+<br/>
+HTTPS Example<br/>
+<br/>
+ip http secure-server<br/>
+ip http secure-ciphersuite aes-128-cbc-sha <br/>
+ip http secure-client-auth<br/>
+ip http secure-trustpoint CA_XXX<br/>
+<br/>
+If the router is not configured to implement cryptographic mechanisms to protect the confidentiality of remote maintenance sessions using a FIPS 140-2 approved algorithm, this is a finding.</td>
+</tr>
+<tr>
+<th class="ruledata">Fix:</th>
+<td class="ruledata">Configure the Cisco router to implement cryptographic mechanisms to protect the confidentiality of remote maintenance sessions using a FIPS 140-2 approved algorithm as shown in the examples below.<br/>
+<br/>
+SSH Example<br/>
+<br/>
+R1(config)#ip ssh server algorithm encryption aes128-cbc aes128-ctr aes192-cbc aes192-ctr<br/>
+<br/>
+HTTPS Example<br/>
+<br/>
+R2(config)#ip http secure-ciphersuite aes-128-cbc-sha</td>
+</tr>
+<tr>
+<th class="ruledata">References:</th>
+<td class="ruledata">
+<ul class="ruledata"/>
+</td>
+</tr>
+</table>
+<br/>
+<a name="RULE_SV-215846r531083_rule">
+<table class="ruleblock">
+<tr class="ruleblock">
+<td class="ruleblock">
+<span class="ruleheader">STIG ID:</span>
+<br/>CISC-ND-001220</td>
+<td class="ruleblock">
+<span class="ruleheader">Group ID:</span>
+<br/>V-215846</td>
+<td class="ruleblock">
+<span class="ruleheader">Rule ID:</span>
+<br/>SV-215846r531083_rule</td>
+<td class="ruleblock">
+<span class="ruleheader">Severity:</span>
+<br/>CAT II</td>
+</tr>
+</table>
+</a>
+<table class="ruledata">
+<tr>
+<th class="ruledata">Requirement:</th>
+<td class="ruledata">
+<span class="rulerequirement">The Cisco router must be configured to protect against known types of denial-of-service (DoS) attacks by employing organization-defined security safeguards.</span>
+</td>
+</tr>
+<tr>
+<th class="ruledata">Discussion:</th>
+<td class="ruledata">DoS is a condition when a resource is not available for legitimate users. When this occurs, the organization either cannot accomplish its mission or must operate at degraded capacity.<br/>
+<br/>
+This requirement addresses the configuration of network devices to mitigate the impact of DoS attacks that have occurred or are ongoing on device availability. For each network device, known and potential DoS attacks must be identified and solutions for each type implemented. A variety of technologies exist to limit or, in some cases, eliminate the effects of DoS attacks (e.g., limiting processes or restricting the number of sessions the device opens at one time). Employing increased capacity and bandwidth, combined with service redundancy, may reduce the susceptibility to some DoS attacks.<br/>
+<br/>
+The security safeguards cannot be defined at the DoD level because they vary according to the capabilities of the individual network devices and the security controls applied on the adjacent networks (e.g., firewalls performing packet filtering to block DoS attacks).</td>
+</tr>
+<tr>
+<th class="ruledata">Check:</th>
+<td class="ruledata">Review the Cisco router configuration to verify that it is compliant with this requirement. <br/>
+<br/>
+Step 1: Verify traffic types have been classified based on importance levels. The following is an example configuration:<br/>
+<br/>
+class-map match-all CoPP_CRITICAL <br/>
+match access-group name CoPP_CRITICAL <br/>
+class-map match-any CoPP_IMPORTANT <br/>
+match access-group name CoPP_IMPORTANT <br/>
+match protocol arp <br/>
+class-map match-all CoPP_NORMAL <br/>
+match access-group name CoPP_NORMAL <br/>
+class-map match-any CoPP_UNDESIRABLE <br/>
+match access-group name CoPP_UNDESIRABLE <br/>
+class-map match-all CoPP_DEFAULT <br/>
+match access-group name CoPP_DEFAULT <br/>
+<br/>
+Step 2: Review the ACLs referenced by the class maps to determine if the traffic is being classified appropriately. The following is an example configuration:<br/>
+<br/>
+ip access-list extended CoPP_CRITICAL <br/>
+remark our control plane adjacencies are critical <br/>
+permit ospf host [OSPF neighbor A] any <br/>
+permit ospf host [OSPF neighbor B] any <br/>
+permit pim host [PIM neighbor A] any <br/>
+permit pim host [PIM neighbor B] any <br/>
+permit pim host [RP addr] any <br/>
+permit igmp any 224.0.0.0 15.255.255.255 <br/>
+permit tcp host [BGP neighbor] eq bgp host [local BGP addr] <br/>
+permit tcp host [BGP neighbor] host [local BGP addr] eq bgp <br/>
+deny ip any any <br/>
+<br/>
+ip access-list extended CoPP_IMPORTANT <br/>
+permit tcp host [TACACS server] eq tacacs any <br/>
+permit tcp [management subnet] 0.0.0.255 any eq 22 <br/>
+permit udp host [SNMP manager] any eq snmp <br/>
+permit udp host [NTP server] eq ntp any <br/>
+deny ip any any <br/>
+<br/>
+ip access-list extended CoPP_NORMAL <br/>
+remark we will want to rate limit ICMP traffic <br/>
+permit icmp any any echo <br/>
+permit icmp any any echo-reply <br/>
+permit icmp any any time-exceeded <br/>
+permit icmp any any unreachable <br/>
+deny ip any any <br/>
+<br/>
+ip access-list extended CoPP_UNDESIRABLE <br/>
+remark other management plane traffic that should not be received <br/>
+permit udp any any eq ntp <br/>
+permit udp any any eq snmp<br/>
+permit tcp any any eq 22 <br/>
+permit tcp any any eq 23 <br/>
+remark other control plane traffic not configured on router <br/>
+permit eigrp any any <br/>
+permit udp any any eq rip <br/>
+deny ip any any <br/>
+<br/>
+ip access-list extended CoPP_DEFAULT <br/>
+permit ip any any <br/>
+<br/>
+Note: Explicitly defining undesirable traffic with ACL entries enables the network operator to collect statistics. Excessive ARP packets can potentially monopolize Route Processor resources, starving other important processes. Currently, ARP is the only Layer 2 protocol that can be specifically classified using the match protocol command. <br/>
+<br/>
+Step 3: Review the policy-map to determine if the traffic is being policed appropriately for each classification. The following is an example configuration:<br/>
+<br/>
+policy-map CONTROL_PLANE_POLICY <br/>
+class CoPP_CRITICAL <br/>
+police 512000 8000 conform-action transmit exceed-action transmit <br/>
+class CoPP_IMPORTANT <br/>
+police 256000 4000 conform-action transmit exceed-action drop <br/>
+class CoPP_NORMAL <br/>
+police 128000 2000 conform-action transmit exceed-action drop <br/>
+class CoPP_UNDESIRABLE <br/>
+police 8000 1000 conform-action drop exceed-action drop <br/>
+class CoPP_DEFAULT<br/>
+police 64000 1000 conform-action transmit exceed-action drop <br/>
+<br/>
+Step 4: Verify that the CoPP policy is enabled. The following is an example configuration:<br/>
+<br/>
+control-plane <br/>
+service-policy input CONTROL_PLANE_POLICY <br/>
+<br/>
+Note: Control Plane Protection (CPPr) can be used to filter as well as police control plane traffic destined to the RP. CPPr is very similar to CoPP and has the ability to filter and police traffic using finer granularity by dividing the aggregate control plane into three separate categories: (1) host, (2) transit, and (3) CEF-exception. Hence, a separate policy-map could be configured for each traffic category.<br/>
+<br/>
+If the Cisco router is not configured to protect against known types of DoS attacks by employing organization-defined security safeguards, this is a finding.</td>
+</tr>
+<tr>
+<th class="ruledata">Fix:</th>
+<td class="ruledata">Configure the Cisco router to protect against known types of DoS attacks on the route processor. Implementing a CoPP policy as shown in the example below is a best practice method.<br/>
+<br/>
+Step 1: Configure ACLs specific traffic types.<br/>
+<br/>
+R1(config)#ip access-list extended CoPP_CRITICAL<br/>
+R1(config-ext-nacl)#remark our control plane adjacencies are critical<br/>
+R1(config-ext-nacl)#permit ospf host x.x.x.x any<br/>
+R1(config-ext-nacl)#permit ospf host x.x.x.x any<br/>
+R1(config-ext-nacl)#permit pim host x.x.x.x any<br/>
+R1(config-ext-nacl)#permit pim host x.x.x.x any<br/>
+R1(config-ext-nacl)#permit igmp any 224.0.0.0 15.255.255.255<br/>
+R1(config-ext-nacl)#permit tcp host x.x.x.x eq bgp host x.x.x.x<br/>
+R1(config-ext-nacl)#deny ip any any<br/>
+R1(config-ext-nacl)#exit<br/>
+<br/>
+R1(config)#ip access-list extended CoPP_IMPORTANT<br/>
+R1(config-ext-nacl)#permit tcp host x.x.x.x eq tacacs any<br/>
+R1(config-ext-nacl)#permit tcp x.x.x.x 0.0.0.255 any eq 22<br/>
+R1(config-ext-nacl)#permit udp host x.x.x.x any eq snmp<br/>
+R1(config-ext-nacl)#permit udp host x.x.x.x eq ntp any<br/>
+R1(config-ext-nacl)#deny ip any any<br/>
+R1(config-ext-nacl)#exit<br/>
+<br/>
+R1(config)#ip access-list extended CoPP_NORMAL<br/>
+R1(config-ext-nacl)#remark we will want to rate limit ICMP traffic<br/>
+R1(config-ext-nacl)#permit icmp any any echo<br/>
+R1(config-ext-nacl)#permit icmp any any echo-reply<br/>
+R1(config-ext-nacl)#permit icmp any any time-exceeded<br/>
+R1(config-ext-nacl)#permit icmp any any unreachable<br/>
+R1(config-ext-nacl)#deny ip any any<br/>
+R1(config-ext-nacl)#exit<br/>
+<br/>
+R1(config)#ip access-list extended CoPP_UNDESIRABLE<br/>
+R1(config-ext-nacl)#remark management plane traffic that should not be received<br/>
+R1(config-ext-nacl)#permit udp any any eq ntp<br/>
+R1(config-ext-nacl)#permit udp any any eq snmp<br/>
+R1(config-ext-nacl)#permit tcp any any eq 22<br/>
+R1(config-ext-nacl)#permit tcp any any eq 23<br/>
+R1(config-ext-nacl)#remark control plane traffic not configured on router<br/>
+R1(config-ext-nacl)#permit eigrp any any<br/>
+R1(config-ext-nacl)#permit udp any any eq rip<br/>
+R1(config-ext-nacl)#deny ip any any<br/>
+R1(config-ext-nacl)#exit<br/>
+R1(config)#ip access-list extended CoPP_DEFAULT<br/>
+R1(config-ext-nacl)#permit ip any any<br/>
+R1(config-ext-nacl)#exit<br/>
+<br/>
+Step 2: Configure class maps referencing each of the ACLs.<br/>
+<br/>
+R1(config)#class-map match-all CoPP_CRITICAL<br/>
+R1(config-cmap)#match access-group name CoPP_CRITICAL<br/>
+R1(config-cmap)#class-map match-any CoPP_IMPORTANT<br/>
+R1(config-cmap)#match access-group name CoPP_IMPORTANT<br/>
+R1(config-cmap)#match protocol arp<br/>
+R1(config-cmap)#class-map match-all CoPP_NORMAL<br/>
+R1(config-cmap)#match access-group name CoPP_NORMAL<br/>
+R1(config-cmap)#class-map match-any CoPP_UNDESIRABLE<br/>
+R1(config-cmap)#match access-group name CoPP_UNDESIRABLE<br/>
+R1(config-cmap)#class-map match-all CoPP_DEFAULT<br/>
+R1(config-cmap)#match access-group name CoPP_DEFAULT<br/>
+R1(config-cmap)#exit<br/>
+<br/>
+Step 3: Configure a policy map referencing the configured class maps and apply appropriate bandwidth allowance and policing attributes.<br/>
+<br/>
+R1(config)#policy-map CONTROL_PLANE_POLICY<br/>
+R1(config-pmap)#class CoPP_CRITICAL<br/>
+R1(config-pmap-c)#police 512000 8000 conform-action transmit exceed-action transmit<br/>
+R1(config-pmap-c-police)#class CoPP_IMPORTANT<br/>
+R1(config-pmap-c)#police 256000 4000 conform-action transmit exceed-action drop<br/>
+R1(config-pmap-c-police)#class CoPP_NORMAL<br/>
+R1(config-pmap-c)#police 128000 2000 conform-action transmit exceed-action drop<br/>
+R1(config-pmap-c-police)#class CoPP_UNDESIRABLE<br/>
+R1(config-pmap-c)#police 8000 1000 conform-action drop exceed-action drop<br/>
+R1(config-pmap-c-police)#class CoPP_DEFAULT<br/>
+R1(config-pmap-c)#police 64000 1000 conform-action transmit exceed-action drop<br/>
+R1(config-pmap-c-police)#exit<br/>
+R1(config-pmap-c)#exit<br/>
+R1(config-pmap)#exit<br/>
+<br/>
+Step 4: Apply the policy map to the control plane.<br/>
+<br/>
+R1(config)#control-plane<br/>
+R1(config-cp)#service-policy input CONTROL_PLANE_POLICY<br/>
+R1(config-cp)#end</td>
+</tr>
+<tr>
+<th class="ruledata">References:</th>
+<td class="ruledata">
+<ul class="ruledata"/>
+</td>
+</tr>
+</table>
+<br/>
+<a name="RULE_SV-215847r531083_rule">
+<table class="ruleblock">
+<tr class="ruleblock">
+<td class="ruleblock">
+<span class="ruleheader">STIG ID:</span>
+<br/>CISC-ND-001240</td>
+<td class="ruleblock">
+<span class="ruleheader">Group ID:</span>
+<br/>V-215847</td>
+<td class="ruleblock">
+<span class="ruleheader">Rule ID:</span>
+<br/>SV-215847r531083_rule</td>
+<td class="ruleblock">
+<span class="ruleheader">Severity:</span>
+<br/>CAT II</td>
+</tr>
+</table>
+</a>
+<table class="ruledata">
+<tr>
+<th class="ruledata">Requirement:</th>
+<td class="ruledata">
+<span class="rulerequirement">The Cisco router must be configured to generate log records when administrator privileges are modified.</span>
+</td>
+</tr>
+<tr>
+<th class="ruledata">Discussion:</th>
+<td class="ruledata">Without generating audit records that are specific to the security and mission needs of the organization, it would be difficult to establish, correlate, and investigate the events relating to an incident or identify those responsible for one.<br/>
+<br/>
+Audit records can be generated from various components within the network device (e.g., module or policy filter).</td>
+</tr>
+<tr>
+<th class="ruledata">Check:</th>
+<td class="ruledata">Review the Cisco router configuration to verify that it is compliant with this requirement as shown in the examples below.<br/>
+<br/>
+hostname R4<br/>
+!<br/>
+!<br/>
+logging userinfo<br/>
+…<br/>
+…<br/>
+…<br/>
+archive<br/>
+ log config<br/>
+ logging enable<br/>
+<br/>
+Note: The logging userinfo command will log when the administrator increases his or her privilege level while the log config command will log all configuration changes such as changing privilege levels for certain commands.<br/>
+<br/>
+If the Cisco router is not configured to generate log records when administrator privileges are modified, this is a finding.</td>
+</tr>
+<tr>
+<th class="ruledata">Fix:</th>
+<td class="ruledata">Configure the Cisco router to generate log records when account privileges are modified as shown in the example below.<br/>
+<br/>
+R4(config)#logging userinfo <br/>
+R4(config)#archive<br/>
+R4(config-archive)#log config<br/>
+R4(config-archive-log-cfg)#logging enable<br/>
+R4(config-archive-log-cfg)#end</td>
+</tr>
+<tr>
+<th class="ruledata">References:</th>
+<td class="ruledata">
+<ul class="ruledata"/>
+</td>
+</tr>
+</table>
+<br/>
+<a name="RULE_SV-215848r531083_rule">
+<table class="ruleblock">
+<tr class="ruleblock">
+<td class="ruleblock">
+<span class="ruleheader">STIG ID:</span>
+<br/>CISC-ND-001250</td>
+<td class="ruleblock">
+<span class="ruleheader">Group ID:</span>
+<br/>V-215848</td>
+<td class="ruleblock">
+<span class="ruleheader">Rule ID:</span>
+<br/>SV-215848r531083_rule</td>
+<td class="ruleblock">
+<span class="ruleheader">Severity:</span>
+<br/>CAT II</td>
+</tr>
+</table>
+</a>
+<table class="ruledata">
+<tr>
+<th class="ruledata">Requirement:</th>
+<td class="ruledata">
+<span class="rulerequirement">The Cisco router must be configured to generate log records when administrator privileges are deleted.</span>
+</td>
+</tr>
+<tr>
+<th class="ruledata">Discussion:</th>
+<td class="ruledata">Without generating audit records that are specific to the security and mission needs of the organization, it would be difficult to establish, correlate, and investigate the events relating to an incident or identify those responsible for one.<br/>
+<br/>
+Audit records can be generated from various components within the network device (e.g., module or policy filter).</td>
+</tr>
+<tr>
+<th class="ruledata">Check:</th>
+<td class="ruledata">Review the Cisco router configuration to verify that it is compliant with this requirement as shown in the example below.<br/>
+<br/>
+archive<br/>
+ log config<br/>
+ logging enable<br/>
+<br/>
+If the Cisco router is not configured to generate log records when administrator privileges are deleted, this is a finding.</td>
+</tr>
+<tr>
+<th class="ruledata">Fix:</th>
+<td class="ruledata">Configure the Cisco router to generate log records when administrator privileges are deleted as shown in the example below.<br/>
+<br/>
+R4(config)#archive<br/>
+R4(config-archive)#log config<br/>
+R4(config-archive-log-cfg)#logging enable<br/>
+R4(config-archive-log-cfg)#end</td>
+</tr>
+<tr>
+<th class="ruledata">References:</th>
+<td class="ruledata">
+<ul class="ruledata"/>
+</td>
+</tr>
+</table>
+<br/>
+<a name="RULE_SV-215849r531083_rule">
+<table class="ruleblock">
+<tr class="ruleblock">
+<td class="ruleblock">
+<span class="ruleheader">STIG ID:</span>
+<br/>CISC-ND-001260</td>
+<td class="ruleblock">
+<span class="ruleheader">Group ID:</span>
+<br/>V-215849</td>
+<td class="ruleblock">
+<span class="ruleheader">Rule ID:</span>
+<br/>SV-215849r531083_rule</td>
+<td class="ruleblock">
+<span class="ruleheader">Severity:</span>
+<br/>CAT II</td>
+</tr>
+</table>
+</a>
+<table class="ruledata">
+<tr>
+<th class="ruledata">Requirement:</th>
+<td class="ruledata">
+<span class="rulerequirement">The Cisco router must be configured to generate audit records when successful/unsuccessful logon attempts occur.</span>
+</td>
+</tr>
+<tr>
+<th class="ruledata">Discussion:</th>
+<td class="ruledata">Without generating audit records that are specific to the security and mission needs of the organization, it would be difficult to establish, correlate, and investigate the events relating to an incident or identify those responsible for one.<br/>
+<br/>
+Audit records can be generated from various components within the network device (e.g., module or policy filter).</td>
+</tr>
+<tr>
+<th class="ruledata">Check:</th>
+<td class="ruledata">Review the Cisco router configuration to verify that it is compliant with this requirement as shown in the examples below.<br/>
+<br/>
+login on-failure log<br/>
+login on-success log<br/>
+<br/>
+If the Cisco router is not configured to generate audit records when successful/unsuccessful logon attempts occur, this is a finding.</td>
+</tr>
+<tr>
+<th class="ruledata">Fix:</th>
+<td class="ruledata">Configure the Cisco router to generate audit records when successful/unsuccessful logon attempts occur as shown in the example below.<br/>
+<br/>
+R5(config)#login on-failure log<br/>
+R5(config)#login on-success log</td>
+</tr>
+<tr>
+<th class="ruledata">References:</th>
+<td class="ruledata">
+<ul class="ruledata"/>
+</td>
+</tr>
+</table>
+<br/>
+<a name="RULE_SV-215850r531083_rule">
+<table class="ruleblock">
+<tr class="ruleblock">
+<td class="ruleblock">
+<span class="ruleheader">STIG ID:</span>
+<br/>CISC-ND-001270</td>
+<td class="ruleblock">
+<span class="ruleheader">Group ID:</span>
+<br/>V-215850</td>
+<td class="ruleblock">
+<span class="ruleheader">Rule ID:</span>
+<br/>SV-215850r531083_rule</td>
+<td class="ruleblock">
+<span class="ruleheader">Severity:</span>
+<br/>CAT II</td>
+</tr>
+</table>
+</a>
+<table class="ruledata">
+<tr>
+<th class="ruledata">Requirement:</th>
+<td class="ruledata">
+<span class="rulerequirement">The Cisco router must be configured to generate log records for privileged activities.</span>
+</td>
+</tr>
+<tr>
+<th class="ruledata">Discussion:</th>
+<td class="ruledata">Without generating audit records that are specific to the security and mission needs of the organization, it would be difficult to establish, correlate, and investigate the events relating to an incident or identify those responsible for one.<br/>
+<br/>
+Audit records can be generated from various components within the network device (e.g., module or policy filter).</td>
+</tr>
+<tr>
+<th class="ruledata">Check:</th>
+<td class="ruledata">Review the Cisco router configuration to verify that it is compliant with this requirement as shown in the example configurations below.<br/>
+<br/>
+archive<br/>
+ log config<br/>
+ logging enable<br/>
+<br/>
+If the Cisco router is not configured to generate log records for privileged activities, this is a finding.</td>
+</tr>
+<tr>
+<th class="ruledata">Fix:</th>
+<td class="ruledata">Configure the Cisco router to generate log records for privileged activities as shown in the example below.<br/>
+<br/>
+R4(config)#archive<br/>
+R4(config-archive)#log config<br/>
+R4(config-archive-log-cfg)#logging enable<br/>
+R4(config-archive-log-cfg)#end</td>
+</tr>
+<tr>
+<th class="ruledata">References:</th>
+<td class="ruledata">
+<ul class="ruledata"/>
+</td>
+</tr>
+</table>
+<br/>
+<a name="RULE_SV-215852r531083_rule">
+<table class="ruleblock">
+<tr class="ruleblock">
+<td class="ruleblock">
+<span class="ruleheader">STIG ID:</span>
+<br/>CISC-ND-001290</td>
+<td class="ruleblock">
+<span class="ruleheader">Group ID:</span>
+<br/>V-215852</td>
+<td class="ruleblock">
+<span class="ruleheader">Rule ID:</span>
+<br/>SV-215852r531083_rule</td>
+<td class="ruleblock">
+<span class="ruleheader">Severity:</span>
+<br/>CAT II</td>
+</tr>
+</table>
+</a>
+<table class="ruledata">
+<tr>
+<th class="ruledata">Requirement:</th>
+<td class="ruledata">
+<span class="rulerequirement">The Cisco router must be configured to generate log records when concurrent logons from different workstations occur.</span>
+</td>
+</tr>
+<tr>
+<th class="ruledata">Discussion:</th>
+<td class="ruledata">Without generating audit records that are specific to the security and mission needs of the organization, it would be difficult to establish, correlate, and investigate the events relating to an incident or identify those responsible for one.<br/>
+<br/>
+Audit records can be generated from various components within the network device (e.g., module or policy filter).</td>
+</tr>
+<tr>
+<th class="ruledata">Check:</th>
+<td class="ruledata">Review the Cisco router configuration to verify that it is compliant with this requirement as shown in the examples below.<br/>
+<br/>
+login on-success log<br/>
+<br/>
+If the Cisco router is not configured to generate log records when concurrent logons from different workstations occur, this is a finding.</td>
+</tr>
+<tr>
+<th class="ruledata">Fix:</th>
+<td class="ruledata">Configure the Cisco router to generate log records when concurrent logons from different workstations occur as shown in the example below.<br/>
+<br/>
+R5(config)#login on-success log</td>
+</tr>
+<tr>
+<th class="ruledata">References:</th>
+<td class="ruledata">
+<ul class="ruledata"/>
+</td>
+</tr>
+</table>
+<br/>
+<a name="RULE_SV-215853r531083_rule">
+<table class="ruleblock">
+<tr class="ruleblock">
+<td class="ruleblock">
+<span class="ruleheader">STIG ID:</span>
+<br/>CISC-ND-001310</td>
+<td class="ruleblock">
+<span class="ruleheader">Group ID:</span>
+<br/>V-215853</td>
+<td class="ruleblock">
+<span class="ruleheader">Rule ID:</span>
+<br/>SV-215853r531083_rule</td>
+<td class="ruleblock">
+<span class="ruleheader">Severity:</span>
+<br/>CAT II</td>
+</tr>
+</table>
+</a>
+<table class="ruledata">
+<tr>
+<th class="ruledata">Requirement:</th>
+<td class="ruledata">
+<span class="rulerequirement">The Cisco router must be configured to off-load log records onto a different system than the system being audited.</span>
+</td>
+</tr>
+<tr>
+<th class="ruledata">Discussion:</th>
+<td class="ruledata">Information stored in one location is vulnerable to accidental or incidental deletion or alteration.<br/>
+<br/>
+Off-loading is a common process in information systems with limited audit storage capacity.</td>
+</tr>
+<tr>
+<th class="ruledata">Check:</th>
+<td class="ruledata">Review the Cisco router configuration to verify that it is compliant with this requirement as shown in the example below.<br/>
+<br/>
+logging trap notifications<br/>
+logging x.x.x.x<br/>
+<br/>
+Note: Default for sending log messages to the syslog server is informational (level 6); hence, the command logging trap informational will not be seen in the configuration. Level of log messages sent to the syslog server can be verified using the show logging command.<br/>
+<br/>
+If the Cisco router is not configured to off-load log records onto a different system than the system being audited, this is a finding.</td>
+</tr>
+<tr>
+<th class="ruledata">Fix:</th>
+<td class="ruledata">Configure the Cisco router to send log records to a syslog server as shown in the example below.<br/>
+<br/>
+R4(config)#logging host x.x.x.x<br/>
+R4(config)#logging trap notifications</td>
+</tr>
+<tr>
+<th class="ruledata">References:</th>
+<td class="ruledata">
+<ul class="ruledata"/>
+</td>
+</tr>
+</table>
+<br/>
+<a name="RULE_SV-215854r531083_rule">
+<table class="ruleblock">
+<tr class="ruleblock">
+<td class="ruleblock">
+<span class="ruleheader">STIG ID:</span>
+<br/>CISC-ND-001370</td>
+<td class="ruleblock">
+<span class="ruleheader">Group ID:</span>
+<br/>V-215854</td>
+<td class="ruleblock">
+<span class="ruleheader">Rule ID:</span>
+<br/>SV-215854r531083_rule</td>
+<td class="ruleblock">
+<span class="ruleheader">Severity:</span>
+<br/>CAT I</td>
+</tr>
+</table>
+</a>
+<table class="ruledata">
+<tr>
+<th class="ruledata">Requirement:</th>
+<td class="ruledata">
+<span class="rulerequirement">The Cisco router must be configured to use an authentication server for the purpose of authenticating users prior to granting administrative access.</span>
+</td>
+</tr>
+<tr>
+<th class="ruledata">Discussion:</th>
+<td class="ruledata">Centralized management of user accounts and authentication increases the administrative access to the router. This control is particularly important protection against the insider threat. With robust centralized management, audit records for administrator account access to the organization's network devices can be more readily analyzed for trends and anomalies. The alternative method of defining administrator accounts on each device exposes the device configuration to remote access authentication attacks and system administrators with multiple authenticators for each network device.</td>
+</tr>
+<tr>
+<th class="ruledata">Check:</th>
+<td class="ruledata">Review the Cisco router configuration to verify that the device is configured to use an authentication server as primary source for authentication as shown in the following example:<br/>
+<br/>
+aaa new-model<br/>
+!<br/>
+aaa authentication login LOGIN_AUTHENTICATION group radius local<br/>
+…<br/>
+…<br/>
+…<br/>
+ip http authentication aaa login-authentication LOGIN_AUTHENTICATION<br/>
+ip http secure-server<br/>
+…<br/>
+…<br/>
+…<br/>
+radius-server host x.x.x.x auth-port 1645 acct-port 1646 key xxxxxxx<br/>
+…<br/>
+…<br/>
+…<br/>
+line con 0<br/>
+ exec-timeout 10 0<br/>
+ login authentication LOGIN_AUTHENTICATION<br/>
+line vty 0 4<br/>
+ exec-timeout 10 0<br/>
+ login authentication LOGIN_AUTHENTICATION<br/>
+<br/>
+If the Cisco router is not configured to use an authentication server for the purpose of authenticating users prior to granting administrative access, this is a finding.</td>
+</tr>
+<tr>
+<th class="ruledata">Fix:</th>
+<td class="ruledata">Step 1: Configure the Cisco router to use an authentication server as shown in the following example:<br/>
+<br/>
+R4(config)#radius host 10.1.48.2 key xxxxxx<br/>
+<br/>
+Step 2: Configure the authentication order to use the authentication server as primary source for authentication as shown in the following example:<br/>
+<br/>
+R4(config)#aaa authentication login LOGIN_AUTHENTICATION group radius local<br/>
+<br/>
+Step 3: Configure all network connections associated with a device management to use an authentication server for the purpose of login authentication.<br/>
+<br/>
+R4(config)#line vty 0 4<br/>
+R4(config-line)#login authentication LOGIN_AUTHENTICATION<br/>
+R4(config-line)#exit<br/>
+R4(config)#line con 0<br/>
+R4(config-line)#login authentication LOGIN_AUTHENTICATION<br/>
+R4(config-line)#exit <br/>
+R4(config)#ip http authentication aaa login-authentication LOGIN_AUTHENTICATION</td>
+</tr>
+<tr>
+<th class="ruledata">References:</th>
+<td class="ruledata">
+<ul class="ruledata"/>
+</td>
+</tr>
+</table>
+<br/>
+<a name="RULE_SV-215855r531083_rule">
+<table class="ruleblock">
+<tr class="ruleblock">
+<td class="ruleblock">
+<span class="ruleheader">STIG ID:</span>
+<br/>CISC-ND-001410</td>
+<td class="ruleblock">
+<span class="ruleheader">Group ID:</span>
+<br/>V-215855</td>
+<td class="ruleblock">
+<span class="ruleheader">Rule ID:</span>
+<br/>SV-215855r531083_rule</td>
+<td class="ruleblock">
+<span class="ruleheader">Severity:</span>
+<br/>CAT II</td>
+</tr>
+</table>
+</a>
+<table class="ruledata">
+<tr>
+<th class="ruledata">Requirement:</th>
+<td class="ruledata">
+<span class="rulerequirement">The Cisco router must be configured to back up the configuration when changes occur.</span>
+</td>
+</tr>
+<tr>
+<th class="ruledata">Discussion:</th>
+<td class="ruledata">System-level information includes default and customized settings and security attributes, including ACLs that relate to the network device configuration, as well as software required for the execution and operation of the device. Information system backup is a critical step in ensuring system integrity and availability. If the system fails and there is no backup of the system-level information, a denial of service condition is possible for all who utilize this critical network component.<br/>
+<br/>
+This control requires the network device to support the organizational central backup process for system-level information associated with the network device. This function may be provided by the network device itself; however, the preferred best practice is a centralized backup rather than each network device performing discrete backups.</td>
+</tr>
+<tr>
+<th class="ruledata">Check:</th>
+<td class="ruledata">Review the Cisco router configuration to verify that it is compliant with this requirement. The example configuration below will send the configuration to a TFTP server when a configuration change occurs.<br/>
+<br/>
+event manager applet BACKUP_CONFIG<br/>
+ event syslog pattern "%SYS-5-CONFIG_I"<br/>
+ action 1 info type routername<br/>
+ action 2 cli command "enable"<br/>
+ action 3 cli command "copy run tftp" pattern "remote host"<br/>
+ action 4 cli command "x.x.x.x" pattern "filename"<br/>
+ action 5 cli command "$_info_routername-config"<br/>
+ action 6 syslog priority informational msg "Configuration backup was executed"<br/>
+<br/>
+If the Cisco router is not configured to conduct backups of the configuration when changes occur, this is a finding.</td>
+</tr>
+<tr>
+<th class="ruledata">Fix:</th>
+<td class="ruledata">Configure the Cisco router to send the configuration to a TFTP or FTP server when a configuration change occurs as shown in the example below.<br/>
+<br/>
+R4(config)#event manager applet BACKUP_CONFIG<br/>
+R4(config-applet)#event syslog pattern "%SYS-5-CONFIG_I"<br/>
+R4(config-applet)#action 1 cli command "enable"<br/>
+R4(config-applet)#action 2 info type routername<br/>
+R4(config-applet)#action 3 cli command "copy run tftp" pattern "remote host"<br/>
+R4(config-applet)#action 4 cli command "x.x.x.x" pattern "filename"<br/>
+R4(config-applet)#action 5 cli command "$_info_routername-config"<br/>
+R4(config-applet)#action 6 syslog priority informational msg "Configuration backup was executed"<br/>
+R4(config-applet)#end</td>
+</tr>
+<tr>
+<th class="ruledata">References:</th>
+<td class="ruledata">
+<ul class="ruledata"/>
+</td>
+</tr>
+</table>
+<br/>
+<a name="RULE_SV-215856r531083_rule">
+<table class="ruleblock">
+<tr class="ruleblock">
+<td class="ruleblock">
+<span class="ruleheader">STIG ID:</span>
+<br/>CISC-ND-001440</td>
+<td class="ruleblock">
+<span class="ruleheader">Group ID:</span>
+<br/>V-215856</td>
+<td class="ruleblock">
+<span class="ruleheader">Rule ID:</span>
+<br/>SV-215856r531083_rule</td>
+<td class="ruleblock">
+<span class="ruleheader">Severity:</span>
+<br/>CAT II</td>
+</tr>
+</table>
+</a>
+<table class="ruledata">
+<tr>
+<th class="ruledata">Requirement:</th>
+<td class="ruledata">
+<span class="rulerequirement">The Cisco router must be configured to obtain its public key certificates from an appropriate certificate policy through an approved service provider.</span>
+</td>
+</tr>
+<tr>
+<th class="ruledata">Discussion:</th>
+<td class="ruledata">For user certificates, each organization obtains certificates from an approved, shared service provider, as required by OMB policy. For federal agencies operating a legacy public key infrastructure cross-certified with the Federal Bridge Certification Authority (CA) at medium assurance or higher, this CA will suffice.</td>
+</tr>
+<tr>
+<th class="ruledata">Check:</th>
+<td class="ruledata">Review the router configuration to determine if a CA trust point has been configured. The CA trust point will contain the URL of the CA in which the router has enrolled with. Verify this is a DoD or DoD-approved CA. This will ensure the router has enrolled and received a certificate from a trusted CA. The CA trust point configuration would look similar to the example below.<br/>
+<br/>
+crypto pki trustpoint CA_X<br/>
+ enrollment url http://trustpoint1.example.com<br/>
+<br/>
+Note: A remote end-point's certificate will always be validated by the router by verifying the signature of the CA on the certificate using the CA's public key, which is contained in the router's certificate it received at enrollment.<br/>
+<br/>
+Note: This requirement is not applicable if the router does not have any public key certificates.<br/>
+<br/>
+If the Cisco router is not configured to obtain its public key certificates from an appropriate certificate policy through an approved service provider, this is a finding.</td>
+</tr>
+<tr>
+<th class="ruledata">Fix:</th>
+<td class="ruledata">Configure the router to obtain its public key certificates from an appropriate certificate policy through an approved service provider as shown in the example below.<br/>
+<br/>
+R2(config)# crypto pki trustpoint CA_X<br/>
+R2(ca-trustpoint)#enrollment url http://trustpoint1.example.com<br/>
+</td>
+</tr>
+<tr>
+<th class="ruledata">References:</th>
+<td class="ruledata">
+<ul class="ruledata"/>
+</td>
+</tr>
+</table>
+<br/>
+<a name="RULE_SV-220139r531083_rule">
+<table class="ruleblock">
+<tr class="ruleblock">
+<td class="ruleblock">
+<span class="ruleheader">STIG ID:</span>
+<br/>CISC-ND-001450</td>
+<td class="ruleblock">
+<span class="ruleheader">Group ID:</span>
+<br/>V-220139</td>
+<td class="ruleblock">
+<span class="ruleheader">Rule ID:</span>
+<br/>SV-220139r531083_rule</td>
+<td class="ruleblock">
+<span class="ruleheader">Severity:</span>
+<br/>CAT I</td>
+</tr>
+</table>
+</a>
+<table class="ruledata">
+<tr>
+<th class="ruledata">Requirement:</th>
+<td class="ruledata">
+<span class="rulerequirement">The Cisco router must be configured to send log data to a syslog server for the purpose of forwarding alerts to the administrators and the ISSO.</span>
+</td>
+</tr>
+<tr>
+<th class="ruledata">Discussion:</th>
+<td class="ruledata">The aggregation of log data kept on a syslog server can be used to detect attacks and trigger an alert to the appropriate security personnel. The stored log data can used to detect weaknesses in security that enable the network IA team to find and address these weaknesses before breaches can occur. Reviewing these logs, whether before or after a security breach, are important in showing whether someone is an internal employee or an outside threat.</td>
+</tr>
+<tr>
+<th class="ruledata">Check:</th>
+<td class="ruledata">Verify that the router is configured to send logs to a syslog server. The configuration should look similar to the example below:<br/>
+<br/>
+logging trap notifications<br/>
+logging x.x.x.x<br/>
+<br/>
+Note: Default for sending log messages to the syslog server is informational (level 6); hence, the command logging trap informational will not be seen in the configuration. Level of log messages sent to the syslog server can be verified using the show logging command.<br/>
+<br/>
+If the router is not configured to send log data to the syslog server, this is a finding.</td>
+</tr>
+<tr>
+<th class="ruledata">Fix:</th>
+<td class="ruledata">Configure the router to send log messages to the syslog server as shown in the example below.<br/>
+<br/>
+R4(config)#logging host x.x.x.x<br/>
+R4(config)#logging trap notifications</td>
+</tr>
+<tr>
+<th class="ruledata">References:</th>
+<td class="ruledata">
+<ul class="ruledata"/>
+</td>
+</tr>
+</table>
+<br/>
+<a name="RULE_SV-220140r531083_rule">
+<table class="ruleblock">
+<tr class="ruleblock">
+<td class="ruleblock">
+<span class="ruleheader">STIG ID:</span>
+<br/>CISC-ND-001470</td>
+<td class="ruleblock">
+<span class="ruleheader">Group ID:</span>
+<br/>V-220140</td>
+<td class="ruleblock">
+<span class="ruleheader">Rule ID:</span>
+<br/>SV-220140r531083_rule</td>
+<td class="ruleblock">
+<span class="ruleheader">Severity:</span>
+<br/>CAT I</td>
+</tr>
+</table>
+</a>
+<table class="ruledata">
+<tr>
+<th class="ruledata">Requirement:</th>
+<td class="ruledata">
+<span class="rulerequirement">The Cisco router must be running an IOS release that is currently supported by Cisco Systems.</span>
+</td>
+</tr>
+<tr>
+<th class="ruledata">Discussion:</th>
+<td class="ruledata">Network devices running an unsupported operating system lack current security fixes required to mitigate the risks associated with recent vulnerabilities. Running a supported release also enables operations to maintain a stable and reliable network provided by improved quality of service and security features.</td>
+</tr>
+<tr>
+<th class="ruledata">Check:</th>
+<td class="ruledata">Verify that the router is in compliance with this requirement by having the router administrator enter the following command: <br/>
+<br/>
+show version<br/>
+<br/>
+Verify that the release is still supported by Cisco. All releases supported by Cisco can be found on the following URL:<br/>
+<br/>
+www.cisco.com/c/en/us/support/ios-nx-os-software<br/>
+<br/>
+If the router is not running a supported release, this is a finding.</td>
+</tr>
+<tr>
+<th class="ruledata">Fix:</th>
+<td class="ruledata">Upgrade the router to a supported release.</td>
+</tr>
+<tr>
+<th class="ruledata">References:</th>
+<td class="ruledata">
+<ul class="ruledata"/>
+</td>
+</tr>
+</table>
+<br/>
+</div>
+</div>
+<div class="footer headerfooter">UNCLASSIFIED</div>
+</body>
+</html>

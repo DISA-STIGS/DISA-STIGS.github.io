@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/bootstrap/css/stylesheet.css">
+	
+	<script>document.getElementsByTagName("html")[0].className += " js";</script>
+	<link rel="stylesheet" href="faqassets/css/style.css">
+	<title>FAQ - DISA Security Technical Implementation Guide (STIGs)</title>
+	
+	
+</head>
+
+<body>
+
+
+ <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
+  <!-- Brand -->
+  <a class="navbar-brand" href="#"><img src="assets/img/DISA_Seal.png" class="ml-auto">   DISA STIGS</a>
+
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+  <!-- Navbar links -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+  <ul class="nav navbar-nav ml-auto">
+	  <li class="nav-item">
+        <a class="nav-link" href="index.html">Home</a>
+      </li>
+	  <li class="nav-item">
+        <a class="nav-link" href="Announcements.html">Announcements</a>
+      </li>
+
+<li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">About Us</a>
+                    <div class="dropdown-menu">
+                        <a href="AboutUs.html" class="dropdown-item">Who We Are</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="ContactUs.html"class="dropdown-item">Contact Us</a>
+                    </div>
+                </li>
+      <li class="nav-item">
+        <a class="nav-link" href="faqs.html">FAQs</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<header class="cd-header flex flex-column flex-center" style="background: url('assets/img/faq.png')no-repeat center center;">
+        <div class="overlay" style="height: 429px;"></div>
+        <div class="container container-fluid mb-1">
+            <div class="row">
+                <div class="col-xl-9 mb-2" style="text-shadow: -2px 4px 9px rgb(0,0,0);">  
+				<h1 class="mb-3">
+				<span style="font-size:32px; color: #cddc39;"><strong>>>  </span>Frequently Asked Questions</h1>
+            </div></div>
+        </div>
+    </header>
+
+<section class="cd-faq js-cd-faq container max-width-md margin-top-lg margin-bottom-lg">
+	<ul class="cd-faq__categories">
+		<li><a class="cd-faq__category cd-faq__category-selected truncate" href="#general">General Questions</a></li>
+		<li><a class="cd-faq__category truncate" href="#stigs">STIGs</a></li>
+		<li><a class="cd-faq__category truncate" href="#SCAP">SCAP</a></li>
+		<!---li><a class="cd-faq__category truncate" href="#sac">Supplemental Automated Content</a></li--->
+	</ul> <!-- cd-faq__categories -->
+
+	<div class="cd-faq__items">
+		<ul id="general" class="cd-faq__group">
+			<li class="cd-faq__title"><h2>General Questions</h2></li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>Who is the STIG team?</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+            <p>Our branch is part of the Cyber Standards and Analysis Division under DISA's Risk Management Executive. We develop and provide operationally implementable secure configuration guidance for use
+		    throughout the DoD </p>
+		<p> We are not the:</p>
+<p>• DoD approver for the procurement or use of a product or technology</p>
+<p>• National Information Assurance Partnership (NIAP)</p>
+<p>• National Institute of Standards and Technology (NIST) Cryptographic Module Validation Program (CMVP)</p>
+<p>• DoD Unified Capabilities (UC) Approved Products List (APL)</p>
+		  
+			</div>
+			</div> <!-- cd-faq__content -->
+			</li>
+
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>Does DISA  certify products for use in the DoD?</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+            <p>No. DISA certifies Information Systems for use in DISA. DISA not does certify products for DoD use. SRGs/STIGs are designed to assist in implementing the secure deployment of products.</p>
+          </div>
+				</div> <!-- cd-faq__content -->
+			</li>
+
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>What is SCAP?</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+              <p>Security Content Automation Protocol (SCAP) is a collection of specifications</p>
+<p>•  Specifications originally developed by the government which
+are now being adopted as the industry standard</p>
+<p>•  Supports a standards based approach to develop and
+publish IA configuration guidance, assess assets, and report
+compliance</p>
+          </div>
+				</div> <!-- cd-faq__content -->
+			</li>
+
+		</ul> <!-- cd-faq__group -->
+
+		<ul id="stigs" class="cd-faq__group">
+			<li class="cd-faq__title"><h2>STIGs</h2></li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>How do I open XCCDF STIGs?</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+            <p>	Save the STIG zip file package to your local PC drive and extract it to a folder. Extract the files from the zip package that ends with MANUAL_STIG into a new folder. Open the folder with the extracted files, locate and open the .xml file using a web browser. For requestors who want PDF interactive checkboxes, etc.</p>
+
+				<p>PDF formats have been an interim step for STIG publication, and are being phased out. There is currently no plan to develop updatable PDF formats for STIGs. The future format for STIG publication is XCCDF output. The conversion process has begun for XCCDF, to enable STIG consumption by tools where both compliance and configuration remediation can be automated with the addition of OVAL code. Several operating system STIGs appear on the DoD Cyber Exchange web site today in the XCCDF format.</p>
+
+				<p>The XCCDF format of STIG is made human readable by using a style sheet, which will be bundled with each STIG. It is not in our current plan to create interactive checkbox functionality for XCCDF format STIGs.</p>
+          </div>
+				</div> <!-- cd-faq__content -->
+			</li>
+
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>What do I use if there is no STIG?</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+               <p>Determine if a STIG has been published for an earlier version of the same product. Many checks and fixes in earlier versions of STIGs can be applied to the new version of the product. If a STIG for an older version of the product is available, review the check and fix procedures to determine which of these work with the new product version. Where possible, use the checks and fixes that work directly with the new version. The remainder of checks and fixes that no longer work with the new product version will need to be evaluated and proper check and fix procedures will need to be determined for each requirement. New product features and configuration settings must also be accounted for based on the relevant SRG.</p>
+
+<p>If there is no related STIG, the most relevant SRG can be used to determine compliance with DoD policies. If assistance is needed in determining which SRG applies to the product, please open a ticket with the STIG Customer Support Helpdesk at disa.stig_spt@mail.mil</p>
+
+<p>In fulfilling a requirement, be it from an SRG or an earlier version of a STIG, vendor documentation may be followed for configuration guidance.</p>
+			   </div>
+				</div> <!-- cd-faq__content -->
+			</li>
+
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>Where can I download STIG Viewer?</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+               <p>To download all SRG/STIG tools and viewing guidance, please go to <a href="https://public.cyber.mil/stigs/srg-stig-tools/" target="_blank" style="color: purple"> https://public.cyber.mil/stigs/srg-stig-tools/</a>.</p>
+			   </div>
+				</div> <!-- cd-faq__content -->
+			</li>
+		</ul> <!-- cd-faq__group -->
+
+
+		<ul id="SCAP" class="cd-faq__group">
+			<li class="cd-faq__title"><h2>SCAP</h2></li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>Why are files missing from the benchmarks in the SCAP 1.2 format?</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+            <p> SCAP 1.2 benchmarks are published using the data stream XML format. The traditional XCCDF, OVAL, CPE-OVAL, and CPE-Dictionary components of a DISA Benchmark are bundled together as a single data stream file, which is then ZIPped for delivery. The data stream format adds the capability to sign SCAP content, which may be utilized in future releases of DISA Benchmarks.</p>
+          </div>
+				</div> <!-- cd-faq__content -->
+			</li>
+
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>Will DISA be releasing an SCAP benchmark for Debian?</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+            <p>Although the SCC tool does support Debian SCAP benchmarks DISA will not be releasing a benchmark for Debian.</p>
+          </div>
+				</div> <!-- cd-faq__content -->
+			</li>
+		</ul> <!-- cd-faq__group -->
+
+		
+	</div> <!-- cd-faq__items -->
+
+	<a href="#0" class="cd-faq__close-panel text-replace">Close</a>
+  
+  <div class="cd-faq__overlay" aria-hidden="true"></div>
+</section> <!-- cd-faq -->
+
+
+<footer class="footer bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 my-auto h-100 text-center text-lg-center">
+                   <ul class="list-inline mb-2">
+
+			<!-- Trigger/Open The Modal -->
+			<li class="list-inline-item"><a href="AboutUs.html" id="aboutUs">About</a></li>
+				
+			<!-- Trigger/Open The Modal -->
+			<li class="list-inline-item"><a href="ContactUs.html" id="contactUs">Contact Us</a></li>
+				
+			<!-- Trigger/Open The Modal -->
+			<li class="list-inline-item"><a href="faqs.html" id="faqs">FAQs</a></li>
+				
+                    </ul>
+					
+                    <p class="text-muted small mb-4 mb-lg-0">Defense Information Systems Agency (DISA)</p>
+                </div>
+		</div>
+        </div>
+    </footer>
+
+
+
+<script src="faqassets/js/util.js"></script> <!-- util functions included in the CodyHouse framework -->
+<script src="faqassets/js/main.js"></script> 
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+	<script src="assets/js/scripts.js"></script>
+</body>
+</html>
