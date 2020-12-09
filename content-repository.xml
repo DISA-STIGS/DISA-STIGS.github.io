@@ -3,12 +3,12 @@
 <content-repository style="0.1">
       <repository-id>disa-stig-repo</repository-id>
       <repository-publisher>DISA</repository-publisher>
-      <last-updated>2020-12-08T14:26:38</last-updated>
+      <last-updated>2020-12-09T07:23:38</last-updated>
       <license>Open</license>
       <contents>
             <scap-content>
                   <content-id>U_Adobe_Acrobat_Reader_DC_Classic_V2R1_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip//U_Adobe_Acrobat_Reader_DC_Classic_V2R1_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_Adobe_Acrobat_Reader_DC_Classic_V2R1_STIG_SCAP_1-2_Benchmark.zip</location>
                   <checksum style="SHA3_256">63bff8b60687c93c05ec90dbef5b0c51e2f1edbe3d143eec2e444e1fa3cb464e</checksum>
                   <benchmarks>
                         <benchmark>
@@ -32,7 +32,7 @@
             </scap-content>
             <scap-content>
                   <content-id>U_Adobe_Acrobat_Reader_DC_Continuous_V1R5_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip//U_Adobe_Acrobat_Reader_DC_Continuous_V1R5_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_Adobe_Acrobat_Reader_DC_Continuous_V1R5_STIG_SCAP_1-2_Benchmark.zip</location>
                   <checksum style="SHA3_256">6bce5f2ce2a52de3062b90a2aa26bea939a5f54840e1f55ade55fb977fda57ee</checksum>
                   <benchmarks>
                         <benchmark>
@@ -56,7 +56,7 @@
             </scap-content>
             <scap-content>
                   <content-id>U_CAN_Ubuntu_16-04_LTS_V2R1_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip//U_CAN_Ubuntu_16-04_LTS_V2R1_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_CAN_Ubuntu_16-04_LTS_V2R1_STIG_SCAP_1-2_Benchmark.zip</location>
                   <checksum style="SHA3_256">3dd2e5946aeadca38bc8a47850ceda2144e9ed0c9841f77bf921bb944829776f</checksum>
                   <benchmarks>
                         <benchmark>
@@ -80,7 +80,7 @@
             </scap-content>
             <scap-content>
                   <content-id>U_CAN_Ubuntu_18-04_V1R1_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip//U_CAN_Ubuntu_18-04_V1R1_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_CAN_Ubuntu_18-04_V1R1_STIG_SCAP_1-2_Benchmark.zip</location>
                   <checksum style="SHA3_256">75fbfacbd9b520207c8f0c7ca85e43075dbf2685f5a1f6dedffb2d0e0802ee69</checksum>
                   <benchmarks>
                         <benchmark>
@@ -104,7 +104,7 @@
             </scap-content>
             <scap-content>
                   <content-id>U_Google_Chrome_Windows_V2R1_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip//U_Google_Chrome_Windows_V2R1_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_Google_Chrome_Windows_V2R1_STIG_SCAP_1-2_Benchmark.zip</location>
                   <checksum style="SHA3_256">50209047af7c754ea8248f898dab54a28978edf308b5e62bff142b76df51f7e1</checksum>
                   <benchmarks>
                         <benchmark>
@@ -128,7 +128,7 @@
             </scap-content>
             <scap-content>
                   <content-id>U_McAfee_VirusScan_8-8_Local_Client_V1R2_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip//U_McAfee_VirusScan_8-8_Local_Client_V1R2_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_McAfee_VirusScan_8-8_Local_Client_V1R2_STIG_SCAP_1-2_Benchmark.zip</location>
                   <checksum style="SHA3_256">70a9468f6acc3f95aa3d5f0bb88159fc6e996fd175836791c55bc87c0f4d635f</checksum>
                   <benchmarks>
                         <benchmark>
@@ -152,7 +152,7 @@
             </scap-content>
             <scap-content>
                   <content-id>U_McAfee_VirusScan_8-8_Managed_Client_V1R3_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip//U_McAfee_VirusScan_8-8_Managed_Client_V1R3_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_McAfee_VirusScan_8-8_Managed_Client_V1R3_STIG_SCAP_1-2_Benchmark.zip</location>
                   <checksum style="SHA3_256">0d5b05a5dbaaa751fbbcc2a1adbaded3da0f4aa4e1f38b24fb30d5040bf0a172</checksum>
                   <benchmarks>
                         <benchmark>
@@ -176,7 +176,7 @@
             </scap-content>
             <scap-content>
                   <content-id>U_MOZ_Firefox_RHEL_V1R7_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip//U_MOZ_Firefox_RHEL_V1R7_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_MOZ_Firefox_RHEL_V1R7_STIG_SCAP_1-2_Benchmark.zip</location>
                   <checksum style="SHA3_256">dd2fe22b8882487a4f38f468b74528ed62a2b59d32d26907f9817824ea784db6</checksum>
                   <benchmarks>
                         <benchmark>
@@ -200,7 +200,7 @@
             </scap-content>
             <scap-content>
                   <content-id>U_MOZ_Firefox_Windows_V1R6_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip//U_MOZ_Firefox_Windows_V1R6_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_MOZ_Firefox_Windows_V1R6_STIG_SCAP_1-2_Benchmark.zip</location>
                   <checksum style="SHA3_256">aae33194f9be38e0f0aee67b119487b0d7e381e066c45b6bb6cb6f90881018a7</checksum>
                   <benchmarks>
                         <benchmark>
@@ -224,7 +224,7 @@
             </scap-content>
             <scap-content>
                   <content-id>U_MS_DotNet_Framework_4_V1R8_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip//U_MS_DotNet_Framework_4_V1R8_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_MS_DotNet_Framework_4_V1R8_STIG_SCAP_1-2_Benchmark.zip</location>
                   <checksum style="SHA3_256">bd3b3352478f06d76893e103cdf9860244a84a7b2d730f62ef7f309763b3047c</checksum>
                   <benchmarks>
                         <benchmark>
@@ -248,7 +248,7 @@
             </scap-content>
             <scap-content>
                   <content-id>U_MS_IE11_V1R15_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip//U_MS_IE11_V1R15_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_MS_IE11_V1R15_STIG_SCAP_1-2_Benchmark.zip</location>
                   <checksum style="SHA3_256">d0c2189bd07562a5eca12f49490c69baa79801a2b90c763f9eda5333f6f22827</checksum>
                   <benchmarks>
                         <benchmark>
@@ -272,7 +272,7 @@
             </scap-content>
             <scap-content>
                   <content-id>U_MS_Windows_10_V2R1_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip//U_MS_Windows_10_V2R1_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_MS_Windows_10_V2R1_STIG_SCAP_1-2_Benchmark.zip</location>
                   <checksum style="SHA3_256">ab149df04c1c284add9f05c0e51a82f0fa48fcc63ecb8f379edb55e46d495303</checksum>
                   <benchmarks>
                         <benchmark>
@@ -296,7 +296,7 @@
             </scap-content>
             <scap-content>
                   <content-id>U_MS_Windows_2012_and_2012_R2_DC_V3R1_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip//U_MS_Windows_2012_and_2012_R2_DC_V3R1_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_MS_Windows_2012_and_2012_R2_DC_V3R1_STIG_SCAP_1-2_Benchmark.zip</location>
                   <checksum style="SHA3_256">3df8029ad615917cf9edb52102770633f3fc8b3d39c7c46bbc565dd56f067d2f</checksum>
                   <benchmarks>
                         <benchmark>
@@ -323,7 +323,7 @@
             </scap-content>
             <scap-content>
                   <content-id>U_MS_Windows_2012_and_2012_R2_MS_V3R1_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip//U_MS_Windows_2012_and_2012_R2_MS_V3R1_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_MS_Windows_2012_and_2012_R2_MS_V3R1_STIG_SCAP_1-2_Benchmark.zip</location>
                   <checksum style="SHA3_256">874d75097772eec3ad17f969a59a0cad49ec3b3f4b4cb05f723f4eaf7165f648</checksum>
                   <benchmarks>
                         <benchmark>
@@ -350,7 +350,7 @@
             </scap-content>
             <scap-content>
                   <content-id>U_MS_Windows_Defender_AV_V2R1_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip//U_MS_Windows_Defender_AV_V2R1_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_MS_Windows_Defender_AV_V2R1_STIG_SCAP_1-2_Benchmark.zip</location>
                   <checksum style="SHA3_256">364b78fc48ad300438512c3ef0d20780a8ff6541e15bfb249e6ca151e05b6b6f</checksum>
                   <benchmarks>
                         <benchmark>
@@ -374,7 +374,7 @@
             </scap-content>
             <scap-content>
                   <content-id>U_MS_Windows_Server_2016_V2R1_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip//U_MS_Windows_Server_2016_V2R1_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_MS_Windows_Server_2016_V2R1_STIG_SCAP_1-2_Benchmark.zip</location>
                   <checksum style="SHA3_256">6011c57041af25d7dbab54246a1dccb5c072b45cc06b7b9464e6472e4ab2dc47</checksum>
                   <benchmarks>
                         <benchmark>
@@ -398,7 +398,7 @@
             </scap-content>
             <scap-content>
                   <content-id>U_MS_Windows_Server_2019_V2R1_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip//U_MS_Windows_Server_2019_V2R1_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_MS_Windows_Server_2019_V2R1_STIG_SCAP_1-2_Benchmark.zip</location>
                   <checksum style="SHA3_256">326dbb7eab9525fe63a3d80d4f2e5fe28296074db620855ce42000d8d5704caf</checksum>
                   <benchmarks>
                         <benchmark>
@@ -422,7 +422,7 @@
             </scap-content>
             <scap-content>
                   <content-id>U_Oracle_Linux_7_V2R1_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip//U_Oracle_Linux_7_V2R1_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_Oracle_Linux_7_V2R1_STIG_SCAP_1-2_Benchmark.zip</location>
                   <checksum style="SHA3_256">16c376e5a4e0491da605bd8e96388b8c97369fc4a7882061619c14b89e3d402b</checksum>
                   <benchmarks>
                         <benchmark>
@@ -446,7 +446,7 @@
             </scap-content>
             <scap-content>
                   <content-id>U_RHEL_6_V2R1_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip//U_RHEL_6_V2R1_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_RHEL_6_V2R1_STIG_SCAP_1-2_Benchmark.zip</location>
                   <checksum style="SHA3_256">e02d30f824e78a4e5d5526c934660058f320b77a747e73f235293f8dad41aec8</checksum>
                   <benchmarks>
                         <benchmark>
@@ -470,7 +470,7 @@
             </scap-content>
             <scap-content>
                   <content-id>U_RHEL_7_V3R1_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip//U_RHEL_7_V3R1_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_RHEL_7_V3R1_STIG_SCAP_1-2_Benchmark.zip</location>
                   <checksum style="SHA3_256">ba2d4d9d53cbe92618656ea7ca7a70ced67259ef70dbbd68350531f44e5539a6</checksum>
                   <benchmarks>
                         <benchmark>
@@ -494,7 +494,7 @@
             </scap-content>
             <scap-content>
                   <content-id>U_SLES_12_V2R1_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip//U_SLES_12_V2R1_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_SLES_12_V2R1_STIG_SCAP_1-2_Benchmark.zip</location>
                   <checksum style="SHA3_256">5d790a19c1a943971f4bfb5b2660ca05b60391e87c7e1cfd4541800bf6d47033</checksum>
                   <benchmarks>
                         <benchmark>
@@ -518,7 +518,7 @@
             </scap-content>
             <scap-content>
                   <content-id>U_SOL_10_SPARC_V2R1_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip//U_SOL_10_SPARC_V2R1_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_SOL_10_SPARC_V2R1_STIG_SCAP_1-2_Benchmark.zip</location>
                   <checksum style="SHA3_256">32e6af0536901860fa63646929bf00f3b81ddd7828e39322e8372e7de83453df</checksum>
                   <benchmarks>
                         <benchmark>
@@ -542,7 +542,7 @@
             </scap-content>
             <scap-content>
                   <content-id>U_SOL_10_X86_V2R1_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip//U_SOL_10_X86_V2R1_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_SOL_10_X86_V2R1_STIG_SCAP_1-2_Benchmark.zip</location>
                   <checksum style="SHA3_256">f79e1705a4b5f9b3611fcd1eb1f81896353c4072760e4c7ff2ba00976899ea9d</checksum>
                   <benchmarks>
                         <benchmark>
@@ -566,7 +566,7 @@
             </scap-content>
             <scap-content>
                   <content-id>U_SOL_11_SPARC_V2R1_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip//U_SOL_11_SPARC_V2R1_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_SOL_11_SPARC_V2R1_STIG_SCAP_1-2_Benchmark.zip</location>
                   <checksum style="SHA3_256">583e9602edb80e83e4483c2589d215d63ff482b55a537725f6b279957987ca39</checksum>
                   <benchmarks>
                         <benchmark>
@@ -590,7 +590,7 @@
             </scap-content>
             <scap-content>
                   <content-id>U_SOL_11_X86_V2R1_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip//U_SOL_11_X86_V2R1_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_SOL_11_X86_V2R1_STIG_SCAP_1-2_Benchmark.zip</location>
                   <checksum style="SHA3_256">5cffb8457646442508607d218aeecc3b9f131c3e990334917d4131205d42025d</checksum>
                   <benchmarks>
                         <benchmark>
@@ -614,7 +614,7 @@
             </scap-content>
             <scap-content>
                   <content-id>U_Windows_Firewall_V1R7_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip//U_Windows_Firewall_V1R7_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_Windows_Firewall_V1R7_STIG_SCAP_1-2_Benchmark.zip</location>
                   <checksum style="SHA3_256">58f7567de3b713b4a49c5ced7064e647edcb62baed5ae5228858a65f2738f7c8</checksum>
                   <benchmarks>
                         <benchmark>
