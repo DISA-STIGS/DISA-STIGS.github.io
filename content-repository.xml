@@ -3,7 +3,7 @@
 <content-repository style="0.1">
       <repository-id>disa-stig-repo</repository-id>
       <repository-publisher>DISA</repository-publisher>
-      <last-updated>2021-01-07T08:41:03</last-updated>
+      <last-updated>2021-01-25T13:42:27</last-updated>
       <license>Open</license>
       <contents>
             <scap-content>
@@ -55,17 +55,17 @@
                   </platforms>
             </scap-content>
             <scap-content>
-                  <content-id>U_CAN_Ubuntu_16-04_LTS_V2R1_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_CAN_Ubuntu_16-04_LTS_V2R1_STIG_SCAP_1-2_Benchmark.zip</location>
-                  <checksum style="SHA3_256">3dd2e5946aeadca38bc8a47850ceda2144e9ed0c9841f77bf921bb944829776f</checksum>
+                  <content-id>U_CAN_Ubuntu_16-04_LTS_V2R2_STIG_SCAP_1-2_Benchmark.zip</content-id>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_CAN_Ubuntu_16-04_LTS_V2R2_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <checksum style="SHA3_256">683f94ff8fad7d9d8aea5c97fae159de524f24159efcba8659888bfdca006ac1</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_Canonical_Ubuntu_16-04_LTS</benchmark-id>
                               <title>Canonical Ubuntu 16.04 LTS Security Technical Implementation Guide</title>
-                              <version>002.001</version>
+                              <version>002.002</version>
                               <style>SCAP_1.2</style>
                               <status>accepted</status>
-                              <status-date>2020-10-23</status-date>
+                              <status-date>2020-12-09</status-date>
                               <creator>DISA</creator>
                               <publisher>DISA</publisher>
                               <contributor>DISA</contributor>
@@ -79,17 +79,17 @@
                   </platforms>
             </scap-content>
             <scap-content>
-                  <content-id>U_CAN_Ubuntu_18-04_V1R1_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_CAN_Ubuntu_18-04_V1R1_STIG_SCAP_1-2_Benchmark.zip</location>
-                  <checksum style="SHA3_256">75fbfacbd9b520207c8f0c7ca85e43075dbf2685f5a1f6dedffb2d0e0802ee69</checksum>
+                  <content-id>U_CAN_Ubuntu_18-04_V2R1_STIG_SCAP_1-2_Benchmark.zip</content-id>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_CAN_Ubuntu_18-04_V2R1_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <checksum style="SHA3_256">6dd95ad55f73435da5571f55b4294ba37abc2314f3c4cdab662c05c5752aaeb5</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_CAN_Ubuntu_18-04_STIG</benchmark-id>
                               <title>Canonical Ubuntu 18.04 LTS Security Technical Implementation Guide</title>
-                              <version>001.001</version>
+                              <version>002.001</version>
                               <style>SCAP_1.2</style>
                               <status>accepted</status>
-                              <status-date>2020-12-01</status-date>
+                              <status-date>2020-12-09</status-date>
                               <creator>DISA</creator>
                               <publisher>DISA</publisher>
                               <contributor>DISA</contributor>
@@ -103,17 +103,17 @@
                   </platforms>
             </scap-content>
             <scap-content>
-                  <content-id>U_Google_Chrome_Windows_V2R1_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_Google_Chrome_Windows_V2R1_STIG_SCAP_1-2_Benchmark.zip</location>
-                  <checksum style="SHA3_256">50209047af7c754ea8248f898dab54a28978edf308b5e62bff142b76df51f7e1</checksum>
+                  <content-id>U_Google_Chrome_Windows_V2R2_STIG_SCAP_1-2_Benchmark.zip</content-id>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_Google_Chrome_Windows_V2R2_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <checksum style="SHA3_256">b38eb3a4819ca1cbb2f91464e07f839d777b234042a0d6f417e1fd8fd587fb36</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_Google_Chrome_Current_Windows</benchmark-id>
                               <title>Google Chrome Current Windows Security Technical Implementation Guide</title>
-                              <version>002.001</version>
+                              <version>002.002</version>
                               <style>SCAP_1.2</style>
                               <status>accepted</status>
-                              <status-date>2020-10-23</status-date>
+                              <status-date>2020-12-11</status-date>
                               <creator>DISA</creator>
                               <publisher>DISA</publisher>
                               <contributor>DISA</contributor>
@@ -175,17 +175,17 @@
                   </platforms>
             </scap-content>
             <scap-content>
-                  <content-id>U_MOZ_Firefox_RHEL_V1R7_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_MOZ_Firefox_RHEL_V1R7_STIG_SCAP_1-2_Benchmark.zip</location>
-                  <checksum style="SHA3_256">dd2fe22b8882487a4f38f468b74528ed62a2b59d32d26907f9817824ea784db6</checksum>
+                  <content-id>U_MOZ_Firefox_RHEL_V5R1_STIG_SCAP_1-2_Benchmark.zip</content-id>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_MOZ_Firefox_RHEL_V5R1_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <checksum style="SHA3_256">e09f6a645891da19c97c217c9d4c22ec8869a7fc9b13ad1120fe3822104fca3d</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_Mozilla_Firefox_RHEL</benchmark-id>
                               <title>Mozilla Firefox Security Technical Implementation Guide</title>
-                              <version>001.007</version>
+                              <version>005.001</version>
                               <style>SCAP_1.2</style>
                               <status>accepted</status>
-                              <status-date>2020-07-24</status-date>
+                              <status-date>2020-12-10</status-date>
                               <creator>DISA</creator>
                               <publisher>DISA</publisher>
                               <contributor>DISA</contributor>
@@ -199,17 +199,17 @@
                   </platforms>
             </scap-content>
             <scap-content>
-                  <content-id>U_MOZ_Firefox_Windows_V1R6_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_MOZ_Firefox_Windows_V1R6_STIG_SCAP_1-2_Benchmark.zip</location>
-                  <checksum style="SHA3_256">aae33194f9be38e0f0aee67b119487b0d7e381e066c45b6bb6cb6f90881018a7</checksum>
+                  <content-id>U_MOZ_Firefox_Windows_V5R1_STIG_SCAP_1-2_Benchmark.zip</content-id>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_MOZ_Firefox_Windows_V5R1_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <checksum style="SHA3_256">dc41034d6fd20ea877819e0fe7760d764a04502fbbcb833b1e9b7b92767466ff</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_Mozilla_Firefox_Windows</benchmark-id>
                               <title>Mozilla Firefox Security Technical Implementation Guide</title>
-                              <version>001.006</version>
+                              <version>005.001</version>
                               <style>SCAP_1.2</style>
                               <status>accepted</status>
-                              <status-date>2020-07-24</status-date>
+                              <status-date>2020-12-10</status-date>
                               <creator>DISA</creator>
                               <publisher>DISA</publisher>
                               <contributor>DISA</contributor>
@@ -223,17 +223,17 @@
                   </platforms>
             </scap-content>
             <scap-content>
-                  <content-id>U_MS_DotNet_Framework_4_V1R8_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_MS_DotNet_Framework_4_V1R8_STIG_SCAP_1-2_Benchmark.zip</location>
-                  <checksum style="SHA3_256">bd3b3352478f06d76893e103cdf9860244a84a7b2d730f62ef7f309763b3047c</checksum>
+                  <content-id>U_MS_DotNet_Framework_4-0_V2R1_STIG_SCAP_1-2_Benchmark.zip</content-id>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_MS_DotNet_Framework_4-0_V2R1_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <checksum style="SHA3_256">1343a4978e2fbac2a535d0bd9387e750d26bece63651b712af1ba823ff52c7e1</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_MS_Dot_Net_Framework</benchmark-id>
-                              <title>Microsoft DotNet Framework 4.0 STIG</title>
-                              <version>001.008</version>
+                              <title>Microsoft DotNet Framework 4.0 Security Technical Implementation Guide</title>
+                              <version>002.001</version>
                               <style>SCAP_1.2</style>
                               <status>accepted</status>
-                              <status-date>2019-09-30</status-date>
+                              <status-date>2020-12-11</status-date>
                               <creator>DISA</creator>
                               <publisher>DISA</publisher>
                               <contributor>DISA</contributor>
@@ -421,17 +421,17 @@
                   </platforms>
             </scap-content>
             <scap-content>
-                  <content-id>U_Oracle_Linux_7_V2R1_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_Oracle_Linux_7_V2R1_STIG_SCAP_1-2_Benchmark.zip</location>
-                  <checksum style="SHA3_256">16c376e5a4e0491da605bd8e96388b8c97369fc4a7882061619c14b89e3d402b</checksum>
+                  <content-id>U_Oracle_Linux_7_V2R2_STIG_SCAP_1-2_Benchmark.zip</content-id>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_Oracle_Linux_7_V2R2_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <checksum style="SHA3_256">da2b69c25ee5c613ff1fbba3652e51dbc29736909d32bda7e24fea32b5189d85</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_Oracle_Linux_7_STIG</benchmark-id>
                               <title>Oracle Linux 7 Security Technical Implementation Guide</title>
-                              <version>002.001</version>
+                              <version>002.002</version>
                               <style>SCAP_1.2</style>
                               <status>accepted</status>
-                              <status-date>2020-10-23</status-date>
+                              <status-date>2020-12-08</status-date>
                               <creator>DISA</creator>
                               <publisher>DISA</publisher>
                               <contributor>DISA</contributor>
@@ -445,17 +445,17 @@
                   </platforms>
             </scap-content>
             <scap-content>
-                  <content-id>U_RHEL_6_V2R1_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_RHEL_6_V2R1_STIG_SCAP_1-2_Benchmark.zip</location>
-                  <checksum style="SHA3_256">e02d30f824e78a4e5d5526c934660058f320b77a747e73f235293f8dad41aec8</checksum>
+                  <content-id>U_RHEL_6_V2R2_STIG_SCAP_1-2_Benchmark.zip</content-id>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_RHEL_6_V2R2_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <checksum style="SHA3_256">5c0c4cb299f07140c807fffe50f660c8095a82303328180af0c3c7996e74ceb8</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_RHEL_6_STIG</benchmark-id>
                               <title>Red Hat Enterprise Linux 6 Security Technical Implementation Guide</title>
-                              <version>002.001</version>
+                              <version>002.002</version>
                               <style>SCAP_1.2</style>
                               <status>accepted</status>
-                              <status-date>2020-10-23</status-date>
+                              <status-date>2020-12-04</status-date>
                               <creator>DISA</creator>
                               <publisher>DISA</publisher>
                               <contributor>DISA</contributor>
@@ -469,17 +469,17 @@
                   </platforms>
             </scap-content>
             <scap-content>
-                  <content-id>U_RHEL_7_V3R1_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_RHEL_7_V3R1_STIG_SCAP_1-2_Benchmark.zip</location>
-                  <checksum style="SHA3_256">ba2d4d9d53cbe92618656ea7ca7a70ced67259ef70dbbd68350531f44e5539a6</checksum>
+                  <content-id>U_RHEL_7_V3R2_STIG_SCAP_1-2_Benchmark.zip</content-id>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_RHEL_7_V3R2_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <checksum style="SHA3_256">c2bc8a64dab00601b557830b358e58deb399c3d5282417dd39b96642d61291ce</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_RHEL_7_STIG</benchmark-id>
                               <title>Red Hat Enterprise Linux 7 Security Technical Implementation Guide</title>
-                              <version>003.001</version>
+                              <version>003.002</version>
                               <style>SCAP_1.2</style>
                               <status>accepted</status>
-                              <status-date>2020-10-23</status-date>
+                              <status-date>2020-12-08</status-date>
                               <creator>DISA</creator>
                               <publisher>DISA</publisher>
                               <contributor>DISA</contributor>
@@ -517,17 +517,17 @@
                   </platforms>
             </scap-content>
             <scap-content>
-                  <content-id>U_SLES_12_V2R1_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_SLES_12_V2R1_STIG_SCAP_1-2_Benchmark.zip</location>
-                  <checksum style="SHA3_256">5d790a19c1a943971f4bfb5b2660ca05b60391e87c7e1cfd4541800bf6d47033</checksum>
+                  <content-id>U_SLES_12_V2R2_STIG_SCAP_1-2_Benchmark.zip</content-id>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_SLES_12_V2R2_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <checksum style="SHA3_256">3a4e3bc4283bbb9a4786827d2c085928146a6dbe5255ba2f82bdb5c63e73eeff</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_SLES_12_STIG</benchmark-id>
                               <title>SLES 12 Security Technical Implementation Guide</title>
-                              <version>002.001</version>
+                              <version>002.002</version>
                               <style>SCAP_1.2</style>
                               <status>accepted</status>
-                              <status-date>2020-10-23</status-date>
+                              <status-date>2020-12-04</status-date>
                               <creator>DISA</creator>
                               <publisher>DISA</publisher>
                               <contributor>DISA</contributor>
@@ -541,17 +541,17 @@
                   </platforms>
             </scap-content>
             <scap-content>
-                  <content-id>U_SOL_10_SPARC_V2R1_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_SOL_10_SPARC_V2R1_STIG_SCAP_1-2_Benchmark.zip</location>
-                  <checksum style="SHA3_256">32e6af0536901860fa63646929bf00f3b81ddd7828e39322e8372e7de83453df</checksum>
+                  <content-id>U_SOL_10_SPARC_V2R2_STIG_SCAP_1-2_Benchmark.zip</content-id>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_SOL_10_SPARC_V2R2_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <checksum style="SHA3_256">29a49d4291a30927fbe0000990540cf68734d293c8e8fb33254fcf959ea43e4d</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_Solaris_10_SPARC_STIG</benchmark-id>
                               <title>Solaris 10 SPARC Security Technical Implementation Guide</title>
-                              <version>002.001</version>
+                              <version>002.002</version>
                               <style>SCAP_1.2</style>
                               <status>accepted</status>
-                              <status-date>2020-10-23</status-date>
+                              <status-date>2020-12-04</status-date>
                               <creator>DISA</creator>
                               <publisher>DISA</publisher>
                               <contributor>DISA</contributor>
@@ -565,17 +565,17 @@
                   </platforms>
             </scap-content>
             <scap-content>
-                  <content-id>U_SOL_10_X86_V2R1_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_SOL_10_X86_V2R1_STIG_SCAP_1-2_Benchmark.zip</location>
-                  <checksum style="SHA3_256">f79e1705a4b5f9b3611fcd1eb1f81896353c4072760e4c7ff2ba00976899ea9d</checksum>
+                  <content-id>U_SOL_10_X86_V2R2_STIG_SCAP_1-2_Benchmark.zip</content-id>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_SOL_10_X86_V2R2_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <checksum style="SHA3_256">b04fc24a2179e7005149befdec05522edcc30389e212d574c13b17e2920adc67</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_Solaris_10_X86_STIG</benchmark-id>
                               <title>Solaris 10 X86 Security Technical Implementation Guide</title>
-                              <version>002.001</version>
+                              <version>002.002</version>
                               <style>SCAP_1.2</style>
                               <status>accepted</status>
-                              <status-date>2020-10-23</status-date>
+                              <status-date>2020-12-04</status-date>
                               <creator>DISA</creator>
                               <publisher>DISA</publisher>
                               <contributor>DISA</contributor>
@@ -589,17 +589,17 @@
                   </platforms>
             </scap-content>
             <scap-content>
-                  <content-id>U_SOL_11_SPARC_V2R1_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_SOL_11_SPARC_V2R1_STIG_SCAP_1-2_Benchmark.zip</location>
-                  <checksum style="SHA3_256">583e9602edb80e83e4483c2589d215d63ff482b55a537725f6b279957987ca39</checksum>
+                  <content-id>U_SOL_11_SPARC_V2R2_STIG_SCAP_1-2_Benchmark.zip</content-id>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_SOL_11_SPARC_V2R2_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <checksum style="SHA3_256">6b8fda0520b1b1e61a6383f2cbf8c320de478dbefe6a806c42e09f452473af65</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_Solaris_11_SPARC_STIG</benchmark-id>
                               <title>Solaris 11 SPARC Security Technical Implementation Guide</title>
-                              <version>002.001</version>
+                              <version>002.002</version>
                               <style>SCAP_1.2</style>
                               <status>accepted</status>
-                              <status-date>2020-10-23</status-date>
+                              <status-date>2020-12-08</status-date>
                               <creator>DISA</creator>
                               <publisher>DISA</publisher>
                               <contributor>DISA</contributor>
@@ -613,17 +613,17 @@
                   </platforms>
             </scap-content>
             <scap-content>
-                  <content-id>U_SOL_11_X86_V2R1_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_SOL_11_X86_V2R1_STIG_SCAP_1-2_Benchmark.zip</location>
-                  <checksum style="SHA3_256">5cffb8457646442508607d218aeecc3b9f131c3e990334917d4131205d42025d</checksum>
+                  <content-id>U_SOL_11_X86_V2R2_STIG_SCAP_1-2_Benchmark.zip</content-id>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_SOL_11_X86_V2R2_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <checksum style="SHA3_256">6e5fce1942257a56d5c6db113807ee6e1604bb502954126b331d96d7a6455187</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_Solaris_11_X86_STIG</benchmark-id>
                               <title>Solaris 11 X86 Security Technical Implementation Guide</title>
-                              <version>002.001</version>
+                              <version>002.002</version>
                               <style>SCAP_1.2</style>
                               <status>accepted</status>
-                              <status-date>2020-10-23</status-date>
+                              <status-date>2020-12-04</status-date>
                               <creator>DISA</creator>
                               <publisher>DISA</publisher>
                               <contributor>DISA</contributor>
@@ -656,16 +656,10 @@
                   </benchmarks>
                   <platforms>
                         <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2008:r2</platform-id>
-                        </platform>
-                        <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2016:-</platform-id>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2012:-</platform-id>
                         </platform>
                         <platform>
                               <platform-id style="cpe">cpe:/o:microsoft:windows_server_2008</platform-id>
-                        </platform>
-                        <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_10</platform-id>
                         </platform>
                         <platform>
                               <platform-id style="cpe">cpe:/o:microsoft:windows_8.1</platform-id>
@@ -674,16 +668,22 @@
                               <platform-id style="cpe">cpe:/o:microsoft:windows_7</platform-id>
                         </platform>
                         <platform>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2008:r2</platform-id>
+                        </platform>
+                        <platform>
                               <platform-id style="cpe">cpe:/o:microsoft:windows_server_2012:r2</platform-id>
+                        </platform>
+                        <platform>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2016:-</platform-id>
+                        </platform>
+                        <platform>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_10</platform-id>
                         </platform>
                         <platform>
                               <platform-id style="cpe">cpe:/o:microsoft:windows_vista</platform-id>
                         </platform>
                         <platform>
                               <platform-id style="cpe">cpe:/o:microsoft:windows_8</platform-id>
-                        </platform>
-                        <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2012:-</platform-id>
                         </platform>
                   </platforms>
             </scap-content>
