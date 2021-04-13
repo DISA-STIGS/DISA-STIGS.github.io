@@ -1,0 +1,1245 @@
+<?xml version="1.0" encoding="UTF-8"?><html xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:cdf="http://checklists.nist.gov/xccdf/1.1" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<style>
+			body {
+				font-family: veranda,sans-serif;
+				font-size: 13px;
+				margin-left: 0px;
+			}
+
+			div.content {
+				position: relative;
+				padding-bottom: 20px;
+			}
+
+			@page {
+				size: 8.5in 11in;
+				margin: 1in;
+			}
+
+			@media print
+			{
+				div.headerfooter {
+					position: relative;
+				}
+			}
+
+			@media screen {
+				div.content {
+					margin-top: 40px;
+					margin-left: 10%;
+					margin-right: 10%;
+				}
+			
+				div.headerfooter {
+					position: fixed;
+					z-index: 1000;
+				}
+			}
+
+			div.headerfooter {
+				background-color: green;
+				color: white;
+				font-size: 8pt;
+				font-weight: bold;
+				text-align: center;
+				width: 100%;
+			}
+
+			div.header {
+				top: 0;
+			}
+
+			div.footer {
+				bottom: 0;
+				
+			}
+
+			table {
+				font-size: 13px;
+			}
+
+			table, td, th {
+				border: 1px solid black;
+				border-collapse: collapse;
+				vertical-align: top;
+				padding: 5px;
+				word-wrap: break-word;
+			}
+
+			th {
+				font-weight: bold;
+			}
+
+			table.ruleblock {
+				width: 100%;
+				table-layout: fixed;
+				border-top: 1px solid black;
+				border-left: 1px solid black;
+				border-right: 1px solid black;
+				border-bottom: 0px;
+			}
+
+			td.ruleblock {
+				width: 25%;
+				font-weight: bold;
+				font-size: 15px;
+				padding: 5px;
+				border-bottom: 0px;
+			}
+			
+			tr.ruleblock {
+				border-bottom: 0px;
+			}
+
+			span.ruleheader {
+				font-size: 10px;
+			}
+
+			table.ruledata {
+				width: 100%;
+				table-layout: fixed;
+			}
+
+			th.ruledata {
+				width: 15%;
+				text-align: left;
+				border: none;
+			}
+
+			td.ruledata {
+				border: none;
+			}
+
+			span.rulerequirement {
+				font-size: 15px;
+				font-weight: bold;
+			}
+
+			div.rotate {
+				-ms-transform:rotate(270deg); /* IE 9 */
+				-moz-transform:rotate(270deg); /* Firefox */
+				-webkit-transform:rotate(270deg); /* Safari and Chrome */
+				-o-transform:rotate(270deg); /* Opera */
+			}
+			
+			ul.ruledata {
+			  list-style-position: inside;
+			  padding-left: 0;
+			}
+
+		</style>
+<title>(U) Microsoft Publisher 2013 Security Technical Implementation Guide</title>
+</head>
+<body>
+<div class="header headerfooter">UNCLASSIFIED</div>
+<div class="content">
+<div>
+<h1>Microsoft Publisher 2013 Security Technical Implementation Guide</h1>
+<h2>Version 1 Release 5</h2>
+<h3>13 Apr 2021</h3>
+</div>
+<div class="toc">
+<h2>Table of Contents</h2>
+<ul>
+<li>
+<a href="#intro">Introduction</a>
+<br/>
+<ul>
+<li>
+<a href="#summary">Executive Summary</a>
+</li>
+<li>
+<a href="#authority">Authority</a>
+</li>
+<li>
+<a href="#severity">Vulnerability Severity Category Code Definitions</a>
+</li>
+<li>
+<a href="#distribution">STIG Distribution</a>
+</li>
+<li>
+<a href="#compliance">SRG Compliance Reporting</a>
+</li>
+<li>
+<a href="#revisions">Document Revisions</a>
+</li>
+<li>
+<a href="#considerations">Other Considerations</a>
+</li>
+<li>
+<a href="#disclaimer">Product Approval Disclaimer</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#catalog">Requirement Catalog</a>
+<br/>
+<ul>
+<li>
+<a href="#requirementtable">Table of Requirements</a>
+</li>
+<li>
+<a href="#requirementdetails">Requirement Details</a>
+</li>
+</ul>
+</li>
+<li>Revision History</li>
+</ul>
+</div>
+<div class="intro">
+<a name="intro">
+<h2>Introduction</h2>
+</a>
+<a name="summary">
+<h3>Executive Summary</h3>
+</a>
+<p>
+The Microsoft Publisher 2013 Security Technical Implementation Guide is published as a tool to improve the security of the Department of Defense (DoD) information systems.
+			</p>
+<a name="authority">
+<h3>Authority</h3>
+</a>
+<p>
+DoD Instruction (DoDI) 8500.01 requires that â€œall IT that receives, processes, stores, displays, 
+or transmits DoD information will be [â€¦] configured [â€¦] consistent with applicable DoD cybersecurity policies, 
+standards, and architecturesâ€? and tasks that Defense Information Systems Agency (DISA) â€œdevelops and maintains 
+control correlation identifiers (CCIs), security requirements guides (SRGs), security technical implementation 
+guides (STIGs), and mobile code risk categories and usage guides that implement and are consistent with DoD 
+cybersecurity policies, standards, architectures, security controls, and validation procedures, with the 
+support of the NSA/CSS, using input from stakeholders, and using automation whenever possible.â€? This document 
+is provided under the authority of DoDI 8500.01.
+			</p>
+<p>
+Although the use of the principles and guidelines in these SRGs/STIGs provides an environment that contributes 
+to the security requirements of DoD systems, applicable NIST SP 800-53 cybersecurity controls need to be 
+applied to all systems and architectures based on the Committee on National Security Systems (CNSS) Instruction 
+(CNSSI) 1253.
+			</p>
+<a name="severity">
+<h3>Vulnerability Severity Category Code Definitions</h3>
+</a>
+<p>
+				Severity Category Codes (referred to as CAT) are a measure of vulnerabilities used to assess a
+facility or system security posture. Each security policy specified in this document is assigned a
+Severity Code of CAT I, II, or III.
+			</p>
+<table>
+<tr>
+<th/>
+<th>Category Code Guidelines</th>
+</tr>
+<tr>
+<th>CAT I</th>
+<td>
+Any vulnerability, the exploitation of which will, directly and immediately result in loss of
+Confidentiality, Availability, or Integrity.
+					</td>
+</tr>
+<tr>
+<th>CAT II</th>
+<td>Any vulnerability, the exploitation of which has a potential to result in loss of Confidentiality, Availability,
+or Integrity.</td>
+</tr>
+<tr>
+<th>CAT III</th>
+<td>Any vulnerability, the existence of which degrades measures to protect against loss of Confidentiality, Availability, or Integrity.</td>
+</tr>
+</table>
+<a name="distribution">
+<h3>STIG Distribution</h3>
+</a>
+<p>
+Parties within the DoD and Federal Governmentâ€™s computing environments can obtain the applicable STIG from the Cyber Exchange website at 
+<a href="https://cyber.mil/">https://cyber.mil/</a>. This site contains the latest copies of STIGs, SRGs, and other related security information. 
+Those without a Common Access Card (CAC) that has DoD Certificates can obtain the STIG from <a href="https://public.cyber.mil/">https://public.cyber.mil/</a>.
+			</p>
+<a name="compliance">
+<h3>SRG Compliance Reporting</h3>
+</a>
+<p>
+All technical NIST SP 800-53 requirements were considered while developing this STIG. Requirements that are applicable and configurable 
+will be included in the final STIG. A report marked For Official Use Only (FOUO) will be available for those items that did not meet requirements. 
+This report will be available to component Authorizing Official (AO) personnel for risk assessment purposes by request via email to: <a href="mailto:disa.stig_spt@mail.mil">disa.stig_spt@mail.mil</a>.
+			</p>
+<a name="revisions">
+<h3>Document Revision Process</h3>
+</a>
+<p>
+Comments or proposed revisions to this document should be sent via email to the following address: <a href="mailto:disa.stig_spt@mail.mil">disa.stig_spt@mail.mil</a>. 
+DISA will coordinate all change requests with the relevant DoD organizations before inclusion in this document. Approved changes will be made in accordance with the DISA maintenance release schedule.
+			</p>
+<a name="considerations">
+<h3>Other Considerations</h3>
+</a>
+<p>
+DISA accepts no liability for the consequences of applying specific configuration settings made on the basis of the SRGs/STIGs. 
+It must be noted that the configuration settings specified should be evaluated in a local, representative test environment before 
+implementation in a production environment, especially within large user populations. The extensive variety of environments makes 
+it impossible to test these configuration settings for all potential software configurations.
+			</p>
+<p>
+For some production environments, failure to test before implementation may lead to a loss of required functionality. Evaluating 
+the risks and benefits to a systemâ€™s particular circumstances and requirements is the system ownerâ€™s responsibility. The evaluated 
+risks resulting from not applying specified configuration settings must be approved by the responsible Authorizing Official. 
+Furthermore, DISA implies no warranty that the application of all specified configurations will make a system 100 percent secure.
+			</p>
+<p>
+Security guidance is provided for the Department of Defense. While other agencies and organizations are free to use it, care must 
+be given to ensure that all applicable security guidance is applied both at the device hardening level as well as the architectural 
+level due to the fact that some of the settings may not be able to be configured in environments outside the DoD architecture.
+			</p>
+<a name="disclaimer">
+<h3>Product Approval Disclaimer</h3>
+</a>
+<p>
+The existence of a STIG does not equate to DoD approval for the procurement or use of a product.
+			</p>
+<p>
+STIGs provide configurable operational security guidance for products being used by the DoD. STIGs, along with vendor confidential 
+documentation, also provide a basis for assessing compliance with Cybersecurity controls/control enhancements, which supports system 
+Assessment and Authorization (A&amp;A) under the DoD Risk Management Framework (RMF). DoD Authorizing Officials (AOs) may request available 
+vendor confidential documentation for a product that has a STIG for product evaluation and RMF purposes from <a href="mailto:disa.stig_spt@mail.mil">disa.stig_spt@mail.mil</a>. 
+This documentation is not published for general access to protect the vendorâ€™s proprietary information.
+			</p>
+<p>
+AOs have the purview to determine product use/approval IAW DoD policy and through RMF risk acceptance. Inputs into acquisition or pre-acquisition product selection include such processes as:
+<ul>
+<li>National Information Assurance Partnership (NIAP) evaluation for National Security Systems (NSS) (http://www.niap-ccevs.org/) IAW CNSSP #11</li>
+<li>National Institute of Standards and Technology (NIST) Cryptographic Module Validation Program (CMVP) (http://csrc.nist.gov/groups/STM/cmvp/) IAW Federal/DoD mandated standards</li>
+<li>DoD Unified Capabilities (UC) Approved Products List (APL) (http://www.disa.mil/network-services/ucco) IAW DoDI 8100.04</li>
+</ul>
+</p>
+</div>
+<div class="catalog">
+<a name="catalog">
+<h2>Requirements Catalog</h2>
+</a>
+<a name="requirementtable">
+<h3>Table of Requirements</h3>
+</a>
+<table>
+<tr>
+<th>STIG ID</th>
+<th>Group ID</th>
+<th>Rule ID</th>
+<th>Requirement</th>
+<th>Severity</th>
+</tr>
+<tr>
+<td>DTOO104</td>
+<td>V-242799</td>
+<td>
+<a href="#RULE_SV-242799r716273_rule">SV-242799r716273_rule</a>
+</td>
+<td>Disabling of user name and password syntax from being used in URLs must be enforced.</td>
+<td>CAT II</td>
+</tr>
+<tr>
+<td>DTOO111</td>
+<td>V-242800</td>
+<td>
+<a href="#RULE_SV-242800r716276_rule">SV-242800r716276_rule</a>
+</td>
+<td>The Internet Explorer Bind to Object functionality must be enabled.</td>
+<td>CAT II</td>
+</tr>
+<tr>
+<td>DTOO117</td>
+<td>V-242801</td>
+<td>
+<a href="#RULE_SV-242801r716279_rule">SV-242801r716279_rule</a>
+</td>
+<td>The Saved from URL mark must be selected to enforce Internet zone processing.</td>
+<td>CAT II</td>
+</tr>
+<tr>
+<td>DTOO123</td>
+<td>V-242802</td>
+<td>
+<a href="#RULE_SV-242802r716282_rule">SV-242802r716282_rule</a>
+</td>
+<td>Navigation to URLs embedded in Office products must be blocked.</td>
+<td>CAT II</td>
+</tr>
+<tr>
+<td>DTOO124</td>
+<td>V-242803</td>
+<td>
+<a href="#RULE_SV-242803r716285_rule">SV-242803r716285_rule</a>
+</td>
+<td>Scripted Window Security must be enforced.</td>
+<td>CAT II</td>
+</tr>
+<tr>
+<td>DTOO126</td>
+<td>V-242804</td>
+<td>
+<a href="#RULE_SV-242804r716288_rule">SV-242804r716288_rule</a>
+</td>
+<td>Add-on Management functionality must be allowed.</td>
+<td>CAT II</td>
+</tr>
+<tr>
+<td>DTOO127</td>
+<td>V-242805</td>
+<td>
+<a href="#RULE_SV-242805r716291_rule">SV-242805r716291_rule</a>
+</td>
+<td>Add-ins to Office applications must be signed by a Trusted Publisher.</td>
+<td>CAT II</td>
+</tr>
+<tr>
+<td>DTOO129</td>
+<td>V-242806</td>
+<td>
+<a href="#RULE_SV-242806r716294_rule">SV-242806r716294_rule</a>
+</td>
+<td>Links that invoke instances of Internet Explorer from within an Office product must be blocked.</td>
+<td>CAT II</td>
+</tr>
+<tr>
+<td>DTOO131</td>
+<td>V-242807</td>
+<td>
+<a href="#RULE_SV-242807r716297_rule">SV-242807r716297_rule</a>
+</td>
+<td>Trust Bar Notifications for unsigned application add-ins must be blocked.</td>
+<td>CAT II</td>
+</tr>
+<tr>
+<td>DTOO132</td>
+<td>V-242808</td>
+<td>
+<a href="#RULE_SV-242808r716300_rule">SV-242808r716300_rule</a>
+</td>
+<td>File Downloads must be configured for proper restrictions.</td>
+<td>CAT II</td>
+</tr>
+<tr>
+<td>DTOO209</td>
+<td>V-242809</td>
+<td>
+<a href="#RULE_SV-242809r716303_rule">SV-242809r716303_rule</a>
+</td>
+<td>Protection from zone elevation must be enforced.</td>
+<td>CAT II</td>
+</tr>
+<tr>
+<td>DTOO211</td>
+<td>V-242810</td>
+<td>
+<a href="#RULE_SV-242810r716306_rule">SV-242810r716306_rule</a>
+</td>
+<td>ActiveX Installs must be configured for proper restriction.</td>
+<td>CAT II</td>
+</tr>
+<tr>
+<td>DTOO304</td>
+<td>V-242811</td>
+<td>
+<a href="#RULE_SV-242811r716309_rule">SV-242811r716309_rule</a>
+</td>
+<td>Warning Bar settings for VBA macros must be configured.</td>
+<td>CAT II</td>
+</tr>
+<tr>
+<td>DTOO322</td>
+<td>V-242812</td>
+<td>
+<a href="#RULE_SV-242812r716312_rule">SV-242812r716312_rule</a>
+</td>
+<td>Fatally corrupt files must be blocked from opening.</td>
+<td>CAT II</td>
+</tr>
+<tr>
+<td>DTOO323</td>
+<td>V-242813</td>
+<td>
+<a href="#RULE_SV-242813r716315_rule">SV-242813r716315_rule</a>
+</td>
+<td>The Publisher Automation Security Level must be configured for high security.</td>
+<td>CAT II</td>
+</tr>
+</table>
+<a name="requirementdetails">
+<h3>Requirement Details</h3>
+</a>
+<a name="RULE_SV-242799r716273_rule">
+<table class="ruleblock">
+<tr class="ruleblock">
+<td class="ruleblock">
+<span class="ruleheader">STIG ID:</span>
+<br/>DTOO104</td>
+<td class="ruleblock">
+<span class="ruleheader">Group ID:</span>
+<br/>V-242799</td>
+<td class="ruleblock">
+<span class="ruleheader">Rule ID:</span>
+<br/>SV-242799r716273_rule</td>
+<td class="ruleblock">
+<span class="ruleheader">Severity:</span>
+<br/>CAT II</td>
+</tr>
+</table>
+</a>
+<table class="ruledata">
+<tr>
+<th class="ruledata">Requirement:</th>
+<td class="ruledata">
+<span class="rulerequirement">Disabling of user name and password syntax from being used in URLs must be enforced.</span>
+</td>
+</tr>
+<tr>
+<th class="ruledata">Discussion:</th>
+<td class="ruledata">The Uniform Resource Locator (URL) standard allows user authentication to be included in URL strings in the form http://username:password@example.com. A malicious user might use this URL syntax to create a hyperlink that appears to open a legitimate website but actually opens a deceptive (spoofed) website. For example, the URL http://www.wingtiptoys.com@example.com appears to open http://www.wingtiptoys.com but actually opens http://example.com. To protect users from such attacks, Internet Explorer usually blocks any URLs using this syntax.<br/>
+<br/>
+This functionality can be controlled separately for instances of Internet Explorer spawned by Office applications (for example, if a user clicks a link in an Office document or selects a menu option that loads a web page). If user names and passwords in URLs are allowed, users could be diverted to dangerous web pages, which would pose a security risk.</td>
+</tr>
+<tr>
+<th class="ruledata">Check:</th>
+<td class="ruledata">Verify the policy value for Computer Configuration -&gt; Administrative Templates -&gt; Microsoft Office 2013 (Machine) -&gt; Security Settings -&gt; IE Security "Disable user name and password" must be "Enabled" and a check in the 'mspub.exe' check box must be present.<br/>
+<br/>
+Procedure: Use the Windows Registry Editor to navigate to the following key: <br/>
+<br/>
+HKLM\Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_HTTP_USERNAME_PASSWORD_DISABLE<br/>
+<br/>
+Criteria: If the value mspub.exe is REG_DWORD = 1, this is not a finding.</td>
+</tr>
+<tr>
+<th class="ruledata">Fix:</th>
+<td class="ruledata">Set the policy value for Computer Configuration -&gt; Administrative Templates -&gt; Microsoft Office 2013 (Machine) -&gt; Security Settings -&gt; IE Security "Disable user name and password" to "Enabled" and place a check in the 'mspub.exe' check box.</td>
+</tr>
+<tr>
+<th class="ruledata">References:</th>
+<td class="ruledata">
+<ul class="ruledata"/>
+</td>
+</tr>
+</table>
+<br/>
+<a name="RULE_SV-242800r716276_rule">
+<table class="ruleblock">
+<tr class="ruleblock">
+<td class="ruleblock">
+<span class="ruleheader">STIG ID:</span>
+<br/>DTOO111</td>
+<td class="ruleblock">
+<span class="ruleheader">Group ID:</span>
+<br/>V-242800</td>
+<td class="ruleblock">
+<span class="ruleheader">Rule ID:</span>
+<br/>SV-242800r716276_rule</td>
+<td class="ruleblock">
+<span class="ruleheader">Severity:</span>
+<br/>CAT II</td>
+</tr>
+</table>
+</a>
+<table class="ruledata">
+<tr>
+<th class="ruledata">Requirement:</th>
+<td class="ruledata">
+<span class="rulerequirement">The Internet Explorer Bind to Object functionality must be enabled.</span>
+</td>
+</tr>
+<tr>
+<th class="ruledata">Discussion:</th>
+<td class="ruledata">Internet Explorer performs a number of safety checks before initializing an ActiveX control. It will not initialize a control if the kill bit for the control is set in the registry, or if the security settings for the zone in which the control is located do not allow it to be initialized.<br/>
+This functionality can be controlled separately for instances of Internet Explorer spawned by Office applications (for example, if a user clicks a link in an Office document or selects a menu option that loads a web page). A security risk could occur if potentially dangerous controls are allowed to load.</td>
+</tr>
+<tr>
+<th class="ruledata">Check:</th>
+<td class="ruledata">Verify the policy value for Computer Configuration -&gt; Administrative Templates -&gt; Microsoft Office 2013 (Machine) -&gt; Security Settings -&gt; IE Security "Bind to Object" must be "Enabled" and a check in the 'mspub.exe' check box must be present.<br/>
+<br/>
+Procedure: Use the Windows Registry Editor to navigate to the following key: <br/>
+<br/>
+HKLM\Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_SAFE_BINDTOOBJECT<br/>
+<br/>
+Criteria: If the value mspub.exe  is REG_DWORD = 1, this is not a finding.</td>
+</tr>
+<tr>
+<th class="ruledata">Fix:</th>
+<td class="ruledata">Set the policy value for Computer Configuration -&gt; Administrative Templates -&gt; Microsoft Office 2013 (Machine) -&gt; Security Settings -&gt; IE Security "Bind to Object" to "Enabled" and place a check in the 'mspub.exe' check box.</td>
+</tr>
+<tr>
+<th class="ruledata">References:</th>
+<td class="ruledata">
+<ul class="ruledata"/>
+</td>
+</tr>
+</table>
+<br/>
+<a name="RULE_SV-242801r716279_rule">
+<table class="ruleblock">
+<tr class="ruleblock">
+<td class="ruleblock">
+<span class="ruleheader">STIG ID:</span>
+<br/>DTOO117</td>
+<td class="ruleblock">
+<span class="ruleheader">Group ID:</span>
+<br/>V-242801</td>
+<td class="ruleblock">
+<span class="ruleheader">Rule ID:</span>
+<br/>SV-242801r716279_rule</td>
+<td class="ruleblock">
+<span class="ruleheader">Severity:</span>
+<br/>CAT II</td>
+</tr>
+</table>
+</a>
+<table class="ruledata">
+<tr>
+<th class="ruledata">Requirement:</th>
+<td class="ruledata">
+<span class="rulerequirement">The Saved from URL mark must be selected to enforce Internet zone processing.</span>
+</td>
+</tr>
+<tr>
+<th class="ruledata">Discussion:</th>
+<td class="ruledata">Typically, when Internet Explorer loads a web page from a Universal Naming Convention (UNC) share that contains a Mark of the Web (MOTW) comment, indicating the page was saved from a site on the Internet, Internet Explorer runs the page in the Internet security zone instead of the less restrictive Local Intranet security zone. This functionality can be controlled separately for instances of Internet Explorer spawned by Office applications (for example, if a user clicks a link in an Office document or selects a menu option that loads a web page). If Internet Explorer does not evaluate the page for a MOTW, potentially dangerous code could be allowed to run.</td>
+</tr>
+<tr>
+<th class="ruledata">Check:</th>
+<td class="ruledata">Verify the policy value for Computer Configuration -&gt; Administrative Templates -&gt; Microsoft Office 2013 (Machine) -&gt; Security Settings -&gt; IE Security "Saved from URL" must be "Enabled" and a check in the 'mspub.exe' check box must be present.<br/>
+<br/>
+Procedure: Use the Windows Registry Editor to navigate to the following key: <br/>
+<br/>
+HKLM\Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_UNC_SAVEDFILECHECK<br/>
+<br/>
+Criteria: If the value mspub.exe is REG_DWORD = 1, this is not a finding.</td>
+</tr>
+<tr>
+<th class="ruledata">Fix:</th>
+<td class="ruledata">Set the policy value for Computer Configuration -&gt; Administrative Templates -&gt; Microsoft Office 2013 (Machine) -&gt; Security Settings -&gt; IE Security "Saved from URL" to "Enabled" and place a check in the 'mspub.exe' check box.</td>
+</tr>
+<tr>
+<th class="ruledata">References:</th>
+<td class="ruledata">
+<ul class="ruledata"/>
+</td>
+</tr>
+</table>
+<br/>
+<a name="RULE_SV-242802r716282_rule">
+<table class="ruleblock">
+<tr class="ruleblock">
+<td class="ruleblock">
+<span class="ruleheader">STIG ID:</span>
+<br/>DTOO123</td>
+<td class="ruleblock">
+<span class="ruleheader">Group ID:</span>
+<br/>V-242802</td>
+<td class="ruleblock">
+<span class="ruleheader">Rule ID:</span>
+<br/>SV-242802r716282_rule</td>
+<td class="ruleblock">
+<span class="ruleheader">Severity:</span>
+<br/>CAT II</td>
+</tr>
+</table>
+</a>
+<table class="ruledata">
+<tr>
+<th class="ruledata">Requirement:</th>
+<td class="ruledata">
+<span class="rulerequirement">Navigation to URLs embedded in Office products must be blocked.</span>
+</td>
+</tr>
+<tr>
+<th class="ruledata">Discussion:</th>
+<td class="ruledata">To protect users from attacks, Internet Explorer usually does not attempt to load malformed URLs. This functionality can be controlled separately for instances of Internet Explorer spawned by Office applications (for example, if a user clicks a link in an Office document or selects a menu option that loads a web page). If Internet Explorer attempts to load a malformed URL, a security risk could occur.</td>
+</tr>
+<tr>
+<th class="ruledata">Check:</th>
+<td class="ruledata">Verify the policy value for Computer Configuration -&gt; Administrative Templates -&gt; Microsoft Office 2013 (Machine) -&gt; Security Settings -&gt; IE Security "Navigate URL" must be "Enabled" and a check in the 'mspub.exe' check box must be present.<br/>
+<br/>
+Procedure: Use the Windows Registry Editor to navigate to the following key: <br/>
+<br/>
+HKLM\Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_VALIDATE_NAVIGATE_URL<br/>
+<br/>
+Criteria: If the value mspub.exe is REG_DWORD = 1, this is not a finding.</td>
+</tr>
+<tr>
+<th class="ruledata">Fix:</th>
+<td class="ruledata">Set the policy value for Computer Configuration -&gt; Administrative Templates -&gt; Microsoft Office 2013 (Machine) -&gt; Security Settings -&gt; IE Security "Navigate URL" to "Enabled" and place a check in the 'mspub.exe' check box.</td>
+</tr>
+<tr>
+<th class="ruledata">References:</th>
+<td class="ruledata">
+<ul class="ruledata"/>
+</td>
+</tr>
+</table>
+<br/>
+<a name="RULE_SV-242803r716285_rule">
+<table class="ruleblock">
+<tr class="ruleblock">
+<td class="ruleblock">
+<span class="ruleheader">STIG ID:</span>
+<br/>DTOO124</td>
+<td class="ruleblock">
+<span class="ruleheader">Group ID:</span>
+<br/>V-242803</td>
+<td class="ruleblock">
+<span class="ruleheader">Rule ID:</span>
+<br/>SV-242803r716285_rule</td>
+<td class="ruleblock">
+<span class="ruleheader">Severity:</span>
+<br/>CAT II</td>
+</tr>
+</table>
+</a>
+<table class="ruledata">
+<tr>
+<th class="ruledata">Requirement:</th>
+<td class="ruledata">
+<span class="rulerequirement">Scripted Window Security must be enforced.</span>
+</td>
+</tr>
+<tr>
+<th class="ruledata">Discussion:</th>
+<td class="ruledata">Malicious websites often try to confuse or trick users into giving a site permission to perform an action allowing the site to take control of the users' computer in some manner. Disabling or not configuring this setting allows unknown websites to:<br/>
+-Create browser windows appearing to be from the local operating system.<br/>
+-Draw active windows displaying outside of the viewable areas of the screen capturing keyboard input.<br/>
+-Overlay parent windows with their own browser windows to hide important system information, choices or prompts.</td>
+</tr>
+<tr>
+<th class="ruledata">Check:</th>
+<td class="ruledata">Verify the policy value for Computer Configuration -&gt; Administrative Templates -&gt; Microsoft Office 2013 (Machine) -&gt; Security Settings -&gt; IE Security "Scripted Window Security Restrictions" is set to "Enabled" and 'mspub.exe' is checked. <br/>
+<br/>
+Procedure: Use the Windows Registry Editor to navigate to the following key: <br/>
+<br/>
+HKLM\Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_WINDOW_RESTRICTIONS<br/>
+<br/>
+Criteria: If the value mspub.exe is REG_DWORD = 1, this is not a finding.</td>
+</tr>
+<tr>
+<th class="ruledata">Fix:</th>
+<td class="ruledata">Set the policy value for Computer Configuration -&gt; Administrative Templates -&gt; Microsoft Office 2013 (Machine) -&gt; Security Settings -&gt; IE Security "Scripted Window Security Restrictions" to "Enabled" and 'mspub.exe' is checked.</td>
+</tr>
+<tr>
+<th class="ruledata">References:</th>
+<td class="ruledata">
+<ul class="ruledata"/>
+</td>
+</tr>
+</table>
+<br/>
+<a name="RULE_SV-242804r716288_rule">
+<table class="ruleblock">
+<tr class="ruleblock">
+<td class="ruleblock">
+<span class="ruleheader">STIG ID:</span>
+<br/>DTOO126</td>
+<td class="ruleblock">
+<span class="ruleheader">Group ID:</span>
+<br/>V-242804</td>
+<td class="ruleblock">
+<span class="ruleheader">Rule ID:</span>
+<br/>SV-242804r716288_rule</td>
+<td class="ruleblock">
+<span class="ruleheader">Severity:</span>
+<br/>CAT II</td>
+</tr>
+</table>
+</a>
+<table class="ruledata">
+<tr>
+<th class="ruledata">Requirement:</th>
+<td class="ruledata">
+<span class="rulerequirement">Add-on Management functionality must be allowed.</span>
+</td>
+</tr>
+<tr>
+<th class="ruledata">Discussion:</th>
+<td class="ruledata">Internet Explorer add-ons are pieces of code, run in Internet Explorer, to provide additional functionality. Rogue add-ons may contain viruses or other malicious code. Disabling or not configuring this setting could allow malicious code or users to become active on user computers or the network. For example, a malicious user can monitor and then use keystrokes users type into Internet Explorer. Even legitimate add-ons may demand resources, compromising the performance of Internet Explorer, and the operating systems for the user's computer.</td>
+</tr>
+<tr>
+<th class="ruledata">Check:</th>
+<td class="ruledata">Verify the policy value for Computer Configuration -&gt; Administrative Templates -&gt; Microsoft Office 2013 (Machine) -&gt; Security Settings -&gt; IE Security "Add-on Management" is set to "Enabled" and  'mspub.exe' is checked. <br/>
+<br/>
+Procedure: Use the Windows Registry Editor to navigate to the following key: <br/>
+<br/>
+HKLM\Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_ADDON_MANAGEMENT<br/>
+<br/>
+Criteria: If the value mspub.exe is REG_DWORD = 1, this is not a finding.</td>
+</tr>
+<tr>
+<th class="ruledata">Fix:</th>
+<td class="ruledata">Set the policy value for Computer Configuration -&gt; Administrative Templates -&gt; Microsoft Office 2013 (Machine) -&gt; Security Settings -&gt; IE Security "Add-on Management" to "Enabled" and  'mspub.exe' is checked.</td>
+</tr>
+<tr>
+<th class="ruledata">References:</th>
+<td class="ruledata">
+<ul class="ruledata"/>
+</td>
+</tr>
+</table>
+<br/>
+<a name="RULE_SV-242805r716291_rule">
+<table class="ruleblock">
+<tr class="ruleblock">
+<td class="ruleblock">
+<span class="ruleheader">STIG ID:</span>
+<br/>DTOO127</td>
+<td class="ruleblock">
+<span class="ruleheader">Group ID:</span>
+<br/>V-242805</td>
+<td class="ruleblock">
+<span class="ruleheader">Rule ID:</span>
+<br/>SV-242805r716291_rule</td>
+<td class="ruleblock">
+<span class="ruleheader">Severity:</span>
+<br/>CAT II</td>
+</tr>
+</table>
+</a>
+<table class="ruledata">
+<tr>
+<th class="ruledata">Requirement:</th>
+<td class="ruledata">
+<span class="rulerequirement">Add-ins to Office applications must be signed by a Trusted Publisher.</span>
+</td>
+</tr>
+<tr>
+<th class="ruledata">Discussion:</th>
+<td class="ruledata">Office 2013 applications do not check the digital signature on application add-ins before opening them.  Disabling or not configuring this setting may allow an application to load a dangerous add-in.  As a result, malicious code could become active on the user's computer or the network.</td>
+</tr>
+<tr>
+<th class="ruledata">Check:</th>
+<td class="ruledata">Verify the policy value for User Configuration -&gt; Administrative Templates -&gt; Microsoft Publisher 2013 -&gt; Security -&gt; Trust Center "Require that application add-ins are signed by Trusted Publisher" is set to "Enabled". <br/>
+<br/>
+Procedure: Use the Windows Registry Editor to navigate to the following key: <br/>
+<br/>
+HKCU\Software\Policies\Microsoft\Office\15.0\publisher\security<br/>
+<br/>
+Criteria: If the value RequireAddinSig is REG_DWORD = 1, this is not a finding.</td>
+</tr>
+<tr>
+<th class="ruledata">Fix:</th>
+<td class="ruledata">Set the policy value for User Configuration -&gt; Administrative Templates -&gt; Microsoft Publisher 2013 -&gt; Security -&gt; Trust Center "Require that application add-ins are signed by Trusted Publisher" to "Enabled".</td>
+</tr>
+<tr>
+<th class="ruledata">References:</th>
+<td class="ruledata">
+<ul class="ruledata"/>
+</td>
+</tr>
+</table>
+<br/>
+<a name="RULE_SV-242806r716294_rule">
+<table class="ruleblock">
+<tr class="ruleblock">
+<td class="ruleblock">
+<span class="ruleheader">STIG ID:</span>
+<br/>DTOO129</td>
+<td class="ruleblock">
+<span class="ruleheader">Group ID:</span>
+<br/>V-242806</td>
+<td class="ruleblock">
+<span class="ruleheader">Rule ID:</span>
+<br/>SV-242806r716294_rule</td>
+<td class="ruleblock">
+<span class="ruleheader">Severity:</span>
+<br/>CAT II</td>
+</tr>
+</table>
+</a>
+<table class="ruledata">
+<tr>
+<th class="ruledata">Requirement:</th>
+<td class="ruledata">
+<span class="rulerequirement">Links that invoke instances of Internet Explorer from within an Office product must be blocked.</span>
+</td>
+</tr>
+<tr>
+<th class="ruledata">Discussion:</th>
+<td class="ruledata">The Pop-up Blocker feature in Internet Explorer can be used to block most unwanted pop-up and pop-under windows from appearing. This functionality can be controlled separately for instances of Internet Explorer spawned by Office applications (for example, if a user clicks a link in an Office document or selects a menu option that loads a web page). If the Pop-up Blocker is disabled, disruptive and potentially dangerous pop-up windows could load and present a security risk.</td>
+</tr>
+<tr>
+<th class="ruledata">Check:</th>
+<td class="ruledata">Verify the policy value for Computer Configuration -&gt; Administrative Templates -&gt; Microsoft Office 2013 (Machine) -&gt; Security Settings -&gt; IE Security "Block popups" must be "Enabled" and 'mspub.exe' is checked. <br/>
+<br/>
+Procedure: Use the Windows Registry Editor to navigate to the following key: <br/>
+<br/>
+HKLM\Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_WEBOC_POPUPMANAGEMENT<br/>
+<br/>
+Criteria: If the value mspub.exe  is REG_DWORD = 1, this is not a finding.</td>
+</tr>
+<tr>
+<th class="ruledata">Fix:</th>
+<td class="ruledata">Set the policy value for Computer Configuration -&gt; Administrative Templates -&gt; Microsoft Office 2013 (Machine) -&gt; Security Settings -&gt; IE Security "Block popups" to "Enabled" and select 'mspub.exe'.</td>
+</tr>
+<tr>
+<th class="ruledata">References:</th>
+<td class="ruledata">
+<ul class="ruledata"/>
+</td>
+</tr>
+</table>
+<br/>
+<a name="RULE_SV-242807r716297_rule">
+<table class="ruleblock">
+<tr class="ruleblock">
+<td class="ruleblock">
+<span class="ruleheader">STIG ID:</span>
+<br/>DTOO131</td>
+<td class="ruleblock">
+<span class="ruleheader">Group ID:</span>
+<br/>V-242807</td>
+<td class="ruleblock">
+<span class="ruleheader">Rule ID:</span>
+<br/>SV-242807r716297_rule</td>
+<td class="ruleblock">
+<span class="ruleheader">Severity:</span>
+<br/>CAT II</td>
+</tr>
+</table>
+</a>
+<table class="ruledata">
+<tr>
+<th class="ruledata">Requirement:</th>
+<td class="ruledata">
+<span class="rulerequirement">Trust Bar Notifications for unsigned application add-ins must be blocked.</span>
+</td>
+</tr>
+<tr>
+<th class="ruledata">Discussion:</th>
+<td class="ruledata">If an application is configured to require all add-ins to be signed by a trusted publisher, any unsigned add-ins the application loads will be disabled and the application will display the Trust Bar at the top of the active window. The Trust Bar contains a message informing users about the unsigned add-in. If a user is allowed to make the determination to allow an unsigned add-in, it increases the risk of malicious code being introduced onto the user's computer or the network.</td>
+</tr>
+<tr>
+<th class="ruledata">Check:</th>
+<td class="ruledata">Verify the policy value for User Configuration -&gt; Administrative Templates -&gt; Microsoft Publisher 2013 -&gt; Security -&gt; Trust Center "Disable Trust Bar Notification for unsigned application add-ins" must be "Enabled". <br/>
+<br/>
+Procedure: Use the Windows Registry Editor to navigate to the following key: <br/>
+<br/>
+HKCU\Software\Policies\Microsoft\Office\15.0\publisher\security<br/>
+<br/>
+Criteria: If the value NoTBPromptUnsignedAddin is REG_DWORD = 1, this is not a finding.</td>
+</tr>
+<tr>
+<th class="ruledata">Fix:</th>
+<td class="ruledata">Set the policy value for User Configuration -&gt; Administrative Templates -&gt; Microsoft Publisher 2013 -&gt; Security -&gt; Trust Center "Disable Trust Bar Notification for unsigned application add-ins" to "Enabled".</td>
+</tr>
+<tr>
+<th class="ruledata">References:</th>
+<td class="ruledata">
+<ul class="ruledata"/>
+</td>
+</tr>
+</table>
+<br/>
+<a name="RULE_SV-242808r716300_rule">
+<table class="ruleblock">
+<tr class="ruleblock">
+<td class="ruleblock">
+<span class="ruleheader">STIG ID:</span>
+<br/>DTOO132</td>
+<td class="ruleblock">
+<span class="ruleheader">Group ID:</span>
+<br/>V-242808</td>
+<td class="ruleblock">
+<span class="ruleheader">Rule ID:</span>
+<br/>SV-242808r716300_rule</td>
+<td class="ruleblock">
+<span class="ruleheader">Severity:</span>
+<br/>CAT II</td>
+</tr>
+</table>
+</a>
+<table class="ruledata">
+<tr>
+<th class="ruledata">Requirement:</th>
+<td class="ruledata">
+<span class="rulerequirement">File Downloads must be configured for proper restrictions.</span>
+</td>
+</tr>
+<tr>
+<th class="ruledata">Discussion:</th>
+<td class="ruledata">Disabling this setting allows websites to present file download prompts via code without the user specifically initiating the download.  User preferences may also allow the download to occur without prompting or interaction with the user.  Even if Internet Explorer prompts the user to accept the download, some websites abuse this functionality.  Malicious websites may continually prompt users to download a file or present confusing dialog boxes to trick users into downloading or running a file.  If the download occurs and it contains malicious code, the code could become active on the user's computer or the network.</td>
+</tr>
+<tr>
+<th class="ruledata">Check:</th>
+<td class="ruledata">Verify the policy value for Computer Configuration -&gt; Administrative Templates -&gt; Microsoft Office 2013 (Machine) -&gt; Security Settings -&gt; IE Security "Restrict File Download" is set to "Enabled" and 'mspub.exe' is checked. <br/>
+<br/>
+Procedure: Use the Windows Registry Editor to navigate to the following key: <br/>
+<br/>
+HKLM\Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_RESTRICT_FILEDOWNLOAD<br/>
+<br/>
+Criteria: If the value mspub.exe is REG_DWORD = 1, this is not a finding.</td>
+</tr>
+<tr>
+<th class="ruledata">Fix:</th>
+<td class="ruledata">Set the policy value for Computer Configuration -&gt; Administrative Templates -&gt; Microsoft Office 2013 (Machine) -&gt; Security Settings -&gt; IE Security "Restrict File Download" to "Enabled" and 'mspub.exe' is checked.</td>
+</tr>
+<tr>
+<th class="ruledata">References:</th>
+<td class="ruledata">
+<ul class="ruledata"/>
+</td>
+</tr>
+</table>
+<br/>
+<a name="RULE_SV-242809r716303_rule">
+<table class="ruleblock">
+<tr class="ruleblock">
+<td class="ruleblock">
+<span class="ruleheader">STIG ID:</span>
+<br/>DTOO209</td>
+<td class="ruleblock">
+<span class="ruleheader">Group ID:</span>
+<br/>V-242809</td>
+<td class="ruleblock">
+<span class="ruleheader">Rule ID:</span>
+<br/>SV-242809r716303_rule</td>
+<td class="ruleblock">
+<span class="ruleheader">Severity:</span>
+<br/>CAT II</td>
+</tr>
+</table>
+</a>
+<table class="ruledata">
+<tr>
+<th class="ruledata">Requirement:</th>
+<td class="ruledata">
+<span class="rulerequirement">Protection from zone elevation must be enforced.</span>
+</td>
+</tr>
+<tr>
+<th class="ruledata">Discussion:</th>
+<td class="ruledata">Internet Explorer places restrictions on each web page users can use the browser to open. Web pages on a user's local computer have the fewest security restrictions and reside in the Local Machine zone, making this security zone a prime target for malicious users and code. Disabling or not configuring this setting could allow pages in the Internet zone to navigate to pages in the Local Machine zone to then run code to elevate privileges. This could allow malicious code or users to become active on the user's computer or the network.</td>
+</tr>
+<tr>
+<th class="ruledata">Check:</th>
+<td class="ruledata">Verify the policy value for Computer Configuration -&gt; Administrative Templates -&gt; Microsoft Office 2013 (Machine) -&gt; Security Settings -&gt; IE Security "Protection From Zone Elevation" is set to "Enabled" and 'mspub.exe' is checked. <br/>
+<br/>
+Procedure: Use the Windows Registry Editor to navigate to the following key: <br/>
+<br/>
+HKLM\Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_ZONE_ELEVATION<br/>
+<br/>
+Criteria: If the value mspub.exe is REG_DWORD = 1, this is not a finding.</td>
+</tr>
+<tr>
+<th class="ruledata">Fix:</th>
+<td class="ruledata">Set the policy value for Computer Configuration -&gt; Administrative Templates -&gt; Microsoft Office 2013 (Machine) -&gt; Security Settings -&gt; IE Security "Protection From Zone Elevation" to "Enabled" and 'mspub.exe' is checked.</td>
+</tr>
+<tr>
+<th class="ruledata">References:</th>
+<td class="ruledata">
+<ul class="ruledata"/>
+</td>
+</tr>
+</table>
+<br/>
+<a name="RULE_SV-242810r716306_rule">
+<table class="ruleblock">
+<tr class="ruleblock">
+<td class="ruleblock">
+<span class="ruleheader">STIG ID:</span>
+<br/>DTOO211</td>
+<td class="ruleblock">
+<span class="ruleheader">Group ID:</span>
+<br/>V-242810</td>
+<td class="ruleblock">
+<span class="ruleheader">Rule ID:</span>
+<br/>SV-242810r716306_rule</td>
+<td class="ruleblock">
+<span class="ruleheader">Severity:</span>
+<br/>CAT II</td>
+</tr>
+</table>
+</a>
+<table class="ruledata">
+<tr>
+<th class="ruledata">Requirement:</th>
+<td class="ruledata">
+<span class="rulerequirement">ActiveX Installs must be configured for proper restriction.</span>
+</td>
+</tr>
+<tr>
+<th class="ruledata">Discussion:</th>
+<td class="ruledata">Microsoft ActiveX controls allow unmanaged, unprotected code to run on the user computers. ActiveX controls do not run within a protected container in the browser like the other types of HTML or Microsoft Silverlight-based controls. Disabling or not configuring this setting does not block prompts for ActiveX control installations and these prompts display to users. This could allow malicious code to become active on the user's computer or the network.</td>
+</tr>
+<tr>
+<th class="ruledata">Check:</th>
+<td class="ruledata">Verify the policy value for Computer Configuration -&gt; Administrative Templates -&gt; Microsoft Office 2013 (Machine) -&gt; Security Settings -&gt; IE Security "Restrict ActiveX Install" is set to "Enabled" and 'mspub.exe' is checked.<br/>
+<br/>
+<br/>
+Procedure: Use the Windows Registry Editor to navigate to the following key: <br/>
+<br/>
+HKLM\Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_RESTRICT_ACTIVEXINSTALL<br/>
+<br/>
+Criteria: If the value mspub.exe is REG_DWORD = 1, this is not a finding.</td>
+</tr>
+<tr>
+<th class="ruledata">Fix:</th>
+<td class="ruledata">Set the policy value for Computer Configuration -&gt; Administrative Templates -&gt; Microsoft Office 2013 (Machine) -&gt; Security Settings -&gt; IE Security "Restrict ActiveX Install" to "Enabled" and 'mspub.exe' is checked.</td>
+</tr>
+<tr>
+<th class="ruledata">References:</th>
+<td class="ruledata">
+<ul class="ruledata"/>
+</td>
+</tr>
+</table>
+<br/>
+<a name="RULE_SV-242811r716309_rule">
+<table class="ruleblock">
+<tr class="ruleblock">
+<td class="ruleblock">
+<span class="ruleheader">STIG ID:</span>
+<br/>DTOO304</td>
+<td class="ruleblock">
+<span class="ruleheader">Group ID:</span>
+<br/>V-242811</td>
+<td class="ruleblock">
+<span class="ruleheader">Rule ID:</span>
+<br/>SV-242811r716309_rule</td>
+<td class="ruleblock">
+<span class="ruleheader">Severity:</span>
+<br/>CAT II</td>
+</tr>
+</table>
+</a>
+<table class="ruledata">
+<tr>
+<th class="ruledata">Requirement:</th>
+<td class="ruledata">
+<span class="rulerequirement">Warning Bar settings for VBA macros must be configured.</span>
+</td>
+</tr>
+<tr>
+<th class="ruledata">Discussion:</th>
+<td class="ruledata">When users open files containing VBA Macros, applications open the files with the macros disabled and displays the Trust Bar with a warning that macros are present and have been disabled. Users may then enable these macros by clicking Options on the Trust Bar and selecting the option to enable them. Disabling or not configuring this setting may allow dangerous macros to become active on the user's computer or the network.</td>
+</tr>
+<tr>
+<th class="ruledata">Check:</th>
+<td class="ruledata">Verify the policy value for User Configuration -&gt; Administrative Templates -&gt; Microsoft Publisher 2013 -&gt; Security -&gt; Trust Center "VBA Macro Notification Settings" must be "Enabled (Disabled all with notifications)". <br/>
+<br/>
+Procedure: Use the Windows Registry Editor to navigate to the following key: <br/>
+<br/>
+HKCU\Software\Policies\Microsoft\Office\15.0\publisher\security<br/>
+<br/>
+Criteria: If the value VBAWarnings is REG_DWORD = 2, this is not a finding.</td>
+</tr>
+<tr>
+<th class="ruledata">Fix:</th>
+<td class="ruledata">Set the policy value for User Configuration -&gt; Administrative Templates -&gt; Microsoft Publisher 2013 -&gt; Security -&gt; Trust Center "VBA Macro Notification Settings" to "Enabled (Disabled all with notifications)".</td>
+</tr>
+<tr>
+<th class="ruledata">References:</th>
+<td class="ruledata">
+<ul class="ruledata"/>
+</td>
+</tr>
+</table>
+<br/>
+<a name="RULE_SV-242812r716312_rule">
+<table class="ruleblock">
+<tr class="ruleblock">
+<td class="ruleblock">
+<span class="ruleheader">STIG ID:</span>
+<br/>DTOO322</td>
+<td class="ruleblock">
+<span class="ruleheader">Group ID:</span>
+<br/>V-242812</td>
+<td class="ruleblock">
+<span class="ruleheader">Rule ID:</span>
+<br/>SV-242812r716312_rule</td>
+<td class="ruleblock">
+<span class="ruleheader">Severity:</span>
+<br/>CAT II</td>
+</tr>
+</table>
+</a>
+<table class="ruledata">
+<tr>
+<th class="ruledata">Requirement:</th>
+<td class="ruledata">
+<span class="rulerequirement">Fatally corrupt files must be blocked from opening.</span>
+</td>
+</tr>
+<tr>
+<th class="ruledata">Discussion:</th>
+<td class="ruledata">Enabling this setting allows a user to open fatally corrupt Publisher 2013 files.  As a result, malicious code or users could become active on the user's computer or the network.  For example, a malicious user may purposely corrupt a Publisher file.  The corrupted file could force the application to fail or execute malicious code, giving the malicious user control of Publisher 2013.</td>
+</tr>
+<tr>
+<th class="ruledata">Check:</th>
+<td class="ruledata">Verify the policy value for User Configuration -&gt; Administrative Templates -&gt; Microsoft Publisher 2013 -&gt; Security "Prompt to allow fatally corrupt files to open instead of blocking them" is set to "Disabled".<br/>
+<br/>
+Procedure: Use the Windows Registry Editor to navigate to the following key: <br/>
+<br/>
+<br/>
+HKCU\Software\Policies\Microsoft\Office\15.0\publisher<br/>
+<br/>
+Criteria: If the value PromptForBadFiles is REG_DWORD = 0, this is not a finding.</td>
+</tr>
+<tr>
+<th class="ruledata">Fix:</th>
+<td class="ruledata">Set the policy value for User Configuration -&gt; Administrative Templates -&gt; Microsoft Publisher 2013 -&gt; Security "Prompt to allow fatally corrupt files to open instead of blocking them" to "Disabled".</td>
+</tr>
+<tr>
+<th class="ruledata">References:</th>
+<td class="ruledata">
+<ul class="ruledata"/>
+</td>
+</tr>
+</table>
+<br/>
+<a name="RULE_SV-242813r716315_rule">
+<table class="ruleblock">
+<tr class="ruleblock">
+<td class="ruleblock">
+<span class="ruleheader">STIG ID:</span>
+<br/>DTOO323</td>
+<td class="ruleblock">
+<span class="ruleheader">Group ID:</span>
+<br/>V-242813</td>
+<td class="ruleblock">
+<span class="ruleheader">Rule ID:</span>
+<br/>SV-242813r716315_rule</td>
+<td class="ruleblock">
+<span class="ruleheader">Severity:</span>
+<br/>CAT II</td>
+</tr>
+</table>
+</a>
+<table class="ruledata">
+<tr>
+<th class="ruledata">Requirement:</th>
+<td class="ruledata">
+<span class="rulerequirement">The Publisher Automation Security Level must be configured for high security.</span>
+</td>
+</tr>
+<tr>
+<th class="ruledata">Discussion:</th>
+<td class="ruledata">When a separate application is used to launch Publisher 2013 programmatically, any macros can run in the programmatically-opened application without being blocked.  Disabling or not configuring this setting could allow a malicious user to use automation to run malicious code in Publisher 2013.</td>
+</tr>
+<tr>
+<th class="ruledata">Check:</th>
+<td class="ruledata">Verify the policy value for User Configuration -&gt; Administrative Templates -&gt; Microsoft Publisher 2013 -&gt; Security "Publisher Automation Security Level" is set to "Enabled and High (Disabled)" is selected. <br/>
+<br/>
+Procedure: Use the Windows Registry Editor to navigate to the following key: <br/>
+<br/>
+HKCU\Software\Policies\Microsoft\Office\Common\Security <br/>
+<br/>
+Criteria: If the value AutomationSecurityPublisher is REG_DWORD = 3, this is not a finding.</td>
+</tr>
+<tr>
+<th class="ruledata">Fix:</th>
+<td class="ruledata">Set the policy value for User Configuration -&gt; Administrative Templates -&gt; Microsoft Publisher 2013 -&gt; Security "Publisher Automation Security Level" to "Enabled and High (Disabled)" is selected.</td>
+</tr>
+<tr>
+<th class="ruledata">References:</th>
+<td class="ruledata">
+<ul class="ruledata"/>
+</td>
+</tr>
+</table>
+<br/>
+</div>
+</div>
+<div class="footer headerfooter">UNCLASSIFIED</div>
+</body>
+</html>
