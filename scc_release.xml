@@ -1,10 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <scc>
-	<version>5.4</version>
-	<timeStamp>2020-12-08T12:29:23</timeStamp>
-	<releaseInfo>Added SCAP content updating.
-Added SCC update checking.
-Added scanning via Active Directory OU names.
-Fixed several SSH scanning issues</releaseInfo>
+	<version>5.4.1</version>
+	<timeStamp>2021-05-16T12:29:23</timeStamp>
+	<releaseInfo>
+For All Platform
+* Updated DISA STIG SCAP content for April 2021
+* Fixed several issues with command-line scanning of offline Cisco IOS XE configuration files
+* Updated SCC's libssh2 module to resolve CVE-2019-17498
+* Updated XML parsing to prevent loading any external entities
+* Updated SCC's Libxml2 module
+
+For Windows
+* Updated Windows host file creation to prevent application hang on very large domains
+* Updated AppCmd and AppCmdListConfig based on upcoming OVAL release
+
+For Linux
+* Added STIG Benchmark for RHEL8
+* Updated GPG key for signing RPM's to use SHA256 for RHEL8
+
+For Mac OS X
+* Updated NIST SCAP content for Catalina and Big Sur
+
+</releaseInfo>
 	<url>https://public.cyber.mil/stigs/scap/</url>
 </scc>
