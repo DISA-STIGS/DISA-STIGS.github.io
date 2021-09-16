@@ -1,25 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <scc>
-	<version>5.4.1</version>
-	<timeStamp>2021-05-16T12:29:23</timeStamp>
+	<version>5.4.2</version>
+	<timeStamp>2021-08-24T12:29:23</timeStamp>
 	<releaseInfo>
 For All Platform
-* Updated DISA STIG SCAP content for April 2021
-* Fixed several issues with command-line scanning of offline Cisco IOS XE configuration files
-* Updated SCC's libssh2 module to resolve CVE-2019-17498
-* Updated XML parsing to prevent loading any external entities
-* Updated SCC's Libxml2 module
+* Updated DISA STIG SCAP content for July 2021
+* Added DISA SCAP 1.3 Benchmarks for Cisco IOS-XE Routers
+* Fixed issues scanning certain Cisco IOS and IOS XE configuration files
+* Update SCC internal libxml2 dependency to version 2.9.11
+* Added command line parameter to print debug to standard out (-ds or --debugToScreen)
 
 For Windows
-* Updated Windows host file creation to prevent application hang on very large domains
-* Updated AppCmd and AppCmdListConfig based on upcoming OVAL release
+* Updated Windows OU and Host File Creation with OU to default to no OU's selected vs all
+* Updated cscc.exe to return '0' as the 'successful' return code
 
-For Linux
-* Added STIG Benchmark for RHEL8
-* Updated GPG key for signing RPM's to use SHA256 for RHEL8
+For UNIX/Linux
+* Updated --setOpt, --getOpt and --listOpt to not perform a scan (configuration only parameters) on UNIX systems
+* Updated SCC's internal libssh2 on RHEL6 x64 and Ubuntu 16 x64 to current version 1.9.0
+* Fix "Argument Too Long" Error on Solaris with ENV variable > 512 characters
 
 For Mac OS X
 * Updated NIST SCAP content for Catalina and Big Sur
+* Updated SCC's internal libssh2 on MacOS to current version 1.9.0
 
 </releaseInfo>
 	<url>https://public.cyber.mil/stigs/scap/</url>
