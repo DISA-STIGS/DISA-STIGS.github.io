@@ -3,7 +3,7 @@
 <content-repository style="0.1">
       <repository-id>disa-stig-repo</repository-id>
       <repository-publisher>DISA</repository-publisher>
-      <last-updated>2021-10-26T07:34:23</last-updated>
+      <last-updated>2021-12-20T10:13:45</last-updated>
       <license>Open</license>
       <contents>
             <scap-content>
@@ -175,30 +175,6 @@
                   </platforms>
             </scap-content>
             <scap-content>
-                  <content-id>U_McAfee_VirusScan_8-8_Local_Client_V1R3_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_McAfee_VirusScan_8-8_Local_Client_V1R3_STIG_SCAP_1-2_Benchmark.zip</location>
-                  <checksum style="SHA512">da76931f2d33379b2eeef3afda2f4cf260cab87b400ba427766b07c7d4e8dab6d72ad0407e1985d85b03c1f1edb87f275231cd33657745c5fb1cf24d2d183432</checksum>
-                  <benchmarks>
-                        <benchmark>
-                              <benchmark-id>xccdf_mil.disa.stig_benchmark_McAfee_VirusScan88_Local_Client</benchmark-id>
-                              <title>McAfee VirusScan 8.8 Local Client STIG</title>
-                              <version>001.003</version>
-                              <style>SCAP_1.2</style>
-                              <status>accepted</status>
-                              <status-date>2018-07-09</status-date>
-                              <creator>DISA</creator>
-                              <publisher>DISA</publisher>
-                              <contributor>DISA</contributor>
-                              <source>STIG.DOD.MIL</source>
-                        </benchmark>
-                  </benchmarks>
-                  <platforms>
-                        <platform>
-                              <platform-id style="cpe">cpe:/a:mcafee:virusscan_enterprise:8.8.0::~~~~~local</platform-id>
-                        </platform>
-                  </platforms>
-            </scap-content>
-            <scap-content>
                   <content-id>U_McAfee_VirusScan_8-8_Managed_Client_V1R3_STIG_SCAP_1-2_Benchmark.zip</content-id>
                   <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_McAfee_VirusScan_8-8_Managed_Client_V1R3_STIG_SCAP_1-2_Benchmark.zip</location>
                   <checksum style="SHA512">272013081bf98d48d1bef2e887f7e07994e4afa100cb9a29aca881c7995b79b52011441abd7a4a398f8264b2f9b51fdbbf39fef1bf430f696b33c0191d472052</checksum>
@@ -295,6 +271,30 @@
                   </platforms>
             </scap-content>
             <scap-content>
+                  <content-id>U_MS_Edge_V1R1_STIG_SCAP_1-2_Benchmark.zip</content-id>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_MS_Edge_V1R1_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <checksum style="SHA512">9b9893fd86761e26714f05db394c17bc2ae974a86107e2086dd0e27475920ef739990192be6056bd18418582aad7592e305ff571c074df10648d9a800e884db2</checksum>
+                  <benchmarks>
+                        <benchmark>
+                              <benchmark-id>xccdf_mil.disa.stig_benchmark_MS_Edge_STIG</benchmark-id>
+                              <title>Microsoft Edge Security Technical Implementation Guide</title>
+                              <version>001.001</version>
+                              <style>SCAP_1.2</style>
+                              <status>accepted</status>
+                              <status-date>2021-09-03</status-date>
+                              <creator>DISA</creator>
+                              <publisher>DISA</publisher>
+                              <contributor>DISA</contributor>
+                              <source>STIG.DOD.MIL</source>
+                        </benchmark>
+                  </benchmarks>
+                  <platforms>
+                        <platform>
+                              <platform-id style="cpe">cpe:/a:microsoft:edge</platform-id>
+                        </platform>
+                  </platforms>
+            </scap-content>
+            <scap-content>
                   <content-id>U_MS_IE11_V2R1_STIG_SCAP_1-2_Benchmark.zip</content-id>
                   <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_MS_IE11_V2R1_STIG_SCAP_1-2_Benchmark.zip</location>
                   <checksum style="SHA512">d663712a0c62373bb8ece5dacba28a1c08f7beefbc2b7b19ac704232e921eb4e283ed226ad8e4ab2eebc02ba24bf7df78079d1777e75af4ec2760d708dcfb2ca</checksum>
@@ -319,17 +319,17 @@
                   </platforms>
             </scap-content>
             <scap-content>
-                  <content-id>U_MS_Windows_10_V2R2_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_MS_Windows_10_V2R2_STIG_SCAP_1-2_Benchmark.zip</location>
-                  <checksum style="SHA512">1ca8dba40addb6720e2e240c8f03a145caf52597acc0750f589bd6b7e26e5fdd3d87c90d767a8ec1dfd39a0e9c77d7f16d1408e0a28915c53609a46622a604d5</checksum>
+                  <content-id>U_MS_Windows_10_V2R3_STIG_SCAP_1-2_Benchmark.zip</content-id>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_MS_Windows_10_V2R3_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <checksum style="SHA512">804aec16a0fa2b2a79427d18e83e23655749d508f61bf5e3243a6de68beee34ccd69b7507b622937f6ab7aae9f9712c640970648237f2a556483dde905a9af01</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_Windows_10_STIG</benchmark-id>
                               <title>Windows 10 Security Technical Implementation Guide</title>
-                              <version>002.002</version>
+                              <version>002.003</version>
                               <style>SCAP_1.2</style>
                               <status>accepted</status>
-                              <status-date>2021-03-10</status-date>
+                              <status-date>2021-08-18</status-date>
                               <creator>DISA</creator>
                               <publisher>DISA</publisher>
                               <contributor>DISA</contributor>
@@ -343,17 +343,17 @@
                   </platforms>
             </scap-content>
             <scap-content>
-                  <content-id>U_MS_Windows_2012_and_2012_R2_DC_V3R1_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_MS_Windows_2012_and_2012_R2_DC_V3R1_STIG_SCAP_1-2_Benchmark.zip</location>
-                  <checksum style="SHA512">ca14227fd3c81dd6aa16f64d92c6e462a9318a6770e3a1b027989de100e656dd935b216f1c284ab334f5fc2d87a515b6343954e3d44fe0f9aba558173f68bcf9</checksum>
+                  <content-id>U_MS_Windows_2012_and_2012_R2_DC_V3R2_STIG_SCAP_1-2_Benchmark.zip</content-id>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_MS_Windows_2012_and_2012_R2_DC_V3R2_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <checksum style="SHA512">6a84b77199cf3b3c2e387b041783e66412fc7150434c3f1905fcd20265fe222fe7d7cedcf51a19069cff057a5b3cc7085b8bebaf6259f89ec01e53f2dfab0fc5</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_Windows_2012_DC_STIG</benchmark-id>
                               <title>Microsoft Windows Server 2012/2012 R2 Domain Controller Security Technical Implementation Guide</title>
-                              <version>003.001</version>
+                              <version>003.002</version>
                               <style>SCAP_1.2</style>
                               <status>accepted</status>
-                              <status-date>2020-10-15</status-date>
+                              <status-date>2021-10-18</status-date>
                               <creator>DISA</creator>
                               <publisher>DISA</publisher>
                               <contributor>DISA</contributor>
@@ -362,25 +362,25 @@
                   </benchmarks>
                   <platforms>
                         <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2012:-</platform-id>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2012:r2</platform-id>
                         </platform>
                         <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2012:r2</platform-id>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2012:-</platform-id>
                         </platform>
                   </platforms>
             </scap-content>
             <scap-content>
-                  <content-id>U_MS_Windows_2012_and_2012_R2_MS_V3R1_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_MS_Windows_2012_and_2012_R2_MS_V3R1_STIG_SCAP_1-2_Benchmark.zip</location>
-                  <checksum style="SHA512">11b186f0d287970633d7fcdecc058751f7fb179674a57807a372bfe5b7c792cfabe6b7c41c0f70f924443e9054785cfd6a5c712361a68f645e31aa0904d7c284</checksum>
+                  <content-id>U_MS_Windows_2012_and_2012_R2_MS_V3R2_STIG_SCAP_1-2_Benchmark.zip</content-id>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_MS_Windows_2012_and_2012_R2_MS_V3R2_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <checksum style="SHA512">7941e2dd6ea806ece1eb7935b6f8f3175c693ee575d29f313c5e5a3ba262391875f09d9bf7c7bba220041a870b369594765eea28911a1dc992e3589b6acef76d</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_Windows_2012_MS_STIG</benchmark-id>
                               <title>Microsoft Windows Server 2012/2012 R2 Member Server Security Technical Implementation Guide</title>
-                              <version>003.001</version>
+                              <version>003.002</version>
                               <style>SCAP_1.2</style>
                               <status>accepted</status>
-                              <status-date>2020-10-15</status-date>
+                              <status-date>2021-10-18</status-date>
                               <creator>DISA</creator>
                               <publisher>DISA</publisher>
                               <contributor>DISA</contributor>
@@ -397,17 +397,17 @@
                   </platforms>
             </scap-content>
             <scap-content>
-                  <content-id>U_MS_Windows_Defender_AV_V2R1_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_MS_Windows_Defender_AV_V2R1_STIG_SCAP_1-2_Benchmark.zip</location>
-                  <checksum style="SHA512">313875ed8eb542102ffdf5f14d3b54b7e2929818ea135e7792800b82f679c68ccbdcddc5eb606f60ada2fcdc1225ecd3888c8921871d2f397316cb4e87c334aa</checksum>
+                  <content-id>U_MS_Windows_Defender_AV_V2R2_STIG_SCAP_1-2_Benchmark.zip</content-id>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_MS_Windows_Defender_AV_V2R2_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <checksum style="SHA512">158f38ddae760138143d508c71252d04021068f109d628cd2a7465b017255929935864010ef207b94bcfab1a188fdf748128f3bdd9971790f56e33e1a3a63886</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_Windows_Defender_Antivirus</benchmark-id>
                               <title>Microsoft Windows Defender Antivirus Security Technical Implementation Guide</title>
-                              <version>002.001</version>
+                              <version>002.002</version>
                               <style>SCAP_1.2</style>
                               <status>accepted</status>
-                              <status-date>2020-10-15</status-date>
+                              <status-date>2021-09-30</status-date>
                               <creator>DISA</creator>
                               <publisher>DISA</publisher>
                               <contributor>DISA</contributor>
@@ -417,6 +417,60 @@
                   <platforms>
                         <platform>
                               <platform-id style="cpe">cpe:/a:microsoft:windows_defender</platform-id>
+                        </platform>
+                  </platforms>
+            </scap-content>
+            <scap-content>
+                  <content-id>U_MS_Windows_Firewall_V2R1_STIG_SCAP_1-2_Benchmark.zip</content-id>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_MS_Windows_Firewall_V2R1_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <checksum style="SHA512">64fd57131880b276a3c76bea4435cda31318be0d1f72e3ee01836420b6b0ed173780182f2fd99f3831c45bcef220f3ddf59e3c13a58984920858cc5f5b680751</checksum>
+                  <benchmarks>
+                        <benchmark>
+                              <benchmark-id>xccdf_mil.disa.stig_benchmark_Windows_Firewall_with_Advanced_Security</benchmark-id>
+                              <title>Windows Firewall with Advanced Security Security Technical Implementation Guide</title>
+                              <version>002.001</version>
+                              <style>SCAP_1.2</style>
+                              <status>accepted</status>
+                              <status-date>2021-10-15</status-date>
+                              <creator>DISA</creator>
+                              <publisher>DISA</publisher>
+                              <contributor>DISA</contributor>
+                              <source>STIG.DOD.MIL</source>
+                        </benchmark>
+                  </benchmarks>
+                  <platforms>
+                        <platform>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_8.1</platform-id>
+                        </platform>
+                        <platform>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2012:-</platform-id>
+                        </platform>
+                        <platform>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2008</platform-id>
+                        </platform>
+                        <platform>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2008:r2</platform-id>
+                        </platform>
+                        <platform>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2019:-</platform-id>
+                        </platform>
+                        <platform>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_7</platform-id>
+                        </platform>
+                        <platform>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_8</platform-id>
+                        </platform>
+                        <platform>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2012:r2</platform-id>
+                        </platform>
+                        <platform>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_10</platform-id>
+                        </platform>
+                        <platform>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2016:-</platform-id>
+                        </platform>
+                        <platform>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_vista</platform-id>
                         </platform>
                   </platforms>
             </scap-content>
@@ -657,57 +711,6 @@
                   <platforms>
                         <platform>
                               <platform-id style="cpe">cpe:/o:sun:sunos:5.11:-:~~~~x86~</platform-id>
-                        </platform>
-                  </platforms>
-            </scap-content>
-            <scap-content>
-                  <content-id>U_Windows_Firewall_V1R7_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_Windows_Firewall_V1R7_STIG_SCAP_1-2_Benchmark.zip</location>
-                  <checksum style="SHA512">7006e3fb1f590f9867fee32d75339ed3ad2e877e81023bd5febb8d1a813cb2ecf408b55a5216a6b46014a4ba296370e2c119d59eb0329c48f6306776563b1302</checksum>
-                  <benchmarks>
-                        <benchmark>
-                              <benchmark-id>xccdf_mil.disa.stig_benchmark_Windows_Firewall</benchmark-id>
-                              <title>Windows Firewall with Advanced Security Security Technical Implementation Guide</title>
-                              <version>001.007</version>
-                              <style>SCAP_1.2</style>
-                              <status>accepted</status>
-                              <status-date>2018-07-27</status-date>
-                              <creator>DISA</creator>
-                              <publisher>DISA</publisher>
-                              <contributor>DISA</contributor>
-                              <source>STIG.DOD.MIL</source>
-                        </benchmark>
-                  </benchmarks>
-                  <platforms>
-                        <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_10</platform-id>
-                        </platform>
-                        <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_vista</platform-id>
-                        </platform>
-                        <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_8.1</platform-id>
-                        </platform>
-                        <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2012:-</platform-id>
-                        </platform>
-                        <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_8</platform-id>
-                        </platform>
-                        <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2016:-</platform-id>
-                        </platform>
-                        <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2008:r2</platform-id>
-                        </platform>
-                        <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2008</platform-id>
-                        </platform>
-                        <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_7</platform-id>
-                        </platform>
-                        <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2012:r2</platform-id>
                         </platform>
                   </platforms>
             </scap-content>
