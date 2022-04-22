@@ -3,7 +3,7 @@
 <content-repository style="0.1">
       <repository-id>disa-stig-repo</repository-id>
       <repository-publisher>DISA</repository-publisher>
-      <last-updated>2022-02-25T08:35:30</last-updated>
+      <last-updated>2022-04-22T10:51:36</last-updated>
       <license>Open</license>
       <contents>
             <scap-content>
@@ -55,17 +55,17 @@
                   </platforms>
             </scap-content>
             <scap-content>
-                  <content-id>U_CAN_Ubuntu_18-04_V2R5_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_CAN_Ubuntu_18-04_V2R5_STIG_SCAP_1-2_Benchmark.zip</location>
-                  <checksum style="SHA512">43185fa5173d554b5f03f579412db698b29713a4f498eeac834f4dfe466da0169810f0bd24664ae0e951dbb45ec5492fbfa50a2ee30f48074914b265cae44271</checksum>
+                  <content-id>U_CAN_Ubuntu_18-04_V2R6_STIG_SCAP_1-2_Benchmark.zip</content-id>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_CAN_Ubuntu_18-04_V2R6_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <checksum style="SHA512">c91945f684954a3cb433bf3b1ca0371d2ff1ef185a77fe47d4bac1258cfd9367b8c88080af60f5059a7970c4aa3427c7db4cec0d601cf9229fe820dd76d18e9a</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_CAN_Ubuntu_18-04_STIG</benchmark-id>
                               <title>Canonical Ubuntu 18.04 LTS Security Technical Implementation Guide</title>
-                              <version>002.005</version>
+                              <version>002.006</version>
                               <style>SCAP_1.2</style>
                               <status>accepted</status>
-                              <status-date>2021-11-29</status-date>
+                              <status-date>2022-02-17</status-date>
                               <creator>DISA</creator>
                               <publisher>DISA</publisher>
                               <contributor>DISA</contributor>
@@ -79,17 +79,17 @@
                   </platforms>
             </scap-content>
             <scap-content>
-                  <content-id>U_CAN_Ubuntu_20-04_LTS_V1R1_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_CAN_Ubuntu_20-04_LTS_V1R1_STIG_SCAP_1-2_Benchmark.zip</location>
-                  <checksum style="SHA512">7caadb6e55fed6682616685d4c95d85ac5f4805b7b2d9de2a342f8bc02346157f0102733eb72fa88379bfcbc51a3aa47dcc67a50d4e8441da5d03bc295dddfc2</checksum>
+                  <content-id>U_CAN_Ubuntu_20-04_LTS_V1R2_STIG_SCAP_1-2_Benchmark.zip</content-id>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_CAN_Ubuntu_20-04_LTS_V1R2_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <checksum style="SHA512">31315ec3792282f8cdea4ab38fe084d112af0034e60203de46d414b61cff498a1335271e9a32132ce627cd088d24d923378c44804f51423942ffc7bdba28ffc5</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_Canonical_Ubuntu_20-04_LTS_STIG</benchmark-id>
                               <title>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide</title>
-                              <version>001.001</version>
+                              <version>001.002</version>
                               <style>SCAP_1.2</style>
                               <status>accepted</status>
-                              <status-date>2021-11-19</status-date>
+                              <status-date>2022-02-17</status-date>
                               <creator>DISA</creator>
                               <publisher>DISA</publisher>
                               <contributor>DISA</contributor>
@@ -151,17 +151,17 @@
                   </platforms>
             </scap-content>
             <scap-content>
-                  <content-id>U_Google_Chrome_Windows_V2R5_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_Google_Chrome_Windows_V2R5_STIG_SCAP_1-2_Benchmark.zip</location>
-                  <checksum style="SHA512">f9f17430dbbc4d1d270eed97795fb601284a561709a3cf2e85942674f374d7184085950117c101c6758f3245ce7cef28fdcd293cf78963b6c53a840c1388c9da</checksum>
+                  <content-id>U_Google_Chrome_V2R6_STIG_SCAP_1-2_Benchmark.zip</content-id>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_Google_Chrome_V2R6_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <checksum style="SHA512">c3f4b04bc66003eb58e81d467615c1a2297ef667133605879b5a09a0de31ef28bc5307d8eb9e1e07317c2a735ddf8fbc983c278270867babf6b3f3e2c1f368a0</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_Google_Chrome_Current_Windows</benchmark-id>
                               <title>Google Chrome Current Windows Security Technical Implementation Guide</title>
-                              <version>002.005</version>
+                              <version>002.006</version>
                               <style>SCAP_1.2</style>
                               <status>accepted</status>
-                              <status-date>2021-11-19</status-date>
+                              <status-date>2022-03-02</status-date>
                               <creator>DISA</creator>
                               <publisher>DISA</publisher>
                               <contributor>DISA</contributor>
@@ -317,10 +317,10 @@
                   </benchmarks>
                   <platforms>
                         <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2012:-</platform-id>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2012:r2</platform-id>
                         </platform>
                         <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2012:r2</platform-id>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2012:-</platform-id>
                         </platform>
                   </platforms>
             </scap-content>
@@ -368,37 +368,37 @@
                   </benchmarks>
                   <platforms>
                         <platform>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_8.1</platform-id>
+                        </platform>
+                        <platform>
                               <platform-id style="cpe">cpe:/o:microsoft:windows_server_2008</platform-id>
-                        </platform>
-                        <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2019:-</platform-id>
-                        </platform>
-                        <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_7</platform-id>
-                        </platform>
-                        <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_8</platform-id>
-                        </platform>
-                        <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_10</platform-id>
-                        </platform>
-                        <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2016:-</platform-id>
                         </platform>
                         <platform>
                               <platform-id style="cpe">cpe:/o:microsoft:windows_server_2008:r2</platform-id>
                         </platform>
                         <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_8.1</platform-id>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_7</platform-id>
                         </platform>
                         <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2012:r2</platform-id>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2016:-</platform-id>
+                        </platform>
+                        <platform>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_10</platform-id>
+                        </platform>
+                        <platform>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2012:-</platform-id>
+                        </platform>
+                        <platform>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2019:-</platform-id>
+                        </platform>
+                        <platform>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_8</platform-id>
                         </platform>
                         <platform>
                               <platform-id style="cpe">cpe:/o:microsoft:windows_vista</platform-id>
                         </platform>
                         <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2012:-</platform-id>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2012:r2</platform-id>
                         </platform>
                   </platforms>
             </scap-content>
@@ -451,17 +451,17 @@
                   </platforms>
             </scap-content>
             <scap-content>
-                  <content-id>U_Oracle_Linux_7_V2R6_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_Oracle_Linux_7_V2R6_STIG_SCAP_1-2_Benchmark.zip</location>
-                  <checksum style="SHA512">a623ea64e8c652618c757e9b153f02b79698fb73116b34782db178b9bcffe3106c8e22579814fa1803ee182f29dae0d2e6f6af6356915571885e625587017b39</checksum>
+                  <content-id>U_Oracle_Linux_7_V2R7_STIG_SCAP_1-2_Benchmark.zip</content-id>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_Oracle_Linux_7_V2R7_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <checksum style="SHA512">5b170847902017ca02af265749720ab77ca75521b46aa77ade6859d7c95cda274b76976b7ced9c5ce19eba70166e7d7d13f821ceebd800e6eb8ea67ec3053384</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_Oracle_Linux_7_STIG</benchmark-id>
                               <title>Oracle Linux 7 Security Technical Implementation Guide</title>
-                              <version>002.006</version>
+                              <version>002.007</version>
                               <style>SCAP_1.2</style>
                               <status>accepted</status>
-                              <status-date>2021-12-06</status-date>
+                              <status-date>2022-02-11</status-date>
                               <creator>DISA</creator>
                               <publisher>DISA</publisher>
                               <contributor>DISA</contributor>
@@ -499,17 +499,41 @@
                   </platforms>
             </scap-content>
             <scap-content>
-                  <content-id>U_RHEL_8_V1R4_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_RHEL_8_V1R4_STIG_SCAP_1-2_Benchmark.zip</location>
-                  <checksum style="SHA512">63fd6c15f91bd1a9dd04873aac1e4294c823e2a64ab3a71dc4c606a23962315f2f081a16a2f681dfaa1ed4e42c956ffe6b2cff28735ea9e92e3a92693a9ca830</checksum>
+                  <content-id>U_RHEL_7_V3R7_STIG_SCAP_1-2_Benchmark.zip</content-id>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_RHEL_7_V3R7_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <checksum style="SHA512">f596060a494d036c35a7fff398d608321031d6f5700dd425054ef7c74a811a9df0beae67385cca207242b03075d0ff05e408fec18299e8786975376c2c84d01f</checksum>
+                  <benchmarks>
+                        <benchmark>
+                              <benchmark-id>xccdf_mil.disa.stig_benchmark_RHEL_7_STIG</benchmark-id>
+                              <title>Red Hat Enterprise Linux 7 Security Technical Implementation Guide</title>
+                              <version>003.007</version>
+                              <style>SCAP_1.2</style>
+                              <status>accepted</status>
+                              <status-date>2022-02-17</status-date>
+                              <creator>DISA</creator>
+                              <publisher>DISA</publisher>
+                              <contributor>DISA</contributor>
+                              <source>STIG.DOD.MIL</source>
+                        </benchmark>
+                  </benchmarks>
+                  <platforms>
+                        <platform>
+                              <platform-id style="cpe">cpe:/o:redhat:enterprise_linux:7</platform-id>
+                        </platform>
+                  </platforms>
+            </scap-content>
+            <scap-content>
+                  <content-id>U_RHEL_8_V1R5_STIG_SCAP_1-2_Benchmark.zip</content-id>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_RHEL_8_V1R5_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <checksum style="SHA512">03047502385c85029e77c540018b9b8ff0b58f7830d45ca8ce3baceb5ae212e05039dbacba36f6e7367609fc2617fc7f1efe99ce053981ff50d0cd1339913d34</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_RHEL_8_STIG</benchmark-id>
                               <title>Red Hat Enterprise Linux 8 Security Technical Implementation Guide</title>
-                              <version>001.004</version>
+                              <version>001.005</version>
                               <style>SCAP_1.2</style>
                               <status>accepted</status>
-                              <status-date>2021-12-03</status-date>
+                              <status-date>2022-02-17</status-date>
                               <creator>DISA</creator>
                               <publisher>DISA</publisher>
                               <contributor>DISA</contributor>
