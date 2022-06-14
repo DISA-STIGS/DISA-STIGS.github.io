@@ -1,27 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <scc>
-	<version>5.4.2</version>
-	<timeStamp>2021-08-24T12:29:23</timeStamp>
+	<version>5.5</version>
+	<timeStamp>2022-06-03T16:00:00</timeStamp>
 	<releaseInfo>
-For All Platform
-* Updated DISA STIG SCAP content for July 2021
-* Added DISA SCAP 1.3 Benchmarks for Cisco IOS-XE Routers
-* Fixed issues scanning certain Cisco IOS and IOS XE configuration files
-* Update SCC internal libxml2 dependency to version 2.9.11
-* Added command line parameter to print debug to standard out (-ds or --debugToScreen)
+For All Platforms
+* Updated DISA STIG SCAP content
+* Added option to allow automatically whitelisting SCC for scanning STIG compliant RHEL8 via SSH
+* Added command line --ssh to start SSH based UNIX/Cisco scans (although GUI is still requires for host/credential management)
+* Improved command line parameters to have human readable aliases
+* Improved support for OCIL questionnaires in preparation for future usage
+* Improved support for XCCDF Tailoring, as the replacement for Deviations and the Unlocker
+* Numerous internal changes in preparation for SCAP 1.3 independent validation
 
 For Windows
-* Updated Windows OU and Host File Creation with OU to default to no OU's selected vs all
-* Updated cscc.exe to return '0' as the 'successful' return code
+* Added ability to run SCC as a non-administrator to perform SSH UNIX and Cisco based scans
 
-For UNIX/Linux
-* Updated --setOpt, --getOpt and --listOpt to not perform a scan (configuration only parameters) on UNIX systems
-* Updated SCC's internal libssh2 on RHEL6 x64 and Ubuntu 16 x64 to current version 1.9.0
-* Fix "Argument Too Long" Error on Solaris with ENV variable > 512 characters
+For all UNIX
+* Updated installations to be smaller in size and quicker startup times
+
+For Linux
+* Added support for arm64 based Debian/Ubuntu
+* Added support for aarch64 based RHEL/Oracle linux
 
 For Mac OS X
-* Updated NIST SCAP content for Catalina and Big Sur
-* Updated SCC's internal libssh2 on MacOS to current version 1.9.0
+* Updated NIST developed SCAP content for Mac OS X 10.15, 11, 12
 
 </releaseInfo>
 	<url>https://public.cyber.mil/stigs/scap/</url>
