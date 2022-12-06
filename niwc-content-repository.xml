@@ -1,0 +1,766 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<content-repository style="0.1">
+      <repository-id>niwc-stig-repo</repository-id>
+      <repository-publisher>NIWC</repository-publisher>
+      <last-updated>2022-12-02T15:32:19</last-updated>
+      <license>Open</license>
+      <contents>
+            <scap-content>
+                  <content-id>U_Adobe_Acrobat_Reader_DC_Continuous_V2R2_STIG_SCAP_1-2_Benchmark-enhanced.zip</content-id>
+                  <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2022/12/U_Adobe_Acrobat_Reader_DC_Continuous_V2R2_STIG_SCAP_1-2_Benchmark-enhanced.zip</location>
+                  <checksum style="SHA512">ff5fb1cc12e2e01888bbff8baf7bc23cab22ca2b15237eb5c33f38d6f95eb021bbef9041b5bc01aa1b6a10b33fad695f0799cb76219a8e890874e1bebfaeb471</checksum>
+                  <benchmarks>
+                        <benchmark>
+                              <benchmark-id>xccdf_mil.disa.stig_benchmark_Adobe_Acrobat_Reader_DC_Continuous_Track_STIG</benchmark-id>
+                              <title>Adobe Acrobat Reader DC Continuous Track STIG SCAP Benchmark - NIWC Enhanced with Manual Questions</title>
+                              <version>002.002</version>
+                              <style>SCAP_1.2</style>
+                              <status>accepted</status>
+                              <status-date>2021-06-22</status-date>
+                              <creator>DISA</creator>
+                              <publisher>DISA</publisher>
+                              <contributor>DISA</contributor>
+                              <source>STIG.DOD.MIL</source>
+                        </benchmark>
+                  </benchmarks>
+                  <platforms>
+                        <platform>
+                              <platform-id style="cpe">cpe:/a:adobe:acrobat_reader_dc:::~~continuous~windows~~</platform-id>
+                        </platform>
+                  </platforms>
+            </scap-content>
+            <scap-content>
+                  <content-id>U_CAN_Ubuntu_16-04_LTS_V2R3_STIG_SCAP_1-2_Benchmark-enhanced.zip</content-id>
+                  <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2022/12/U_CAN_Ubuntu_16-04_LTS_V2R3_STIG_SCAP_1-2_Benchmark-enhanced.zip</location>
+                  <checksum style="SHA512">d60fc9ae74c6fb514c4cffb1d927fe00e1d4c5af5b1e32084627bff876b18ad7431fd23c7e8e578abe7ef4bdc624cf6741edc48f0a10e95f4662a22b816ad86f</checksum>
+                  <benchmarks>
+                        <benchmark>
+                              <benchmark-id>xccdf_mil.disa.stig_benchmark_Canonical_Ubuntu_16-04_LTS</benchmark-id>
+                              <title>Canonical Ubuntu 16.04 LTS Security Technical Implementation Guide - NIWC Enhanced with Manual Questions</title>
+                              <version>002.003</version>
+                              <style>SCAP_1.2</style>
+                              <status>accepted</status>
+                              <status-date>2021-03-10</status-date>
+                              <creator>DISA</creator>
+                              <publisher>DISA</publisher>
+                              <contributor>DISA</contributor>
+                              <source>STIG.DOD.MIL</source>
+                        </benchmark>
+                  </benchmarks>
+                  <platforms>
+                        <platform>
+                              <platform-id style="cpe">cpe:/o:canonical:ubuntu_linux:16.04</platform-id>
+                        </platform>
+                  </platforms>
+            </scap-content>
+            <scap-content>
+                  <content-id>U_CAN_Ubuntu_18-04_V2R7_STIG_SCAP_1-2_Benchmark-enhanced.zip</content-id>
+                  <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2022/12/U_CAN_Ubuntu_18-04_V2R7_STIG_SCAP_1-2_Benchmark-enhanced.zip</location>
+                  <checksum style="SHA512">32265c6524da7abfc703727391f29592e44a4202508c6ec55b5fde4403de52502f8fa26631409d84af0435eeb7d71977b45aa1e7ee9069d7fd854b1dd073313d</checksum>
+                  <benchmarks>
+                        <benchmark>
+                              <benchmark-id>xccdf_mil.disa.stig_benchmark_CAN_Ubuntu_18-04_STIG</benchmark-id>
+                              <title>Canonical Ubuntu 18.04 LTS Security Technical Implementation Guide - NIWC Enhanced with Manual Questions</title>
+                              <version>002.007</version>
+                              <style>SCAP_1.2</style>
+                              <status>accepted</status>
+                              <status-date>2022-06-06</status-date>
+                              <creator>DISA</creator>
+                              <publisher>DISA</publisher>
+                              <contributor>DISA</contributor>
+                              <source>STIG.DOD.MIL</source>
+                        </benchmark>
+                  </benchmarks>
+                  <platforms>
+                        <platform>
+                              <platform-id style="cpe">cpe:/o:canonical:ubuntu_linux:18.04</platform-id>
+                        </platform>
+                  </platforms>
+            </scap-content>
+            <scap-content>
+                  <content-id>U_CAN_Ubuntu_20-04_LTS_V1R4_STIG_SCAP_1-2_Benchmark-enhanced.zip</content-id>
+                  <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2022/12/U_CAN_Ubuntu_20-04_LTS_V1R4_STIG_SCAP_1-2_Benchmark-enhanced.zip</location>
+                  <checksum style="SHA512">cd7c20e190136a61949b6048b821a509085f34476199a98fc220af22b2d681cb91330d82850d991e9af16f8d52e2d3538936a434fbe16d8022ab7feeca027261</checksum>
+                  <benchmarks>
+                        <benchmark>
+                              <benchmark-id>xccdf_mil.disa.stig_benchmark_Canonical_Ubuntu_20-04_LTS_STIG</benchmark-id>
+                              <title>Canonical Ubuntu 20.04 LTS STIG SCAP Benchmark - NIWC Enhanced with Manual Questions</title>
+                              <version>001.004</version>
+                              <style>SCAP_1.2</style>
+                              <status>accepted</status>
+                              <status-date>2022-09-07</status-date>
+                              <creator>DISA</creator>
+                              <publisher>DISA</publisher>
+                              <contributor>DISA</contributor>
+                              <source>STIG.DOD.MIL</source>
+                        </benchmark>
+                  </benchmarks>
+                  <platforms>
+                        <platform>
+                              <platform-id style="cpe">cpe:/o:canonical:ubuntu_linux:20.04</platform-id>
+                        </platform>
+                  </platforms>
+            </scap-content>
+            <scap-content>
+                  <content-id>U_Cisco_IOS-XE_Router_NDM_V1R5_STIG_SCAP_1-3_Benchmark-enhanced.zip</content-id>
+                  <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2022/12/U_Cisco_IOS-XE_Router_NDM_V1R5_STIG_SCAP_1-3_Benchmark-enhanced.zip</location>
+                  <checksum style="SHA512">c6a3a37083cc2962de1ec8ea369647a8b221450b045c64d9ce7d671eedc1adeb03c9182c901322823f84850b7a541b99ba05849877bedebb192f767dea95a59a</checksum>
+                  <benchmarks>
+                        <benchmark>
+                              <benchmark-id>xccdf_mil.disa.stig_benchmark_Cisco_IOS-XE_Router_NDM_STIG</benchmark-id>
+                              <title>Cisco IOS XE Router NDM STIG SCAP Benchmark - NIWC Enhanced with Manual Questions</title>
+                              <version>001.005</version>
+                              <style>SCAP_1.3</style>
+                              <status>accepted</status>
+                              <status-date>2022-09-15</status-date>
+                              <creator>DISA</creator>
+                              <publisher>DISA</publisher>
+                              <contributor>DISA</contributor>
+                              <source>STIG.DOD.MIL</source>
+                        </benchmark>
+                  </benchmarks>
+                  <platforms>
+                        <platform>
+                              <platform-id style="cpe">cpe:/o:cisco:ios_xe:-</platform-id>
+                        </platform>
+                  </platforms>
+            </scap-content>
+            <scap-content>
+                  <content-id>U_Cisco_IOS-XE_Router_RTR_V1R2_STIG_SCAP_1-3_Benchmark-enhanced.zip</content-id>
+                  <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2022/12/U_Cisco_IOS-XE_Router_RTR_V1R2_STIG_SCAP_1-3_Benchmark-enhanced.zip</location>
+                  <checksum style="SHA512">04e09ed1ccc2aabf4edca6718a69626a7621adf27442b68d4ecf18979b20d61cb16d86f439e046f33d6cdde209e2e9cdf5f65256ceea04d33f6736ef2443f461</checksum>
+                  <benchmarks>
+                        <benchmark>
+                              <benchmark-id>xccdf_mil.disa.stig_benchmark_Cisco_IOS-XE_Router_RTR_STIG</benchmark-id>
+                              <title>Cisco IOS XE Router RTR STIG SCAP Benchmark - NIWC Enhanced with Manual Questions</title>
+                              <version>001.002</version>
+                              <style>SCAP_1.3</style>
+                              <status>accepted</status>
+                              <status-date>2022-09-14</status-date>
+                              <creator>DISA</creator>
+                              <publisher>DISA</publisher>
+                              <contributor>DISA</contributor>
+                              <source>STIG.DOD.MIL</source>
+                        </benchmark>
+                  </benchmarks>
+                  <platforms>
+                        <platform>
+                              <platform-id style="cpe">cpe:/o:cisco:ios_xe:-</platform-id>
+                        </platform>
+                  </platforms>
+            </scap-content>
+            <scap-content>
+                  <content-id>U_Google_Chrome_V2R7_STIG_SCAP_1-2_Benchmark-enhanced.zip</content-id>
+                  <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2022/12/U_Google_Chrome_V2R7_STIG_SCAP_1-2_Benchmark-enhanced.zip</location>
+                  <checksum style="SHA512">53b4638b5e7ed45ffd6a153e0b9f4a858951726d9ed0e236dff0f38c52ef5298a4039ceda7d743490cf8b03894532a8ca8d7c9d09221d22a42a056025573e590</checksum>
+                  <benchmarks>
+                        <benchmark>
+                              <benchmark-id>xccdf_mil.disa.stig_benchmark_Google_Chrome_Current_Windows</benchmark-id>
+                              <title>Google Chrome Current Windows STIG SCAP Benchmark - NIWC Enhanced with Manual Questions</title>
+                              <version>002.007</version>
+                              <style>SCAP_1.2</style>
+                              <status>accepted</status>
+                              <status-date>2022-09-09</status-date>
+                              <creator>DISA</creator>
+                              <publisher>DISA</publisher>
+                              <contributor>DISA</contributor>
+                              <source>STIG.DOD.MIL</source>
+                        </benchmark>
+                  </benchmarks>
+                  <platforms>
+                        <platform>
+                              <platform-id style="cpe">cpe:/a:google:chrome</platform-id>
+                        </platform>
+                  </platforms>
+            </scap-content>
+            <scap-content>
+                  <content-id>U_MOZ_Firefox_Linux_V6R3_STIG_SCAP_1-2_Benchmark-enhanced.zip</content-id>
+                  <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2022/12/U_MOZ_Firefox_Linux_V6R3_STIG_SCAP_1-2_Benchmark-enhanced.zip</location>
+                  <checksum style="SHA512">57b193734982debf4ba027f86761f008d04d01959e8f2ad15d0e8143fa9ecb3351cef9ffc9aa01c1c615442dfa01e510693c6cb2d400f9827f14047e1f194a98</checksum>
+                  <benchmarks>
+                        <benchmark>
+                              <benchmark-id>xccdf_mil.disa.stig_benchmark_MOZ_Firefox_Linux</benchmark-id>
+                              <title>Mozilla Firefox for Linux STIG SCAP Benchmark - NIWC Enhanced with Manual Questions</title>
+                              <version>006.003</version>
+                              <style>SCAP_1.2</style>
+                              <status>accepted</status>
+                              <status-date>2022-09-09</status-date>
+                              <creator>DISA</creator>
+                              <publisher>DISA</publisher>
+                              <contributor>DISA</contributor>
+                              <source>STIG.DOD.MIL</source>
+                        </benchmark>
+                  </benchmarks>
+                  <platforms>
+                        <platform>
+                              <platform-id style="cpe">cpe:/a:mozilla:firefox:::~~~linux~~</platform-id>
+                        </platform>
+                  </platforms>
+            </scap-content>
+            <scap-content>
+                  <content-id>U_MOZ_Firefox_Windows_V6R3_STIG_SCAP_1-2_Benchmark-enhanced.zip</content-id>
+                  <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2022/12/U_MOZ_Firefox_Windows_V6R3_STIG_SCAP_1-2_Benchmark-enhanced.zip</location>
+                  <checksum style="SHA512">4afa76075b2c15726e23d56ae6151cf7afd234c925c5c1aa12a42c5e674568ea36aabfdc1790fd105258cf5ae18aea348b684a6832c25ce430b41fe2fc58eee6</checksum>
+                  <benchmarks>
+                        <benchmark>
+                              <benchmark-id>xccdf_mil.disa.stig_benchmark_MOZ_Firefox_Windows</benchmark-id>
+                              <title>Mozilla Firefox for Linux STIG SCAP Benchmark - NIWC Enhanced with Manual Questions</title>
+                              <version>006.003</version>
+                              <style>SCAP_1.2</style>
+                              <status>accepted</status>
+                              <status-date>2022-09-09</status-date>
+                              <creator>DISA</creator>
+                              <publisher>DISA</publisher>
+                              <contributor>DISA</contributor>
+                              <source>STIG.DOD.MIL</source>
+                        </benchmark>
+                  </benchmarks>
+                  <platforms>
+                        <platform>
+                              <platform-id style="cpe">cpe:/a:mozilla:firefox:::~~~windows~~</platform-id>
+                        </platform>
+                  </platforms>
+            </scap-content>
+            <scap-content>
+                  <content-id>U_MS_DotNet_Framework_4-0_V2R1_STIG_SCAP_1-2_Benchmark-enhanced.zip</content-id>
+                  <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2022/12/U_MS_DotNet_Framework_4-0_V2R1_STIG_SCAP_1-2_Benchmark-enhanced.zip</location>
+                  <checksum style="SHA512">3b0fd43e4467e74a0c0a4a21d7f6b1941c11cd598cfca52a001966a7b06b140f47da4b21418353d32681cf1ffce2de667773f50805717c99b7120b08224467a4</checksum>
+                  <benchmarks>
+                        <benchmark>
+                              <benchmark-id>xccdf_mil.disa.stig_benchmark_MS_Dot_Net_Framework</benchmark-id>
+                              <title>Microsoft DotNet Framework 4.0 Security Technical Implementation Guide - NIWC Enhanced with Manual Questions</title>
+                              <version>002.001</version>
+                              <style>SCAP_1.2</style>
+                              <status>accepted</status>
+                              <status-date>2020-12-11</status-date>
+                              <creator>DISA</creator>
+                              <publisher>DISA</publisher>
+                              <contributor>DISA</contributor>
+                              <source>STIG.DOD.MIL</source>
+                        </benchmark>
+                  </benchmarks>
+                  <platforms>
+                        <platform>
+                              <platform-id style="cpe">cpe:/a:microsoft:.net_framework:4.0</platform-id>
+                        </platform>
+                  </platforms>
+            </scap-content>
+            <scap-content>
+                  <content-id>U_MS_Edge_V1R2_STIG_SCAP_1-2_Benchmark-enhanced.zip</content-id>
+                  <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2022/12/U_MS_Edge_V1R2_STIG_SCAP_1-2_Benchmark-enhanced.zip</location>
+                  <checksum style="SHA512">8db063eb85a10fbf9d5fb129556192b9581df8c8cbf950bcef03952ec10819252ec13f807818da7c0601a2743b669512a3cdb6b4c3ae0f6033a2f8bde2904a10</checksum>
+                  <benchmarks>
+                        <benchmark>
+                              <benchmark-id>xccdf_mil.disa.stig_benchmark_MS_Edge_STIG</benchmark-id>
+                              <title>Microsoft Edge STIG SCAP Benchmark - NIWC Enhanced with Manual Questions</title>
+                              <version>001.002</version>
+                              <style>SCAP_1.2</style>
+                              <status>accepted</status>
+                              <status-date>2022-09-09</status-date>
+                              <creator>DISA</creator>
+                              <publisher>DISA</publisher>
+                              <contributor>DISA</contributor>
+                              <source>STIG.DOD.MIL</source>
+                        </benchmark>
+                  </benchmarks>
+                  <platforms>
+                        <platform>
+                              <platform-id style="cpe">cpe:/a:microsoft:edge</platform-id>
+                        </platform>
+                  </platforms>
+            </scap-content>
+            <scap-content>
+                  <content-id>U_MS_IE11_V2R3_STIG_SCAP_1-2_Benchmark-enhanced.zip</content-id>
+                  <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2022/12/U_MS_IE11_V2R3_STIG_SCAP_1-2_Benchmark-enhanced.zip</location>
+                  <checksum style="SHA512">6c0127da3f3f61de708cd0641ba717535c7c9f37f169ae7a55501fcebbb50f46f78b7666d30b79321936fa14e28a86891d4ec7aeb6a0b908b80b5ae7e7bc23de</checksum>
+                  <benchmarks>
+                        <benchmark>
+                              <benchmark-id>xccdf_mil.disa.stig_benchmark_IE_11_STIG</benchmark-id>
+                              <title>Microsoft Internet Explorer 11 STIG SCAP Benchmark - NIWC Enhanced with Manual Questions</title>
+                              <version>002.003</version>
+                              <style>SCAP_1.2</style>
+                              <status>accepted</status>
+                              <status-date>2022-09-12</status-date>
+                              <creator>DISA</creator>
+                              <publisher>DISA</publisher>
+                              <contributor>DISA</contributor>
+                              <source>STIG.DOD.MIL</source>
+                        </benchmark>
+                  </benchmarks>
+                  <platforms>
+                        <platform>
+                              <platform-id style="cpe">cpe:/a:microsoft:internet_explorer:11</platform-id>
+                        </platform>
+                  </platforms>
+            </scap-content>
+            <scap-content>
+                  <content-id>U_MS_Windows_10_V2R6_STIG_SCAP_1-2_Benchmark-enhanced.zip</content-id>
+                  <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2022/12/U_MS_Windows_10_V2R6_STIG_SCAP_1-2_Benchmark-enhanced.zip</location>
+                  <checksum style="SHA512">fb01186a05c8521bce899cea98af64d656040f45ded0150dd484ade2e99402a0a416235f282dbb82d0563b76738c8f7eae9227f86a0b4e177c1d7d459c8751e1</checksum>
+                  <benchmarks>
+                        <benchmark>
+                              <benchmark-id>xccdf_mil.disa.stig_benchmark_MS_Windows_10_STIG</benchmark-id>
+                              <title>Microsoft Windows 10 STIG SCAP Benchmark - NIWC Enhanced with Manual Questions</title>
+                              <version>002.006</version>
+                              <style>SCAP_1.2</style>
+                              <status>accepted</status>
+                              <status-date>2022-08-29</status-date>
+                              <creator>DISA</creator>
+                              <publisher>DISA</publisher>
+                              <contributor>DISA</contributor>
+                              <source>STIG.DOD.MIL</source>
+                        </benchmark>
+                  </benchmarks>
+                  <platforms>
+                        <platform>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_10</platform-id>
+                        </platform>
+                  </platforms>
+            </scap-content>
+            <scap-content>
+                  <content-id>U_MS_Windows_11_V1R1_STIG_SCAP_1-2_Benchmark-enhanced.zip</content-id>
+                  <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2022/12/U_MS_Windows_11_V1R1_STIG_SCAP_1-2_Benchmark-enhanced.zip</location>
+                  <checksum style="SHA512">387b9bca026e6b62df32f68516fc08db1b9b2e8f95f65a19cd203ce8f035286a5b486bcc3e241445efeb475e3a746274f513d114d55bc8bf171c64cf939c8a7a</checksum>
+                  <benchmarks>
+                        <benchmark>
+                              <benchmark-id>xccdf_mil.disa.stig_benchmark_Microsoft_Windows_11_STIG</benchmark-id>
+                              <title>Microsoft Windows 11 STIG SCAP Benchmark - NIWC Enhanced with Manual Questions</title>
+                              <version>001.001</version>
+                              <style>SCAP_1.2</style>
+                              <status>accepted</status>
+                              <status-date>2022-08-31</status-date>
+                              <creator>DISA</creator>
+                              <publisher>DISA</publisher>
+                              <contributor>DISA</contributor>
+                              <source>STIG.DOD.MIL</source>
+                        </benchmark>
+                  </benchmarks>
+                  <platforms>
+                        <platform>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_11</platform-id>
+                        </platform>
+                  </platforms>
+            </scap-content>
+            <scap-content>
+                  <content-id>U_MS_Windows_2012_and_2012_R2_DC_V3R4_STIG_SCAP_1-2_Benchmark-enhanced.zip</content-id>
+                  <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2022/12/U_MS_Windows_2012_and_2012_R2_DC_V3R4_STIG_SCAP_1-2_Benchmark-enhanced.zip</location>
+                  <checksum style="SHA512">76aea9b131869b0e35c29e351b65bf4dc03b77ad6824f74a24e53c05062978d67f156bf5298fbe5947b07285f8a062c6aa4d4947c6e870bdb37f2d064fcfd6f2</checksum>
+                  <benchmarks>
+                        <benchmark>
+                              <benchmark-id>xccdf_mil.disa.stig_benchmark_Windows_2012_DC_STIG</benchmark-id>
+                              <title>Microsoft Windows Server 2012/2012 R2 Domain Controller STIG SCAP Benchmark - NIWC Enhanced with Manual Questions</title>
+                              <version>003.004</version>
+                              <style>SCAP_1.2</style>
+                              <status>accepted</status>
+                              <status-date>2022-08-31</status-date>
+                              <creator>DISA</creator>
+                              <publisher>DISA</publisher>
+                              <contributor>DISA</contributor>
+                              <source>STIG.DOD.MIL</source>
+                        </benchmark>
+                  </benchmarks>
+                  <platforms>
+                        <platform>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2012:r2</platform-id>
+                        </platform>
+                        <platform>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2012:-</platform-id>
+                        </platform>
+                  </platforms>
+            </scap-content>
+            <scap-content>
+                  <content-id>U_MS_Windows_2012_and_2012_R2_MS_V3R4_STIG_SCAP_1-2_Benchmark-enhanced.zip</content-id>
+                  <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2022/12/U_MS_Windows_2012_and_2012_R2_MS_V3R4_STIG_SCAP_1-2_Benchmark-enhanced.zip</location>
+                  <checksum style="SHA512">d9ff6661dc81a8a42e405a2bf3d3663b4f2e69299156639e22bcc97f52ebed65a0cbed7c5a63b18330972d8e92db94463f237a4447374d5188adac58119584a0</checksum>
+                  <benchmarks>
+                        <benchmark>
+                              <benchmark-id>xccdf_mil.disa.stig_benchmark_Windows_2012_MS_STIG</benchmark-id>
+                              <title>Microsoft Windows Server 2012/2012 R2 Member Server STIG SCAP Benchmark - NIWC Enhanced with Manual Questions</title>
+                              <version>003.004</version>
+                              <style>SCAP_1.2</style>
+                              <status>accepted</status>
+                              <status-date>2022-09-06</status-date>
+                              <creator>DISA</creator>
+                              <publisher>DISA</publisher>
+                              <contributor>DISA</contributor>
+                              <source>STIG.DOD.MIL</source>
+                        </benchmark>
+                  </benchmarks>
+                  <platforms>
+                        <platform>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2012:-</platform-id>
+                        </platform>
+                        <platform>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2012:r2</platform-id>
+                        </platform>
+                  </platforms>
+            </scap-content>
+            <scap-content>
+                  <content-id>U_MS_Windows_Firewall_V2R1_STIG_SCAP_1-2_Benchmark-enhanced.zip</content-id>
+                  <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2022/12/U_MS_Windows_Firewall_V2R1_STIG_SCAP_1-2_Benchmark-enhanced.zip</location>
+                  <checksum style="SHA512">b5e457d62dd81f9c6b2c4650c8b72b10fe9f6fb963627c069ea7773ae54ce2ffabebb70b336909a492b228607768db773ea7cf2b1d2a06c77c95fb59b7e9234c</checksum>
+                  <benchmarks>
+                        <benchmark>
+                              <benchmark-id>xccdf_mil.disa.stig_benchmark_Windows_Firewall_with_Advanced_Security</benchmark-id>
+                              <title>Windows Firewall with Advanced Security Security Technical Implementation Guide - NIWC Enhanced with Manual Questions</title>
+                              <version>002.001</version>
+                              <style>SCAP_1.2</style>
+                              <status>accepted</status>
+                              <status-date>2021-10-15</status-date>
+                              <creator>DISA</creator>
+                              <publisher>DISA</publisher>
+                              <contributor>DISA</contributor>
+                              <source>STIG.DOD.MIL</source>
+                        </benchmark>
+                  </benchmarks>
+                  <platforms>
+                        <platform>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2016:-</platform-id>
+                        </platform>
+                        <platform>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_8</platform-id>
+                        </platform>
+                        <platform>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2019:-</platform-id>
+                        </platform>
+                        <platform>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_vista</platform-id>
+                        </platform>
+                        <platform>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_8.1</platform-id>
+                        </platform>
+                        <platform>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2008</platform-id>
+                        </platform>
+                        <platform>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2012:-</platform-id>
+                        </platform>
+                        <platform>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_10</platform-id>
+                        </platform>
+                        <platform>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2008:r2</platform-id>
+                        </platform>
+                        <platform>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_7</platform-id>
+                        </platform>
+                        <platform>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2012:r2</platform-id>
+                        </platform>
+                  </platforms>
+            </scap-content>
+            <scap-content>
+                  <content-id>U_MS_Windows_Server_2016_V2R3_STIG_SCAP_1-2_Benchmark-enhanced.zip</content-id>
+                  <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2022/12/U_MS_Windows_Server_2016_V2R3_STIG_SCAP_1-2_Benchmark-enhanced.zip</location>
+                  <checksum style="SHA512">09d2b3805999f808d6ac849722dad8ccfa0383e23739e8e35c4fed229ae1a1d5499d66390fb7fa93cc91f89d45bf66b8b3ebfa0071c52ed3067233ed93572bd3</checksum>
+                  <benchmarks>
+                        <benchmark>
+                              <benchmark-id>xccdf_mil.disa.stig_benchmark_Windows_Server_2016_STIG</benchmark-id>
+                              <title>Microsoft Windows Server 2016 STIG SCAP Benchmark - NIWC Enhanced with Manual Questions</title>
+                              <version>002.003</version>
+                              <style>SCAP_1.2</style>
+                              <status>accepted</status>
+                              <status-date>2022-09-06</status-date>
+                              <creator>DISA</creator>
+                              <publisher>DISA</publisher>
+                              <contributor>DISA</contributor>
+                              <source>STIG.DOD.MIL</source>
+                        </benchmark>
+                  </benchmarks>
+                  <platforms>
+                        <platform>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2016:-</platform-id>
+                        </platform>
+                  </platforms>
+            </scap-content>
+            <scap-content>
+                  <content-id>U_MS_Windows_Server_2019_V2R3_STIG_SCAP_1-2_Benchmark-enhanced.zip</content-id>
+                  <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2022/12/U_MS_Windows_Server_2019_V2R3_STIG_SCAP_1-2_Benchmark-enhanced.zip</location>
+                  <checksum style="SHA512">b892f286e201b62ea3f4ee1be26c129cfb6f053ac1214357a582df48474a13089e3048d4f8d9222d7b9eaa4c8ef343b9083c931a58b8d13a56edd1fc5543e6c0</checksum>
+                  <benchmarks>
+                        <benchmark>
+                              <benchmark-id>xccdf_mil.disa.stig_benchmark_Windows_Server_2019_STIG</benchmark-id>
+                              <title>Microsoft Windows Server 2019 STIG SCAP Benchmark - NIWC Enhanced with Manual Questions</title>
+                              <version>002.003</version>
+                              <style>SCAP_1.2</style>
+                              <status>accepted</status>
+                              <status-date>2022-09-06</status-date>
+                              <creator>DISA</creator>
+                              <publisher>DISA</publisher>
+                              <contributor>DISA</contributor>
+                              <source>STIG.DOD.MIL</source>
+                        </benchmark>
+                  </benchmarks>
+                  <platforms>
+                        <platform>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2019:-</platform-id>
+                        </platform>
+                  </platforms>
+            </scap-content>
+            <scap-content>
+                  <content-id>U_Oracle_Linux_7_V2R9_STIG_SCAP_1-2_Benchmark-enhanced.zip</content-id>
+                  <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2022/12/U_Oracle_Linux_7_V2R9_STIG_SCAP_1-2_Benchmark-enhanced.zip</location>
+                  <checksum style="SHA512">6e1419e232286e44801124d63234691e159b69c7207b278f1fdfb5347370666ee8ddfd9617e0bf13879bcc74f80e1f1d4ee402bd3ed8863a3762289a1573678b</checksum>
+                  <benchmarks>
+                        <benchmark>
+                              <benchmark-id>xccdf_mil.disa.stig_benchmark_Oracle_Linux_7_STIG</benchmark-id>
+                              <title>Oracle Linux 7 STIG SCAP Benchmark - NIWC Enhanced with Manual Questions</title>
+                              <version>002.009</version>
+                              <style>SCAP_1.2</style>
+                              <status>accepted</status>
+                              <status-date>2022-09-07</status-date>
+                              <creator>DISA</creator>
+                              <publisher>DISA</publisher>
+                              <contributor>DISA</contributor>
+                              <source>STIG.DOD.MIL</source>
+                        </benchmark>
+                  </benchmarks>
+                  <platforms>
+                        <platform>
+                              <platform-id style="cpe">cpe:/o:oracle:linux:7</platform-id>
+                        </platform>
+                  </platforms>
+            </scap-content>
+            <scap-content>
+                  <content-id>U_Oracle_Linux_8_V1R3_STIG_SCAP_1-2_Benchmark-enhanced.zip</content-id>
+                  <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2022/12/U_Oracle_Linux_8_V1R3_STIG_SCAP_1-2_Benchmark-enhanced.zip</location>
+                  <checksum style="SHA512">a6b4c8296985b747b59a9dabc36b030f8368bf9c97e68a86cc66f021d3fdab4267bd009cd374ef8747d4f67c91630f2867990c9b7841bae64f7c48d822aae123</checksum>
+                  <benchmarks>
+                        <benchmark>
+                              <benchmark-id>xccdf_mil.disa.stig_benchmark_Oracle_Linux_8_STIG</benchmark-id>
+                              <title>Oracle Linux 8 STIG SCAP Benchmark - NIWC Enhanced with Manual Questions</title>
+                              <version>001.003</version>
+                              <style>SCAP_1.2</style>
+                              <status>accepted</status>
+                              <status-date>2022-09-07</status-date>
+                              <creator>DISA</creator>
+                              <publisher>DISA</publisher>
+                              <contributor>DISA</contributor>
+                              <source>STIG.DOD.MIL</source>
+                        </benchmark>
+                  </benchmarks>
+                  <platforms>
+                        <platform>
+                              <platform-id style="cpe">cpe:/o:oracle:linux:8</platform-id>
+                        </platform>
+                  </platforms>
+            </scap-content>
+            <scap-content>
+                  <content-id>U_RHEL_6_V2R2_STIG_SCAP_1-2_Benchmark-enhanced.zip</content-id>
+                  <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2022/12/U_RHEL_6_V2R2_STIG_SCAP_1-2_Benchmark-enhanced.zip</location>
+                  <checksum style="SHA512">66822ff4df7e8b38b0c3395ca6c8a0e6b899c2f1a233313e267bb2e7eac82d5216a6bbb3907f034c74eb3b7c89a18dc5c281faae5c3b641605b6d0cf371d9903</checksum>
+                  <benchmarks>
+                        <benchmark>
+                              <benchmark-id>xccdf_mil.disa.stig_benchmark_RHEL_6_STIG</benchmark-id>
+                              <title>Red Hat Enterprise Linux 6 Security Technical Implementation Guide - NIWC Enhanced with Manual Questions</title>
+                              <version>002.002</version>
+                              <style>SCAP_1.2</style>
+                              <status>accepted</status>
+                              <status-date>2020-12-04</status-date>
+                              <creator>DISA</creator>
+                              <publisher>DISA</publisher>
+                              <contributor>DISA</contributor>
+                              <source>STIG.DOD.MIL</source>
+                        </benchmark>
+                  </benchmarks>
+                  <platforms>
+                        <platform>
+                              <platform-id style="cpe">cpe:/o:redhat:enterprise_linux:6</platform-id>
+                        </platform>
+                  </platforms>
+            </scap-content>
+            <scap-content>
+                  <content-id>U_RHEL_7_V3R9_STIG_SCAP_1-2_Benchmark-enhanced.zip</content-id>
+                  <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2022/12/U_RHEL_7_V3R9_STIG_SCAP_1-2_Benchmark-enhanced.zip</location>
+                  <checksum style="SHA512">72f4286a46bee27eb45da72d16b97a3d4eb83b4400c74de5fcf56f41769cb791340c5af2683dddf1bd8bf422b9493e846be58c658bace884765f515636e657f7</checksum>
+                  <benchmarks>
+                        <benchmark>
+                              <benchmark-id>xccdf_mil.disa.stig_benchmark_RHEL_7_STIG</benchmark-id>
+                              <title>Red Hat Enterprise Linux 7 STIG SCAP Benchmark - NIWC Enhanced with Manual Questions</title>
+                              <version>003.009</version>
+                              <style>SCAP_1.2</style>
+                              <status>accepted</status>
+                              <status-date>2022-09-12</status-date>
+                              <creator>DISA</creator>
+                              <publisher>DISA</publisher>
+                              <contributor>DISA</contributor>
+                              <source>STIG.DOD.MIL</source>
+                        </benchmark>
+                  </benchmarks>
+                  <platforms>
+                        <platform>
+                              <platform-id style="cpe">cpe:/o:redhat:enterprise_linux:7</platform-id>
+                        </platform>
+                  </platforms>
+            </scap-content>
+            <scap-content>
+                  <content-id>U_RHEL_8_V1R7_STIG_SCAP_1-2_Benchmark-enhanced.zip</content-id>
+                  <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2022/12/U_RHEL_8_V1R7_STIG_SCAP_1-2_Benchmark-enhanced.zip</location>
+                  <checksum style="SHA512">3ea5faa110be794de71c4b2406a10bb819e6e0a974bce4b9b8d21c5e34498a5a6d1a1b291a23879843a007fe07aa9ad75a8d1f7dd288f4acc63ecba2780d71ea</checksum>
+                  <benchmarks>
+                        <benchmark>
+                              <benchmark-id>xccdf_mil.disa.stig_benchmark_RHEL_8_STIG</benchmark-id>
+                              <title>Red Hat Enterprise Linux 8 STIG SCAP Benchmark - NIWC Enhanced with Manual Questions</title>
+                              <version>001.007</version>
+                              <style>SCAP_1.2</style>
+                              <status>accepted</status>
+                              <status-date>2022-09-07</status-date>
+                              <creator>DISA</creator>
+                              <publisher>DISA</publisher>
+                              <contributor>DISA</contributor>
+                              <source>STIG.DOD.MIL</source>
+                        </benchmark>
+                  </benchmarks>
+                  <platforms>
+                        <platform>
+                              <platform-id style="cpe">cpe:/o:redhat:enterprise_linux:8</platform-id>
+                        </platform>
+                  </platforms>
+            </scap-content>
+            <scap-content>
+                  <content-id>U_SLES_12_V2R7_STIG_SCAP_1-2_Benchmark-enhanced.zip</content-id>
+                  <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2022/12/U_SLES_12_V2R7_STIG_SCAP_1-2_Benchmark-enhanced.zip</location>
+                  <checksum style="SHA512">62df099248748cbd10abc4318691337c37b52458064cd34bbb334f2cf59f3bc72b8518e0054e3ace151b92d0e89cde9ae6d70b7297805a8296c90f634b65f3d1</checksum>
+                  <benchmarks>
+                        <benchmark>
+                              <benchmark-id>xccdf_mil.disa.stig_benchmark_SLES_12_STIG</benchmark-id>
+                              <title>SLES 12 Security Technical Implementation Guide - NIWC Enhanced with Manual Questions</title>
+                              <version>002.007</version>
+                              <style>SCAP_1.2</style>
+                              <status>accepted</status>
+                              <status-date>2022-06-06</status-date>
+                              <creator>DISA</creator>
+                              <publisher>DISA</publisher>
+                              <contributor>DISA</contributor>
+                              <source>STIG.DOD.MIL</source>
+                        </benchmark>
+                  </benchmarks>
+                  <platforms>
+                        <platform>
+                              <platform-id style="cpe">cpe:/o:suse:suse_enterprise_linux_server:12</platform-id>
+                        </platform>
+                  </platforms>
+            </scap-content>
+            <scap-content>
+                  <content-id>U_SLES_15_V1R2_STIG_SCAP_1-2_Benchmark-enhanced.zip</content-id>
+                  <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2022/12/U_SLES_15_V1R2_STIG_SCAP_1-2_Benchmark-enhanced.zip</location>
+                  <checksum style="SHA512">8ecf67c3a469af6d1621a084cf12afc17b2807d2f47210f1966cf85e103fb284dc2689c30bdbb718c545b6c969f1f7cc9f40c199f8a49e858388d0b42d0387eb</checksum>
+                  <benchmarks>
+                        <benchmark>
+                              <benchmark-id>xccdf_mil.disa.stig_benchmark_SLES_15_STIG</benchmark-id>
+                              <title>SUSE Linux Enterprise Server 15 Security Technical Implementation Guide - NIWC Enhanced with Manual Questions</title>
+                              <version>001.002</version>
+                              <style>SCAP_1.2</style>
+                              <status>accepted</status>
+                              <status-date>2022-06-06</status-date>
+                              <creator>DISA</creator>
+                              <publisher>DISA</publisher>
+                              <contributor>DISA</contributor>
+                              <source>STIG.DOD.MIL</source>
+                        </benchmark>
+                  </benchmarks>
+                  <platforms>
+                        <platform>
+                              <platform-id style="cpe">cpe:/o:suse:suse_enterprise_linux_server:15</platform-id>
+                        </platform>
+                  </platforms>
+            </scap-content>
+            <scap-content>
+                  <content-id>U_SOL_10_SPARC_V2R3_STIG_SCAP_1-2_Benchmark-enhanced.zip</content-id>
+                  <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2022/12/U_SOL_10_SPARC_V2R3_STIG_SCAP_1-2_Benchmark-enhanced.zip</location>
+                  <checksum style="SHA512">77c89b46d4639c5aab9ec6266cb7bffe867ac05cc4f8128f50af3b263b3f8c07c0bfc95534e99c117c3f9e9f5aa335dfae4b3f29fd4f622832ae5f743c92dde9</checksum>
+                  <benchmarks>
+                        <benchmark>
+                              <benchmark-id>xccdf_mil.disa.stig_benchmark_Solaris_10_SPARC_STIG</benchmark-id>
+                              <title>Solaris 10 SPARC STIG SCAP Benchmark - NIWC Enhanced with Manual Questions</title>
+                              <version>002.003</version>
+                              <style>SCAP_1.2</style>
+                              <status>accepted</status>
+                              <status-date>2022-09-07</status-date>
+                              <creator>DISA</creator>
+                              <publisher>DISA</publisher>
+                              <contributor>DISA</contributor>
+                              <source>STIG.DOD.MIL</source>
+                        </benchmark>
+                  </benchmarks>
+                  <platforms>
+                        <platform>
+                              <platform-id style="cpe">cpe:/o:sun:sunos:5.10:-:sparc</platform-id>
+                        </platform>
+                  </platforms>
+            </scap-content>
+            <scap-content>
+                  <content-id>U_SOL_10_X86_V2R3_STIG_SCAP_1-2_Benchmark-enhanced.zip</content-id>
+                  <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2022/12/U_SOL_10_X86_V2R3_STIG_SCAP_1-2_Benchmark-enhanced.zip</location>
+                  <checksum style="SHA512">086d381a7670b50d2fc9bfaf59b3023a6846e41fe72a74c1f80fc55475fbb5ab9e991df62c5b8d2a6ca3135853ac31bc35a92f4a03be1fcae595820c987cc555</checksum>
+                  <benchmarks>
+                        <benchmark>
+                              <benchmark-id>xccdf_mil.disa.stig_benchmark_Solaris_10_X86_STIG</benchmark-id>
+                              <title>Solaris 10 X86 STIG SCAP Benchmark - NIWC Enhanced with Manual Questions</title>
+                              <version>002.003</version>
+                              <style>SCAP_1.2</style>
+                              <status>accepted</status>
+                              <status-date>2022-09-07</status-date>
+                              <creator>DISA</creator>
+                              <publisher>DISA</publisher>
+                              <contributor>DISA</contributor>
+                              <source>STIG.DOD.MIL</source>
+                        </benchmark>
+                  </benchmarks>
+                  <platforms>
+                        <platform>
+                              <platform-id style="cpe">cpe:/o:sun:sunos:5.10:-:ix86</platform-id>
+                        </platform>
+                  </platforms>
+            </scap-content>
+            <scap-content>
+                  <content-id>U_SOL_11_SPARC_V2R3_STIG_SCAP_1-2_Benchmark-enhanced.zip</content-id>
+                  <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2022/12/U_SOL_11_SPARC_V2R3_STIG_SCAP_1-2_Benchmark-enhanced.zip</location>
+                  <checksum style="SHA512">ed3ebe1fb8cca99342e64f8a20a3291dacc176f9c15ac31c17f385138cccc190dca4066c24fd6a1630516e0a4d18bee6ae8978621a12ceae560a6e9997214cd3</checksum>
+                  <benchmarks>
+                        <benchmark>
+                              <benchmark-id>xccdf_mil.disa.stig_benchmark_Solaris_11_SPARC_STIG</benchmark-id>
+                              <title>Solaris 11 SPARC Security Technical Implementation Guide - NIWC Enhanced with Manual Questions</title>
+                              <version>002.003</version>
+                              <style>SCAP_1.2</style>
+                              <status>accepted</status>
+                              <status-date>2021-11-23</status-date>
+                              <creator>DISA</creator>
+                              <publisher>DISA</publisher>
+                              <contributor>DISA</contributor>
+                              <source>STIG.DOD.MIL</source>
+                        </benchmark>
+                  </benchmarks>
+                  <platforms>
+                        <platform>
+                              <platform-id style="cpe">cpe:/o:sun:sunos:5.11:-:~~~~sparc~</platform-id>
+                        </platform>
+                  </platforms>
+            </scap-content>
+            <scap-content>
+                  <content-id>U_SOL_11_X86_V2R3_STIG_SCAP_1-2_Benchmark-enhanced.zip</content-id>
+                  <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2022/12/U_SOL_11_X86_V2R3_STIG_SCAP_1-2_Benchmark-enhanced.zip</location>
+                  <checksum style="SHA512">b3eb2c8cb08032abe77929630394050da72827fea9c50bfdb8ff242052c6136cebe00f31a1ca0efecb3ff56a0d0661c122e2a79455c7d11b3eae979e2c5299b5</checksum>
+                  <benchmarks>
+                        <benchmark>
+                              <benchmark-id>xccdf_mil.disa.stig_benchmark_Solaris_11_X86_STIG</benchmark-id>
+                              <title>Solaris 11 X86 Security Technical Implementation Guide - NIWC Enhanced with Manual Questions</title>
+                              <version>002.003</version>
+                              <style>SCAP_1.2</style>
+                              <status>accepted</status>
+                              <status-date>2021-11-23</status-date>
+                              <creator>DISA</creator>
+                              <publisher>DISA</publisher>
+                              <contributor>DISA</contributor>
+                              <source>STIG.DOD.MIL</source>
+                        </benchmark>
+                  </benchmarks>
+                  <platforms>
+                        <platform>
+                              <platform-id style="cpe">cpe:/o:sun:sunos:5.11:-:~~~~x86~</platform-id>
+                        </platform>
+                  </platforms>
+            </scap-content>
+      </contents>
+</content-repository>
