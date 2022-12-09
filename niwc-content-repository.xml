@@ -3,13 +3,13 @@
 <content-repository style="0.1">
       <repository-id>niwc-stig-repo</repository-id>
       <repository-publisher>NIWC</repository-publisher>
-      <last-updated>2022-12-02T15:32:19</last-updated>
+      <last-updated>2022-12-08T09:30:14</last-updated>
       <license>Open</license>
       <contents>
             <scap-content>
                   <content-id>U_Adobe_Acrobat_Reader_DC_Continuous_V2R2_STIG_SCAP_1-2_Benchmark-enhanced.zip</content-id>
                   <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2022/12/U_Adobe_Acrobat_Reader_DC_Continuous_V2R2_STIG_SCAP_1-2_Benchmark-enhanced.zip</location>
-                  <checksum style="SHA512">ff5fb1cc12e2e01888bbff8baf7bc23cab22ca2b15237eb5c33f38d6f95eb021bbef9041b5bc01aa1b6a10b33fad695f0799cb76219a8e890874e1bebfaeb471</checksum>
+                  <checksum style="SHA512">6a8f8593d41c16807d483f272de24b5c7940348ce7ebf677928f4dadf887ac5247be8b996bdba74cf4a4b0ab32435e09b0e1aaa0d87820998ae5f15cf8a41276</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_Adobe_Acrobat_Reader_DC_Continuous_Track_STIG</benchmark-id>
@@ -33,7 +33,7 @@
             <scap-content>
                   <content-id>U_CAN_Ubuntu_16-04_LTS_V2R3_STIG_SCAP_1-2_Benchmark-enhanced.zip</content-id>
                   <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2022/12/U_CAN_Ubuntu_16-04_LTS_V2R3_STIG_SCAP_1-2_Benchmark-enhanced.zip</location>
-                  <checksum style="SHA512">d60fc9ae74c6fb514c4cffb1d927fe00e1d4c5af5b1e32084627bff876b18ad7431fd23c7e8e578abe7ef4bdc624cf6741edc48f0a10e95f4662a22b816ad86f</checksum>
+                  <checksum style="SHA512">b62f08effe357e9c5c910a499c0803f109c087811d425dc9d376078e2668e3e568040fb423a898c1bab261f73af90d3b0f98a56686ce82ee901678c5866244eb</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_Canonical_Ubuntu_16-04_LTS</benchmark-id>
@@ -57,7 +57,7 @@
             <scap-content>
                   <content-id>U_CAN_Ubuntu_18-04_V2R7_STIG_SCAP_1-2_Benchmark-enhanced.zip</content-id>
                   <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2022/12/U_CAN_Ubuntu_18-04_V2R7_STIG_SCAP_1-2_Benchmark-enhanced.zip</location>
-                  <checksum style="SHA512">32265c6524da7abfc703727391f29592e44a4202508c6ec55b5fde4403de52502f8fa26631409d84af0435eeb7d71977b45aa1e7ee9069d7fd854b1dd073313d</checksum>
+                  <checksum style="SHA512">989cd286a9d29270a32f3a2056e7c1ae3307a4882529e4aff828c2aa49ad85044e12206fcc9f22c47fc5a317468bdfa3a025054c976c73824cb6a0dffaee3eb9</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_CAN_Ubuntu_18-04_STIG</benchmark-id>
@@ -81,7 +81,7 @@
             <scap-content>
                   <content-id>U_CAN_Ubuntu_20-04_LTS_V1R4_STIG_SCAP_1-2_Benchmark-enhanced.zip</content-id>
                   <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2022/12/U_CAN_Ubuntu_20-04_LTS_V1R4_STIG_SCAP_1-2_Benchmark-enhanced.zip</location>
-                  <checksum style="SHA512">cd7c20e190136a61949b6048b821a509085f34476199a98fc220af22b2d681cb91330d82850d991e9af16f8d52e2d3538936a434fbe16d8022ab7feeca027261</checksum>
+                  <checksum style="SHA512">451d2fbfa60156bf77f13e4425e0952d1e731f50a3e966472a30e234ad55111018fdbf25cfe8aebe281b142c0dded1736d1b516f871d82bcfb4483e7ff9d87d7</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_Canonical_Ubuntu_20-04_LTS_STIG</benchmark-id>
@@ -105,7 +105,7 @@
             <scap-content>
                   <content-id>U_Cisco_IOS-XE_Router_NDM_V1R5_STIG_SCAP_1-3_Benchmark-enhanced.zip</content-id>
                   <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2022/12/U_Cisco_IOS-XE_Router_NDM_V1R5_STIG_SCAP_1-3_Benchmark-enhanced.zip</location>
-                  <checksum style="SHA512">c6a3a37083cc2962de1ec8ea369647a8b221450b045c64d9ce7d671eedc1adeb03c9182c901322823f84850b7a541b99ba05849877bedebb192f767dea95a59a</checksum>
+                  <checksum style="SHA512">eedfb0f843451eec7b0feffb3d0cbf42b51dddbcf85168ef382862d2e84840ffc04b40ef579461da27d7a3b2d2c64710472f0906a66131d807626e0fdd1bd332</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_Cisco_IOS-XE_Router_NDM_STIG</benchmark-id>
@@ -129,7 +129,7 @@
             <scap-content>
                   <content-id>U_Cisco_IOS-XE_Router_RTR_V1R2_STIG_SCAP_1-3_Benchmark-enhanced.zip</content-id>
                   <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2022/12/U_Cisco_IOS-XE_Router_RTR_V1R2_STIG_SCAP_1-3_Benchmark-enhanced.zip</location>
-                  <checksum style="SHA512">04e09ed1ccc2aabf4edca6718a69626a7621adf27442b68d4ecf18979b20d61cb16d86f439e046f33d6cdde209e2e9cdf5f65256ceea04d33f6736ef2443f461</checksum>
+                  <checksum style="SHA512">7b7d3d6f647ef9a12675fdb32f04fbf4f492e61a0ebd093ff33e3aebe3a0a3c8053ff1f5ed11932aee5d01550bb35c5db74cc55bac26399bc05df9f0ad81563d</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_Cisco_IOS-XE_Router_RTR_STIG</benchmark-id>
@@ -153,7 +153,7 @@
             <scap-content>
                   <content-id>U_Google_Chrome_V2R7_STIG_SCAP_1-2_Benchmark-enhanced.zip</content-id>
                   <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2022/12/U_Google_Chrome_V2R7_STIG_SCAP_1-2_Benchmark-enhanced.zip</location>
-                  <checksum style="SHA512">53b4638b5e7ed45ffd6a153e0b9f4a858951726d9ed0e236dff0f38c52ef5298a4039ceda7d743490cf8b03894532a8ca8d7c9d09221d22a42a056025573e590</checksum>
+                  <checksum style="SHA512">bafe76d841ea8356fe9f9a367a22f8722960efdd50759d34183912ae6fe14c975daf5c3b81b397bf1af61573a1cc57a77611802b584ae71530ff3780e81af701</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_Google_Chrome_Current_Windows</benchmark-id>
@@ -177,7 +177,7 @@
             <scap-content>
                   <content-id>U_MOZ_Firefox_Linux_V6R3_STIG_SCAP_1-2_Benchmark-enhanced.zip</content-id>
                   <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2022/12/U_MOZ_Firefox_Linux_V6R3_STIG_SCAP_1-2_Benchmark-enhanced.zip</location>
-                  <checksum style="SHA512">57b193734982debf4ba027f86761f008d04d01959e8f2ad15d0e8143fa9ecb3351cef9ffc9aa01c1c615442dfa01e510693c6cb2d400f9827f14047e1f194a98</checksum>
+                  <checksum style="SHA512">a67510cd84b18f23310e21eb007b6bf98133bc6936cf323ba6a84d9bc2227a0a88dc6faee90a3a2ce3e13159681e531fcf299f225f6cc9f5495880ee55dbb92f</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_MOZ_Firefox_Linux</benchmark-id>
@@ -201,7 +201,7 @@
             <scap-content>
                   <content-id>U_MOZ_Firefox_Windows_V6R3_STIG_SCAP_1-2_Benchmark-enhanced.zip</content-id>
                   <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2022/12/U_MOZ_Firefox_Windows_V6R3_STIG_SCAP_1-2_Benchmark-enhanced.zip</location>
-                  <checksum style="SHA512">4afa76075b2c15726e23d56ae6151cf7afd234c925c5c1aa12a42c5e674568ea36aabfdc1790fd105258cf5ae18aea348b684a6832c25ce430b41fe2fc58eee6</checksum>
+                  <checksum style="SHA512">772c2dd8f0f95abdb2cf3b75475305a55fc074ea680ece9c985146b76e6e6b1913a25ca2519da9920cf6f19854c0a6152f4831509794669bfdb1266dceaf1c7a</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_MOZ_Firefox_Windows</benchmark-id>
@@ -223,9 +223,33 @@
                   </platforms>
             </scap-content>
             <scap-content>
+                  <content-id>U_MS_Defender_Antivirus_V2R3_STIG_SCAP_1-2_Benchmark-enhanced.zip</content-id>
+                  <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2022/12/U_MS_Defender_Antivirus_V2R3_STIG_SCAP_1-2_Benchmark-enhanced.zip</location>
+                  <checksum style="SHA512">7d72c1e0b38cd8ab22af0dd81bea30ad24449050bb18af3ccff650c7dbf8938193751a963b2760936672296edf6777f1390fb7f2798daf476fd649f601879aa7</checksum>
+                  <benchmarks>
+                        <benchmark>
+                              <benchmark-id>xccdf_mil.disa.stig_benchmark_Windows_Defender_Antivirus</benchmark-id>
+                              <title>Microsoft Defender Antivirus Security Technical Implementation Guide - NIWC Enhanced with Manual Questions</title>
+                              <version>002.003</version>
+                              <style>SCAP_1.2</style>
+                              <status>accepted</status>
+                              <status-date>2022-04-08</status-date>
+                              <creator>DISA</creator>
+                              <publisher>DISA</publisher>
+                              <contributor>DISA</contributor>
+                              <source>STIG.DOD.MIL</source>
+                        </benchmark>
+                  </benchmarks>
+                  <platforms>
+                        <platform>
+                              <platform-id style="cpe">cpe:/a:microsoft:windows_defender</platform-id>
+                        </platform>
+                  </platforms>
+            </scap-content>
+            <scap-content>
                   <content-id>U_MS_DotNet_Framework_4-0_V2R1_STIG_SCAP_1-2_Benchmark-enhanced.zip</content-id>
                   <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2022/12/U_MS_DotNet_Framework_4-0_V2R1_STIG_SCAP_1-2_Benchmark-enhanced.zip</location>
-                  <checksum style="SHA512">3b0fd43e4467e74a0c0a4a21d7f6b1941c11cd598cfca52a001966a7b06b140f47da4b21418353d32681cf1ffce2de667773f50805717c99b7120b08224467a4</checksum>
+                  <checksum style="SHA512">57749c1874a8c49a2f059b4b6b488d78ebdefd424ba924083a112592235879e0f8a5ee6d015ddd8079ff2db0b3628413690ab03071c0e4431de8f569e8a965c8</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_MS_Dot_Net_Framework</benchmark-id>
@@ -249,7 +273,7 @@
             <scap-content>
                   <content-id>U_MS_Edge_V1R2_STIG_SCAP_1-2_Benchmark-enhanced.zip</content-id>
                   <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2022/12/U_MS_Edge_V1R2_STIG_SCAP_1-2_Benchmark-enhanced.zip</location>
-                  <checksum style="SHA512">8db063eb85a10fbf9d5fb129556192b9581df8c8cbf950bcef03952ec10819252ec13f807818da7c0601a2743b669512a3cdb6b4c3ae0f6033a2f8bde2904a10</checksum>
+                  <checksum style="SHA512">aa98f7221bd9806e8d0604a1fc033147c77619817cab7751378a4be1ffce92d698cf1a1858e687076c9370780c49c03c0b942b3b81b76dd339648902e8e8a4c2</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_MS_Edge_STIG</benchmark-id>
@@ -273,7 +297,7 @@
             <scap-content>
                   <content-id>U_MS_IE11_V2R3_STIG_SCAP_1-2_Benchmark-enhanced.zip</content-id>
                   <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2022/12/U_MS_IE11_V2R3_STIG_SCAP_1-2_Benchmark-enhanced.zip</location>
-                  <checksum style="SHA512">6c0127da3f3f61de708cd0641ba717535c7c9f37f169ae7a55501fcebbb50f46f78b7666d30b79321936fa14e28a86891d4ec7aeb6a0b908b80b5ae7e7bc23de</checksum>
+                  <checksum style="SHA512">0f299369e022b7ef33cf2a39a4d10699a9731ea75bd55bc0dd21672ab6217cb03625535b41bb93f563ca5d96fb3b67c4ad6083cb8f09e34c68f69e0ac7fa4bf9</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_IE_11_STIG</benchmark-id>
@@ -297,7 +321,7 @@
             <scap-content>
                   <content-id>U_MS_Windows_10_V2R6_STIG_SCAP_1-2_Benchmark-enhanced.zip</content-id>
                   <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2022/12/U_MS_Windows_10_V2R6_STIG_SCAP_1-2_Benchmark-enhanced.zip</location>
-                  <checksum style="SHA512">fb01186a05c8521bce899cea98af64d656040f45ded0150dd484ade2e99402a0a416235f282dbb82d0563b76738c8f7eae9227f86a0b4e177c1d7d459c8751e1</checksum>
+                  <checksum style="SHA512">b4300bbe2379630a10bb4462b3212cf38035a28345230ef61f2f84f4caca091bd7ef971d86cba5960105373ad97f1cce2ecd4bd549203ece8f0ea91f38f34705</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_MS_Windows_10_STIG</benchmark-id>
@@ -321,7 +345,7 @@
             <scap-content>
                   <content-id>U_MS_Windows_11_V1R1_STIG_SCAP_1-2_Benchmark-enhanced.zip</content-id>
                   <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2022/12/U_MS_Windows_11_V1R1_STIG_SCAP_1-2_Benchmark-enhanced.zip</location>
-                  <checksum style="SHA512">387b9bca026e6b62df32f68516fc08db1b9b2e8f95f65a19cd203ce8f035286a5b486bcc3e241445efeb475e3a746274f513d114d55bc8bf171c64cf939c8a7a</checksum>
+                  <checksum style="SHA512">9bcdbcfd40990f18edbf986f61fc530623da17fd949d0634bfb74ca181b0810f0741e9e98bfca91ad232f764349209ebb89512f9e80e76988e7c65930f147d99</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_Microsoft_Windows_11_STIG</benchmark-id>
@@ -345,7 +369,7 @@
             <scap-content>
                   <content-id>U_MS_Windows_2012_and_2012_R2_DC_V3R4_STIG_SCAP_1-2_Benchmark-enhanced.zip</content-id>
                   <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2022/12/U_MS_Windows_2012_and_2012_R2_DC_V3R4_STIG_SCAP_1-2_Benchmark-enhanced.zip</location>
-                  <checksum style="SHA512">76aea9b131869b0e35c29e351b65bf4dc03b77ad6824f74a24e53c05062978d67f156bf5298fbe5947b07285f8a062c6aa4d4947c6e870bdb37f2d064fcfd6f2</checksum>
+                  <checksum style="SHA512">5befbe644ed912fdf5e3562b984909646f2bfad77419f7ec70f68d1d13b3311cb275cecd22e1501bc0720f0dd3fc1c728048f6459c9fcc26afbbe81076538bb2</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_Windows_2012_DC_STIG</benchmark-id>
@@ -362,17 +386,17 @@
                   </benchmarks>
                   <platforms>
                         <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2012:r2</platform-id>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2012:-</platform-id>
                         </platform>
                         <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2012:-</platform-id>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2012:r2</platform-id>
                         </platform>
                   </platforms>
             </scap-content>
             <scap-content>
                   <content-id>U_MS_Windows_2012_and_2012_R2_MS_V3R4_STIG_SCAP_1-2_Benchmark-enhanced.zip</content-id>
                   <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2022/12/U_MS_Windows_2012_and_2012_R2_MS_V3R4_STIG_SCAP_1-2_Benchmark-enhanced.zip</location>
-                  <checksum style="SHA512">d9ff6661dc81a8a42e405a2bf3d3663b4f2e69299156639e22bcc97f52ebed65a0cbed7c5a63b18330972d8e92db94463f237a4447374d5188adac58119584a0</checksum>
+                  <checksum style="SHA512">ff50d984aca892baead965db5a9a2cd79bad9eaa8a864fd765e1c3c1dc8d312acec22eafc8b753e7e6bb10bbaa87c4d81a43b4e35fe14ce806f384bbb49dba35</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_Windows_2012_MS_STIG</benchmark-id>
@@ -389,17 +413,17 @@
                   </benchmarks>
                   <platforms>
                         <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2012:-</platform-id>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2012:r2</platform-id>
                         </platform>
                         <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2012:r2</platform-id>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2012:-</platform-id>
                         </platform>
                   </platforms>
             </scap-content>
             <scap-content>
                   <content-id>U_MS_Windows_Firewall_V2R1_STIG_SCAP_1-2_Benchmark-enhanced.zip</content-id>
                   <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2022/12/U_MS_Windows_Firewall_V2R1_STIG_SCAP_1-2_Benchmark-enhanced.zip</location>
-                  <checksum style="SHA512">b5e457d62dd81f9c6b2c4650c8b72b10fe9f6fb963627c069ea7773ae54ce2ffabebb70b336909a492b228607768db773ea7cf2b1d2a06c77c95fb59b7e9234c</checksum>
+                  <checksum style="SHA512">638d9df68b1c018f5881b945ebbc37ff8a09c7ff899ddc2cd7ba36522f9cdce2067691bba180fdd516781df847f60ef0d57084adc66df69d21346716eae87120</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_Windows_Firewall_with_Advanced_Security</benchmark-id>
@@ -416,34 +440,34 @@
                   </benchmarks>
                   <platforms>
                         <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2016:-</platform-id>
-                        </platform>
-                        <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_8</platform-id>
-                        </platform>
-                        <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2019:-</platform-id>
-                        </platform>
-                        <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_vista</platform-id>
-                        </platform>
-                        <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_8.1</platform-id>
-                        </platform>
-                        <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2008</platform-id>
-                        </platform>
-                        <platform>
                               <platform-id style="cpe">cpe:/o:microsoft:windows_server_2012:-</platform-id>
                         </platform>
                         <platform>
                               <platform-id style="cpe">cpe:/o:microsoft:windows_10</platform-id>
                         </platform>
                         <platform>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2019:-</platform-id>
+                        </platform>
+                        <platform>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_8</platform-id>
+                        </platform>
+                        <platform>
                               <platform-id style="cpe">cpe:/o:microsoft:windows_server_2008:r2</platform-id>
                         </platform>
                         <platform>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2016:-</platform-id>
+                        </platform>
+                        <platform>
                               <platform-id style="cpe">cpe:/o:microsoft:windows_7</platform-id>
+                        </platform>
+                        <platform>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_vista</platform-id>
+                        </platform>
+                        <platform>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2008</platform-id>
+                        </platform>
+                        <platform>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_8.1</platform-id>
                         </platform>
                         <platform>
                               <platform-id style="cpe">cpe:/o:microsoft:windows_server_2012:r2</platform-id>
@@ -453,7 +477,7 @@
             <scap-content>
                   <content-id>U_MS_Windows_Server_2016_V2R3_STIG_SCAP_1-2_Benchmark-enhanced.zip</content-id>
                   <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2022/12/U_MS_Windows_Server_2016_V2R3_STIG_SCAP_1-2_Benchmark-enhanced.zip</location>
-                  <checksum style="SHA512">09d2b3805999f808d6ac849722dad8ccfa0383e23739e8e35c4fed229ae1a1d5499d66390fb7fa93cc91f89d45bf66b8b3ebfa0071c52ed3067233ed93572bd3</checksum>
+                  <checksum style="SHA512">a6aba7828affadbfe6447b7ee508804a6f74c1f771bf97803bce744fc705c122464431ead84a91f15ba92d6be0d7db947b179651a1bfa963f5f73e05c67fef88</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_Windows_Server_2016_STIG</benchmark-id>
@@ -477,7 +501,7 @@
             <scap-content>
                   <content-id>U_MS_Windows_Server_2019_V2R3_STIG_SCAP_1-2_Benchmark-enhanced.zip</content-id>
                   <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2022/12/U_MS_Windows_Server_2019_V2R3_STIG_SCAP_1-2_Benchmark-enhanced.zip</location>
-                  <checksum style="SHA512">b892f286e201b62ea3f4ee1be26c129cfb6f053ac1214357a582df48474a13089e3048d4f8d9222d7b9eaa4c8ef343b9083c931a58b8d13a56edd1fc5543e6c0</checksum>
+                  <checksum style="SHA512">7733bbc969304809be3978b3b00b8c2b365bd2e903c1571a08bf2d1c4d2f0bf6f44b5b58dedbe719e0c7672254062481fb20dadb5d4be6e7d921eae7dd5332dc</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_Windows_Server_2019_STIG</benchmark-id>
@@ -501,7 +525,7 @@
             <scap-content>
                   <content-id>U_Oracle_Linux_7_V2R9_STIG_SCAP_1-2_Benchmark-enhanced.zip</content-id>
                   <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2022/12/U_Oracle_Linux_7_V2R9_STIG_SCAP_1-2_Benchmark-enhanced.zip</location>
-                  <checksum style="SHA512">6e1419e232286e44801124d63234691e159b69c7207b278f1fdfb5347370666ee8ddfd9617e0bf13879bcc74f80e1f1d4ee402bd3ed8863a3762289a1573678b</checksum>
+                  <checksum style="SHA512">1d3d0074887bcd51899fc89f093ee8f08e8b0060a9771fdf608e61a06d42acc2669a8c66e2ef3888daea3f5e9323ca639bcd947413764315276f74059cd81872</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_Oracle_Linux_7_STIG</benchmark-id>
@@ -525,7 +549,7 @@
             <scap-content>
                   <content-id>U_Oracle_Linux_8_V1R3_STIG_SCAP_1-2_Benchmark-enhanced.zip</content-id>
                   <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2022/12/U_Oracle_Linux_8_V1R3_STIG_SCAP_1-2_Benchmark-enhanced.zip</location>
-                  <checksum style="SHA512">a6b4c8296985b747b59a9dabc36b030f8368bf9c97e68a86cc66f021d3fdab4267bd009cd374ef8747d4f67c91630f2867990c9b7841bae64f7c48d822aae123</checksum>
+                  <checksum style="SHA512">b8fca0c2666cfa915f8947a5a47c202cfbe5fa79849b12747102fcdb503e56de286b30a8907ed0b8970699e4bef9c54075f90e416043de76bc9ca348dd08265c</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_Oracle_Linux_8_STIG</benchmark-id>
@@ -549,7 +573,7 @@
             <scap-content>
                   <content-id>U_RHEL_6_V2R2_STIG_SCAP_1-2_Benchmark-enhanced.zip</content-id>
                   <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2022/12/U_RHEL_6_V2R2_STIG_SCAP_1-2_Benchmark-enhanced.zip</location>
-                  <checksum style="SHA512">66822ff4df7e8b38b0c3395ca6c8a0e6b899c2f1a233313e267bb2e7eac82d5216a6bbb3907f034c74eb3b7c89a18dc5c281faae5c3b641605b6d0cf371d9903</checksum>
+                  <checksum style="SHA512">2525d27e45e64eb25f8595de799380be0ad969973748b3773d954a27fff05aa3ac872bbc379d3df6ec770d3efe7905f0a726d8c7e0f98129a523478edcdc27c1</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_RHEL_6_STIG</benchmark-id>
@@ -573,7 +597,7 @@
             <scap-content>
                   <content-id>U_RHEL_7_V3R9_STIG_SCAP_1-2_Benchmark-enhanced.zip</content-id>
                   <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2022/12/U_RHEL_7_V3R9_STIG_SCAP_1-2_Benchmark-enhanced.zip</location>
-                  <checksum style="SHA512">72f4286a46bee27eb45da72d16b97a3d4eb83b4400c74de5fcf56f41769cb791340c5af2683dddf1bd8bf422b9493e846be58c658bace884765f515636e657f7</checksum>
+                  <checksum style="SHA512">bbfb8b4d9c90b9ef19ce57d4cd1f370c69dee49982e560917050e915e57f6ef7fa6c237fd8f4c7aa19efe1efed23c14e8a92f782744134c96aa505dc69bd4731</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_RHEL_7_STIG</benchmark-id>
@@ -597,7 +621,7 @@
             <scap-content>
                   <content-id>U_RHEL_8_V1R7_STIG_SCAP_1-2_Benchmark-enhanced.zip</content-id>
                   <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2022/12/U_RHEL_8_V1R7_STIG_SCAP_1-2_Benchmark-enhanced.zip</location>
-                  <checksum style="SHA512">3ea5faa110be794de71c4b2406a10bb819e6e0a974bce4b9b8d21c5e34498a5a6d1a1b291a23879843a007fe07aa9ad75a8d1f7dd288f4acc63ecba2780d71ea</checksum>
+                  <checksum style="SHA512">11b724edc0453208c64491bf60d179cccdc599ca62e2f14aee9ca94b518c18a15c8cea31ea06bafeda9a826f0282c36eb90f4a5f47b3eff0c2d8062d7a020f31</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_RHEL_8_STIG</benchmark-id>
@@ -621,7 +645,7 @@
             <scap-content>
                   <content-id>U_SLES_12_V2R7_STIG_SCAP_1-2_Benchmark-enhanced.zip</content-id>
                   <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2022/12/U_SLES_12_V2R7_STIG_SCAP_1-2_Benchmark-enhanced.zip</location>
-                  <checksum style="SHA512">62df099248748cbd10abc4318691337c37b52458064cd34bbb334f2cf59f3bc72b8518e0054e3ace151b92d0e89cde9ae6d70b7297805a8296c90f634b65f3d1</checksum>
+                  <checksum style="SHA512">d7554b233f98c7da3e7698df05fd3579ebd60807be159e0e86bc5e2a75786f102c126e578c1ae7ec8833a82bbd0f30d2da3fabb1347be972b5d384cf3acff516</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_SLES_12_STIG</benchmark-id>
@@ -645,7 +669,7 @@
             <scap-content>
                   <content-id>U_SLES_15_V1R2_STIG_SCAP_1-2_Benchmark-enhanced.zip</content-id>
                   <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2022/12/U_SLES_15_V1R2_STIG_SCAP_1-2_Benchmark-enhanced.zip</location>
-                  <checksum style="SHA512">8ecf67c3a469af6d1621a084cf12afc17b2807d2f47210f1966cf85e103fb284dc2689c30bdbb718c545b6c969f1f7cc9f40c199f8a49e858388d0b42d0387eb</checksum>
+                  <checksum style="SHA512">39c65b157139261b4d5c7bd6a7cd7643a48257a1ed7fde74083f3308929830b902268df08390f9c53c1f64de028df24008038359ce3ceda5f8fafe15ba14487b</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_SLES_15_STIG</benchmark-id>
@@ -669,7 +693,7 @@
             <scap-content>
                   <content-id>U_SOL_10_SPARC_V2R3_STIG_SCAP_1-2_Benchmark-enhanced.zip</content-id>
                   <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2022/12/U_SOL_10_SPARC_V2R3_STIG_SCAP_1-2_Benchmark-enhanced.zip</location>
-                  <checksum style="SHA512">77c89b46d4639c5aab9ec6266cb7bffe867ac05cc4f8128f50af3b263b3f8c07c0bfc95534e99c117c3f9e9f5aa335dfae4b3f29fd4f622832ae5f743c92dde9</checksum>
+                  <checksum style="SHA512">1c8a60ad74577249249dbab3b6d6d282539d87511a169c445aabf1a0592730ef3c867122ae4a6655c74abdc6dc9e8d93d957a7c511826ed6bc27d6fcf0207802</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_Solaris_10_SPARC_STIG</benchmark-id>
@@ -693,7 +717,7 @@
             <scap-content>
                   <content-id>U_SOL_10_X86_V2R3_STIG_SCAP_1-2_Benchmark-enhanced.zip</content-id>
                   <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2022/12/U_SOL_10_X86_V2R3_STIG_SCAP_1-2_Benchmark-enhanced.zip</location>
-                  <checksum style="SHA512">086d381a7670b50d2fc9bfaf59b3023a6846e41fe72a74c1f80fc55475fbb5ab9e991df62c5b8d2a6ca3135853ac31bc35a92f4a03be1fcae595820c987cc555</checksum>
+                  <checksum style="SHA512">e55e8ae0b41a8d01508f9b64b39e63171817a59ef5c52ab244026c4e4da763d23005d0fe6c8abada54d468963c1df380a58cee85d0db69bb1f67b67d8d88af1d</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_Solaris_10_X86_STIG</benchmark-id>
@@ -717,7 +741,7 @@
             <scap-content>
                   <content-id>U_SOL_11_SPARC_V2R3_STIG_SCAP_1-2_Benchmark-enhanced.zip</content-id>
                   <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2022/12/U_SOL_11_SPARC_V2R3_STIG_SCAP_1-2_Benchmark-enhanced.zip</location>
-                  <checksum style="SHA512">ed3ebe1fb8cca99342e64f8a20a3291dacc176f9c15ac31c17f385138cccc190dca4066c24fd6a1630516e0a4d18bee6ae8978621a12ceae560a6e9997214cd3</checksum>
+                  <checksum style="SHA512">acaa78173ce19863cf6f2a7c125962a47d667a58b5c69d063adc979fe23a68b7d6ac6a21e5ddab2b36e33c8fa45151d101e5f53ae3a921ee6c72e431297648ea</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_Solaris_11_SPARC_STIG</benchmark-id>
@@ -741,7 +765,7 @@
             <scap-content>
                   <content-id>U_SOL_11_X86_V2R3_STIG_SCAP_1-2_Benchmark-enhanced.zip</content-id>
                   <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2022/12/U_SOL_11_X86_V2R3_STIG_SCAP_1-2_Benchmark-enhanced.zip</location>
-                  <checksum style="SHA512">b3eb2c8cb08032abe77929630394050da72827fea9c50bfdb8ff242052c6136cebe00f31a1ca0efecb3ff56a0d0661c122e2a79455c7d11b3eae979e2c5299b5</checksum>
+                  <checksum style="SHA512">e0423476b81de55fec23ce2b8232e16de956d65b4d73454c3b88e17cd29faa0e2c83d504559ce0c8507d8843ff96301755faccc718b9308245d42e50df5d5883</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_Solaris_11_X86_STIG</benchmark-id>
