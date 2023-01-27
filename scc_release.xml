@@ -1,29 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <scc>
-	<version>5.5</version>
-	<timeStamp>2022-06-03T16:00:00</timeStamp>
+	<version>5.7</version>
+	<timeStamp>2023-01-26T16:00:00</timeStamp>
 	<releaseInfo>
 For All Platforms
-* Updated DISA STIG SCAP content
-* Added option to allow automatically whitelisting SCC for scanning STIG compliant RHEL8 via SSH
-* Added command line --ssh to start SSH based UNIX/Cisco scans (although GUI is still requires for host/credential management)
-* Improved command line parameters to have human readable aliases
-* Improved support for OCIL questionnaires in preparation for future usage
-* Improved support for XCCDF Tailoring, as the replacement for Deviations and the Unlocker
-* Numerous internal changes in preparation for SCAP 1.3 independent validation
+* Updated all SCAP content to be enhanced by NIWC SCC team with manual checks, providing 100% coverage of DISA STIG Manuals, using SCAP standard of Open Checklist Interactive Language (OCIL)
+* Updated default SCAP content repository to NIWC's repository located at https://www.niwcatlantic.navy.mil/scap/scap-content-repository/
+* Updated SCC GUI to provide interface for manual questions
+* Added manual question autoanswer files for command line automation
+* Added creation of DISA's Checklist (CKL) report output, for SCAP content that has been enhanced with manual questions.
+* Improved error reporting in HTML/Text/XML
+* Improved result details in XCCDF XML results, which should be supported by DISA STIG Viewer in the future
+* Now officially SCAP 1.3 validated by an independent lab
+* Added crowdsource funding popup for FY24 funds
 
 For Windows
-* Added ability to run SCC as a non-administrator to perform SSH UNIX and Cisco based scans
-
-For all UNIX
-* Updated installations to be smaller in size and quicker startup times
+* Added configuration upgrade from 5.6, 5.5, 5.4.2 on first application launch
+* Added NIWC developed SCAP content for
+** Microsoft Internet Information Server (IIS) 8.5
+** Microsoft Internet Information Server (IIS) 10.0
+** Microsoft Office 365 ProPlus
+** Microsoft OneDrive
 
 For Linux
-* Added support for arm64 based Debian/Ubuntu
-* Added support for aarch64 based RHEL/Oracle linux
+* Added support configuration update with RPM -u
+* Added support configuration update with DEB package upgrade
 
 For Mac OS X
-* Updated NIST developed SCAP content for Mac OS X 10.15, 11, 12
+* Included updated NIST developed SCAP content for MacOS
 
 </releaseInfo>
 	<url>https://public.cyber.mil/stigs/scap/</url>
