@@ -1,33 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <scc>
-	<version>5.7</version>
-	<timeStamp>2023-01-26T16:00:00</timeStamp>
+	<version>5.7.1</version>
+	<timeStamp>2023-02-28T16:00:00</timeStamp>
 	<releaseInfo>
 For All Platforms
-* Updated all SCAP content to be enhanced by NIWC SCC team with manual checks, providing 100% coverage of DISA STIG Manuals, using SCAP standard of Open Checklist Interactive Language (OCIL)
-* Updated default SCAP content repository to NIWC's repository located at https://www.niwcatlantic.navy.mil/scap/scap-content-repository/
-* Updated SCC GUI to provide interface for manual questions
-* Added manual question autoanswer files for command line automation
-* Added creation of DISA's Checklist (CKL) report output, for SCAP content that has been enhanced with manual questions.
-* Improved error reporting in HTML/Text/XML
-* Improved result details in XCCDF XML results, which should be supported by DISA STIG Viewer in the future
-* Now officially SCAP 1.3 validated by an independent lab
-* Added crowdsource funding popup for FY24 funds
-
-For Windows
-* Added configuration upgrade from 5.6, 5.5, 5.4.2 on first application launch
-* Added NIWC developed SCAP content for
-** Microsoft Internet Information Server (IIS) 8.5
-** Microsoft Internet Information Server (IIS) 10.0
-** Microsoft Office 365 ProPlus
-** Microsoft OneDrive
-
-For Linux
-* Added support configuration update with RPM -u
-* Added support configuration update with DEB package upgrade
-
-For Mac OS X
-* Included updated NIST developed SCAP content for MacOS
+*	Fixed data interoperability issue with SCC's CKL file and eMASS
+*	Disabled the creation of XCCDF Results for Manual Questions rules, if Manual Question processing option is disabled.
+*	Updated upgrade feature on Windows to upgrade any Manual Question results from a previous installation
+*	Improved functionality of Manual Question GUI, adding searching and sorting
+*	Minor improvements to Manual Question autoanswer text file templates
+Windows
+*	Fixed issue running on Windows when no network cards have IP Addresses
+*	Fixed issue with WMI remote scanning of a computer with ipv6
+ Linux
+*	Fixed issue running GUI at 1024 x 768 resolution
+MacOS
+*	Fixed minor issues with incorrectly identifying NIST content as containing manual checks.
 
 </releaseInfo>
 	<url>https://public.cyber.mil/stigs/scap/</url>
