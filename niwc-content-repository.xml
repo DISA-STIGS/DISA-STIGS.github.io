@@ -3,7 +3,7 @@
 <content-repository style="0.1">
       <repository-id>niwc-stig-repo</repository-id>
       <repository-publisher>NIWC</repository-publisher>
-      <last-updated>2023-03-06T16:12:42</last-updated>
+      <last-updated>2023-04-07T09:38:32</last-updated>
       <license>Open</license>
       <contents>
             <scap-content>
@@ -319,14 +319,14 @@
                   </platforms>
             </scap-content>
             <scap-content>
-                  <content-id>U_MS_IIS_10-0_Server_V2R8_STIG_SCAP_1-3_Benchmark-enhancedV2.zip</content-id>
-                  <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2023/03/U_MS_IIS_10-0_Server_V2R8_STIG_SCAP_1-3_Benchmark-enhancedV2.zip</location>
-                  <checksum style="SHA512">9087bb89d3eacc653cdc6f2be89ce8b3e253ac89aaf49a774a43cea995a2caf64683d180de9448ee6bb5d59298a5d9b90a9f6d1affe5449d44d7a01eed9f21fd</checksum>
+                  <content-id>U_MS_IIS_10-0_Server_V2R8_STIG_SCAP_1-3_Benchmark-enhancedV3.zip</content-id>
+                  <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2023/04/U_MS_IIS_10-0_Server_V2R8_STIG_SCAP_1-3_Benchmark-enhancedV3.zip</location>
+                  <checksum style="SHA512">b1c96e9807c436d7893f8dfd8c2c7285146c221bbda3c0ce17244ddfc2c57abe2f4aa88d19545b62eb1558e40486d448ba97a23f1373f6e70171cd45dcf7faa6</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_navy.navwar.niwcatlantic.scc_benchmark_IIS_10-0_Server_STIG</benchmark-id>
                               <title>Microsoft IIS 10.0 Server STIG SCAP Benchmark - NIWC Enhanced with Manual Questions</title>
-                              <version>2.8.2</version>
+                              <version>2.8.3</version>
                               <style>SCAP_1.3</style>
                               <status>accepted</status>
                               <status-date>2023-01-21</status-date>
@@ -343,14 +343,14 @@
                   </platforms>
             </scap-content>
             <scap-content>
-                  <content-id>U_MS_IIS_10-0_Site_V2R7_STIG_SCAP_1-3_Benchmark-enhancedV2.zip</content-id>
-                  <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2023/03/U_MS_IIS_10-0_Site_V2R7_STIG_SCAP_1-3_Benchmark-enhancedV2.zip</location>
-                  <checksum style="SHA512">e5d62ae5dfb7fa8d85c2b21506777469175f7d47b7fee2a6c3275fe947c4c9356143c7a48cf30b4bf049324802b4a3d350fe0f5fd93dee8c3f8eec5c374ce231</checksum>
+                  <content-id>U_MS_IIS_10-0_Site_V2R7_STIG_SCAP_1-3_Benchmark-enhancedV3.zip</content-id>
+                  <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2023/04/U_MS_IIS_10-0_Site_V2R7_STIG_SCAP_1-3_Benchmark-enhancedV3.zip</location>
+                  <checksum style="SHA512">84a86a303958359d5eac5ef838eb184f520192d79d1efefb67746e3933b91e3f773d42c7a239ac8d7582f555e0f76f8f8a5d051463dfd6f805788bc7dd0dbb43</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_navy.navwar.niwcatlantic.scc_benchmark_IIS_10-0_Site_STIG</benchmark-id>
                               <title>Microsoft IIS 10.0 Site STIG SCAP Benchmark - NIWC Enhanced with Manual Questions</title>
-                              <version>2.7.2</version>
+                              <version>2.7.3</version>
                               <style>SCAP_1.3</style>
                               <status>accepted</status>
                               <status-date>2023-01-21</status-date>
@@ -584,37 +584,37 @@
                   </benchmarks>
                   <platforms>
                         <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_vista</platform-id>
-                        </platform>
-                        <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2016:-</platform-id>
-                        </platform>
-                        <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2012:r2</platform-id>
-                        </platform>
-                        <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_7</platform-id>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2012:-</platform-id>
                         </platform>
                         <platform>
                               <platform-id style="cpe">cpe:/o:microsoft:windows_10</platform-id>
                         </platform>
                         <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_8</platform-id>
-                        </platform>
-                        <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2008:r2</platform-id>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2016:-</platform-id>
                         </platform>
                         <platform>
                               <platform-id style="cpe">cpe:/o:microsoft:windows_server_2019:-</platform-id>
                         </platform>
                         <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2012:-</platform-id>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_8</platform-id>
+                        </platform>
+                        <platform>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2008</platform-id>
+                        </platform>
+                        <platform>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_vista</platform-id>
+                        </platform>
+                        <platform>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_7</platform-id>
+                        </platform>
+                        <platform>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2008:r2</platform-id>
                         </platform>
                         <platform>
                               <platform-id style="cpe">cpe:/o:microsoft:windows_8.1</platform-id>
                         </platform>
                         <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2008</platform-id>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2012:r2</platform-id>
                         </platform>
                   </platforms>
             </scap-content>
