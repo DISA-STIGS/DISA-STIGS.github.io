@@ -3,7 +3,7 @@
 <content-repository style="0.1">
       <repository-id>disa-stig-repo</repository-id>
       <repository-publisher>DISA</repository-publisher>
-      <last-updated>2023-01-24T10:24:21</last-updated>
+      <last-updated>2023-05-15T15:11:35</last-updated>
       <license>Open</license>
       <contents>
             <scap-content>
@@ -31,41 +31,17 @@
                   </platforms>
             </scap-content>
             <scap-content>
-                  <content-id>U_CAN_Ubuntu_16-04_LTS_V2R3_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_CAN_Ubuntu_16-04_LTS_V2R3_STIG_SCAP_1-2_Benchmark.zip</location>
-                  <checksum style="SHA512">d7c5b938ffef65479846fcdec8e5a992f8318494cee76e8b8b99d1965766f269d79e0281ad53038a03c1e268bf14f486e4478c5f48efec21638c62b00bd8b066</checksum>
-                  <benchmarks>
-                        <benchmark>
-                              <benchmark-id>xccdf_mil.disa.stig_benchmark_Canonical_Ubuntu_16-04_LTS</benchmark-id>
-                              <title>Canonical Ubuntu 16.04 LTS Security Technical Implementation Guide</title>
-                              <version>002.003</version>
-                              <style>SCAP_1.2</style>
-                              <status>accepted</status>
-                              <status-date>2021-03-10</status-date>
-                              <creator>DISA</creator>
-                              <publisher>DISA</publisher>
-                              <contributor>DISA</contributor>
-                              <source>STIG.DOD.MIL</source>
-                        </benchmark>
-                  </benchmarks>
-                  <platforms>
-                        <platform>
-                              <platform-id style="cpe">cpe:/o:canonical:ubuntu_linux:16.04</platform-id>
-                        </platform>
-                  </platforms>
-            </scap-content>
-            <scap-content>
-                  <content-id>U_CAN_Ubuntu_18-04_V2R8_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_CAN_Ubuntu_18-04_V2R8_STIG_SCAP_1-2_Benchmark.zip</location>
-                  <checksum style="SHA512">3f5f744e1ec4e3b88345c168ac0129ee70672cc72fb7897c006c5d3a0d7388842c5f044ba62dfbd22050eea42b55e00cf97655e56cdf594358e2d42c902643a0</checksum>
+                  <content-id>U_CAN_Ubuntu_18-04_V2R9_STIG_SCAP_1-2_Benchmark.zip</content-id>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_CAN_Ubuntu_18-04_V2R9_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <checksum style="SHA512">5dec2ae12d768dfc8a302c07142e855538d13fd2b7dea8a8e5fcbff1c9104cd8109459347c672d1aa3b440d40feab9f065e88052b3931cdd9b4eb3b7a4fd0c2f</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_CAN_Ubuntu_18-04_STIG</benchmark-id>
                               <title>Canonical Ubuntu 18.04 LTS STIG SCAP Benchmark</title>
-                              <version>002.008</version>
+                              <version>002.009</version>
                               <style>SCAP_1.2</style>
                               <status>accepted</status>
-                              <status-date>2022-12-06</status-date>
+                              <status-date>2023-03-06</status-date>
                               <creator>DISA</creator>
                               <publisher>DISA</publisher>
                               <contributor>DISA</contributor>
@@ -79,17 +55,17 @@
                   </platforms>
             </scap-content>
             <scap-content>
-                  <content-id>U_CAN_Ubuntu_20-04_LTS_V1R5_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_CAN_Ubuntu_20-04_LTS_V1R5_STIG_SCAP_1-2_Benchmark.zip</location>
-                  <checksum style="SHA512">d3d22040a63497cfd1eaa7256b89189dfe5be5dc3c6b727f678da77947a4b3b107431e18c08e5cd1423632ded6516aab57e6369ecff6cb86a38934ae1cdce178</checksum>
+                  <content-id>U_CAN_Ubuntu_20-04_LTS_V1R6_STIG_SCAP_1-2_Benchmark.zip</content-id>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_CAN_Ubuntu_20-04_LTS_V1R6_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <checksum style="SHA512">239bf16cb174f32ff1a3586587daedd392160f583ddfc372cb96f8894ad27c01e245e13e82382f6ce8afedd5df26ce8d704d753283e31a2ef9d47dce2a29c1a8</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_Canonical_Ubuntu_20-04_LTS_STIG</benchmark-id>
                               <title>Canonical Ubuntu 20.04 LTS STIG SCAP Benchmark</title>
-                              <version>001.005</version>
+                              <version>001.006</version>
                               <style>SCAP_1.2</style>
                               <status>accepted</status>
-                              <status-date>2022-12-06</status-date>
+                              <status-date>2023-03-06</status-date>
                               <creator>DISA</creator>
                               <publisher>DISA</publisher>
                               <contributor>DISA</contributor>
@@ -103,17 +79,17 @@
                   </platforms>
             </scap-content>
             <scap-content>
-                  <content-id>U_Cisco_IOS-XE_Router_NDM_V1R6_STIG_SCAP_1-3_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_Cisco_IOS-XE_Router_NDM_V1R6_STIG_SCAP_1-3_Benchmark.zip</location>
-                  <checksum style="SHA512">12d9fcb9832b0d79f5d65965743d6eba58cc84a548576f32c76dd2a344afe585031bedab6c61d5d1546fefa3395a925c447d78438cef19d90ea80336ae21d938</checksum>
+                  <content-id>U_Cisco_IOS-XE_Router_NDM_V1R7_STIG_SCAP_1-3_Benchmark.zip</content-id>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_Cisco_IOS-XE_Router_NDM_V1R7_STIG_SCAP_1-3_Benchmark.zip</location>
+                  <checksum style="SHA512">a5d7f49777716c4dabd2c29a96bf4f7c24232ce63017964b77cfa375fcf07fb7c3db70aa7d4504c255a8247a95452a3df7e818bf1441ba695af830d22d0f47f5</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_Cisco_IOS-XE_Router_NDM_STIG</benchmark-id>
                               <title>Cisco IOS XE Router NDM STIG SCAP Benchmark</title>
-                              <version>001.006</version>
+                              <version>001.007</version>
                               <style>SCAP_1.3</style>
                               <status>accepted</status>
-                              <status-date>2022-09-15</status-date>
+                              <status-date>2023-02-17</status-date>
                               <creator>DISA</creator>
                               <publisher>DISA</publisher>
                               <contributor>DISA</contributor>
@@ -127,17 +103,17 @@
                   </platforms>
             </scap-content>
             <scap-content>
-                  <content-id>U_Cisco_IOS-XE_Router_RTR_V1R2_STIG_SCAP_1-3_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_Cisco_IOS-XE_Router_RTR_V1R2_STIG_SCAP_1-3_Benchmark.zip</location>
-                  <checksum style="SHA512">f17849dbaca919bad76216249c43d58c5ace680ff5bef5a98b7f19d17b995d01488569211c361ac516e964650dc10ce5af40d996c92f01e06b4da51a87b1e862</checksum>
+                  <content-id>U_Cisco_IOS-XE_Router_RTR_V1R3_STIG_SCAP_1-3_Benchmark.zip</content-id>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_Cisco_IOS-XE_Router_RTR_V1R3_STIG_SCAP_1-3_Benchmark.zip</location>
+                  <checksum style="SHA512">afe6c478fbdc2d1201cb73f6bfc26a23a9ae63d9a435b6cd69cbb00efbfe8d03c533f9b4ac7c12a8493cf9bbe57eb7f0990fbf2ff313b6140f6e05265038c9b3</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_Cisco_IOS-XE_Router_RTR_STIG</benchmark-id>
                               <title>Cisco IOS XE Router RTR STIG SCAP Benchmark</title>
-                              <version>001.002</version>
+                              <version>001.003</version>
                               <style>SCAP_1.3</style>
                               <status>accepted</status>
-                              <status-date>2022-09-14</status-date>
+                              <status-date>2023-02-28</status-date>
                               <creator>DISA</creator>
                               <publisher>DISA</publisher>
                               <contributor>DISA</contributor>
@@ -199,14 +175,14 @@
                   </platforms>
             </scap-content>
             <scap-content>
-                  <content-id>U_MOZ_Firefox_Windows_V6R3_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_MOZ_Firefox_Windows_V6R3_STIG_SCAP_1-2_Benchmark.zip</location>
-                  <checksum style="SHA512">3944bdcb617b0a6faeff318c202f623725d22e7b87dc3a826c1acc50f394da8c887e5b451dc56a346ea69eb81d69c6886e392c726963c4fd3e80f71f044ce939</checksum>
+                  <content-id>U_MOZ_Firefox_Windows_V6R4_STIG_SCAP_1-2_Benchmark.zip</content-id>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_MOZ_Firefox_Windows_V6R4_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <checksum style="SHA512">36074c715fbd4e42f6a61e3a7e94b0a41f2f57b4fa441344bc628f33942c9215344af104a3776e1a1edeb972bd3ba4ac256751354540e78878df8e0da92b5fe2</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_MOZ_Firefox_Windows</benchmark-id>
-                              <title>Mozilla Firefox for Linux STIG SCAP Benchmark</title>
-                              <version>006.003</version>
+                              <title>Mozilla Firefox for Windows STIG SCAP Benchmark</title>
+                              <version>006.004</version>
                               <style>SCAP_1.2</style>
                               <status>accepted</status>
                               <status-date>2022-09-09</status-date>
@@ -223,14 +199,14 @@
                   </platforms>
             </scap-content>
             <scap-content>
-                  <content-id>U_MS_Defender_Antivirus_V2R3_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_MS_Defender_Antivirus_V2R3_STIG_SCAP_1-2_Benchmark.zip</location>
-                  <checksum style="SHA512">35c1dc2e215f08fe968db69061a0c874ab098f2506959283a405eed69248f10f3b0747d5826651174119d39d346d26bb89a3b5daaaa69ee840cf67d317b5e202</checksum>
+                  <content-id>U_MS_Defender_Antivirus_V2R4_STIG_SCAP_1-2_Benchmark.zip</content-id>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_MS_Defender_Antivirus_V2R4_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <checksum style="SHA512">4587a8200462732ffa8dff27ad1a190b4e1fd35d822c5ceba302a7d5d900d5ea443e6ff645dd2cad584cea5c259976e07026b4c4a83a827fdb6456ce33eca2ff</checksum>
                   <benchmarks>
                         <benchmark>
-                              <benchmark-id>xccdf_mil.disa.stig_benchmark_Windows_Defender_Antivirus</benchmark-id>
-                              <title>Microsoft Defender Antivirus Security Technical Implementation Guide</title>
-                              <version>002.003</version>
+                              <benchmark-id>xccdf_mil.disa.stig_benchmark_MS_Defender_Antivirus</benchmark-id>
+                              <title>Microsoft Defender Antivirus STIG SCAP Benchmark</title>
+                              <version>002.004</version>
                               <style>SCAP_1.2</style>
                               <status>accepted</status>
                               <status-date>2022-04-08</status-date>
@@ -295,17 +271,17 @@
                   </platforms>
             </scap-content>
             <scap-content>
-                  <content-id>U_MS_IE11_V2R4_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_MS_IE11_V2R4_STIG_SCAP_1-2_Benchmark.zip</location>
-                  <checksum style="SHA512">87ef2068fa00817cd4a2f763a62ce5462fbc8e2541f441751f4bf2f72647f805ad063e5c7a2cf84508f185f9689bce6c5ec3ef6a5bbc3a946aa2a59d5cf752f1</checksum>
+                  <content-id>U_MS_IE11_V2R5_STIG_SCAP_1-2_Benchmark.zip</content-id>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_MS_IE11_V2R5_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <checksum style="SHA512">243c9f146958649bc76f723ec8696ca4a5b02c9fde7baff111a089b0586bf7607bcb6e877fc42ebfc4476e9a820c8d441c2cec491ef3320fea2513c75b64ab46</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_IE_11_STIG</benchmark-id>
                               <title>Microsoft Internet Explorer 11 STIG SCAP Benchmark</title>
-                              <version>002.004</version>
+                              <version>002.005</version>
                               <style>SCAP_1.2</style>
                               <status>accepted</status>
-                              <status-date>2022-09-12</status-date>
+                              <status-date>2023-02-13</status-date>
                               <creator>DISA</creator>
                               <publisher>DISA</publisher>
                               <contributor>DISA</contributor>
@@ -319,17 +295,17 @@
                   </platforms>
             </scap-content>
             <scap-content>
-                  <content-id>U_MS_Windows_10_V2R7_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_MS_Windows_10_V2R7_STIG_SCAP_1-2_Benchmark.zip</location>
-                  <checksum style="SHA512">85e9bb9782021f32fe48a6d4b21b332d295a9c252be7184b23c39a7e39163ee43949b4e165bc880a756a7fad9e214d35194d34043c518dea8e2bb18a4fb19ba6</checksum>
+                  <content-id>U_MS_Windows_10_V2R8_STIG_SCAP_1-2_Benchmark.zip</content-id>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_MS_Windows_10_V2R8_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <checksum style="SHA512">66645e7a9d667bf7019e27234ab136d160571cceac6d625fc02a67861955dce66e6a61298127ca79456a54ceb9782ef577e34d72a742583c4a010617a3026651</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_MS_Windows_10_STIG</benchmark-id>
                               <title>Microsoft Windows 10 STIG SCAP Benchmark</title>
-                              <version>002.007</version>
+                              <version>002.008</version>
                               <style>SCAP_1.2</style>
                               <status>accepted</status>
-                              <status-date>2022-08-29</status-date>
+                              <status-date>2023-02-28</status-date>
                               <creator>DISA</creator>
                               <publisher>DISA</publisher>
                               <contributor>DISA</contributor>
@@ -343,17 +319,17 @@
                   </platforms>
             </scap-content>
             <scap-content>
-                  <content-id>U_MS_Windows_11_V1R1_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_MS_Windows_11_V1R1_STIG_SCAP_1-2_Benchmark.zip</location>
-                  <checksum style="SHA512">c3c006ab02451f65391e52ac6cc770e3964987bc70381ea4593c5ed4a73d4a8dd9f16da22624d453d42a91c0346ab144f19d1c657f92a25370204a5446366318</checksum>
+                  <content-id>U_MS_Windows_11_V1R2_STIG_SCAP_1-2_Benchmark.zip</content-id>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_MS_Windows_11_V1R2_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <checksum style="SHA512">74440e825cb2e695c5b6e7cacd393d74cf0ff931ff68ed0b438c3e9ec7c28d01d5c4395b728bdb5eea5954b7224c64a5445ad5ce7d3aa0d9f31e4cc7d18d87aa</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_Microsoft_Windows_11_STIG</benchmark-id>
                               <title>Microsoft Windows 11 STIG SCAP Benchmark</title>
-                              <version>001.001</version>
+                              <version>001.002</version>
                               <style>SCAP_1.2</style>
                               <status>accepted</status>
-                              <status-date>2022-08-31</status-date>
+                              <status-date>2023-02-27</status-date>
                               <creator>DISA</creator>
                               <publisher>DISA</publisher>
                               <contributor>DISA</contributor>
@@ -367,17 +343,17 @@
                   </platforms>
             </scap-content>
             <scap-content>
-                  <content-id>U_MS_Windows_2012_and_2012_R2_DC_V3R4_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_MS_Windows_2012_and_2012_R2_DC_V3R4_STIG_SCAP_1-2_Benchmark.zip</location>
-                  <checksum style="SHA512">2627277754bdd5668b25c69e922eb4f73a1c52a9972a0a1f4352e149f4e05066200c422eb154d5cb89c985cb7cc191772eb796f74e42dbb0337889d216440bc5</checksum>
+                  <content-id>U_MS_Windows_2012_and_2012_R2_DC_V3R5_STIG_SCAP_1-2_Benchmark.zip</content-id>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_MS_Windows_2012_and_2012_R2_DC_V3R5_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <checksum style="SHA512">a66d7bed29d70c3b8bbede968bf94c995ad349d800524b56cd9602a85b7deb3b6c9bdeb96ada35be74e101e3c5592d15ed88745a288d2bb65dcd4d1e49376395</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_Windows_2012_DC_STIG</benchmark-id>
                               <title>Microsoft Windows Server 2012/2012 R2 Domain Controller STIG SCAP Benchmark</title>
-                              <version>003.004</version>
+                              <version>003.005</version>
                               <style>SCAP_1.2</style>
                               <status>accepted</status>
-                              <status-date>2022-08-31</status-date>
+                              <status-date>2023-02-27</status-date>
                               <creator>DISA</creator>
                               <publisher>DISA</publisher>
                               <contributor>DISA</contributor>
@@ -394,17 +370,17 @@
                   </platforms>
             </scap-content>
             <scap-content>
-                  <content-id>U_MS_Windows_2012_and_2012_R2_MS_V3R4_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_MS_Windows_2012_and_2012_R2_MS_V3R4_STIG_SCAP_1-2_Benchmark.zip</location>
-                  <checksum style="SHA512">97d475b142d741fdb15a847915ea38b08da85ffb128383efd57de9f5c68044db8254e1c23be7fef1250f5d0fca143f29b89e0394c30f3c117f5d0ffc372a544a</checksum>
+                  <content-id>U_MS_Windows_2012_and_2012_R2_MS_V3R5_STIG_SCAP_1-2_Benchmark.zip</content-id>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_MS_Windows_2012_and_2012_R2_MS_V3R5_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <checksum style="SHA512">38e7ca9dde1612911b249014997715f390596b4e9166acfd87197498b9290e765b5d70e24696fe1f07103b99049a3bb1a27079b2919d37892dc1450e97eb785b</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_Windows_2012_MS_STIG</benchmark-id>
                               <title>Microsoft Windows Server 2012/2012 R2 Member Server STIG SCAP Benchmark</title>
-                              <version>003.004</version>
+                              <version>003.005</version>
                               <style>SCAP_1.2</style>
                               <status>accepted</status>
-                              <status-date>2022-09-06</status-date>
+                              <status-date>2023-02-27</status-date>
                               <creator>DISA</creator>
                               <publisher>DISA</publisher>
                               <contributor>DISA</contributor>
@@ -421,14 +397,14 @@
                   </platforms>
             </scap-content>
             <scap-content>
-                  <content-id>U_MS_Windows_Firewall_V2R1_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_MS_Windows_Firewall_V2R1_STIG_SCAP_1-2_Benchmark.zip</location>
-                  <checksum style="SHA512">64fd57131880b276a3c76bea4435cda31318be0d1f72e3ee01836420b6b0ed173780182f2fd99f3831c45bcef220f3ddf59e3c13a58984920858cc5f5b680751</checksum>
+                  <content-id>U_MS_Windows_Firewall_V2R2_STIG_SCAP_1-2_Benchmark.zip</content-id>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_MS_Windows_Firewall_V2R2_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <checksum style="SHA512">dfb50895b388a9f9a89ad5c760cdb42f580389ce71a7e48703ce78fe6fefba34af4d10b73b0832430e18142a1d78e45d371925988f94d002c478eeff4c3a4aba</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_Windows_Firewall_with_Advanced_Security</benchmark-id>
-                              <title>Windows Firewall with Advanced Security Security Technical Implementation Guide</title>
-                              <version>002.001</version>
+                              <title>Microsoft Windows Firewall with Advanced Security STIG SCAP Benchmark</title>
+                              <version>002.002</version>
                               <style>SCAP_1.2</style>
                               <status>accepted</status>
                               <status-date>2021-10-15</status-date>
@@ -440,52 +416,52 @@
                   </benchmarks>
                   <platforms>
                         <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2019:-</platform-id>
-                        </platform>
-                        <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2008:r2</platform-id>
-                        </platform>
-                        <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2012:-</platform-id>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2012:r2</platform-id>
                         </platform>
                         <platform>
                               <platform-id style="cpe">cpe:/o:microsoft:windows_8.1</platform-id>
                         </platform>
                         <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_7</platform-id>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2008:r2</platform-id>
                         </platform>
                         <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_10</platform-id>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_vista</platform-id>
+                        </platform>
+                        <platform>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_7</platform-id>
                         </platform>
                         <platform>
                               <platform-id style="cpe">cpe:/o:microsoft:windows_server_2016:-</platform-id>
                         </platform>
                         <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_8</platform-id>
-                        </platform>
-                        <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2012:r2</platform-id>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2019:-</platform-id>
                         </platform>
                         <platform>
                               <platform-id style="cpe">cpe:/o:microsoft:windows_server_2008</platform-id>
                         </platform>
                         <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_vista</platform-id>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_8</platform-id>
+                        </platform>
+                        <platform>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2012:-</platform-id>
+                        </platform>
+                        <platform>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_10</platform-id>
                         </platform>
                   </platforms>
             </scap-content>
             <scap-content>
-                  <content-id>U_MS_Windows_Server_2016_V2R3_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_MS_Windows_Server_2016_V2R3_STIG_SCAP_1-2_Benchmark.zip</location>
-                  <checksum style="SHA512">9a9e7b57e3602364ebff816b5689268ca0d6a850d34f7fa979258631beb8bff13d31d02786f891fe7754a21bb377b1b616c4b53df1aecd9f2e73e699d02ca8f7</checksum>
+                  <content-id>U_MS_Windows_Server_2016_V2R4_STIG_SCAP_1-2_Benchmark.zip</content-id>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_MS_Windows_Server_2016_V2R4_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <checksum style="SHA512">5b6ad35bc9ce26b231408b75e107463eac18eb6f0bfcabedd95e021d846ca6f4b0e805fb4f64d7dfbef2f984642075b615c5e2494ad15d44e561a4fff7fa527e</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_Windows_Server_2016_STIG</benchmark-id>
                               <title>Microsoft Windows Server 2016 STIG SCAP Benchmark</title>
-                              <version>002.003</version>
+                              <version>002.004</version>
                               <style>SCAP_1.2</style>
                               <status>accepted</status>
-                              <status-date>2022-09-06</status-date>
+                              <status-date>2023-03-02</status-date>
                               <creator>DISA</creator>
                               <publisher>DISA</publisher>
                               <contributor>DISA</contributor>
@@ -499,17 +475,17 @@
                   </platforms>
             </scap-content>
             <scap-content>
-                  <content-id>U_MS_Windows_Server_2019_V2R3_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_MS_Windows_Server_2019_V2R3_STIG_SCAP_1-2_Benchmark.zip</location>
-                  <checksum style="SHA512">a13d20587e4ccb5fb20f172e75fd98c7f74d0e69a94dcd2b96a7ebd6518e3f330fa462975eeac29d4e914f74315d752c3eeb3a750a96c7bf5478a6fc375ab5ef</checksum>
+                  <content-id>U_MS_Windows_Server_2019_V2R4_STIG_SCAP_1-2_Benchmark.zip</content-id>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_MS_Windows_Server_2019_V2R4_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <checksum style="SHA512">2db00ee2307f784e3f65fda4d24c1b58bffaccac778fba8c354ed9c8a536c637ded1d7d53702da71fad1225dc78a46db5579566270922c5ba8ca6cc43b275b25</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_Windows_Server_2019_STIG</benchmark-id>
                               <title>Microsoft Windows Server 2019 STIG SCAP Benchmark</title>
-                              <version>002.003</version>
+                              <version>002.004</version>
                               <style>SCAP_1.2</style>
                               <status>accepted</status>
-                              <status-date>2022-09-06</status-date>
+                              <status-date>2023-03-02</status-date>
                               <creator>DISA</creator>
                               <publisher>DISA</publisher>
                               <contributor>DISA</contributor>
@@ -523,17 +499,17 @@
                   </platforms>
             </scap-content>
             <scap-content>
-                  <content-id>U_MS_Windows_Server_2022_V1R1_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_MS_Windows_Server_2022_V1R1_STIG_SCAP_1-2_Benchmark.zip</location>
-                  <checksum style="SHA512">90e9530ba08e47ca70e5ee3ddaf6127f0a9622ee460bc65da16d2031ef7d46507c4468e3168267ca80a445433684f8052777b9520a38b016177f7b227658b0a2</checksum>
+                  <content-id>U_MS_Windows_Server_2022_V1R2_STIG_SCAP_1-2_Benchmark.zip</content-id>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_MS_Windows_Server_2022_V1R2_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <checksum style="SHA512">241cd3227a4826f29f8bf2a01caee87cb6288189aeafedf3c78bacc9a7427091b803c5e050d469f70ccf2d128fe83deedbbe1b0bfac44cad845a7950cbd773bf</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_MS_Windows_Server_2022_STIG</benchmark-id>
                               <title>Microsoft Windows Server 2022 STIG SCAP Benchmark</title>
-                              <version>001.001</version>
+                              <version>001.002</version>
                               <style>SCAP_1.2</style>
                               <status>accepted</status>
-                              <status-date>2022-08-25</status-date>
+                              <status-date>2023-03-07</status-date>
                               <creator>DISA</creator>
                               <publisher>DISA</publisher>
                               <contributor>DISA</contributor>
@@ -547,17 +523,17 @@
                   </platforms>
             </scap-content>
             <scap-content>
-                  <content-id>U_Oracle_Linux_7_V2R10_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_Oracle_Linux_7_V2R10_STIG_SCAP_1-2_Benchmark.zip</location>
-                  <checksum style="SHA512">93cbf06803d9aeae2c37423c5499d03f8cd8d2f0d3284bc7acf2826136a0779235762ac3ce4711638c0f9dec808f9300d80bd2c7f4b771042a7e2dbc857bd3c7</checksum>
+                  <content-id>U_Oracle_Linux_7_V2R11_STIG_SCAP_1-2_Benchmark.zip</content-id>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_Oracle_Linux_7_V2R11_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <checksum style="SHA512">f88dd6f214a5956ba3d3427cd37677824fac677f98ec1bb9bd9ea8b94005963143e85f5760b95b23464eeae7e477645ec075533d6a3cf938831f4dd23fd2ae6d</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_Oracle_Linux_7_STIG</benchmark-id>
                               <title>Oracle Linux 7 STIG SCAP Benchmark</title>
-                              <version>002.010</version>
+                              <version>002.011</version>
                               <style>SCAP_1.2</style>
                               <status>accepted</status>
-                              <status-date>2022-12-06</status-date>
+                              <status-date>2023-03-06</status-date>
                               <creator>DISA</creator>
                               <publisher>DISA</publisher>
                               <contributor>DISA</contributor>
@@ -571,17 +547,17 @@
                   </platforms>
             </scap-content>
             <scap-content>
-                  <content-id>U_Oracle_Linux_8_V1R4_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_Oracle_Linux_8_V1R4_STIG_SCAP_1-2_Benchmark.zip</location>
-                  <checksum style="SHA512">8de45fae6fefc44fc4b203a411b31cfe33f87618218b6430d4f7b22f24dab70bb76d341214d9d11d67532bea27270362c442d432ce3101c0a717f721ede1791b</checksum>
+                  <content-id>U_Oracle_Linux_8_V1R5_STIG_SCAP_1-2_Benchmark.zip</content-id>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_Oracle_Linux_8_V1R5_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <checksum style="SHA512">92378303bb2e635e44ea8d6cd4dcb157b0736713e67212b3331b0af6b45ad7676e8bf683c703645350e50c851af2a8a481c0a8771b7c8943aa464bc105b20e88</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_Oracle_Linux_8_STIG</benchmark-id>
                               <title>Oracle Linux 8 STIG SCAP Benchmark</title>
-                              <version>001.004</version>
+                              <version>001.005</version>
                               <style>SCAP_1.2</style>
                               <status>accepted</status>
-                              <status-date>2022-12-06</status-date>
+                              <status-date>2023-03-06</status-date>
                               <creator>DISA</creator>
                               <publisher>DISA</publisher>
                               <contributor>DISA</contributor>
@@ -595,41 +571,17 @@
                   </platforms>
             </scap-content>
             <scap-content>
-                  <content-id>U_RHEL_6_V2R2_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_RHEL_6_V2R2_STIG_SCAP_1-2_Benchmark.zip</location>
-                  <checksum style="SHA512">f5889ded49329e9ad44f53629f2e0b8cccdd7e50dba897560a9479b5e4e3928757fb17018775aaebdc7f9da6447fb5b459d86c1c79d5ca0cc9c07d7d24cf2501</checksum>
-                  <benchmarks>
-                        <benchmark>
-                              <benchmark-id>xccdf_mil.disa.stig_benchmark_RHEL_6_STIG</benchmark-id>
-                              <title>Red Hat Enterprise Linux 6 Security Technical Implementation Guide</title>
-                              <version>002.002</version>
-                              <style>SCAP_1.2</style>
-                              <status>accepted</status>
-                              <status-date>2020-12-04</status-date>
-                              <creator>DISA</creator>
-                              <publisher>DISA</publisher>
-                              <contributor>DISA</contributor>
-                              <source>STIG.DOD.MIL</source>
-                        </benchmark>
-                  </benchmarks>
-                  <platforms>
-                        <platform>
-                              <platform-id style="cpe">cpe:/o:redhat:enterprise_linux:6</platform-id>
-                        </platform>
-                  </platforms>
-            </scap-content>
-            <scap-content>
-                  <content-id>U_RHEL_7_V3R10_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_RHEL_7_V3R10_STIG_SCAP_1-2_Benchmark.zip</location>
-                  <checksum style="SHA512">edd0d5c5df35bff0a91f7cb2c587134bbbf519d4373130a2a5a377510aac4857c1966242a8d9e09474d742e66af05f13cd6854bdba9cfd8fee0bde6dd09ea0b2</checksum>
+                  <content-id>U_RHEL_7_V3R11_STIG_SCAP_1-2_Benchmark.zip</content-id>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_RHEL_7_V3R11_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <checksum style="SHA512">37ca0cad8135d5c8b68503d315961a4564fd3f6d96d66c58453ced1a1fea5bbcdc61ca89e9ca83d406c94bf7e70019be3bfd8d03dc4dc73a8210f72100948155</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_RHEL_7_STIG</benchmark-id>
                               <title>Red Hat Enterprise Linux 7 STIG SCAP Benchmark</title>
-                              <version>003.010</version>
+                              <version>003.011</version>
                               <style>SCAP_1.2</style>
                               <status>accepted</status>
-                              <status-date>2022-12-06</status-date>
+                              <status-date>2023-03-08</status-date>
                               <creator>DISA</creator>
                               <publisher>DISA</publisher>
                               <contributor>DISA</contributor>
@@ -643,17 +595,17 @@
                   </platforms>
             </scap-content>
             <scap-content>
-                  <content-id>U_RHEL_8_V1R8_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_RHEL_8_V1R8_STIG_SCAP_1-2_Benchmark.zip</location>
-                  <checksum style="SHA512">4f88696471cf40c204988c09d87ef417b2805cbdc0024601dda5d856ab5f4ce97ebc927f4d9853ed51c261532092d90bacb7901d31507e204be3671bbf8a5d61</checksum>
+                  <content-id>U_RHEL_8_V1R9_STIG_SCAP_1-2_Benchmark.zip</content-id>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_RHEL_8_V1R9_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <checksum style="SHA512">208a6f7c1fedebc8cb25bbc6e7fe81ad2d9b694ab1c8801acdb36bad3bad715b6b11688a579669158bd544ec71b419f2ae5e63d572271547547d0af15416d477</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_RHEL_8_STIG</benchmark-id>
                               <title>Red Hat Enterprise Linux 8 STIG SCAP Benchmark</title>
-                              <version>001.008</version>
+                              <version>001.009</version>
                               <style>SCAP_1.2</style>
                               <status>accepted</status>
-                              <status-date>2022-12-06</status-date>
+                              <status-date>2023-03-08</status-date>
                               <creator>DISA</creator>
                               <publisher>DISA</publisher>
                               <contributor>DISA</contributor>
@@ -667,17 +619,17 @@
                   </platforms>
             </scap-content>
             <scap-content>
-                  <content-id>U_SLES_12_V2R8_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_SLES_12_V2R8_STIG_SCAP_1-2_Benchmark.zip</location>
-                  <checksum style="SHA512">725d346995e835d881791b67f4793fdd2c343f5d947df7f4b24ffc270ec9b9a7c4239df649fe8471e6e85eff227adf660456e9dde627864ca8dbf79f892394f5</checksum>
+                  <content-id>U_SLES_12_V2R9_STIG_SCAP_1-2_Benchmark.zip</content-id>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_SLES_12_V2R9_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <checksum style="SHA512">8e3f163e40f3848f68e5cd97a316c92a98b3c87198993311bf1589218907b6d94f07d7e0c3ee4d12dd024eda33c77919e3e9c8fce356255449db4ee3e6f90880</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_SLES_12_STIG</benchmark-id>
                               <title>SLES 12 STIG SCAP Benchmark</title>
-                              <version>002.008</version>
+                              <version>002.009</version>
                               <style>SCAP_1.2</style>
                               <status>accepted</status>
-                              <status-date>2022-12-06</status-date>
+                              <status-date>2023-03-06</status-date>
                               <creator>DISA</creator>
                               <publisher>DISA</publisher>
                               <contributor>DISA</contributor>
@@ -691,17 +643,17 @@
                   </platforms>
             </scap-content>
             <scap-content>
-                  <content-id>U_SLES_15_V1R3_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_SLES_15_V1R3_STIG_SCAP_1-2_Benchmark.zip</location>
-                  <checksum style="SHA512">d4da4647139d54efa8b623e4e0ffca57ec44bba5e82a987da01954db5a94167ba252911dcafb861038516328a4c9d638fb964581132797c2d1af6ca8411c9a7c</checksum>
+                  <content-id>U_SLES_15_V1R4_STIG_SCAP_1-2_Benchmark.zip</content-id>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_SLES_15_V1R4_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <checksum style="SHA512">e77ba51044c149d90b3a4bf4925b02d6c0ccd53c58cb59818d3b03e6bc5880061a40af7d7908c5008a27688770eaec0456717bd0b0dc081ec1e2d6ddd7712db7</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_SLES_15_STIG</benchmark-id>
                               <title>SUSE Linux Enterprise Server 15 STIG SCAP Benchmark</title>
-                              <version>001.003</version>
+                              <version>001.004</version>
                               <style>SCAP_1.2</style>
                               <status>accepted</status>
-                              <status-date>2022-12-07</status-date>
+                              <status-date>2023-03-08</status-date>
                               <creator>DISA</creator>
                               <publisher>DISA</publisher>
                               <contributor>DISA</contributor>
@@ -715,65 +667,17 @@
                   </platforms>
             </scap-content>
             <scap-content>
-                  <content-id>U_SOL_10_SPARC_V2R4_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_SOL_10_SPARC_V2R4_STIG_SCAP_1-2_Benchmark.zip</location>
-                  <checksum style="SHA512">a6ae12c0ad9d9b48d87207576dd2ecb5017a59988750977a60a65fb90e50d3569f0654a1f247eed5dc22ba2af3293a4838d295e24598385c3cfa9ce58c56d9b3</checksum>
-                  <benchmarks>
-                        <benchmark>
-                              <benchmark-id>xccdf_mil.disa.stig_benchmark_Solaris_10_SPARC_STIG</benchmark-id>
-                              <title>Solaris 10 SPARC STIG SCAP Benchmark</title>
-                              <version>002.004</version>
-                              <style>SCAP_1.2</style>
-                              <status>accepted</status>
-                              <status-date>2022-11-18</status-date>
-                              <creator>DISA</creator>
-                              <publisher>DISA</publisher>
-                              <contributor>DISA</contributor>
-                              <source>STIG.DOD.MIL</source>
-                        </benchmark>
-                  </benchmarks>
-                  <platforms>
-                        <platform>
-                              <platform-id style="cpe">cpe:/o:sun:sunos:5.10:-:sparc</platform-id>
-                        </platform>
-                  </platforms>
-            </scap-content>
-            <scap-content>
-                  <content-id>U_SOL_10_X86_V2R4_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_SOL_10_X86_V2R4_STIG_SCAP_1-2_Benchmark.zip</location>
-                  <checksum style="SHA512">83e8c4dafba54c7058a09b79dda7b7d71bf7789adc7d8421fc10063bb63e461a303222fcf012004671398d429936a0acbf1b9b29d8476ad994a8c4e535220867</checksum>
-                  <benchmarks>
-                        <benchmark>
-                              <benchmark-id>xccdf_mil.disa.stig_benchmark_Solaris_10_X86_STIG</benchmark-id>
-                              <title>Solaris 10 X86 STIG SCAP Benchmark</title>
-                              <version>002.004</version>
-                              <style>SCAP_1.2</style>
-                              <status>accepted</status>
-                              <status-date>2022-11-18</status-date>
-                              <creator>DISA</creator>
-                              <publisher>DISA</publisher>
-                              <contributor>DISA</contributor>
-                              <source>STIG.DOD.MIL</source>
-                        </benchmark>
-                  </benchmarks>
-                  <platforms>
-                        <platform>
-                              <platform-id style="cpe">cpe:/o:sun:sunos:5.10:-:ix86</platform-id>
-                        </platform>
-                  </platforms>
-            </scap-content>
-            <scap-content>
-                  <content-id>U_SOL_11_SPARC_V2R3_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_SOL_11_SPARC_V2R3_STIG_SCAP_1-2_Benchmark.zip</location>
-                  <checksum style="SHA512">46c486c0d1489f744cfdc92ac961e4d13fd2f8665291804617738460f60a5780822409d0f6cc83306c9ba578266af6494f54677fc34f8e9154dd4fc04373d599</checksum>
+                  <content-id>U_SOL_11_SPARC_V2R4_STIG_SCAP_1-2_Benchmark.zip</content-id>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_SOL_11_SPARC_V2R4_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <checksum style="SHA512">efa2d8f3b976aea45bddcf8389cc60772e611beb3bced01533e6093e357f9fa7a7da7f4d94042f3a91f890f5eac063ce14a1fd9fdd9834e6999dfeee91b8979a</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_Solaris_11_SPARC_STIG</benchmark-id>
-                              <title>Solaris 11 SPARC Security Technical Implementation Guide</title>
-                              <version>002.003</version>
+                              <title>Solaris 11 SPARC STIG SCAP Benchmark</title>
+                              <version>002.004</version>
                               <style>SCAP_1.2</style>
                               <status>accepted</status>
-                              <status-date>2021-11-23</status-date>
+                              <status-date>2022-11-18</status-date>
                               <creator>DISA</creator>
                               <publisher>DISA</publisher>
                               <contributor>DISA</contributor>
@@ -787,17 +691,17 @@
                   </platforms>
             </scap-content>
             <scap-content>
-                  <content-id>U_SOL_11_X86_V2R3_STIG_SCAP_1-2_Benchmark.zip</content-id>
-                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_SOL_11_X86_V2R3_STIG_SCAP_1-2_Benchmark.zip</location>
-                  <checksum style="SHA512">3574143893b19e8aab3e6a13aab904ebb908580c2366118256840d8255d2567369fcb764ba79830fbf7622f47f62d0e6734d906d0fb662cbc94dfe18f06691c5</checksum>
+                  <content-id>U_SOL_11_X86_V2R4_STIG_SCAP_1-2_Benchmark.zip</content-id>
+                  <location>https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_SOL_11_X86_V2R4_STIG_SCAP_1-2_Benchmark.zip</location>
+                  <checksum style="SHA512">948d846c55a39e8f66852e46cde61129a598c9dc89e687827d5f64715079d099791e1c740d326f5bdc2f718afb3e7d94de36ee747e24ae8a944c102c118f10f1</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_Solaris_11_X86_STIG</benchmark-id>
-                              <title>Solaris 11 X86 Security Technical Implementation Guide</title>
-                              <version>002.003</version>
+                              <title>Solaris 11 X86 STIG SCAP Benchmark</title>
+                              <version>002.004</version>
                               <style>SCAP_1.2</style>
                               <status>accepted</status>
-                              <status-date>2021-11-23</status-date>
+                              <status-date>2022-11-18</status-date>
                               <creator>DISA</creator>
                               <publisher>DISA</publisher>
                               <contributor>DISA</contributor>
