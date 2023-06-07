@@ -318,18 +318,18 @@
                         </platform>
                   </platforms>
             </scap-content>
-            <scap-content>
-                  <content-id>U_MS_IIS_10-0_Server_V2R8_STIG_SCAP_1-3_Benchmark-enhancedV3.zip</content-id>
-                  <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2023/04/U_MS_IIS_10-0_Server_V2R8_STIG_SCAP_1-3_Benchmark-enhancedV3.zip</location>
-                  <checksum style="SHA512">b1c96e9807c436d7893f8dfd8c2c7285146c221bbda3c0ce17244ddfc2c57abe2f4aa88d19545b62eb1558e40486d448ba97a23f1373f6e70171cd45dcf7faa6</checksum>
+                        <scap-content>
+                  <content-id>U_MS_IIS_10-0_Server_V2R9_STIG_SCAP_1-3_Benchmark-enhancedV4.zip</content-id>
+                  <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2023/05/U_MS_IIS_10-0_Server_V2R9_STIG_SCAP_1-3_Benchmark-enhancedV4.zip</location>
+                  <checksum style="SHA512">2572f8180dd69eccc7ac2f6783b532bc2604a3f3e8de008f4c7f48197519d6d249e6df040bbb38ac0afef4e7e621c6c7600b41a79931d51622c3c473d42b803e</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_navy.navwar.niwcatlantic.scc_benchmark_IIS_10-0_Server_STIG</benchmark-id>
                               <title>Microsoft IIS 10.0 Server STIG SCAP Benchmark - NIWC Enhanced with Manual Questions</title>
-                              <version>2.8.3</version>
+                              <version>2.9.4</version>
                               <style>SCAP_1.3</style>
                               <status>accepted</status>
-                              <status-date>2023-01-21</status-date>
+                              <status-date>2023-05-31</status-date>
                               <creator>NIWC</creator>
                               <publisher>NIWC</publisher>
                               <contributor>NIWC</contributor>
@@ -343,17 +343,17 @@
                   </platforms>
             </scap-content>
             <scap-content>
-                  <content-id>U_MS_IIS_10-0_Site_V2R7_STIG_SCAP_1-3_Benchmark-enhancedV3.zip</content-id>
-                  <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2023/04/U_MS_IIS_10-0_Site_V2R7_STIG_SCAP_1-3_Benchmark-enhancedV3.zip</location>
-                  <checksum style="SHA512">84a86a303958359d5eac5ef838eb184f520192d79d1efefb67746e3933b91e3f773d42c7a239ac8d7582f555e0f76f8f8a5d051463dfd6f805788bc7dd0dbb43</checksum>
+                  <content-id>U_MS_IIS_10-0_Site_V2R8_STIG_SCAP_1-3_Benchmark-enhancedV4.zip</content-id>
+                  <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2023/05/U_MS_IIS_10-0_Site_V2R8_STIG_SCAP_1-3_Benchmark-enhancedV4.zip</location>
+                  <checksum style="SHA512">50fe3515ed4432a9d71cda858487adc23871aac69afa88d3f89c22eeac8c1a30042839e70bdae07547083131fc88f4bd6af03c0e00ebcb35b18fad8ff0d87039</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_navy.navwar.niwcatlantic.scc_benchmark_IIS_10-0_Site_STIG</benchmark-id>
                               <title>Microsoft IIS 10.0 Site STIG SCAP Benchmark - NIWC Enhanced with Manual Questions</title>
-                              <version>2.7.3</version>
+                              <version>2.8.4</version>
                               <style>SCAP_1.3</style>
                               <status>accepted</status>
-                              <status-date>2023-01-21</status-date>
+                              <status-date>2023-05-31</status-date>
                               <creator>NIWC</creator>
                               <publisher>NIWC</publisher>
                               <contributor>NIWC</contributor>
@@ -367,17 +367,17 @@
                   </platforms>
             </scap-content>
             <scap-content>
-                  <content-id>U_MS_IIS_8-5_Server_V2R5_STIG_SCAP_1-3_Benchmark-enhancedV2.zip</content-id>
-                  <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2023/03/U_MS_IIS_8-5_Server_V2R5_STIG_SCAP_1-3_Benchmark-enhancedV2.zip</location>
-                  <checksum style="SHA512">41b3fd7c1c65c46ed21f75cb6a64b39335295d45cc40c37c4e723bc79c813e5c23bf695b11b1c11b2fd1a82f64bea03dd933f19c956c502e2302b637cb6e5fda</checksum>
+                  <content-id>U_MS_IIS_8-5_Server_V2R6_STIG_SCAP_1-3_Benchmark-enhancedV3.zip</content-id>
+                  <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2023/05/U_MS_IIS_8-5_Server_V2R6_STIG_SCAP_1-3_Benchmark-enhancedV3.zip</location>
+                  <checksum style="SHA512">866a641767bd29c03c3b7c890ebd5d25a3d2b66538e62fee5a54df84d39eb884e29551a0a12f95883bf5c21ae16d2711b1e7e5b802295be9ec516e6354e6a6b2</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_navy.navwar.niwcatlantic.scc_benchmark_IIS_8-5_Server_STIG</benchmark-id>
                               <title>Microsoft IIS 8.5 Server STIG SCAP Benchmark - NIWC Enhanced with Manual Questions</title>
-                              <version>2.5.2</version>
+                              <version>2.6.3</version>
                               <style>SCAP_1.3</style>
                               <status>accepted</status>
-                              <status-date>2023-01-21</status-date>
+                              <status-date>2023-05-31</status-date>
                               <creator>NIWC</creator>
                               <publisher>NIWC</publisher>
                               <contributor>NIWC</contributor>
@@ -391,17 +391,17 @@
                   </platforms>
             </scap-content>
             <scap-content>
-                  <content-id>U_MS_IIS_8-5_Site_V2R7_STIG_SCAP_1-3_Benchmark-enhancedV2.zip</content-id>
-                  <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2023/03/U_MS_IIS_8-5_Site_V2R7_STIG_SCAP_1-3_Benchmark-enhancedV2.zip</location>
-                  <checksum style="SHA512">5c817de1b55a7b0246b4a8d7210173d962e832f5ea5b6b89bf4b3f7fc110fa13ada44d8b21f955b184787ddc265aacb34409221fd977e08ef9ca6e75aed7ac74</checksum>
+                  <content-id>U_MS_IIS_8-5_Site_V2R8_STIG_SCAP_1-3_Benchmark-enhancedV3.zip</content-id>
+                  <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2023/05/U_MS_IIS_8-5_Site_V2R8_STIG_SCAP_1-3_Benchmark-enhancedV3.zip</location>
+                  <checksum style="SHA512">67cf217adf1022e591c862134b4b8c92c7c761449903f0a8fb50c34c304df6c0a81428563efce02f6c65c6407e99f6ca182aead1b177a9d538a5cf736177ab44</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_navy.navwar.niwcatlantic.scc_benchmark_IIS_8-5_Site_STIG</benchmark-id>
                               <title>Microsoft IIS 8.5 Site STIG SCAP Benchmark - NIWC Enhanced with Manual Questions</title>
-                              <version>2.7.2</version>
+                              <version>2.8.3</version>
                               <style>SCAP_1.3</style>
                               <status>accepted</status>
-                              <status-date>2023-01-21</status-date>
+                              <status-date>2023-05-31</status-date>
                               <creator>NIWC</creator>
                               <publisher>NIWC</publisher>
                               <contributor>NIWC</contributor>
@@ -415,17 +415,17 @@
                   </platforms>
             </scap-content>
             <scap-content>
-                  <content-id>U_MS_Office_365_ProPlus_V2R8_STIG_SCAP_1-3_Benchmark-enhancedV2.zip</content-id>
-                  <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2023/03/U_MS_Office_365_ProPlus_V2R8_STIG_SCAP_1-3_Benchmark-enhancedV2.zip</location>
-                  <checksum style="SHA512">59a26274aa1a1d137dae4a4fa450d7981f16ed35ce7aa6255246e6978119460f471ddcec622c22b2599b585078af29c0f340bb3063d77c657e17a2fa8fe04948</checksum>
+                  <content-id>U_MS_Office_365_ProPlus_V2R9_STIG_SCAP_1-3_Benchmark-enhancedV3.zip</content-id>
+                  <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2023/05/U_MS_Office_365_ProPlus_V2R9_STIG_SCAP_1-3_Benchmark-enhancedV3.zip</location>
+                  <checksum style="SHA512">6eae78fed55541f6dec771ac73ce41d43e3daccfb25deac659520cfea0c3d058f5428a45385f505b06fc7732f830f19f52bb322ff3f2928d0a9769a4c0af8dfe</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_navy.navwar.niwcatlantic.scc_benchmark_MS_Office_365_ProPlus_STIG</benchmark-id>
                               <title>Microsoft Office 365 STIG SCAP Benchmark - NIWC Enhanced with Manual Questions</title>
-                              <version>2.8.2</version>
+                              <version>2.9.3</version>
                               <style>SCAP_1.3</style>
                               <status>accepted</status>
-                              <status-date>2023-01-21</status-date>
+                              <status-date>2023-05-25</status-date>
                               <creator>NIWC</creator>
                               <publisher>NIWC</publisher>
                               <contributor>NIWC</contributor>
@@ -439,17 +439,17 @@
                   </platforms>
             </scap-content>
             <scap-content>
-                  <content-id>U_MS_OneDrive_V2R2_STIG_SCAP_1-3_Benchmark-enhancedV2.zip</content-id>
-                  <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2023/03/U_MS_OneDrive_V2R2_STIG_SCAP_1-3_Benchmark-enhancedV2.zip</location>
-                  <checksum style="SHA512">e3563c28fa78622589f97f29f0cc045c1d28bdb7a258f48b6bf29a9c688130f471b21066aa26839a3d7cb42f16d6ffe43608d4fe791c66e5d89f9eb99b0e061b</checksum>
+                  <content-id>U_MS_OneDrive_V2R2_STIG_SCAP_1-3_Benchmark-enhancedV3.zip</content-id>
+                  <location>https://www.niwcatlantic.navy.mil/wp-content/uploads/2023/05/U_MS_OneDrive_V2R2_STIG_SCAP_1-3_Benchmark-enhancedV3.zip</location>
+                  <checksum style="SHA512">204704a6596ac51c88efa22bec816ad30f4c7441a068c21f02e570d2086ca1a959d56951b4773cba9c64161fdb6f1513549ac8a86739a7f9aa5cd46029ce604f</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_navy.navwar.niwcatlantic.scc_benchmark_Microsoft_OneDrive_STIG</benchmark-id>
                               <title>Microsoft OneDrive STIG SCAP Benchmark - NIWC Enhanced with Manual Questions</title>
-                              <version>2.2.2</version>
+                              <version>2.2.3</version>
                               <style>SCAP_1.3</style>
                               <status>accepted</status>
-                              <status-date>2023-01-21</status-date>
+                              <status-date>2023-05-23</status-date>
                               <creator>NIWC</creator>
                               <publisher>NIWC</publisher>
                               <contributor>NIWC</contributor>
