@@ -3,7 +3,7 @@
 <content-repository style="0.1">
       <repository-id>niwc-stig-repo</repository-id>
       <repository-publisher>NIWC</repository-publisher>
-      <last-updated>2023-08-09T18:39:34</last-updated>
+      <last-updated>2023-08-17T09:30:29</last-updated>
       <license>Open</license>
       <contents>
             <scap-content>
@@ -530,10 +530,10 @@
                   </benchmarks>
                   <platforms>
                         <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2012:r2</platform-id>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2012:-</platform-id>
                         </platform>
                         <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2012:-</platform-id>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2012:r2</platform-id>
                         </platform>
                   </platforms>
             </scap-content>
@@ -584,28 +584,7 @@
                   </benchmarks>
                   <platforms>
                         <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_vista</platform-id>
-                        </platform>
-                        <platform>
                               <platform-id style="cpe">cpe:/o:microsoft:windows_10</platform-id>
-                        </platform>
-                        <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2012:-</platform-id>
-                        </platform>
-                        <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2016:-</platform-id>
-                        </platform>
-                        <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2008:r2</platform-id>
-                        </platform>
-                        <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_8.1</platform-id>
-                        </platform>
-                        <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_7</platform-id>
-                        </platform>
-                        <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2019:-</platform-id>
                         </platform>
                         <platform>
                               <platform-id style="cpe">cpe:/o:microsoft:windows_server_2012:r2</platform-id>
@@ -614,7 +593,28 @@
                               <platform-id style="cpe">cpe:/o:microsoft:windows_server_2008</platform-id>
                         </platform>
                         <platform>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2012:-</platform-id>
+                        </platform>
+                        <platform>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_8.1</platform-id>
+                        </platform>
+                        <platform>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2019:-</platform-id>
+                        </platform>
+                        <platform>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_vista</platform-id>
+                        </platform>
+                        <platform>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2008:r2</platform-id>
+                        </platform>
+                        <platform>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_7</platform-id>
+                        </platform>
+                        <platform>
                               <platform-id style="cpe">cpe:/o:microsoft:windows_8</platform-id>
+                        </platform>
+                        <platform>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2016:-</platform-id>
                         </platform>
                   </platforms>
             </scap-content>
@@ -763,14 +763,14 @@
                   </platforms>
             </scap-content>
             <scap-content>
-                  <content-id>U_RHEL_7_V3R12_STIG_SCAP_1-3_Benchmark-enhancedV4.zip</content-id>
-                  <location>https://www.niwcatlantic.navy.mil/Portals/94/Page-Content/SCAP/Content-Repository/U_RHEL_7_V3R12_STIG_SCAP_1-3_Benchmark-enhancedV4.zip</location>
-                  <checksum style="SHA512">fe75bfacefcf535341196896298598415f34455d4888218ed5ac79c1dd7a03d361b4df7792b3ce0192ea33e2d67f19b9f6c201550a3350ec629e073390ef1a79</checksum>
+                  <content-id>U_RHEL_7_V3R12_STIG_SCAP_1-3_Benchmark-enhancedV5.zip</content-id>
+                  <location>https://www.niwcatlantic.navy.mil/Portals/94/Page-Content/SCAP/Content-Repository/U_RHEL_7_V3R12_STIG_SCAP_1-3_Benchmark-enhancedV5.zip</location>
+                  <checksum style="SHA512">fc7856dd26a61dee6e936a65fa24c9a95045986802f3d7676bcccfaf06bdbefca3ddb22236a1de913390ba173797e346229e4c75bcf4f6a342ece482370f5ff7</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_RHEL_7_STIG</benchmark-id>
                               <title>Red Hat Enterprise Linux 7 STIG SCAP Benchmark - NIWC Enhanced with Manual Questions</title>
-                              <version>3.12.4</version>
+                              <version>3.12.5</version>
                               <style>SCAP_1.3</style>
                               <status>accepted</status>
                               <status-date>2023-06-02</status-date>
@@ -787,14 +787,14 @@
                   </platforms>
             </scap-content>
             <scap-content>
-                  <content-id>U_RHEL_8_V1R10_STIG_SCAP_1-3_Benchmark-enhancedV4.zip</content-id>
-                  <location>https://www.niwcatlantic.navy.mil/Portals/94/Page-Content/SCAP/Content-Repository/U_RHEL_8_V1R10_STIG_SCAP_1-3_Benchmark-enhancedV4.zip</location>
-                  <checksum style="SHA512">4de733aeb7a3d13a92d31429c3b4ed66804a572811a124ebb8085a3dbbcd916ba26192f1f3e4321c76f1abc9fab84afa5bd93e043a5b8ff2b7be9ba9bd8ba3b7</checksum>
+                  <content-id>U_RHEL_8_V1R10_STIG_SCAP_1-3_Benchmark-enhancedV5.zip</content-id>
+                  <location>https://www.niwcatlantic.navy.mil/Portals/94/Page-Content/SCAP/Content-Repository/U_RHEL_8_V1R10_STIG_SCAP_1-3_Benchmark-enhancedV5.zip</location>
+                  <checksum style="SHA512">83441025867ff395ce74ebc025eecbcef66e84b7baed48b857144e6598ce30cbc5e9454961e0d66e78b09edbb8b8c88c338b002beaee606679fcf6281439c3da</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_RHEL_8_STIG</benchmark-id>
                               <title>Red Hat Enterprise Linux 8 STIG SCAP Benchmark - NIWC Enhanced with Manual Questions</title>
-                              <version>1.10.4</version>
+                              <version>1.10.5</version>
                               <style>SCAP_1.3</style>
                               <status>accepted</status>
                               <status-date>2023-06-02</status-date>
