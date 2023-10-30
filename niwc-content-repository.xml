@@ -565,60 +565,6 @@
                   </platforms>
             </scap-content>
             <scap-content>
-                  <content-id>U_MS_Windows_Firewall_V2R2_STIG_SCAP_1-3_Benchmark-enhancedV4 (1).zip</content-id>
-                  <location>https://www.niwcatlantic.navy.mil/Portals/94/Page-Content/SCAP/Content-Repository/U_MS_Windows_Firewall_V2R2_STIG_SCAP_1-3_Benchmark-enhancedV4 (1).zip</location>
-                  <checksum style="SHA512">69a6f40b2288288e4f8d5f193204d517518077b3cb52782e12b39952da580daa7e40bdf9755829aab3dc16d0a81c685d076bb7b8d67a56819111457cb111486f</checksum>
-                  <benchmarks>
-                        <benchmark>
-                              <benchmark-id>xccdf_mil.disa.stig_benchmark_Windows_Firewall_with_Advanced_Security</benchmark-id>
-                              <title>Microsoft Windows Firewall with Advanced Security STIG SCAP Benchmark - NIWC Enhanced with Manual Questions</title>
-                              <version>2.2.4</version>
-                              <style>SCAP_1.2</style>
-                              <status>accepted</status>
-                              <status-date>2021-10-15</status-date>
-                              <creator>DISA</creator>
-                              <publisher>DISA+NIWC</publisher>
-                              <contributor>DISA</contributor>
-                              <source>STIG.DOD.MIL</source>
-                        </benchmark>
-                  </benchmarks>
-                  <platforms>
-                        <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2016:-</platform-id>
-                        </platform>
-                        <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_vista</platform-id>
-                        </platform>
-                        <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_10</platform-id>
-                        </platform>
-                        <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2012:r2</platform-id>
-                        </platform>
-                        <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2008</platform-id>
-                        </platform>
-                        <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2012:-</platform-id>
-                        </platform>
-                        <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2008:r2</platform-id>
-                        </platform>
-                        <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2019:-</platform-id>
-                        </platform>
-                        <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_8</platform-id>
-                        </platform>
-                        <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_7</platform-id>
-                        </platform>
-                        <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_8.1</platform-id>
-                        </platform>
-                  </platforms>
-            </scap-content>
-            <scap-content>
                   <content-id>U_MS_Windows_Firewall_V2R2_STIG_SCAP_1-3_Benchmark-enhancedV4.zip</content-id>
                   <location>https://www.niwcatlantic.navy.mil/Portals/94/Page-Content/SCAP/Content-Repository/U_MS_Windows_Firewall_V2R2_STIG_SCAP_1-3_Benchmark-enhancedV4.zip</location>
                   <checksum style="SHA512">69a6f40b2288288e4f8d5f193204d517518077b3cb52782e12b39952da580daa7e40bdf9755829aab3dc16d0a81c685d076bb7b8d67a56819111457cb111486f</checksum>
