@@ -1,21 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <scc>
-	<version>5.7.1</version>
-	<timeStamp>2023-02-28T16:00:00</timeStamp>
+	<version>5.8</version>
+	<timeStamp>2023-08-24T16:00:00</timeStamp>
 	<releaseInfo>
 For All Platforms
-*	Fixed data interoperability issue with SCC's CKL file and eMASS
-*	Disabled the creation of XCCDF Results for Manual Questions rules, if Manual Question processing option is disabled.
-*	Updated upgrade feature on Windows to upgrade any Manual Question results from a previous installation
-*	Improved functionality of Manual Question GUI, adding searching and sorting
-*	Minor improvements to Manual Question autoanswer text file templates
+*  Several improvements to XCCDF Tailoring
+  --  Much faster load times on Tailoring form
+  --  Redesigned tailoring form for easier use
+  --  Added support for selecting different check systems, which works in combination with updated NIWC Enhanced SCAP content to allow any automated rule to be converted to a manual check, if automated check doesn't match end user requirements.
+  --  Added support for refine-values to allow any rule severity/weight to be changed based on end user requirements
+*New Configuration Profiles, which allows GUI and CLUI methods to quickly switch between sets of SCC configurations
+*Added new feature to make individual content streams be applicable to all targets, configurable via GUI and CLUI
+*Added new command line parameter to make SCC not update/save/modify it's options file during a scan
+
 Windows
-*	Fixed issue running on Windows when no network cards have IP Addresses
-*	Fixed issue with WMI remote scanning of a computer with ipv6
+*  Fixed Windows classic remote scan related to residual data for remote classic scans with trustees when scanning multiple computers
+*  Fixed issues with Windows sid_object and filters against the trustee_sid
+
  Linux
-*	Fixed issue running GUI at 1024 x 768 resolution
+*  Added support for Ubuntu 22.04 (AMD64)
+*  Fixed reporting ipv6 network addresses
+
 MacOS
-*	Fixed minor issues with incorrectly identifying NIST content as containing manual checks.
+*  N/A 
+
+Solaris
+*  N/A
 
 </releaseInfo>
 	<url>https://public.cyber.mil/stigs/scap/</url>
