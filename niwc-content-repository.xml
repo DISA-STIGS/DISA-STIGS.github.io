@@ -3,7 +3,7 @@
 <content-repository style="0.1">
       <repository-id>niwc-stig-repo</repository-id>
       <repository-publisher>NIWC</repository-publisher>
-      <last-updated>2024-02-21T08:17:24</last-updated>
+      <last-updated>2024-04-02T11:09:53</last-updated>
       <license>Open</license>
       <contents>
             <scap-content>
@@ -463,6 +463,54 @@
                   </platforms>
             </scap-content>
             <scap-content>
+                  <content-id>U_MS_SQL_Server_2016_Database_V2R8_STIG_SCAP_1-3_Benchmark-enhancedV1.zip</content-id>
+                  <location>https://www.niwcatlantic.navy.mil/Portals/94/Page-Content/SCAP/Content-Repository/U_MS_SQL_Server_2016_Database_V2R8_STIG_SCAP_1-3_Benchmark-enhancedV1.zip</location>
+                  <checksum style="SHA512">d85791a04443c5a8e2237edd5f0059ff18d63351e3275d91e66e5b7dc7dd3f0cefa084c15b6881c74a1365c4f5c279fa136ecf036aaaa828e5b88c8544edf516</checksum>
+                  <benchmarks>
+                        <benchmark>
+                              <benchmark-id>xccdf_navy.navwar.niwcatlantic.scc_benchmark_MS_SQL_Server_2016_Database_STIG</benchmark-id>
+                              <title>MS SQL Server 2016 Database STIG SCAP Benchmark - NIWC Enhanced with Manual Questions</title>
+                              <version>2.8.1</version>
+                              <style>SCAP_1.3</style>
+                              <status>accepted</status>
+                              <status-date>2024-03-06</status-date>
+                              <creator>NIWC</creator>
+                              <publisher>NIWC</publisher>
+                              <contributor>NIWC</contributor>
+                              <source>STIG.DOD.MIL</source>
+                        </benchmark>
+                  </benchmarks>
+                  <platforms>
+                        <platform>
+                              <platform-id style="cpe">cpe:/a:microsoft:sqlserver:2016</platform-id>
+                        </platform>
+                  </platforms>
+            </scap-content>
+            <scap-content>
+                  <content-id>U_MS_SQL_Server_2016_Instance_V2R11_STIG_SCAP_1-3_Benchmark-enhancedV1.zip</content-id>
+                  <location>https://www.niwcatlantic.navy.mil/Portals/94/Page-Content/SCAP/Content-Repository/U_MS_SQL_Server_2016_Instance_V2R11_STIG_SCAP_1-3_Benchmark-enhancedV1.zip</location>
+                  <checksum style="SHA512">290566fdb6a76169748bebc33401e89a73520dce2bbcb94bd986a6a29b5d41d40779cf77fc06ae226d8a7d6d3ebd25d95dedfa8f1e4c74abc2c8b79185a5a21f</checksum>
+                  <benchmarks>
+                        <benchmark>
+                              <benchmark-id>xccdf_navy.navwar.niwcatlantic.scc_benchmark_MS_SQL_Server_2016_Instance_STIG</benchmark-id>
+                              <title>MS SQL Server 2016 Instance STIG SCAP Benchmark - NIWC Enhanced with Manual Questions</title>
+                              <version>2.11.1</version>
+                              <style>SCAP_1.3</style>
+                              <status>accepted</status>
+                              <status-date>2024-03-06</status-date>
+                              <creator>NIWC</creator>
+                              <publisher>NIWC</publisher>
+                              <contributor>NIWC</contributor>
+                              <source>STIG.DOD.MIL</source>
+                        </benchmark>
+                  </benchmarks>
+                  <platforms>
+                        <platform>
+                              <platform-id style="cpe">cpe:/a:microsoft:sqlserver:2016</platform-id>
+                        </platform>
+                  </platforms>
+            </scap-content>
+            <scap-content>
                   <content-id>U_MS_Windows_10_V2R9_STIG_SCAP_1-3_Benchmark-enhancedV5.zip</content-id>
                   <location>https://www.niwcatlantic.navy.mil/Portals/94/Page-Content/SCAP/Content-Repository/U_MS_Windows_10_V2R9_STIG_SCAP_1-3_Benchmark-enhancedV5.zip</location>
                   <checksum style="SHA512">a9e67961baac03df96f7a0c76288f0c585efb385a9ad943bbe21e82914f08937f41bed8fc47958b5ac604ee185b949b3030db495e79a495ce63eb22726d7cfe1</checksum>
@@ -557,10 +605,10 @@
                   </benchmarks>
                   <platforms>
                         <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2012:r2</platform-id>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2012:-</platform-id>
                         </platform>
                         <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2012:-</platform-id>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2012:r2</platform-id>
                         </platform>
                   </platforms>
             </scap-content>
@@ -777,6 +825,30 @@
                   <platforms>
                         <platform>
                               <platform-id style="cpe">cpe:/o:redhat:enterprise_linux:8</platform-id>
+                        </platform>
+                  </platforms>
+            </scap-content>
+            <scap-content>
+                  <content-id>U_RHEL_9_V1R1_STIG_SCAP_1-3_Benchmark-enhancedV1.zip</content-id>
+                  <location>https://www.niwcatlantic.navy.mil/Portals/94/Page-Content/SCAP/Content-Repository/U_RHEL_9_V1R1_STIG_SCAP_1-3_Benchmark-enhancedV1.zip</location>
+                  <checksum style="SHA512">ef864e34fc400d359f28d9816023ead4febe9f501cc61b8f06ddeaa506ddc7b7e182c7bbed11bd9dea9369c41547b061cc50eb6c7b12d248f2fabdd8a6f8c9e5</checksum>
+                  <benchmarks>
+                        <benchmark>
+                              <benchmark-id>xccdf_mil.disa.stig_benchmark_RHEL_9_STIG</benchmark-id>
+                              <title>Red Hat Enterprise Linux 9 STIG SCAP Benchmark - NIWC Enhanced with Manual Questions</title>
+                              <version>1.1.1</version>
+                              <style>SCAP_1.3</style>
+                              <status>accepted</status>
+                              <status-date>2023-12-01</status-date>
+                              <creator>DISA</creator>
+                              <publisher>DISA+NIWC</publisher>
+                              <contributor>DISA</contributor>
+                              <source>STIG.DOD.MIL</source>
+                        </benchmark>
+                  </benchmarks>
+                  <platforms>
+                        <platform>
+                              <platform-id style="cpe">cpe:/o:redhat:enterprise_linux:9.0</platform-id>
                         </platform>
                   </platforms>
             </scap-content>
