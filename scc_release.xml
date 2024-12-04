@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <scc>
-	<version>5.10</version>
-	<timeStamp>2024-08-09T11:00:00</timeStamp>
+	<version>5.10.1</version>
+	<timeStamp>2024-11-21T11:00:00</timeStamp>
 	<releaseInfo>
 - For All Platforms -
--- Updated XCCDF/CKL result details format to be much more concise
--- Updated report "Additional Information" to "Result Analysis" and update logic to help explain why tests fail
--- Updated SCAP content based on NIWC content for DISA Q3 2024 release of STIG manuals
--- Added option to ignore XCCDF rule 'version' when upgrading manual questions, due to mass re-versioning of DISA STIG's for July 2024
--- Fixed Tailoring on remote SSH scanning
+-- Updated SCAP content based on NIWC content for DISA Q4 2024 release of STIG manuals
+-- Decrease default thresholds for pass/fail details to prevent large and slow to create reports and XCCDF
+-- Updated internal dependencies
 
 - For Windows - 
--- Minor improvements to SQL Server scanning, updated error handling and support for ODBC version 18 drivers
--- Bugfixes to OVAL cmdlet test
+-- Fixed uninstall issues of SCC on Windows when installed on a non-English version of Windows
+-- Updated Windows 'ntuser' tests to exclude user profiles that have not be logged into via Windows Explorer
 
 - For Linux - 
--- Fixed command line -nc and new profile creation on Linux systems
--- Added 'ceph' to list of remote filesystems for skipping local filesystem scans
+-- Fixed some system dependency issues/conflicts which prevented SCC from running on certain platforms
+
+- For Solaris - 
+-- Fixed system dependency issue which prevented SCC from running on x86 processors
 </releaseInfo>
 	<url>https://public.cyber.mil/stigs/scap/</url>
 </scc>
