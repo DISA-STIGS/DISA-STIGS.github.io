@@ -3,7 +3,7 @@
 <content-repository style="0.1">
       <repository-id>niwc-stig-repo</repository-id>
       <repository-publisher>NIWC</repository-publisher>
-      <last-updated>2025-02-05T14:41:53</last-updated>
+      <last-updated>2025-03-13T07:26:43</last-updated>
       <license>Open</license>
       <contents>
             <scap-content>
@@ -75,6 +75,30 @@
                   <platforms>
                         <platform>
                               <platform-id style="cpe">cpe:/o:canonical:ubuntu_linux:20.04</platform-id>
+                        </platform>
+                  </platforms>
+            </scap-content>
+            <scap-content>
+                  <content-id>U_CAN_Ubuntu_22-04_LTS_V2R1_STIG_SCAP_1-3_Benchmark-enhancedV1.zip</content-id>
+                  <location>https://www.niwcatlantic.navy.mil/Portals/94/Page-Content/SCAP/Content-Repository/U_CAN_Ubuntu_22-04_LTS_V2R1_STIG_SCAP_1-3_Benchmark-enhancedV1.zip</location>
+                  <checksum style="SHA512">b527ddcee9b395150445d2ba9fa9f22cd87a113f5b009755fb2b8f79e7fb0ec64ff1012fc67c02c0eb8e1efb31556099bf40f0da5a2ec6ae6bfca6e788953027</checksum>
+                  <benchmarks>
+                        <benchmark>
+                              <benchmark-id>xccdf_mil.disa.stig_benchmark_CAN_Ubuntu_22-04_LTS_STIG</benchmark-id>
+                              <title>Canonical Ubuntu 22.04 LTS STIG SCAP Benchmark - NIWC Enhanced with Manual Questions</title>
+                              <version>2.1.1</version>
+                              <style>SCAP_1.3</style>
+                              <status>accepted</status>
+                              <status-date>2024-11-25</status-date>
+                              <creator>DISA</creator>
+                              <publisher>DISA+NIWC</publisher>
+                              <contributor>DISA</contributor>
+                              <source>STIG.DOD.MIL</source>
+                        </benchmark>
+                  </benchmarks>
+                  <platforms>
+                        <platform>
+                              <platform-id style="cpe">cpe:/o:canonical:ubuntu_linux:22.04::~~lts~~~</platform-id>
                         </platform>
                   </platforms>
             </scap-content>
@@ -391,17 +415,17 @@
                   </platforms>
             </scap-content>
             <scap-content>
-                  <content-id>U_MS_Office_365_ProPlus_V1R1_STIG_SCAP_1-3_Benchmark-enhancedV1.zip</content-id>
-                  <location>https://www.niwcatlantic.navy.mil/Portals/94/Page-Content/SCAP/Content-Repository/U_MS_Office_365_ProPlus_V1R1_STIG_SCAP_1-3_Benchmark-enhancedV1.zip</location>
-                  <checksum style="SHA512">259b8a1c3174b24f4828272150a363f0e9975a514dc133aeada8451f107eb38082e086599749149d03bdcf282ac82878bbcbed8818f3ffa3d2819b6d73243e7e</checksum>
+                  <content-id>U_MS_Office_365_ProPlus_V3R3_STIG_SCAP_1-3_Benchmark-enhancedV2.zip</content-id>
+                  <location>https://www.niwcatlantic.navy.mil/Portals/94/Page-Content/SCAP/Content-Repository/U_MS_Office_365_ProPlus_V3R3_STIG_SCAP_1-3_Benchmark-enhancedV2.zip</location>
+                  <checksum style="SHA512">43aaa8c4cb51beec00714c61851c6aabfefd049f24fa86b20652724d8db45e153d6f6245e39a543406d255ad3fe79a0a2c79f6b4e095c71bbc1c9f2b3ea4d64b</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_MS_Office_365_ProPlus_STIG</benchmark-id>
                               <title>Microsoft Office 365 ProPlus STIG SCAP Benchmark - NIWC Enhanced with Manual Questions</title>
-                              <version>1.1.1</version>
+                              <version>3.3.2</version>
                               <style>SCAP_1.3</style>
                               <status>accepted</status>
-                              <status-date>2024-06-10</status-date>
+                              <status-date>2024-11-25</status-date>
                               <creator>DISA</creator>
                               <publisher>DISA+NIWC</publisher>
                               <contributor>DISA</contributor>
@@ -535,8 +559,8 @@
                   </platforms>
             </scap-content>
             <scap-content>
-                  <content-id>U_MS_Windows_2012_and_2012_R2_DC_V3R6_STIG_SCAP_1-3_Benchmark-enhancedV5 (1).zip</content-id>
-                  <location>https://www.niwcatlantic.navy.mil/Portals/94/Page-Content/SCAP/Content-Repository/U_MS_Windows_2012_and_2012_R2_DC_V3R6_STIG_SCAP_1-3_Benchmark-enhancedV5 (1).zip</location>
+                  <content-id>U_MS_Windows_2012_and_2012_R2_DC_V3R6_STIG_SCAP_1-3_Benchmark-enhancedV5.zip</content-id>
+                  <location>https://www.niwcatlantic.navy.mil/Portals/94/Page-Content/SCAP/Content-Repository/U_MS_Windows_2012_and_2012_R2_DC_V3R6_STIG_SCAP_1-3_Benchmark-enhancedV5.zip</location>
                   <checksum style="SHA512">ca7925cd1aea31c5379927f947533d47217c71871a89425476b7400456e565eb694e1fc61f369a92378ce5622c9cc40f34c071f14dc1fcb347afa8fafeb10fcb</checksum>
                   <benchmarks>
                         <benchmark>
@@ -554,16 +578,16 @@
                   </benchmarks>
                   <platforms>
                         <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2012:-</platform-id>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2012:r2</platform-id>
                         </platform>
                         <platform>
-                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2012:r2</platform-id>
+                              <platform-id style="cpe">cpe:/o:microsoft:windows_server_2012:-</platform-id>
                         </platform>
                   </platforms>
             </scap-content>
             <scap-content>
-                  <content-id>U_MS_Windows_2012_and_2012_R2_MS_V3R6_STIG_SCAP_1-3_Benchmark-enhancedV5 (1).zip</content-id>
-                  <location>https://www.niwcatlantic.navy.mil/Portals/94/Page-Content/SCAP/Content-Repository/U_MS_Windows_2012_and_2012_R2_MS_V3R6_STIG_SCAP_1-3_Benchmark-enhancedV5 (1).zip</location>
+                  <content-id>U_MS_Windows_2012_and_2012_R2_MS_V3R6_STIG_SCAP_1-3_Benchmark-enhancedV5.zip</content-id>
+                  <location>https://www.niwcatlantic.navy.mil/Portals/94/Page-Content/SCAP/Content-Repository/U_MS_Windows_2012_and_2012_R2_MS_V3R6_STIG_SCAP_1-3_Benchmark-enhancedV5.zip</location>
                   <checksum style="SHA512">7e6fc4ab4a0d70b4b72ad147162f6247f35222f7121544c1718faa49ea7247be85ecbf76ede9812036b327d811e3f5f13d0162fbd72c1a0dfff9fe9d5a61ebd4</checksum>
                   <benchmarks>
                         <benchmark>
@@ -757,14 +781,14 @@
                   </platforms>
             </scap-content>
             <scap-content>
-                  <content-id>U_RHEL_8_V2R2_STIG_SCAP_1-3_Benchmark-enhancedV12.zip</content-id>
-                  <location>https://www.niwcatlantic.navy.mil/Portals/94/Page-Content/SCAP/Content-Repository/U_RHEL_8_V2R2_STIG_SCAP_1-3_Benchmark-enhancedV12.zip</location>
-                  <checksum style="SHA512">b589b03ef900ff37cd2d627fe5b0e97a6c74f6c83882cd5ea3e0588e466dfcf80d37b0e494ea7c4ae36e0a4c0cb9ce07912de6097ef5a0d83ff75f7911a310a2</checksum>
+                  <content-id>U_RHEL_8_V2R2_STIG_SCAP_1-3_Benchmark-enhancedV13.zip</content-id>
+                  <location>https://www.niwcatlantic.navy.mil/Portals/94/Page-Content/SCAP/Content-Repository/U_RHEL_8_V2R2_STIG_SCAP_1-3_Benchmark-enhancedV13.zip</location>
+                  <checksum style="SHA512">3d6c4ea8c5d223b89e5f9ddcc603b5515bc750e9c6efd257dae04e813d05e27c73511c77cb5baa2ee31e2ab9af990883362869b77c8f6a175a1ebe11f2bf1450</checksum>
                   <benchmarks>
                         <benchmark>
                               <benchmark-id>xccdf_mil.disa.stig_benchmark_RHEL_8_STIG</benchmark-id>
                               <title>Red Hat Enterprise Linux 8 STIG SCAP Benchmark - NIWC Enhanced with Manual Questions</title>
-                              <version>2.2.12</version>
+                              <version>2.2.13</version>
                               <style>SCAP_1.3</style>
                               <status>accepted</status>
                               <status-date>2024-11-25</status-date>
